@@ -1,0 +1,3 @@
+diplomatic_core.replication.tab (text/tab-separated-values) 4792362 bytes.
+Diplomatic_core.Replicationinfo.pdf (application/pdf) 32608 bytes.
+Diplomatic_Core_Supplemental_Information_6-11-15.pdf (application/pdf) 487005 bytes.

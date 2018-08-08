@@ -1,0 +1,7 @@
+Codebook.pdf (application/pdf) 728046 bytes.
+DescriptionsUN1-72.tab (text/tab-separated-values) 1390716 bytes.
+Dyadicdata.tab (text/tab-separated-values) 161594277 bytes.
+IdealpointsPublished.tab (text/tab-separated-values) 1281885 bytes.
+UNDescriptions1-72.RData (application/x-rlang-transport) 291786 bytes.
+UNVotes1-72.tab (text/tab-separated-values) 52094891 bytes.
+UNVotes1-72full.RData (application/x-rlang-transport) 1289905 bytes.

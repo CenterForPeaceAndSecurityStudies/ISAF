@@ -1,0 +1,15 @@
+Why do countries contribute sizable military resources to conflicts in which they have seemingly little strategic interest? Though the existing literature is deeply concerned with the relationship between security commitments and conflict initiation, we lack an understanding of the process by which countries coordinate military contributions to conflict theaters. We construct a novel data set of country-level force structures and each country's specific force commitment to the NATO International Security Assistance Force in Afghanistan. After employing measures of foreign policy preferences from UN voting data, we find that closer preferences with the US are associated with greater troop contributions. However, countries without a military pact with the US or UK are less sensitive to preference similarities. These analyses suggest that countries will contribute surprisingly to conflicts if there are prospects for future military gain, which anecdotal evidence supports. More broadly, this suggests that countries will avoid incentives to commit minimal or no resources in military theaters if signaling reliability can produce benefits through subsequent cooperation.
+
+We can't include a NATO dummy alongside military pact, because that coefficient is meaningless. There are no countries without a defense pact with the US but also in NATO. So it is just model extrapolation.
+
+Analysis overview:
+
+1. Countries with a military pact contribute more than those without.
+
+2. But the most robust predictor of contributions is ideological overlap with the US.
+
+3. R.e. surprising contributors, among those without a military pact with the US or UK, ideological similarity predicts best.
+
+4. Centrality in ideology network predicts fewer troops, but its effects tend to be insignificant.
+
+5. Next steps seem to be: 1) extend to other domains. 2) do these unexpected contributions earn subsequent DCAs and/or pacts? That would reflect the strategic calculus we are projecting onto these countries.

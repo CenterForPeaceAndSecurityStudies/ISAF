@@ -1,0 +1,15 @@
+Abstract:
+
+Why do countries contribute forces to war-time conflicts in which they have seemingly little strategic interest? We construct a novel data set of country-level force structures and each country's specific commitments to the NATO International Security Assistance Force in Afghanistan. After employing measures of foreign policy preferences from UN voting data, we find that closer foreign policy preferences with the US are associated with greater troop contributions. However, countries without a military pact with the US or UK are less sensitive to these preferential differences. These analyses suggest that countries will contribute surprisingly to conflicts if signaling reliability can produce material benefits through subsequent cooperation.
+
+Contributions:
+
+Takeaway
+- Small states fight for future military cooperation
+
+Contribution
+- New data on relative contributions helps explain free-riding exceptions
+
+Next steps
+- Examine variation in allocation of military equipment, type of personnel, and geography
+- Investigate whether this signal pays off
