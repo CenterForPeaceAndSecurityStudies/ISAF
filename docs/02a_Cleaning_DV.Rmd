@@ -13,7 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 Load the RData files containing the spreadsheets for the IISS deployment to Afghanistan data and country-year troop levels
 ```{r}
 iiss_deployment <- readRDS(file = paste0(here::here(), '/data/iiss_deployment.rds'))
-
 iiss_troops <- readRDS(file = paste0(here::here(), '/data/iiss_troops.rds'))
 ```
 
@@ -32,21 +31,17 @@ Narrow the datasets to just the years 2001-2014, the scope of the Afghanistan wa
 ```
 
 # Merge
+Merge the two datasets into a single dataframe
 ```{r}
-# Reset country-years
+iiss_afghan <-
 ```
 
-##
+# Create new ratio values
 ```{r}
 
-troop_data[is.na(troop_data)] <- 0
-troop_data$troops_active <- as.numeric(troop_data$troops_active)
-troop_data$troops_isaf <- as.numeric(troop_data$troops_isaf)
-troop_data$troops_oef <- as.numeric(troop_data$troops_oef)
+```
 
-troop_data$troops_total <- troop_data$troops_isaf + troop_data$troops_oef
-
-troop_data$isaf_ratio <- troop_data$troops_total/troop_data$troops_active
-
-write.csv(troop_data, file = "Data/dv_troops.csv")
+# Save final dataset
+```{r}
+saveRDS(iiss_afghan, paste0(here::here(),"/data/","iiss_afghan.rds"))
 ```
