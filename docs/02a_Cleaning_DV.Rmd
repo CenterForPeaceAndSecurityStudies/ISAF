@@ -9,14 +9,35 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Load and clean
+Load the RData files containing the spreadsheets for the IISS deployment to Afghanistan data and country-year troop levels
+```{r}
+iiss_deployment <- readRDS(file = paste0(here::here(), '/data/iiss_deployment.rds'))
 
+iiss_troops <- readRDS(file = paste0(here::here(), '/data/iiss_troops.rds'))
+```
 
-iiss <- readRDS(file = paste0(here::here(), '/data/IISS.rds'))
+The country-years in both datasets refer to the IISS publication year which is one year prior to the actual calendar year the data describes
+```{r}
+iiss_deployment$year <- iiss_deployment$year - 1
+iiss_troops$year <- iiss_troops$year - 1
+```
 
+Narrow the datasets to just the years 2001-2014, the scope of the Afghanistan war
+```{r}
+# Subset deployment data
 
-## Column for percent of armed forces in Afghan per year
-troop_data <- read.csv("../Data/dv_troops.csv")
+# Subset troop data
+
+```
+
+# Merge
+```{r}
+# Reset country-years
+```
+
+##
+```{r}
 
 troop_data[is.na(troop_data)] <- 0
 troop_data$troops_active <- as.numeric(troop_data$troops_active)
@@ -28,3 +49,4 @@ troop_data$troops_total <- troop_data$troops_isaf + troop_data$troops_oef
 troop_data$isaf_ratio <- troop_data$troops_total/troop_data$troops_active
 
 write.csv(troop_data, file = "Data/dv_troops.csv")
+```
