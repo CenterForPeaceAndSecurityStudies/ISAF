@@ -1,0 +1,28 @@
+---
+title: "01a_DataLoad_DV"
+author: "J Andres Gannon"
+date: "August 8, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load data
+The troop contribution data for the dependent variable comes from the IISS military balance reports. It has been extracted into two google docs, one for military personnel and another for troop contributions.
+
+These do not need to be run every time because it takes a while to import from the google doc. The created .rds files are a sufficient place to start assuming the google docs have not been changed
+
+## Troops in Afghanistan per year
+```{r}
+iiss_deployment <- pull_deployment_data()
+saveRDS(iiss_deployment, paste0(here::here(),"/data/","iiss_deployment.rds"))
+```
+
+## Overall troops per year
+```{r}
+iiss_troops <- pull_troop_data()
+saveRDS(iiss_troops, paste0(here::here(),"/data/","iiss_troops.rds"))
+```
+

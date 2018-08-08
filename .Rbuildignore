@@ -2,3 +2,4 @@
 ^LICENSE\.md$
 ^ISAF\.Rproj$
 ^\.Rproj\.user$
+^\.httr-oauth$

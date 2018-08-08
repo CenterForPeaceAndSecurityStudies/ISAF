@@ -1,0 +1,30 @@
+---
+title: "02a_Cleaning_DV"
+author: "J Andres Gannon"
+date: "August 8, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+iiss <- readRDS(file = paste0(here::here(), '/data/IISS.rds'))
+
+
+## Column for percent of armed forces in Afghan per year
+troop_data <- read.csv("../Data/dv_troops.csv")
+
+troop_data[is.na(troop_data)] <- 0
+troop_data$troops_active <- as.numeric(troop_data$troops_active)
+troop_data$troops_isaf <- as.numeric(troop_data$troops_isaf)
+troop_data$troops_oef <- as.numeric(troop_data$troops_oef)
+
+troop_data$troops_total <- troop_data$troops_isaf + troop_data$troops_oef
+
+troop_data$isaf_ratio <- troop_data$troops_total/troop_data$troops_active
+
+write.csv(troop_data, file = "Data/dv_troops.csv")
