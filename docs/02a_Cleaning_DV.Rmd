@@ -1,12 +1,14 @@
 ---
 title: "02a_Cleaning_DV"
-author: "J Andres Gannon"
+author: "J Andres Gannon and Erin Werner"
 date: "August 8, 2018"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(data.table)
 ```
 
 # Load and clean
@@ -22,17 +24,94 @@ iiss_deployment$year <- iiss_deployment$year - 1
 iiss_troops$year <- iiss_troops$year - 1
 ```
 
+
 Narrow the datasets to just the years 2001-2014, the scope of the Afghanistan war
 ```{r}
 # Subset deployment data
+iiss_deployment <- iiss_deployment %>% filter(iiss_deployment$year > 2000 & 
+                                                iiss_deployment$year < 2015)
 
 # Subset troop data
+iiss_troops <- iiss_troops %>% filter(iiss_troops$year > 2000 & 
+                                                iiss_troops$year < 2015)
 
 ```
+
+Clean the country string names from both data frames.
+```{r}
+iiss_deployment$country[iiss_deployment$country == "Belqium"] <- "Belgium"
+iiss_deployment$country[iiss_deployment$country == "Bulqaria"] <- "Bulgaria"
+iiss_deployment$country[iiss_deployment$country == "Bosnia -Herzegovina"] <- "Bosnia-Herzegovina" 
+iiss_deployment$country[iiss_deployment$country == "Bosnia- Herzegovina"] <- "Bosnia-Herzegovina" 
+iiss_deployment$country[iiss_deployment$country == "Bosnia- Herzeqovina"] <- "Bosnia-Herzegovina" 
+iiss_deployment$country[iiss_deployment$country == "Bosnia-Herzeqovina"] <- "Bosnia-Herzegovina" 
+iiss_deployment$country[iiss_deployment$country == "Burkino Faso"] <- "Burkina Faso"
+iiss_deployment$country[iiss_deployment$country == "Hunqary"] <- "Hungary"
+iiss_deployment$country[iiss_deployment$country == "Niqeria"] <- "Nigeria"
+iiss_deployment$country[iiss_deployment$country == "Portuqal"] <- "Portugal"
+iiss_deployment$country[iiss_deployment$country == "Seneqal"] <- "Senegal"
+iiss_deployment$country[iiss_deployment$country == "Paraquay"] <- "Paraguay"
+iiss_deployment$country[iiss_deployment$country == "Tonqa"] <- "Tonga"
+iiss_deployment$country[iiss_deployment$country == "Toqo"] <- "Togo"
+iiss_deployment$country[iiss_deployment$country == "Sir Lanka"] <- "Sri Lanka"
+iiss_deployment$country[iiss_deployment$country == "China, People's Republic of"] <- "Republic of China"
+iiss_deployment$country[iiss_deployment$country == "China, People’ Republic of"] <- "Republic of China"
+iiss_deployment$country[iiss_deployment$country == "China, People’s Republic of"] <- "Republic of China"
+iiss_deployment$country[iiss_deployment$country == "China, Peoples Republic of"] <- "Republic of China"
+iiss_deployment$country[iiss_deployment$country == "Congo, Republic of"] <- "Congo"
+iiss_deployment$country[iiss_deployment$country == "Cote d’Ivoire"] <- "Cote D'Ivoire"
+iiss_deployment$country[iiss_deployment$country == "Democratic Republic of the Congo"] <- "Democratic Republic of Congo"
+iiss_deployment$country[iiss_deployment$country == "Equatorial Guniea"] <- "Equatorial Guinea" 
+iiss_deployment$country[iiss_deployment$country == "Guniea"] <- "Guinea"
+iiss_deployment$country[iiss_deployment$country == "Kyrgystan"] <- "Kyrgyzstan"
+iiss_deployment$country[iiss_deployment$country == "Kyrqyzstan"] <- "Kyrgyzstan"
+iiss_deployment$country[iiss_deployment$country == "Macedonia"] <- "Macedonia, Former Yugoslav Republic of"
+iiss_deployment$country[iiss_deployment$country == "Macedonia (FYROM)"] <- "Macedonia, Former Yugoslav Republic of"
+iiss_deployment$country[iiss_deployment$country == "Macedonia, Former Yugoslav Republic"] <- "Macedonia, Former Yugoslav Republic of"
+iiss_deployment$country[iiss_deployment$country == "FYROM"] <- "Macedonia, Former Yugoslav Republic of"
+iiss_deployment$country[iiss_deployment$country == "UAE"] <- "United Arab Emirates"
+iiss_deployment$country[iiss_deployment$country == "UK"] <- "United Kingdom"
+iiss_deployment$country[iiss_deployment$country == "Yemen, Rep of"] <- "Yemen"
+iiss_deployment$country[iiss_deployment$country == "Republic of Korea"] <- "Korea, Republic of"
+iiss_deployment$country[iiss_deployment$country == "The Gambia"] <- "Gambia"
+iiss_deployment$country[iiss_deployment$country == "Timor-Leste"] <- "Timor Leste"
+```
+
 
 # Merge
 Merge the two datasets into a single dataframe
 ```{r}
+years <- c(2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001)
+myList <- list()
+index <- 1
+
+for(yr in years){
+  temp_troops <- iiss_troops[which(iiss_troops$year==yr),]
+  temp_dep <- iiss_deployment[which(iiss_deployment$year==yr),]
+  
+  countries <- sort(unique(temp_troops$country))
+  
+  for(state in countries){
+    
+    #row <- c(yr,state) 
+    myList[[index]] <- data.frame(year = yr, country = state)
+    index <- index + 1
+  }
+}
+
+my_df <- myList[[1]]
+for(i in 2:length(myList)){
+  my_df <- rbind(my_df,myList[[i]])
+}
+
+my_df$ccode <- countrycode::countrycode(my_df$country, 'country.name', 'cown')
+my_df$ccode[my_df$country == "Palestinian Territories"] <- "665"
+my_df$ccode[my_df$country == "Palestinian Autonomous Areas of Gaza and Jericho"] <- "665"
+my_df$ccode[my_df$country == "Republika Sepska Armed Forces"] <- "000"
+my_df$ccode[my_df$country == "Serbia"] <- "345"
+my_df$ccode[my_df$country == "Serbia and Montenegro"] <- "345"
+
+
 iiss_afghan <-
 ```
 
