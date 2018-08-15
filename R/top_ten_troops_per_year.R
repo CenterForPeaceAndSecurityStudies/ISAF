@@ -28,13 +28,6 @@ top_ten_troops_per_year <- function(iiss_afghan){
     top <- head(temp,10)
     top <- data.frame(top)
 
-    header.true <- function(df) {
-      names(df) <- as.character(unlist(df[1,]))
-      df[-1,]
-    }
-
-    top <- header.true(top)
-
     table <- xtable::xtable(top)
     print.xtable(table,file = paste0(here::here(), '/paper/figures/',yr,'_top_ten_troops.tex'),caption.placement = 'top',include.rownames = FALSE)
   }
