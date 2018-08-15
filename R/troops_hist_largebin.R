@@ -1,6 +1,6 @@
-troops_hist_largebin <- function(){
+troops_hist_largebin <- function(iiss_afghan){
 
-  iiss_afghan <- readRDS(file = paste0(here::here(), '/data/iiss_afghan.rds'))
+  #iiss_afghan <- readRDS(file = paste0(here::here(), '/data/iiss_afghan.rds'))
 
   troops_subset <- subset(iiss_afghan, iiss_afghan$troops_total > 0)
   troops_subset <- troops_subset %>% filter(troops_subset$year > 2000 & troops_subset$year < 2006)
