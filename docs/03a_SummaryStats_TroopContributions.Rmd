@@ -17,8 +17,5 @@ troops <- readRDS(file = paste0(here::here(), '/data/iiss_afghan.rds'))
 # Country contribution ratio histogram
 ```{r}
 troops_hist_largebin(troops)
-#ggplot2::ggsave("troops_hist_largebin.png", path = paste0(here::here(), '/paper/figures'))
-
 troops_hist_smallbin(troops)
-#ggplot2::ggsave("troops_hist_smallbin.png", path = paste0(here::here(), '/paper/figures'))
 ```
