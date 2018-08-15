@@ -125,7 +125,12 @@ for(yr in years){
     
     combined <- oh+is+un
     
-    ratio <- combined/active
+    if(combined == 0){
+      ratio <- 0
+    }
+    else{
+      ratio <- combined/active
+    }
      
     myList[[index]] <- data.frame(year = yr, country = state, troops_total = active,
                                   troops_afghan_total = combined, troops_afghan_oef = oh,
