@@ -7,6 +7,14 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(lubridate)
+library(ggplot2)
+library(ggmap)
+library(dplyr)
+library(data.table)
+library(ggrepel)
+library(magrittr)
+library(gghighlight)
 ```
 
 # Load data
