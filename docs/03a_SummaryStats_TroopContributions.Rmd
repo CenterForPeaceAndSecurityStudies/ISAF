@@ -21,7 +21,7 @@ troops_hist_smallbin(troops)
 ```
 
 
-
+# Annual troop contribution bar plot
 ```{r}
 total_troops_per_year(iiss_afghan)
 total_troops_year_mission(iiss_afghan)
