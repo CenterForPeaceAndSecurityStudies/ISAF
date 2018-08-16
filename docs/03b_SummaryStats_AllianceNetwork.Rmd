@@ -1,6 +1,6 @@
 ---
 title: "03b_SummaryStats_AllianceNetwork"
-author: "Daniel Kent"
+author: "Erin Werner and Daniel Kent"
 date: "August 8, 2018"
 output: html_document
 ---
