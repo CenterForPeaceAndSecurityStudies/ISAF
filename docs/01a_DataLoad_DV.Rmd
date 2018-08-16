@@ -15,7 +15,7 @@ The troop contribution data for the dependent variable comes from the IISS milit
 These do not need to be run every time because it takes a while to import from the google doc. The created .rds files are a sufficient place to start assuming the google docs have not been changed
 
 ## Troops in Afghanistan per year
-```{r}
+```{r, message=FALSE, warning=FALSE, include=FALSE}
 iiss_deployment <- pull_deployment_data()
 saveRDS(iiss_deployment, paste0(here::here(),"/data/","iiss_deployment.rds"))
 ```

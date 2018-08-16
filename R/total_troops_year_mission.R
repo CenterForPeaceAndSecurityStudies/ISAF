@@ -23,15 +23,20 @@ total_troops_year_mission <- function(iiss_afghan){
     my_df <- rbind(my_df,myList[[i]])
   }
 
-  g <- ggplot(data = my_df, aes(x = my_df$year,y = my_df$total,fill = my_df$mission))
-  g + geom_bar(stat = "identity", width = 0.5) +
+  g <- ggplot(data = my_df, aes(x = my_df$year,y = my_df$total,fill = my_df$mission)) +
+    geom_bar(stat = "identity", width = 0.5) +
     theme_light() +
     theme(axis.text.x = element_text(size = 12,vjust=0.6),
           axis.text.y = element_text(size = 12)) +
     guides(fill=guide_legend(title="Mission")) +
+    scale_fill_manual(values=c("#C1CDCD","#98F5FF","#00008B"),
+                      labels = c("ISAF","OEF-HOA","UNAMA")) +
     labs(title="Total ISAF Total",
          subtitle="2001-2005",
          x = "Year", y = "Total Troops")
+  g
+  #ggplot2::ggsave("total_troops_year_mission.png",g,"png", path = paste0(here::here(), '/paper/figures'),limitsize=FALSE)
+
 
 }
 
