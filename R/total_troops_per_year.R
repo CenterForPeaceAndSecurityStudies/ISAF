@@ -15,12 +15,18 @@ total_troops_per_year <- function(iiss_afghan){
     my_df <- rbind(my_df,myList[[i]])
   }
 
-  Total_Troops <- my_df$total
   Year <- my_df$year
 
-  g <- ggplot(my_df, aes(Year, Total_Troops))
-  g + geom_bar(stat="identity", width = 0.5, fill="plum") +
-    labs(title="Total ISAF Contributions Per Year",
-         subtitle="2001-2005") +
-    theme(axis.text.x = element_text(angle=65, vjust=0.6))
+  g <- ggplot(my_df, aes(Year, my_df$total)) +
+    geom_bar(stat="identity", width = 0.5, fill="gray75") +
+    labs(title="Total ISAF Troops",
+         subtitle="2001-2005",
+         y="Total Troops") +
+    theme_light() +
+    theme(axis.text.x = element_text(size = 12,vjust=0.6),
+          axis.text.y = element_text(size = 12))
+  g
+  #ggplot2::ggsave("total_troops_per_year.png",g,"png", path = paste0(here::here(), '/paper/figures'),limitsize=FALSE)
+
+
 }
