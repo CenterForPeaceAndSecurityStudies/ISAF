@@ -29,7 +29,7 @@ total_troops_year_mission <- function(iiss_afghan){
     theme(axis.text.x = element_text(size = 12,vjust=0.6),
           axis.text.y = element_text(size = 12)) +
     guides(fill=guide_legend(title="Mission")) +
-    scale_fill_manual(values=c("#C1CDCD","#98F5FF","#00008B"),
+    scale_fill_manual(values=c("#CD3333","#0000FF","#FF7F00"),
                       labels = c("ISAF","OEF-HOA","UNAMA")) +
     labs(title="Total ISAF Total",
          subtitle="2001-2005",
