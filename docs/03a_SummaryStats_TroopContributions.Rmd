@@ -19,3 +19,12 @@ troops <- readRDS(file = paste0(here::here(), '/data/iiss_afghan.rds'))
 troops_hist_largebin(troops)
 troops_hist_smallbin(troops)
 ```
+
+
+
+```{r}
+total_troops_per_year(iiss_afghan)
+total_troops_year_mission(iiss_afghan)
+```
+
+

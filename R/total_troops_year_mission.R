@@ -36,7 +36,7 @@ total_troops_year_mission <- function(iiss_afghan){
          x = "Year", y = "Total Troops")
   g
   #ggplot2::ggsave("total_troops_year_mission.png",g,"png", path = paste0(here::here(), '/paper/figures'),limitsize=FALSE)
-
+  return(g)
 
 }
 

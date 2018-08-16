@@ -27,6 +27,6 @@ total_troops_per_year <- function(iiss_afghan){
           axis.text.y = element_text(size = 12))
   g
   #ggplot2::ggsave("total_troops_per_year.png",g,"png", path = paste0(here::here(), '/paper/figures'),limitsize=FALSE)
-
+  return(g)
 
 }
