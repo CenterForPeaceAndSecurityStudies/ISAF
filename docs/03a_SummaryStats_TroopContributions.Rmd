@@ -32,3 +32,7 @@ total_troops_year_mission(troops)
 country_troop_lineplot(troops)
 ```
 
+# Troops contribution distribution boxplot
+```{r,warning=FALSE}
+country_troop_boxplot(troops)
+```

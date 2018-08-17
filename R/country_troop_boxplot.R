@@ -22,14 +22,18 @@ country_troop_boxplot <- function(iiss_afghan){
     my_df <- rbind(my_df,percentages[[i]])
   }
 
-  g <- ggplot(my_df, aes(x=my_df$year, y=my_df$total,group=my_df$year)) +
+  my_df$log_tot <- log(my_df$total)
+
+  g <- ggplot(my_df, aes(x=my_df$year, y=my_df$log_tot,group=my_df$year)) +
     geom_boxplot(varwidth=T,colour="deepskyblue4") +
     theme_light() +
-    labs(title="Troop Contributions",subtitle="2001-2005",
-         y="Total Troops",x = "Year")
-
+    theme(axis.text.x = element_text(size = 12,vjust=0.6),
+          axis.text.y = element_text(size = 12)) +
+    ylim(0,max(my_df$log_tot)+0.5) +
+    labs(title="Average country contributions to ISAF by year",
+         subtitle="2001-2005",
+         y="Log National Troop Deployment",x = "Year")
   g
-  return(g)
-    #geom_text_repel(aes(label = df$outlier), point.padding = 2)
 
+  return(g)
 }

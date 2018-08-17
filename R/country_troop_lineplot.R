@@ -66,6 +66,5 @@ country_troop_lineplot <- function(iiss_afghan){
   my_plot
 
   return(my_plot)
-
 }
 
