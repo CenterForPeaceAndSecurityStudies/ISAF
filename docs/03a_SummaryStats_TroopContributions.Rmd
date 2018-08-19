@@ -36,3 +36,117 @@ country_troop_lineplot(troops)
 ```{r,warning=FALSE}
 country_troop_boxplot(troops)
 ```
+
+# Troops Contribution map
+## Year 2001 contributions
+```{r}
+### Filter to only year 2001 observations that contributed troops
+troops_2001 <- subset(troops, year == "2001")
+troops_2001 <- subset(troops_2001, troops_afghan_total != "0")
+
+### Raw Troop Contributions
+map <- rworldmap::joinCountryData2Map(troops_2001,
+                                      nameJoinColumn="country",
+                                      joinCode="NAME" )
+
+rworldmap::mapDevice()
+
+mapParams <- rworldmap::mapCountryData(map,
+                                       nameColumnToPlot='troops_afghan_total',
+                                       catMethod = "pretty",
+                                       mapTitle = "Troop Contributions to War in Afghanistan (2001)",
+                                       addLegend = FALSE
+                                      )
+
+do.call(rworldmap::addMapLegendBoxes,
+        c(mapParams,
+          horiz = FALSE,
+          title = "Troop Contribution",
+          cex = 0.9
+          )
+        )
+
+```
+
+```{r}
+### Ratio of contribution to total military
+map <- rworldmap::joinCountryData2Map(troops_2001,
+                                      nameJoinColumn="country",
+                                      joinCode="NAME" )
+
+rworldmap::mapDevice()
+
+mapParams <- rworldmap::mapCountryData(map,
+                                       nameColumnToPlot='troops_afghan_ratio',
+                                       catMethod = "pretty",
+                                       mapTitle = "Troop Contributions Relative to Total Military (2001)",
+                                       addLegend = FALSE
+                                      )
+
+do.call(rworldmap::addMapLegendBoxes,
+        c(mapParams,
+          horiz = FALSE,
+          title = "Contribution Ratio",
+          cex = 0.9
+          )
+        )
+
+```
+
+```{r}
+### Now we scale the variables
+troops_2001$troops_afghan_total <- scale(troops_2001$troops_afghan_total)
+troops_2001$troops_afghan_ratio <- scale(troops_2001$troops_afghan_ratio)
+```
+
+```{r}
+### Scaled Raw Troop Contributions
+map <- rworldmap::joinCountryData2Map(troops_2001,
+                                      nameJoinColumn="country",
+                                      joinCode="NAME" )
+
+rworldmap::mapDevice()
+
+mapParams <- rworldmap::mapCountryData(map,
+                                       nameColumnToPlot='troops_afghan_total',
+                                       catMethod = "pretty",
+                                       mapTitle = "Troop Contributions to War in Afghanistan (2001)",
+                                       addLegend = FALSE
+                                      )
+
+do.call(rworldmap::addMapLegendBoxes,
+        c(mapParams,
+          horiz = FALSE,
+          title = "Scaled Troop Contribution",
+          cex = 0.9
+          )
+        )
+
+```
+
+```{r}
+### Scaled Ratio of contribution to total military
+map <- rworldmap::joinCountryData2Map(troops_2001,
+                                      nameJoinColumn="country",
+                                      joinCode="NAME" )
+
+rworldmap::mapDevice()
+
+mapParams <- rworldmap::mapCountryData(map,
+                                       nameColumnToPlot='troops_afghan_ratio',
+                                       catMethod = "pretty",
+                                       mapTitle = "Troop Contributions Relative to Total Military (2001)",
+                                       addLegend = FALSE
+                                      )
+
+do.call(rworldmap::addMapLegendBoxes,
+        c(mapParams,
+          horiz = FALSE,
+          title = "Scaled Contribution Ratio",
+          cex = 0.9
+          )
+        )
+
+```
+
+
