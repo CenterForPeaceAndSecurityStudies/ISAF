@@ -100,7 +100,7 @@ troops_2001$troops_afghan_ratio <- scale(troops_2001$troops_afghan_ratio)
 ```
 
 ```{r}
-### Scaled Raw Troop Contributions
+### Scaled total contribution
 map <- rworldmap::joinCountryData2Map(troops_2001,
                                       nameJoinColumn="country",
                                       joinCode="NAME" )
@@ -110,14 +110,14 @@ rworldmap::mapDevice()
 mapParams <- rworldmap::mapCountryData(map,
                                        nameColumnToPlot='troops_afghan_total',
                                        catMethod = "pretty",
-                                       mapTitle = "Troop Contributions to War in Afghanistan (2001)",
+                                       mapTitle = " Total Troop Contributions (2001)",
                                        addLegend = FALSE
                                       )
 
 do.call(rworldmap::addMapLegendBoxes,
         c(mapParams,
           horiz = FALSE,
-          title = "Scaled Troop Contribution",
+          title = "Scaled Total Contribution",
           cex = 0.9
           )
         )
@@ -149,4 +149,35 @@ do.call(rworldmap::addMapLegendBoxes,
 
 ```
 
+```{r}
+### Put plots side-by-side
+par(mfrow=c(1,2))
+par(mar = c(0,0,0,0))
 
+### Scaled Raw Troop Contributions
+map <- rworldmap::joinCountryData2Map(troops_2001,
+                                      nameJoinColumn="country",
+                                      joinCode="NAME" )
+
+mapParams_1 <- rworldmap::mapCountryData(map,
+                                       nameColumnToPlot='troops_afghan_total',
+                                       catMethod = "pretty",
+                                       mapTitle = "",
+                                       addLegend = FALSE
+                                      )
+
+
+mapParams_2 <- rworldmap::mapCountryData(map,
+                                       nameColumnToPlot='troops_afghan_ratio',
+                                       catMethod = "pretty",
+                                       mapTitle = "",
+                                       addLegend = FALSE
+                                      )
+
+grid::grid.text(label = "Total Troops Contributed", x = 0.25, y = 0.73)
+grid::grid.text(label = "Percent Troops Contributed", x = 0.75, y = 0.73)
+grid::grid.text(label = "Troop Contributions to War in Afghanistan (2001)", x = 0.5, y = 0.85, gp = gpar(fontsize = 14, fontface = "bold"))
+grid::grid.text(label = "Darker countries indicate higher values.\nBoth maps scaled relative to average contribution level to make values comparable.", x = 0.5, y = 0.2, gp = gpar(fontsize = 9))
+
+
+```
