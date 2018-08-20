@@ -1,6 +1,6 @@
 ---
 title: "03a_SummaryStats_TroopContributions"
-author: "J Andres Gannon and Erin Werner"
+author: "J Andres Gannon, Erin Werner, and Cole Reynolds"
 date: "August 8, 2018"
 output: html_document
 ---
@@ -37,7 +37,7 @@ country_troop_lineplot(troops)
 country_troop_boxplot(troops)
 ```
 
-# Troops Contribution map
+# Troops Contribution Maps
 ## Year 2001 contributions
 ```{r}
 ### Filter to only year 2001 observations that contributed troops
