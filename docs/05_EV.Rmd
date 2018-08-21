@@ -1,0 +1,111 @@
+---
+title: "05_EV"
+author: "Daniel Kent"
+date: "August 14, 2018"
+output: html_document
+---
+
+
+# Baseline data
+
+First, we load the data for 2001-2012. This is a cleaned version of the national military capabilities dataset, which serves as a nice starting point because we are generally interested in contributions relative to a country's total military capacity.
+
+It is worth noting that we have troop data for Afghanistan through 2014, so we may have to revisit this setup to see if we can find a way to get our right-hand side through 2014.
+
+```{R}
+isaf <- rio::import('inst/extdata/isaf_rhs.rds')
+```
+
+# Ideal Points
+
+Second, let's merge the Bailey et al. ideal point measures.
+
+```{R}
+## import data
+ideal <- rio::import('inst/extdata/voeten_un_votes/idealpoints.csv')
+
+## prep for merging by removing unwanted variables
+ideal <- dplyr::select(ideal, c(ccode, year, CountryName, Idealpoint, PctAgreeUS))
+colnames(ideal) <- c("ccode", "year", "statenme", "idealpoint", "pctagreeus")
+
+## merge data
+isaf <- dplyr::left_join(isaf, ideal)
+```
+
+# Lebovic and Saunders
+
+Second, let's add the the Lebovic and Saunders data on diplomatic visits. This only goes to 2012.
+
+```{R}
+diplomatic <- rio::import('inst/extdata/lebovich_saunders_diplomacy/dipl_core.csv')
+
+## There is a lot going on here. Let's just look at US visits and arms relations.
+dipl <- dplyr::select(diplomatic, c(cowid, year, bi_SOS, bi_PRE, bi_str_SOS,
+                    bi_str_PRE, USmilaid, allies, USdefense,
+                    UStrade, USalign, UNpart))
+
+## colnames that make more sense
+colnames(dipl) <- c("ccode", "year", "sec_st", "pres", "sec_only", "pres_only",
+                    "us_mil_aid", "us_ally", "us_def_pact", "us_trade",
+                    "us_un_vote_sim", "un_particip")
+
+## merge datasets
+isaf <- dplyr::left_join(isaf, dipl)
+```
+
+# Kinne
+
+This is a cleaned version of the original dataset, as the original was too large for GitHub and contained variables and observations we did not need. Note that this data ends in 2010.
+
+```{R}
+kinne <- rio::import('inst/extdata/kinne_defense_cooperation_agreements/kinne_dca.rds')
+
+isaf <- dplyr::left_join(isaf, kinne)
+```
+
+# DV
+
+Let's import the iiss data about troop levels in Afghanistan.
+
+```{R}
+iiss_troops <- rio::import('data/iiss_afghan.rds')
+iiss_troops <- dplyr::arrange(iiss_troops, year)
+```
+
+# Merge
+
+Now we can merge everything together.
+
+```{R}
+iiss_troops$ccode <- as.integer(iiss_troops$ccode)
+final_data <- dplyr::left_join(iiss_troops, isaf)
+```
+
+# Finalize
+
+Last, let's clean everything up.
+
+```{R}
+colnames(final_data)
+
+final_data <- dplyr::select(final_data, -c(statenme))
+final_data <- dplyr::select(final_data, c(year, country, stateabb, ccode, troops_total,
+        troops_afghan_total, troops_afghan_oef, troops_afghan_isaf, troops_afghan_unama,
+        troops_afghan_ratio, milex, milper, irst, pec, tpop, upop, cinc, idealpoint,
+        pctagreeus, us_un_vote_sim, un_particip, sec_st, pres, sec_only, pres_only,
+        ambassador, us_mil_aid, us_ally, us_def_pact, us_trade, dca, dca_ongoing,
+        abs_ideal_diff, arms_imports, NATO))
+```
+
+# Save files
+
+```{R}
+iiss_rhs <- dplyr::select(isaf, -c(troops_total, troops_afghan_total,
+                        troops_afghan_oef, troops_afghan_isaf,
+                        troops_afghan_unama, troops_afghan_ratio))
+
+## right hand side data
+rio::export(iiss_rhs, 'data/iiss_afghan_rhs.rds')
+## merged complete data
+rio::export(final_data, 'data/iiss_afghan_complete.rds')
+```
