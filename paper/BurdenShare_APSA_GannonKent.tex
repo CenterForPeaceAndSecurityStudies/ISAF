@@ -1,27 +1,38 @@
 \documentclass[12pt,letterpaper]{article}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage[normalem]{ulem}
-\usepackage{setspace}
+\usepackage[singlespacing]{setspace}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
 \usepackage{titlesec}
+\setcounter{tocdepth}{2}
 \usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
 \usepackage{ntheorem}
-\newtheorem{hyp}{Hypothesis}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage[stable]{footmisc}
+\usepackage{subcaption}
+\usepackage{ntheorem}
+\newtheorem{hyp}{Hypothesis} 
 \newtheorem{subhyp}{Hypothesis}[hyp]
 \renewcommand\thesubhyp{\thehyp.\alph{subhyp}}
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.pathmorphing, backgrounds, fit, positioning, shapes.symbols, chains, decorations.pathreplacing}
 \usepackage[round]{natbib}
 \bibpunct{(}{)}{;}{a}{}{,~}
 \usepackage[space]{grffile}
 \graphicspath{{./figures/}}
 \usepackage[affil-it]{authblk}
 \makeatletter
+
 \def\@maketitle{%
 	\newpage
 	\null
@@ -56,7 +67,7 @@
 \maketitle
 
 \begin{abstract}
-What determines the magnitude of alliance contributions to conflict theaters? At the outbreak of the 1990 Persian Gulf War, the French military's budget was approximately double that of their Italian counterpart -- 58,149 and 30,768 million 2015 U.S. dollars, respectively.\footnote{\url{https://www.sipri.org/sites/default/files/Milex-constant-2015-USD.pdf}} However, in troops alone, France contributed over ten times as many forces to the conflict as Italy -- 20,000 as opposed to 1,900 military personnel. Though the Italian forces were not without value, their relative size demonstrates a simple but important point: not all alliance commitments are created equal. Indeed, if an ally is not expected to provide resources to a conflict in proportion with its capabilities, then the alliance itself is of far less consequence than it would otherwise be. Yet, empirical investigations of alliances and conflict processes tend
+What determines the magnitude of alliance contributions to conflict theaters? At the outbreak of the 1990 Persian Gulf War, the French military's budget was approximately double that of their Italian counterpart -- 58,149 and 30,768 million 2015 U.S. dollars, respectively. However, in troops alone, France contributed over ten times as many forces to the conflict as Italy -- 20,000 as opposed to 1,900 military personnel. Though the Italian forces were not without value, their relative size demonstrates a simple but important point: not all alliance commitments are created equal. Indeed, if an ally is not expected to provide resources to a conflict in proportion with its capabilities, then the alliance itself is of far less consequence than it would otherwise be. Yet, empirical investigations of alliances and conflict processes tend
 to avoid this distinction, instead focusing on: the formation of alliances, how alliances influence the initiation of disputes, or how alliances link to issues beyond the use of military force. We shed light on this important topic by developing a theoretical framework for and conducting an empirical investigation of the determinants of alliance contributions to conflict theaters. Through a new data set of country-level military portfolios and contributions to conflicts, we measure the type of technologies and amount of forces that states have deployed in conflict theaters since the end of the Cold War. We then apply techniques for statistical inference in social networks to produce insights into the strategic considerations that influence decisions to provide various military capabilities to ongoing conflicts. This project (something about how it will help the lit and is relevant to current debates about alliance reliability amidst various stresses to the international order -- NATO, North Korea, China.)
 \end{abstract}
 
@@ -70,28 +81,55 @@ to avoid this distinction, instead focusing on: the formation of alliances, how 
 	This paper proceeds in five parts. In part two we explore existing explanations for coalition warfare that have thus far focused on the manner in which states fight together rather than explaining why they bother fighting together at all. Part three develops our theory by applying the costly signaling theory to coalition warfare using a innovative measure of the costliness of a state's contribution to coalition warfare; the relative pressure of that mobilization based on the size of its available armed forces. Part four empirically tests this finding by examining coalition contributions during the war in Afghanistan (2001-2014) which presents a ripe test case for our theory given variation in the alliance obligations of the states that participated as well as their level of participation. In section five we discuss the results of this empirical test and its generalizability for the broader theory explaining how states seek to alter their position within the network of capable international actors. Section six concludes.
 
 \section{Existing Studies on Coalition Warfare}
-	Why do countries fight together in coalitions
+	Attempts to explain why countries contribute to alliances can be divided into four different theories; theories of collective action, the balance of threat, alliance dependence, and domestic politics \citep{bennett_burdensharingpersiangulf_1994, haesebrouck_democraticparticipationair_2016}. The \textit{collective action hypothesis} introduced by \citet{olson_economictheoryalliances_1966} argued that dominant states will end up making the largest contributions because smaller states can simply free ride while continuing to garner the benefits of the alliance relationship writ large. These dominant states, with larger economies and militaries, end up paying a disproportionate burden to secure goods even when the public benefits of those goods are reaped by states that made little contribution themselves. The \textit{balance of threat hypothesis} argues that state contributions should be proportional to the gravity of the threat an issue presents to a state. When faced with a larger threat, a state will contribute more to an alliance coalition that they anticipate mitigating that threat \citep{walt_originsalliance_1987, sandler_natoburdensharing_2014}. The \textit{alliance dependence hypothesis} argues that states in an alliance must balance two competing fears; the fear of abandonment and the fear of entrapment \citep{snyder_securitydilemmaalliance_1984}. Problematically, reducing one of these risks necessitates an increase in the risk of the other. Allied support is thus explained by how a state feels about these relative risks; a states will contribute to an alliance when the fear of abandonment exceeds the fear of entrapment. States that most fear abandonment will be those that are most dependent on the other partner in the alliance meaning the military and economic payoffs of the alliance relationship would be difficult to replace. This theory has been expanded by scholars who note that ``alliance value" explains contributions by states who believe they can leverage their allies partner in their favor \citep{davidson_neoclassicalrealistexplanation_2011}. The \textit{domestic hypotheses} of alliance contributions take multiple forms \citep{ashraf_politicscoalitionburdensharing_2011}. Theories of state autonomy and domestic society predict that leaders that can insulate themselves from external constraints on their decision-making about alliance contributions are consequently able to do so even when these leaders' preferences regarding contributions differ from those of the public. Theories of bureaucratic politics instead examine the relationship within the government. Bureaucratic decision-making requires negotiations and bargaining among relevant actors and as such state contributions are the outcome of these bargaining decisions and the the environment shaping the bargaining framework.
+
+	Other literature on state contributions to joint efforts have examined topics like UN peacekeeping. Here, research has found that states that are more centrally located within the international network as measured by policy preferences will contribute the most troops to that peacekeeping mission because they gain private benefits from fighting alongside like-minded states \citep{dorussen_networkedinternationalpolitics_2016}. While theoretically important, these findings do not explain the costliness of a state's contribution nor whether that contribution was used as a signal to improve a state's ties with other actors in the network. Their network position is assumed as a static factor explaining the level of contribution when in reality it is not constant and a position that states want to actively manipulate. The costliness of UN peacekeeping contributions as a signal is harder to measure considering the risk of casualties and collateral damage is lower and domestic publics are less attuned to their state's participation in UN peacekeeping operations that active military conflicts.
 	
-	Those that want to win
-	
-	Formal obligation from alliance conditions
-	
-	Assumes countries that fight together are already predisposed to have aligned interests. Doesn't look at how fighting together can alter the alignment of interests.
-	
-	Some work has looked at related areas like UN peacekeeping, we apply it in a different context where its easier to separate formal obligation from wanting to signal closer friendships, its easier to identify the central actor, and the costs are higher
+	While most of the recent research on contributions to coalition warfare has focused on explaining the magnitude of state contributions, the foundational literature argued that support for all four theories was empirically observed because they explained different phenomena. External pressures like collective action, the balance of threat, and alliance dependence explain \textit{whether} a state contributes to coalition warfare but \textit{how} that state contributes is better explained by internal constraints \citep{bennett_burdensharingpersiangulf_1994}. The problem is how previous work has measured the size of a state's contribution. Almost all prior analysis has measured a state's contribution in absolute terms; the number of troops, financial contributions, or equipment sent a particular operation. For theories interested in explaining who contribute the most this measure makes sense since absolute terms describe the highest contributors. But what this does not do is describe the internal cost a state faces to making a contribution. It is less costly for the United States to send 1,000 forces into a conflict theater than for Poland to do the same. The former has a substantially larger military force and thus experiences a lower internal cost in terms of the burden such a contribution places on its military forces and the zero-sum trade-off of this contribution relative to other security needs.	
+
+	Second problem is how they think about alliances. Temporally indistinct and oriented towards continuity, not change. Assumes countries that fight together are already predisposed to have aligned interests. Doesn't look at how fighting together can alter the alignment of interests.
 
 \section{Theory of Signaling via Coalition Contributions}
-	Nature of military contribution to conflict theater is predicted by a nation?s location in security community because that determines its primary international objective
+	We hope to add to the alliance explanation by arguing that it's not your closest allies who contribute the most, but it's those that want to be closer allies, relatively speaking, that contribute the most.
+		
+	When looking at contributions can't just look at absolute amount, but about the costliness of their contribution to them. Not true that a troop is a troop.
 	
-	Central vs peripheral
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.6\textwidth]{contribution_pyramid.png}
-			\caption{Theory of Coalition Warfare Contributions}
-			\label{fig:theory}
-		\end{figure}			
+	\subsection{Benefits of a Closer Relationship}
+		The primary benefit a state gets from an alliance are its security benefits 
 
-\section{Research Design}
+		However, the security benefits of an alliance do not precisely map onto the security benefits of joining a wartime coalition. The former is an example of a public good; the benefits of the alliance can be reaped even if a participant in the alliance free rides \citep{olson_economictheoryalliances_1966}. During wartime coalitions, however, there are more clear private benefits to states from participating in that coalition. Advocates of the balance of threat perspective point to private incentives actors have to ensure that the aggregate contributions to defense are sufficient to deal with the threat \citep{bennett_friendsneedburden_1997a, baltrusaitis_coalitionpoliticsiraq_2010, davidson_neoclassicalrealistexplanation_2011}.
+		
+		Besides security, there are other reasons state seek and maintain alliances with other states. There are domestic benefits to establishing yourself as a closer ally with a powerful country as was witnessed with Egypt in the 1960's \citep{barnett_domesticsourcesalliances_1991} and the United Kingdom during the Iraq War \citep{davidson_americaallieswar_2011}. In these cases, political leaders who fear domestic opposition from other government actors like bureaucrats or non-partisans or from non-government actors like voters or interest groups may use alliances with other states to demonstrate competent policymaking.
+
+	\subsection{Signaling a Desire for a Closer Relationship}
+		A state may thus seek to signal to a powerful state that it is interested in a closer relationship by sending a costly signal of a disproportionate contribution of forces to a conflict the power actor is leading. Because the value of the signal is determined by its cost, not by its effect, it does not matter if the signaling state sends forces that can materially influence the outcome of the conflict. It only matters that the signal is interpreted as one that was costly for the sender irrespective of its effects. In most cases, the powerful state not only does not need support from smaller state in order to win the conflict, but may actually want to maintain control of the forces that will determine the conflict outcome. As such, smaller states do not want to make contributions that are too influential in the conflict's outcome because of the risk of intruding upon the powerful state's decision-making. Importantly, this differs from other perspectives like \citet{bennett_burdensharingpersiangulf_1994} since the US is not exercising leverage over smaller states to induce their contributions, instead the momentum comes from the smaller states whose contribution does more to serve their interests than the interests of the powerful state.
+		
+		States get private good benefits from coalition war-fighting. For some states, that private good is a desirable war outcome.  For others, the private good to be gained from coalition war-fighting is improving the quality of your relational tie with the central actors leading that conflict. This tie is most improved when a state's contribution to the coalition effort is a costly signal of their commitment to the conflict which happens when they have over-contributed relative to the contribution that would be expected from a state with their military capacity.
+
+		\begin{figure}[H]
+		\centering
+			\begin{tikzpicture}
+			% Graph axes
+			\draw[thick,<->] (0,5) node[above]{Cost of Contribution} -- (0,0) -- (8,0) node[right]{Relationship Tie};
+			
+			% Contribution Curve
+			\draw[thick] (0,0)..controls (5,5) ..(8,2.5);
+			
+			% Desired Relationship Tie
+			\draw[dashed] (4,0) -- (4,3.5);
+			\draw[dashed] (6.5,0) -- (6.5,3.5);
+			\draw[decorate,decoration={brace,mirror,raise=5pt}, thick]
+			(4,0) -- (6.5,0);
+			\node at (5.25,-0.7) {Desire Improved Tie};			
+			\end{tikzpicture}
+		\caption{Theory of State Contributions to Wartime Coalitions}
+		\label{fig:theory}
+		\end{figure}
+		
+	\subsection{Hypothesis}
+		Nature of military contribution to conflict theater is predicted by a nation's location in security community because that determines its primary international objective		
+
+\section{Research Design and Data}
 	Unit of analysis: State (2001-2005)
 	
 	DV: Percent of national military personnel fighting in Afghanistan War
@@ -101,7 +139,14 @@ to avoid this distinction, instead focusing on: the formation of alliances, how 
 	
 	Model: pact + ideal point + pact*ideal point + eigen + cinc + log(distance)
 
-\section{Results}
+\section{Discussion}
+
+	***Explanation of findings***
+		
+	Our findings runs counter to that expected by theories about the balance of threats. For the balance of threat hypothesis, the states with the highest contributions are those that are most concerned about the threat the opposing state presents to their security. Yet, when contributions are measured as internal costs relative to the contribution a state could have made, the highest contributions are from states that appear to be opting into a war in which they have no material stake. Denmark, New Zealand, and Romania, 3 of the top 4 contributors to ISAF by our measure, are not the states that are most concerned about the threat that the Taliban and Al Qaeda posed to their national security.
+		
+	Previous theories described under the rubric of the alliance hypothesis also fail to explain this findings. For previous theories, ally support is expected when you can leverage your allies power in your favor and is thus a measure of closeness \citep{davidson_neoclassicalrealistexplanation_2011}. This expects states that are the closest allies with the United States to be the largest contributors to US war efforts. Yet the relationship we see appears non-linear. These states do not over-contribute because the United States is their best protector or because they think they have the ability to influence the United States through their international clout as \citet{ringsmose_natoburdensharingredux_2010} finds. Rather, it is the states that want the United States to be their best protector or that \textit{want} the ability to influence international relations with the United States that are most likely to over-contribute. Thus, desire for stronger ties and the expectation that over-contribution will positively signal that desire explains our findings in a way that differs from previous theories.
+
 	There is some empirical evidence that this had a positive outcome for New Zealand. They now participate in more joint military training exercises with NATO. ``...good opportunity for the New Zealand Defence Force to test its interoperability with contributing NATO nations. This deployment is an example of New Zealand's commitment to playing our part in supporting NATO in areas of common interest." -- Jonathan Coleman, New Zealand Defence Minister (2014)
 
 \section{Conclusion}
@@ -112,6 +157,6 @@ to avoid this distinction, instead focusing on: the formation of alliances, how 
 	``In the Libya operation, Norway and Denmark, have provided 12 percent of allied strike aircraft yet have struck about one third of the targets...These countries have, with their constrained resources, found ways to do the training, buy the equipment, and field the platforms necessary to make a credible military contribution." -- US Defence Secretary Robert Gates (June 2011)
 
 \bibliographystyle{apsr}
-\bibliography{isaf_alliances.bib}
+\bibliography{isaf_alliances}
 
 \end{document}
