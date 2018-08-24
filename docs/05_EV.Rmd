@@ -79,30 +79,69 @@ ally <- dplyr::select(allies, c(ccode1, state_name1, ccode2, state_name2, year,
 ally_nets <- list()
 
 ## General nodel-level attributes
-ccodes <- rio::import('inst/extdata/ccodes.csv')
-colnames(ccodes) <- c("stateabb", "ccode", "statenme")
-nodes <- dplyr::select(ccodes, c(ccode, stateabb))
+# ccodes <- rio::import('inst/extdata/ccodes.csv')
+# colnames(ccodes) <- c("stateabb", "ccode", "statenme")
+# nodes <- dplyr::select(ccodes, c(ccode, stateabb))
 
+# Let's import state-year membership so that we can build the population of countries every year.
+
+year_states <- rio::import('inst/extdata/states2016.csv')
+year_states <- dplyr::select(year_states, c(stateabb, ccode, statenme, styear, endyear))
+
+#######################################################
+## Necessary changes to build full alliance networks ##
+#######################################################
+
+## Have to extend HSG from 1867 to 1871 to allow for alliance between Germany and HSG in 1868-1871
+year_states[66,5] <- 1871
+## Costa Rica alliances start in 1907
+year_states[25,4] <- 1907
+## Czechoslovakia has an alliance with Russia from 1940-1944 but not in state member list
+year_states[74,5] <- 1944
+## 652, 660, 663 -- Syria, Lebanon, Jordan start at 1945
+year_states[183,4] <- 1945
+year_states[185,4] <- 1945
+year_states[186,4] <- 1945
+## Japan enters 1951 with US alliance
+year_states[210,4] <- 1951
+## 616, 696: Tunisia and UAE enter alliances at 1953,
+year_states[174,4] <- 1953
+year_states[195,4] <- 1953
+## 260: German Federal Republic 1954
+year_states[60,4] <- 1954
+## 625: Sudan 1955
+year_states[176,4] <- 1954
+## 652: Syria alliances in 1959+1960
+year_states[183,5] <- 1960
+## 522 Djibouti enters alliances at 1975
+year_states[152,4] <- 1975
+## 60 St. Kitts and Nevis enter 1981
+year_states[18,4] <- 1981
+## 316, 317: Czech Republic and Slovakia start alliances 1992
+year_states[76,4] <- 1992
+year_states[77,4] <- 1992
 
 for(i in 1816:2012){
     ## Thanks to Skyler Cranmer for much of this code.
     temp <- dplyr::filter(ally, year == i)
+    states <- dplyr::filter(year_states, i >= styear & i <= endyear)
+    states <- dplyr::select(states, c(stateabb, ccode))
 
     ## Edgelist
     state1 <- dplyr::select(temp, c(ccode1))
-    state1 <- dplyr::left_join(state1, nodes, by = c("ccode1" = "ccode"))
+    state1 <- dplyr::left_join(state1, states, by = c("ccode1" = "ccode"))
     colnames(state1) <- c("ccode1", "stateabb1")
 
     state2 <- dplyr::select(temp, c(ccode2))
-    state2 <- dplyr::left_join(state2, nodes, by = c("ccode2" = "ccode"))
+    state2 <- dplyr::left_join(state2, states, by = c("ccode2" = "ccode"))
     colnames(state2) <- c("ccode2", "stateabb2")
 
     edgelist <- dplyr::tibble(state1$stateabb1, state2$stateabb2)
     colnames(edgelist) <- c("V1", "V2")
 
     ## Vertices
-    vertices <- unique(c(state1$stateabb1, state2$stateabb2))
-    allyV <- dplyr::filter(nodes, stateabb %in% vertices)
+    vertices <- unique(states$stateabb)
+    allyV <- dplyr::filter(states, stateabb %in% vertices)
 
     ## Number of vertices
     n <- length(vertices)
@@ -111,14 +150,17 @@ for(i in 1816:2012){
     allynet <- network::network.initialize(n, dir = FALSE)
 
     ## Set vertex names
-    network::network.vertex.names(allynet) <- allyV$stateabb
+    network::network.vertex.names(allynet) <- vertices
+
+    ## To check this worked: https://www.rdocumentation.org/packages/network/versions/1.13.0/topics/attribute.methods
+    ## network::get.vertex.attribute(allynet, "vertex.names")
 
     ## Add in edges
     ## Note, edgelist must match vertex labels
     allynet[as.matrix(edgelist)]  <- 1
 
     ## Set country code as an attribute
-    set.vertex.attribute(x=allynet, # Network in which to store
+    network::set.vertex.attribute(x=allynet, # Network in which to store
             "ccode",                # What to name the attribute
             allyV$ccode)            # Values to put in
 
@@ -140,16 +182,8 @@ rlist::list.save(isaf_alliance_nets, file = "data/alliance_networks.RData")
 We can now calculate statistics for a node's network position each year and input them into the isaf dataset.
 
 ```{R}
-test <- sna::evcent(isaf_alliance_nets[[1]])
-## What are the states?
-get.vertex.attribute(isaf_alliance_nets[[1]], "vertex.names")
-
-nettest <- intergraph::asIgraph(isaf_alliance_nets[[1]])
-test2 <- igraph::transitivity(nettest,type="local")
-## NaNs are those with no closed triples.
 
 ## create an ongoing tibble (append year after year) with each measure and ccode
-
 netstats <- dplyr::tibble(ccode = integer(),
                           eigen = numeric(),
                           clustercoef = numeric(),
