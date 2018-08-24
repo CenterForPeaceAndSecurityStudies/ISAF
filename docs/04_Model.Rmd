@@ -1,11 +1,63 @@
 ---
-title: Building the PolNet Dataset
+title: APSA Model Building
 author: Gannon and Kent
-output:
-  html_document:
-    theme: united
-    toc: true
+output: html_document
 ---
+
+# Steps
+
+1. Load ISAF Data
+2. Descriptive statistics
+3. Models
+  3a. Why contribute amount of troops?
+  3b. Does it pay off?
+
+# Data loading
+
+```{R}
+isaf <- rio::import('data/iiss_afghan_complete.rds')
+
+## Remove afghanistan because it is not a realistic self-contributor
+isaf <- dplyr::filter(isaf, country != "Afghanistan")
+## Only focus on years 2001-2005
+isaf <- dplyr::filter(isaf, year <= 2005)
+```
+
+## Descriptive statistics
+
+```{R}
+```
+
+## Model
+
+Issues to think about: how to deal with NAs in network statistics -- those not in the alliance network? Also, how to deal with irrelevant countries? I.e. those that are not realistic potential partners? Political relevance or distance do not seem realistic, because transportation for troops is not that big of a barrier. Maybe we fit a two-stage model? First, those who are expected to contribute and then second, the amount of troops contributed by those who actually did contribute?
+
+
+```{R}
+form1 <- as.formula(troops_afghan_ratio ~ abs_ideal_diff + degree + abs_ideal_diff*degree)
+m1 <- glm(form1, data= isaf)
+summary(m1)
+interplot::interplot(m1, var1 = 'abs_ideal_diff', var2 = 'degree')
+## Good start -- the further a country is from the US in terms of ideal point, then the less
+## they contribute. But this relationship is less severe the fewer alliance partners a
+## country has.
+
+form2 <- as.formula(troops_afghan_ratio ~ abs_ideal_diff + eigen + abs_ideal_diff*eigen)
+m2 <- glm(form2, data= isaf)
+summary(m2)
+interplot::interplot(m2, var1 = 'abs_ideal_diff', var2 = 'eigen')
+## Same result with eigenvector centrality and degree
+
+## How correlated are they?
+cor(isaf$degree, isaf$eigen, use = "complete.obs")
+## Highly, so we don't want to include in the same model.
+```
+
+How to structure model?
+
+```{R}
+ggplot(data.frame(x=c(-4, 4)), aes(x)) + stat_function(fun = function(x)-x^2)
+```
 
 ## Steps
 

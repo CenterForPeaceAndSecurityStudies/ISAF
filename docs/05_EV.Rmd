@@ -63,6 +63,152 @@ kinne <- rio::import('inst/extdata/kinne_defense_cooperation_agreements/kinne_dc
 isaf <- dplyr::left_join(isaf, kinne)
 ```
 
+# Network measures
+
+Let's also build the alliance network for each year so that we can calculate statistics for network position. Note, it is OK that this only includes states with an alliance. Any state not in the alliance network will be categorized as an NA for network statistics.
+
+
+```{R}
+allies <- rio::import('inst/extdata/alliance_v4.1_by_dyad_yearly.csv')
+
+## All forms of alliances, not just defense
+ally <- dplyr::select(allies, c(ccode1, state_name1, ccode2, state_name2, year,
+                                defense, neutrality, nonaggression, entente))
+
+## Create a list with spots for each year
+ally_nets <- list()
+
+## General nodel-level attributes
+# ccodes <- rio::import('inst/extdata/ccodes.csv')
+# colnames(ccodes) <- c("stateabb", "ccode", "statenme")
+# nodes <- dplyr::select(ccodes, c(ccode, stateabb))
+
+# Let's import state-year membership so that we can build the population of countries every year.
+
+year_states <- rio::import('inst/extdata/states2016.csv')
+year_states <- dplyr::select(year_states, c(stateabb, ccode, statenme, styear, endyear))
+
+#######################################################
+## Necessary changes to build full alliance networks ##
+#######################################################
+
+## Have to extend HSG from 1867 to 1871 to allow for alliance between Germany and HSG in 1868-1871
+year_states[66,5] <- 1871
+## Costa Rica alliances start in 1907
+year_states[25,4] <- 1907
+## Czechoslovakia has an alliance with Russia from 1940-1944 but not in state member list
+year_states[74,5] <- 1944
+## 652, 660, 663 -- Syria, Lebanon, Jordan start at 1945
+year_states[183,4] <- 1945
+year_states[185,4] <- 1945
+year_states[186,4] <- 1945
+## Japan enters 1951 with US alliance
+year_states[210,4] <- 1951
+## 616, 696: Tunisia and UAE enter alliances at 1953,
+year_states[174,4] <- 1953
+year_states[195,4] <- 1953
+## 260: German Federal Republic 1954
+year_states[60,4] <- 1954
+## 625: Sudan 1955
+year_states[176,4] <- 1954
+## 652: Syria alliances in 1959+1960
+year_states[183,5] <- 1960
+## 522 Djibouti enters alliances at 1975
+year_states[152,4] <- 1975
+## 60 St. Kitts and Nevis enter 1981
+year_states[18,4] <- 1981
+## 316, 317: Czech Republic and Slovakia start alliances 1992
+year_states[76,4] <- 1992
+year_states[77,4] <- 1992
+
+for(i in 1816:2012){
+    ## Thanks to Skyler Cranmer for much of this code.
+    temp <- dplyr::filter(ally, year == i)
+    states <- dplyr::filter(year_states, i >= styear & i <= endyear)
+    states <- dplyr::select(states, c(stateabb, ccode))
+
+    ## Edgelist
+    state1 <- dplyr::select(temp, c(ccode1))
+    state1 <- dplyr::left_join(state1, states, by = c("ccode1" = "ccode"))
+    colnames(state1) <- c("ccode1", "stateabb1")
+
+    state2 <- dplyr::select(temp, c(ccode2))
+    state2 <- dplyr::left_join(state2, states, by = c("ccode2" = "ccode"))
+    colnames(state2) <- c("ccode2", "stateabb2")
+
+    edgelist <- dplyr::tibble(state1$stateabb1, state2$stateabb2)
+    colnames(edgelist) <- c("V1", "V2")
+
+    ## Vertices
+    vertices <- unique(states$stateabb)
+    allyV <- dplyr::filter(states, stateabb %in% vertices)
+
+    ## Number of vertices
+    n <- length(vertices)
+
+    ## Initialize the network
+    allynet <- network::network.initialize(n, dir = FALSE)
+
+    ## Set vertex names
+    network::network.vertex.names(allynet) <- vertices
+
+    ## To check this worked: https://www.rdocumentation.org/packages/network/versions/1.13.0/topics/attribute.methods
+    ## network::get.vertex.attribute(allynet, "vertex.names")
+
+    ## Add in edges
+    ## Note, edgelist must match vertex labels
+    allynet[as.matrix(edgelist)]  <- 1
+
+    ## Set country code as an attribute
+    network::set.vertex.attribute(x=allynet, # Network in which to store
+            "ccode",                # What to name the attribute
+            allyV$ccode)            # Values to put in
+
+    ## list store
+    iteration <- i - 1815
+    ally_nets[[iteration]] <- allynet
+}
+```
+
+For the purposes of this project, let's just save the 2001-2012 networks. Note, to load correctly, one needs to import the network package first.
+
+```{R}
+isaf_alliance_nets <- ally_nets[186:197]
+rlist::list.save(isaf_alliance_nets, file = "data/alliance_networks.RData")
+```
+
+## Network statistics
+
+We can now calculate statistics for a node's network position each year and input them into the isaf dataset.
+
+```{R}
+
+## create an ongoing tibble (append year after year) with each measure and ccode
+netstats <- dplyr::tibble(ccode = integer(),
+                          eigen = numeric(),
+                          clustercoef = numeric(),
+                          degree = integer(),
+                          year = integer())
+
+for(i in 1:length(isaf_alliance_nets)){
+    eigen <- sna::evcent(isaf_alliance_nets[[i]])
+    ccode <- network::get.vertex.attribute(
+                isaf_alliance_nets[[i]], "ccode")
+    graph <- intergraph::asIgraph(isaf_alliance_nets[[i]])
+    clustercoef <- igraph::transitivity(graph, type="local")
+    degree <- igraph::degree(graph)
+    netmeasures <- dplyr::tibble(ccode, eigen, clustercoef, degree)
+    netmeasures$year <- i + 2000
+    netstats <- rbind(netstats, netmeasures)
+}
+```
+
+Last, we merge the network stats with isaf. Note we can calculate any network statistic we want at this point and merge on easily.
+
+```{R}
+isaf <- dplyr::left_join(isaf, netstats)
+```
+
 # DV
 
 Let's import the iiss data about troop levels in Afghanistan.
@@ -89,18 +235,19 @@ Last, let's clean everything up.
 colnames(final_data)
 
 final_data <- dplyr::select(final_data, -c(statenme))
-final_data <- dplyr::select(final_data, c(year, country, stateabb, ccode, troops_total,
-        troops_afghan_total, troops_afghan_oef, troops_afghan_isaf, troops_afghan_unama,
-        troops_afghan_ratio, milex, milper, irst, pec, tpop, upop, cinc, idealpoint,
-        pctagreeus, us_un_vote_sim, un_particip, sec_st, pres, sec_only, pres_only,
-        ambassador, us_mil_aid, us_ally, us_def_pact, us_trade, dca, dca_ongoing,
-        abs_ideal_diff, arms_imports, NATO))
+final_data <- dplyr::select(final_data, c(year, country, stateabb, ccode,
+        troops_total, troops_afghan_total, troops_afghan_oef, troops_afghan_isaf,
+        troops_afghan_unama, troops_afghan_ratio, milex, milper, irst, pec, tpop,
+        upop, cinc, idealpoint, pctagreeus, us_un_vote_sim, un_particip, sec_st,
+        pres, sec_only, pres_only, ambassador, us_mil_aid, us_ally, us_def_pact,
+        us_trade, dca, dca_ongoing, abs_ideal_diff, arms_imports, NATO,
+        eigen, clustercoef, degree))
 ```
 
 # Save files
 
 ```{R}
-iiss_rhs <- dplyr::select(isaf, -c(troops_total, troops_afghan_total,
+iiss_rhs <- dplyr::select(final_data, -c(troops_total, troops_afghan_total,
                         troops_afghan_oef, troops_afghan_isaf,
                         troops_afghan_unama, troops_afghan_ratio))
 
@@ -109,3 +256,5 @@ rio::export(iiss_rhs, 'data/iiss_afghan_rhs.rds')
 ## merged complete data
 rio::export(final_data, 'data/iiss_afghan_complete.rds')
 ```
+
+

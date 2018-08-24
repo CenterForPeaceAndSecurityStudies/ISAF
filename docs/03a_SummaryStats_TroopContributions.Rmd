@@ -150,6 +150,8 @@ do.call(rworldmap::addMapLegendBoxes,
 ```
 
 ```{r}
+library(grid)
+
 ### Put plots side-by-side
 par(mfrow=c(1,2))
 par(mar = c(0,0,0,0))
