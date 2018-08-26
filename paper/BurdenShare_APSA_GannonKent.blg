@@ -1,3 +1,48 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: BurdenShare_APSA_GannonKent.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: BurdenShare_APSA_GannonKent.aux
 The style file: apsr.bst
 Database file #1: isaf_alliances.bib
+Warning--I didn't find a database entry for "dorussen_networkedinternationalpolitics_2016"
+You've used 16 entries,
+            2874 wiz_defined-function locations,
+            734 strings with 7564 characters,
+and the built_in function-call counts, 56575 in all, are:
+= -- 9204
+> -- 615
+< -- 0
++ -- 4256
+- -- 225
+* -- 4684
+:= -- 11542
+add.period$ -- 66
+call.type$ -- 16
+change.case$ -- 211
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 251
+empty$ -- 519
+format.name$ -- 243
+if$ -- 10161
+int.to.chr$ -- 6
+int.to.str$ -- 0
+missing$ -- 20
+newline$ -- 76
+num.names$ -- 180
+pop$ -- 82
+preamble$ -- 1
+purify$ -- 240
+quote$ -- 0
+skip$ -- 197
+stack$ -- 0
+substring$ -- 12842
+swap$ -- 33
+text.length$ -- 224
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 0
+while$ -- 363
+width$ -- 0
+write$ -- 235
+(There was 1 warning)
