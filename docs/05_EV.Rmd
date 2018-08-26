@@ -188,6 +188,7 @@ netstats <- dplyr::tibble(ccode = integer(),
                           eigen = numeric(),
                           clustercoef = numeric(),
                           degree = integer(),
+                          sequiv = numeric(),
                           year = integer())
 
 for(i in 1:length(isaf_alliance_nets)){
@@ -197,7 +198,10 @@ for(i in 1:length(isaf_alliance_nets)){
     graph <- intergraph::asIgraph(isaf_alliance_nets[[i]])
     clustercoef <- igraph::transitivity(graph, type="local")
     degree <- igraph::degree(graph)
-    netmeasures <- dplyr::tibble(ccode, eigen, clustercoef, degree)
+    sequiv <- sna::sedist(isaf_alliance_nets[[i]]) ## lower is more equivalent
+    ## equivalence with US only
+    sequiv <- sequiv[,1]
+    netmeasures <- dplyr::tibble(ccode, eigen, clustercoef, degree, sequiv)
     netmeasures$year <- i + 2000
     netstats <- rbind(netstats, netmeasures)
 }
@@ -241,7 +245,7 @@ final_data <- dplyr::select(final_data, c(year, country, stateabb, ccode,
         upop, cinc, idealpoint, pctagreeus, us_un_vote_sim, un_particip, sec_st,
         pres, sec_only, pres_only, ambassador, us_mil_aid, us_ally, us_def_pact,
         us_trade, dca, dca_ongoing, abs_ideal_diff, arms_imports, NATO,
-        eigen, clustercoef, degree))
+        eigen, clustercoef, degree, sequiv))
 ```
 
 # Save files

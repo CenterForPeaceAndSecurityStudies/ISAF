@@ -16,459 +16,274 @@ output: html_document
 
 ```{R}
 isaf <- rio::import('data/iiss_afghan_complete.rds')
-
 ## Remove afghanistan because it is not a realistic self-contributor
-isaf <- dplyr::filter(isaf, country != "Afghanistan")
+## Remove US because paper is about relations with the US
+isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ## Only focus on years 2001-2005
 isaf <- dplyr::filter(isaf, year <= 2005)
+## Are there duplicates?? Yes, from building this dataset too many times?
+## Let's remove... We can fix later.
+isaf <- isaf[!duplicated(isaf[,1:2]),]
 ```
 
 ## Descriptive statistics
 
-```{R}
-```
-
-## Model
-
-Issues to think about: how to deal with NAs in network statistics -- those not in the alliance network? Also, how to deal with irrelevant countries? I.e. those that are not realistic potential partners? Political relevance or distance do not seem realistic, because transportation for troops is not that big of a barrier. Maybe we fit a two-stage model? First, those who are expected to contribute and then second, the amount of troops contributed by those who actually did contribute?
-
+First, let's take a look at our DV and how it varies across key variables:
 
 ```{R}
-form1 <- as.formula(troops_afghan_ratio ~ abs_ideal_diff + degree + abs_ideal_diff*degree)
-m1 <- glm(form1, data= isaf)
-summary(m1)
-interplot::interplot(m1, var1 = 'abs_ideal_diff', var2 = 'degree')
-## Good start -- the further a country is from the US in terms of ideal point, then the less
-## they contribute. But this relationship is less severe the fewer alliance partners a
-## country has.
+## points cluster by country, so fairly noisy
+ggplot(isaf, aes(x = degree, y = troops_afghan_ratio)) + geom_point() +
+      geom_text(aes(label=stateabb),hjust=0, vjust=0, size = 2)
 
-form2 <- as.formula(troops_afghan_ratio ~ abs_ideal_diff + eigen + abs_ideal_diff*eigen)
-m2 <- glm(form2, data= isaf)
-summary(m2)
-interplot::interplot(m2, var1 = 'abs_ideal_diff', var2 = 'eigen')
-## Same result with eigenvector centrality and degree
+## New dataset which averages across contributions and predictors
+countries <- unique(isaf$stateabb)
+isaf_avg <- dplyr::tibble(country = as.character(),
+                      avg_contr = as.numeric(),
+                      degree = as.integer(),
+                      ideal_point = as.numeric(),
+                      eigen = as.numeric(),
+                      sequiv = as.integer())
 
-## How correlated are they?
-cor(isaf$degree, isaf$eigen, use = "complete.obs")
-## Highly, so we don't want to include in the same model.
+## Loop to fill in average country contributions
+for(i in 1:length(countries)){
+  abb <- countries[i]
+  ## subset on country
+  temp <- dplyr::filter(isaf, stateabb == abb)
+  ## store country name
+  isaf_avg[i,1] <- as.character(abb)
+  ## average contr
+  isaf_avg[i,2] <- sum(temp$troops_afghan_ratio)/nrow(temp)
+  ## average degree
+  isaf_avg[i,3] <- sum(temp$degree)/nrow(temp)
+  ## average ideal_point
+  isaf_avg[i,4] <- sum(temp$abs_ideal_diff)/nrow(temp)
+  ## average eigenvector centrality
+  isaf_avg[i,5] <- sum(temp$eigen)/nrow(temp)
+  ## average structural equivalence
+  isaf_avg[i,6] <- sum(temp$sequiv)/nrow(temp)
+}
+
+## Better -- reverse x-axis because it measures distance in terms of structural equiv
+## That way, states are more similar to the US as we get further along the x-axis
+## ggplot does work well with ggplot::ggplot()
+require(ggplot2)
+ggplot(isaf_avg, aes(x = sequiv, y = avg_contr)) + geom_point() +
+      geom_text(aes(label=country),hjust=0, vjust=0, size = 2) +
+      geom_smooth()
+
+## Remove Canada for curvilinear plot, but not analysis
+isaf_avg_sub <- dplyr::filter(isaf_avg, country != "CAN")
+
+## Now our curvilinear plot without Canada
+## Remove non-contributor labels to avoid mess
+ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = country)) +
+      geom_point(size = 2) +
+      ggrepel::geom_text_repel(size = 3.5,
+                      segment.color = 'transparent',
+                      data = subset(isaf_avg_sub, avg_contr > 0)) +
+      geom_smooth(level = 0.95) + scale_x_reverse() + theme_classic() +
+      labs(title = "Average Troop Contributions by Structural Equivalence with the U.S.",
+          x = "Alliance Network Structural Equivalence with the U.S.",
+          y = "Average Ratio of Troops Contributed Relative to Total Troops")
+## Ok, we are off.
+
 ```
 
-How to structure model?
+# Model Estimation
+
+A polynomial equation does not fit the data well and GAMs introduce interpretation barriers that may not be necessary. An easy fix seems to be fitting two separate models, representing two steps:
+1) who contributes at all?
+2) among contributors, what predicts the log of contributions?
 
 ```{R}
-ggplot(data.frame(x=c(-4, 4)), aes(x)) + stat_function(fun = function(x)-x^2)
-```
-
-## Steps
-
-1. Build dataset of all states except for Afghanistan
-2. Add distance to Afghanistan variable
-3. Add military pact with US variable
-4. Add military pact with UK variable
-5. Add military component of CINC score
-6. Add centrality score
-7. Calculate difference in centrality score between state and US
-8. Calculate difference in centrality score between state and UK
-
-## Compile States
-
-First, I've generated a template dataset for all dyads from 2001 to 2008. I used NewGene for this and requested data up through 2014, but it cut us short for some reason. For the purposes of PolNet this is fine. But we may want to get data up to 2014 for the next round.
-
-This already comes with CINC scores, CINC components, and distance.
-
-```{R message = FALSE}
-require(readr)
-require(dplyr)
-require(haven)
-start <- read_csv("isaf_start.csv")
-alliances <- read_csv("alliance_v4.1_by_dyad_yearly.csv")
-```
-
-Now, let's get all Afghanistan dyads (for distance) and turn into monadic. This way we build in distance to Afghanistan. And we keep the CINC components for the non-Afghanistan state.
-
-**Filtering to just include Afghanistan dyads (for distance) drops us down to 2001-2006.**
-
-```{R, eval = FALSE}
-isaf <- filter(start, country1 == "Afghanistan" | country2 == "Afghanistan")
-
-## Afghanistan as country 1
-isaf1 <- filter(isaf, country1 == "Afghanistan") %>%
-        select(-c(ccode1, cap_1, milper_1, milex_1, tpop_1, country1, alliance)) %>%
-        select(c(country2, ccode2, year, cap_2, milper_2, milex_2, tpop_2, contig, distance))
-
-colnames(isaf1) <- c("name", "ccode",  "year", "cinc", "milper", "milex", "tpop", "contig", "distance")
-
-## Afghanistan as country 2
-isaf2 <- filter(isaf, country2 == "Afghanistan") %>%
-        select(-c(ccode2, cap_2, milper_2, milex_2, tpop_2, country2, alliance)) %>%
-        select(c(country1, ccode1, year, cap_1, milper_1, milex_1, tpop_1, contig, distance))
-
-colnames(isaf2) <- c("name", "ccode", "year", "cinc", "milper", "milex", "tpop", "contig", "distance")
-
-## Now merge
-isaf <- rbind(isaf1, isaf2)
-
-## Sort alphabetically
-isaf <- arrange(isaf, name)
-
-
-alliances <- filter(alliances, year >= 2001)
-```
-
-## US or UK Alliance?
-
-```{R eval = FALSE}
-## empty variable for alliance with US or UK
-isaf$usuk <- 0
-
+## Who contributes at all?
+isaf$contributor <- 0
 for(i in 1:nrow(isaf)){
-  country <- as.integer(isaf[i,2])
-  time <- as.integer(isaf[i,3])
-
-  ## select alliances with this country
-  temp <- filter(alliances, ccode1 == country | ccode2 == country) %>%
-    filter(state_name2 == "United States of America" | state_name2 == "United Kingdom" |
-           state_name1 == "United States of America" | state_name1 == "United Kingdom") %>%
-    filter(year == time)
-
-  ## any us or uk?
-  #temp <- filter(temp, state_name2 == "United States of America" | state_name2 == "United Kingdom")
-  ## In this year?
-  #temp <- filter(temp, year == time)
-
-  ## Any alliances with US or UK?
-  if(nrow(temp) > 0){
-    isaf[i,10] <- 1
-  }else{
-    isaf[i,10] <- 0
-  }
-}
-```
-
-## Foreign Policy Preferences Data
-
-```{R eval = FALSE}
-dw <- read_dta("dorussen_ward/PKO Ward_Dorussen_JPR16.dta")
-# Clean
-dw2 <- dw[,-c(48:246)]
-
-## Note, this has similarity scores for dyads if we want to go back
-
-## so let's get the eigen and ideal point for each
-
-isaf$ideal_point <- NA
-isaf$eigen <- NA
-
-for(i in 1:nrow(isaf)){
-  country <- as.integer(isaf[i,2])
-  time <- as.integer(isaf[i,3])
-
-  ## country A is peacekeeping location, so let's look at country B (potential sender)
-  temp <- filter(dw2, ccodeB == country) %>%
-    filter(year == time)
-
-  ## ideal point -- can just use first obs of temp
-  isaf[i,11] <- temp[1, 40]
-
-  ## eigen -- can just use first temp obs
-  isaf[i,12] <- temp[1, 39]
-}
-```
-
-### Distance from the US and UK?
-
-```{R, eval = FALSE}
-## US
-isaf$us_dist <- NA
-
-for(i in 1:nrow(isaf)){
-  ## get us ideal point for that year and get absolute distance
-  time <- as.integer(isaf[i,3])
-  ## get US ideal point
-  temp <- filter(isaf, year == time & name == "United States of America")
-  isaf[i,13] <- abs(isaf[i,11] - temp$ideal_point)
-}
-
-## UK
-isaf$uk_dist <- NA
-
-for(i in 1:nrow(isaf)){
-  ## get us ideal point for that year and get absolute distance
-  time <- as.integer(isaf[i,3])
-  ## get US ideal point
-  temp <- filter(isaf, year == time & name == "United Kingdom")
-  isaf[i,14] <- abs(isaf[i,11] - temp$ideal_point)
-}
-```
-
-## Save data
-
-```{R eval = FALSE}
-# Stata file
-write_dta(isaf, "isaf.dta")
-# csv
-write_csv(isaf, "isaf.csv")
-```
-
-
-## Add troops
-
-```{R, eval = FALSE}
-## If starting from here
-require(readr)
-require(haven)
-require(dplyr)
-
-isaf <- read_csv("isaf.csv")
-isaf <- filter(isaf, year == 2002) %>% select(-year)
-
-troops <- read_csv("dv_troops.csv") %>% select(-year)
-
-## common column name
-colnames(isaf) <- c("country", "ccode", "cinc", "milper", "milex", "tpop", "contig", "distance",
-                    "usuk", "ideal_point", "eigen", "us_dist", "uk_dist")
-
-## Why are there different country numbers? Once these are fixed we can merge.
-setdiff(troops$country, isaf$country)
-
-## Remove afghanistan from troops
-troops <- troops[-1,]
-
-## Antigua and Barbuda
-troops[4,1] <- isaf[5,1]
-
-## Ivory Coast
-troops[36,1] <- isaf[83,1]
-
-## Dem Rep of Congo
-troops[41,1] <- isaf[44,1]
-
-## Bosnia and Herzegovina
-troops[53,1] <- isaf[21,1]
-
-## DPRK
-troops[83,1] <- isaf[126,1]
-
-## South Korea
-troops[84,1] <- isaf[155,1]
-
-## Macedonia
-troops[95,1] <- isaf[101,1]
-
-## Palestine -- remove b/c no COW data?
-troops <- troops[-119,]
-
-## China
-troops[127,1] <- isaf[34,1]
-
-## Republic of Sepska Armed Forces -- remove b/c no COW data?
-troops <- troops[-128,]
-
-## Somalia
-troops[138,1] <- isaf[153,1]
-
-## Northern Cyprus -- partially recognized, no COW data
-troops <- troops[-154,]
-
-## United States
-troops[159,1] <- isaf[182,1]
-
-## Yugoslavia
-troops[165,1] <- isaf[189,1]
-
-## Sort
-troops <- arrange(troops, country)
-
-## Now to merge they need to be the same dimensions. Let's subset.
-
-isaf_sub <- filter(isaf, country %in% troops$country)
-
-## Two China data points, remove republic of china?
-## For getting the code ready, let's drop republic of china
-
-troops_final <- troops[-126,]
-
-## just merge and see what is missing?
-test <- merge(troops_final, isaf_sub, by = "country")
-
-## Ok -- good to go.
-write_csv(test, "polnet_final.csv")
-```
-
-Also, let's add NATO membership.
-
-```{R}
-isaf <- read_csv("polnet_final.csv")
-isaf$nato <- 0
-
-## Set up loop. If country is one of the members, then set to 1. i.e %in%
-members <- c("Belgium", "Canada", "Denmark", "France", "Iceland", "Italy", "Luxembourg",
-             "Netherlands", "Norway", "Portugal", "United Kingdom", "United States of America", "Greece", "Turkey", "Germany", "Spain", "Czech Republic",
-             "Hungary", "Poland")
-
-for(i in 1:nrow(isaf)){
-  if(isaf[i,1] %in% members){
-    isaf[i,19] <- 1
+  if(isaf[i,6] > 0){
+    isaf[i,40] <- 1
   }
 }
 
-write_csv(isaf, "polnet_final.csv")
-```
+##
+model1 <- glm(contributor ~ sequiv + abs_ideal_diff,
+              family = binomial(link = "logit"), data = isaf)
+summary(model1)
 
-## Models
+## Makes no difference in estimate, so let's use this for plotting easily
+model2 <- glm(contributor ~ sequiv,
+              family = binomial(link = "logit"), data = isaf)
+summary(model2)
 
-The right approach might be a two-part model. First, we model the decision to contribute according to one DGP. Then there is a process for amount contributed among those who send troops.
-
-
-**Also, the small contribution amounts make sense. In equilibrium countries that want to gain reputational points still want to free-ride to a degree. So the goal is to just contribute enough to stick out, but no more. So that condition still has relatively small contributions. This actually might be worth solving for in a game -- where we then check how equilibrium troop contributions vary across pact and ideological similarity.**
-
-```{R eval = TRUE, message = FALSE}
-require(readr)
-require(haven)
-require(dplyr)
-require(broom)
-isaf_final <- read_csv("polnet_final.csv")
-
-## Distance from US ideal point
-m1 <- glm(isaf_ratio ~ us_dist + usuk + us_dist*usuk,
-            data = isaf_final)
-tidy(m1)
-## Ok perfect, nato non-significant. But we see the alliance and ideology doing well.
-
-## zero-inflated negative binomial??
+## Predicted probability of committing troops by structural equivalence
+ggplot(isaf, aes(x = sequiv, y = contributor)) +
+  stat_smooth(method="glm", family=binomial,
+            formula=y ~ x,
+            alpha=0.2, size=2) +
+  scale_x_reverse() +
+  labs(x ="Alliance Network Structural Equivalence with the U.S.",
+  y ="Probability of Committing Troops",
+  title ="Probability of Committing Troops by Structural Equivalence with the U.S.") +
+  theme_classic()
 
 
-require(interplot)
-require(cowplot)
+## Model 2: How many troops do contributors provide?
+isaf_contributors <- dplyr::filter(isaf, troops_afghan_total > 0)
 
-## So ideological distance deters, but less so among those without a pact.
-## Cool that the first model shows this.
-interplot(m = m1, var1 = "us_dist", var2 = "usuk") + geom_line()
-interplot(m = m1, var1 = "usuk", var2 = "us_dist") + geom_line()
-## Ok... Further from US means less troops
-
-## Let's look at the distribution of the DV, should we transform?
-hist(isaf_final$isaf_ratio)
-
-## Stack exchange post:
-## https://stats.stackexchange.com/questions/1444/how-should-i-transform-non-negative-data-including-zeros#1630
-
-## Gravity model -- hegre(2008)
-## Cant log 0, so set to 1.
-
-for(i in 1:nrow(isaf_final)){
-  if(isaf_final[i,13] == 0){
-    isaf_final[i,13] <- 1
-  }
-}
-
-m3 <- glm(isaf_ratio ~ us_dist + usuk + us_dist*usuk + nato + cinc + log(distance),
-            data = isaf_final)
-tidy(m3)
-## see positive distance statistic because all contributors were European, American, Australia/NZ/ or SK.
+## Note logging contributions gives us a linear relationship
+## Make sure to transform for predicted contributions plots
+ggplot(isaf_contributors, aes(x = sequiv, y = log(troops_afghan_ratio))) +
+  geom_point() + geom_smooth(method="glm", family=gaussian,
+            formula=y ~ x,
+            alpha=0.2, size=2) +
+  scale_x_reverse() +
+  theme_classic()
 
 
-## Network centrality? -- Opposite direction
-m4 <- glm(isaf_ratio ~ eigen + nato, data = isaf_final)
-tidy(m4)
+model3 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff, data = isaf_contributors)
+broom::tidy(model3)
 
-## Network centrality with the gravity statistics
-m5 <- glm(isaf_ratio ~ eigen + cinc + log(distance), data = isaf_final)
-tidy(m5)
-## even stronger negative relationship
+model4 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff,
+                  index = c("year", "country"), data = isaf_contributors)
+summary(model4)
 
 
-```
+## With additional network statistics -- sequiv capture US similarity,
+## but clustercoef and degree capture extent to which a state is embedded in alliance network
+model5 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
+              clustercoef + degree, data = isaf_contributors)
+broom::tidy(model5)
 
-The eigenvector statistic may actually show that the states which are already popular have little to gain reputationally from troop contributions. This runs counter to D+W.
+## Fixed effects
+model6 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
+                  clustercoef + degree,
+                  index = c("year", "country"), data = isaf_contributors)
 
-
-### Visuals
-
-1. Coefplot with gravity model
-
-```{R}
 require(dotwhisker)
-dwplot(m1) + geom_vline(xintercept = 0, colour = "grey60", linetype = 2)
-
-finalmod <- glm(isaf_ratio ~ us_dist + usuk + usuk*us_dist + eigen + cinc + log(distance),
-               data = isaf_final)
-tidy(finalmod)
-
-plot1 <- dwplot(finalmod, dot_args = list(size = 1.05)) %>%
-    relabel_predictors(c(us_dist = "Ideal Point\nDistance",
-            usuk = "Military Pact",
-            eigen = "Eigenvector \nCentrality",
-            cinc = "CINC",
-            "log(distance)" = "Distance",
-            "us_dist:usuk" = "Pact*Ideal Point")) +
-    geom_vline(xintercept = 0,
-              colour = "black",linetype = 2, size = 1.25) +
-    ggtitle("Coefficient Estimates") +
-    theme_bw() + theme(text = element_text(size = 18), legend.position = "none")
-
-ggsave("coef.png", plot1)
-
+## Ideal point data inferences vary by model specification, but structural equiv does not...
+dwplot(list(model3, model4, model5, model6)) %>%
+                             relabel_predictors(c(sequiv = "Tie Differences",
+                                    abs_ideal_diff = "Ideal Point Difference",
+                                    clustercoef = "Embeddedness",
+                                    degree = "Degree")) +
+                  theme_bw() +
+                  labs(title =
+                  "Troop Contributions by U.S. Tie Strength and Network Centrality"
+                  ) +
+                  scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9", "#009E73"),
+                  labels = c("U.S. Tie Strength", "U.S. Tie Strength, FE",
+                  "U.S. Tie Strength and Network Centrality",
+                  "U.S. Tie Strength and Network Centrality, FE"))
 ```
 
-How to interpret? Being a NATO member has no reliable predictive power. But those in an alliance with the US or UK do contribute more than those not. However, as the interaction effect shows
-
-2. Interaction effect plot
+How best to measure 'tie strength'?
 
 ```{R}
-intermod <- glm(isaf_ratio ~ us_dist + usuk + us_dist*usuk,
-            data = isaf_final)
+## network statistics and troop contr
+ggplot(isaf, aes(x = clustercoef, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
 
-## Note that ideological distance is less of a deterrent among those without a pact.
-## In other words, though ideological similarity still matters, those without a pact are seeking to get one.
-## So they are willing to be more flexible.
-plot2 <- interplot(m = intermod, var1 = "usuk", var2 = "us_dist") +
-          xlab("Ideal Point Distance") +
-          ylab("Effect of Military Pact with US or UK") +
-          ggtitle("Interaction Effect: Ideal Points and Military Pacts") +
-          theme_bw() + theme(text = element_text(size = 16))
+ggplot(isaf, aes(x = degree, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
 
-ggsave("inter.png", plot2)
+ggplot(isaf, aes(x = eigen, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
+
+ggplot(isaf, aes(x = sequiv, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
+
+ggplot(isaf, aes(x = abs_ideal_diff, y = troops_afghan_ratio)) +
+    geom_point() +
+    geom_smooth() +
+    coord_cartesian(xlim = c(0,3))
+
+## create a variable that captures ideology and degree. Maybe degree/ideology.
+## That way the further the distance ideologically, the smaller the number?
+isaf$test <- isaf$degree/isaf$abs_ideal_diff
+
+ggplot(isaf, aes(x = test, y = isaf$troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
+
+## What about subsetting on contributors?
+isaf_sub <- dplyr::filter(isaf, troops_afghan_ratio > 0)
+isaf_sub$test <- isaf_sub$degree/isaf_sub$abs_ideal_diff
+ggplot(isaf_sub, aes(x = degree, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
+
+ggplot(isaf_sub, aes(x = abs_ideal_diff, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
+
+
+ggplot(isaf_sub, aes(x = test, y = troops_afghan_ratio)) +
+    geom_point() + geom_smooth()
 ```
 
-So what are the takeaways:
-
-1. Allies tend to contribute more than non-allies.
-
-2. The further state preferences are from the US, then the less they contribute.
-
-3. Non-allies are less sensitive to ideological distance than allies, because they can gain favor with the US.
-
-So this is the predicted difference in troop contributions for whether or not there is a military pact at each level of ideology. **Notice that when there is no ideological distance between the US and the potential contributor, having no military pact is associated with the highest predicted difference in troop contributions.** Admittedly, because we don't have that many data points (166), there are some model-dependent extrapolations occurring. But, this is what we had predicted based on theory alone, which strengthens the claim.
-
-3. Coefplot for eigenvector
-
-If we add a term for eigenvector centrality, it has little predictive power and points in an unexpected direction. In a bivariate regression with just eigenvector centrality, then it is statistically reliable but again in the opposite direction. So because this is seen as a US-led war and not a public good, the popular states have less need to curry additional favor.
-
-Moreover, the robust result holds -- those without a military pact and little ideological distance contribute the most.
+## Extra code -- delete after html_document
 
 ```{R}
-netmod <- glm(isaf_ratio ~ eigen + usuk + us_dist + usuk*us_dist + nato, data = isaf_final)
-tidy(netmod)
-dwplot(netmod) + geom_vline(xintercept = 0, colour = "grey60", linetype = 2)
+
+fit <- glm(troops_afghan_ratio ~ abs_ideal_diff + sequiv + I(sequiv^2), data = isaf)
+
+
+fit <- glm(avg_contr ~ ideal_point + sequiv + I(sequiv^2),
+            data = isaf_avg_sub)
+# fit <- glm(troops_afghan_ratio ~ abs_ideal_diff + sequiv, data = isaf)
+summary(fit)
+
+## predicted values, let's use fake data covering the range of sequiv 0:152
+prd <- data.frame(sequiv = seq(from = min(isaf_avg_sub$sequiv, na.rm = TRUE),
+                              to = max(isaf_avg_sub$sequiv, na.rm = TRUE),
+                              by = 0.5),
+                  ideal_point = mean(isaf_avg_sub$ideal_point, na.rm = TRUE))
+err <- predict(fit, newdata = prd, se.fit = TRUE)
+
+prd$lci <- err$fit - 1.96 * err$se.fit
+prd$fit <- err$fit
+prd$uci <- err$fit + 1.96 * err$se.fit
+
+
+ggplot(prd, aes(x = sequiv, y = fit)) +
+  theme_bw() +
+  geom_line() +
+  geom_smooth(aes(ymin = lci, ymax = uci), stat = "identity") +
+  geom_point(data = isaf_avg_sub, aes(x = sequiv, y = avg_contr)) +
+  scale_x_reverse()
+
+
+## One thought, what if we weighted sequiv by ideal point? I.e. mult by?
+## Because smaller structural eq distance means more similar and
+## smaller ideal dist is good, the smaller the product, then the closer.
+
+isaf_avg_sub$weighted_sim <- isaf_avg_sub$sequiv*isaf_avg_sub$ideal_point
+ggplot(isaf_avg_sub, aes(x = weighted_sim, y = avg_contr)) + geom_point() +
+      geom_text(aes(label=country),hjust=0, vjust=0, size = 4) +
+      geom_smooth() + scale_x_reverse()
+
+fit2 <- glm(avg_contr ~ weighted_sim + I(weighted_sim^2),
+            data = isaf_avg_sub)
+# fit <- glm(troops_afghan_ratio ~ abs_ideal_diff + sequiv, data = isaf)
+summary(fit2)
+
+## predicted values, let's use fake data covering the range of sequiv 0:152
+prd2 <- data.frame(weighted_sim = seq(from = min(isaf_avg_sub$weighted_sim, na.rm = TRUE),
+                              to = max(isaf_avg_sub$weighted_sim, na.rm = TRUE),
+                              by = 0.5))
+err2 <- predict(fit2, newdata = prd2, se.fit = TRUE)
+
+prd2$lci <- err2$fit - 1.96 * err2$se.fit
+prd2$fit <- err2$fit
+prd2$uci <- err2$fit + 1.96 * err2$se.fit
+
+
+ggplot(prd2, aes(x = weighted_sim, y = fit)) +
+  theme_bw() +
+  geom_line() +
+  geom_smooth(aes(ymin = lci, ymax = uci), stat = "identity") +
+  geom_point(data = isaf_avg_sub, aes(x = weighted_sim, y = avg_contr)) +
+  scale_x_reverse()
+
+## So we can see that the fit is funky with just a polynomial regression...
+## Instead we need something more flexible (gam)
+
+gam1 <- mgcv::gam(troops_afghan_ratio ~ s(sequiv) + s(abs_ideal_diff),
+                  method = "REML", data = isaf)
 ```
-
-
-### poster
-
-1a. glm for interaction effect
-1b. coefplot for interaction effect model
-1c. interplot
-2a. glm for network effect
-2b. coefplot for network effect
-
-## Next steps
-
-So we're just missing ideal point info for a few countries in Africa.
-
-One question that arises is that maybe we should compare two hypotheses:
-
-1. Gaining favor with the initiators. Here we just calculate ideal point difference from US and UK. This is not a networks hypothesis.
-2. Dorussen and Ward provision of public good. The more similar one's preferences are with other states, then the more one gains from safe commons (less terrorism). Here our key predictor is eigenvector centrality (where closeness with popular friends matters most). This is a networks hypothesis.
-
-Also, how much does the ability to project force matter for troops? It does for naval and air power, but with troops the most important barrier is transportation, which can be provided by other countries. One model with and one without force projection (gravity model)?
