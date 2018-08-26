@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  26 AUG 2018 00:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  26 AUG 2018 01:26
 entering extended mode
 **c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex
 (c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex
@@ -1415,13 +1415,14 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 10.51207pt on input line 75.
  [1
 
-{C:/Users/dnken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+{C:/Users/dnken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
+
+[5]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 106.
+(Font)              scaled to size 13.82408pt on input line 107.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 106.
- [4]
-[5] [6] (BurdenShare_APSA_GannonKent.bbl [7])
+(Font)              scaled to size 13.82408pt on input line 107.
+ [6] [7] [8] [9] (BurdenShare_APSA_GannonKent.bbl [10] [11])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 29.
 See the caption package documentation for explanation.
@@ -1429,25 +1430,25 @@ See the caption package documentation for explanation.
 \tf@thm=\write4
 \openout4 = `BurdenShare_APSA_GannonKent.thm'.
 
-[8] (BurdenShare_APSA_GannonKent.aux) ) 
+[12] (BurdenShare_APSA_GannonKent.aux) ) 
 Here is how much of TeX's memory you used:
  18825 strings out of 493333
  364011 string characters out of 3139194
- 389776 words of memory out of 3000000
+ 390776 words of memory out of 3000000
  21887 multiletter control sequences out of 15000+200000
  56222 words of font info for 107 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,8n,77p,2965b,688s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\dnken\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi643\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/f
-onts/enc/dvips/ly1/texnansi.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/bitstr
-ea/charter/bchb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter
-/bchr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchri8a.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr8t.pfb>
-Output written on BurdenShare_APSA_GannonKent.pdf (8 pages, 83914 bytes).
+ <C:\Users\dnken\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi643\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/
+fonts/enc/dvips/ly1/texnansi.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/bitst
+rea/charter/bchb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charte
+r/bchr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchri8a.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr8t.pfb>
+Output written on BurdenShare_APSA_GannonKent.pdf (12 pages, 86815 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

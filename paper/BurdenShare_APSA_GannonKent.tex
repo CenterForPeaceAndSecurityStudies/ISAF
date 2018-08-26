@@ -80,6 +80,7 @@ We shed light on this important but underexplored topic by developing a theoreti
 %Through a new data set of country-level military portfolios and contributions to conflicts, we measure the type of technologies and amount of forces that states have deployed in conflict theaters since the end of the Cold War. We then apply techniques for statistical inference in social networks to produce insights into the strategic considerations that influence decisions to provide various military capabilities to ongoing conflicts. This project (something about how it will help the lit and is relevant to current debates about alliance reliability amidst various stresses to the international order -- NATO, North Korea, China.)
 \end{abstract}
 
+\doublespacing
 \section{Introduction}
 	In 2001 the United States launched the war in Afghanistan with the goal of overthrowing the Taliban and dismantling Al Qaeda. But it did not do so alone; instead it led a coalition of 50 other states that fought alongside the United States until it formally ended in 2014. Not every state contributed equally. While the United States sent thousands of troops for the duration of the conflict, others contributed only a handful to fulfill their contractual alliance obligations under NATO. Yet some state had no formal alliance obligations and still sent troops in a manner that risked significant costs for that state. New Zealand lost almost a dozen troops in the Afghanistan conflict; a difficult thing for a state leader to justify to their public when the outcome of the conflict is largely immaterial to the state at hand.
 
@@ -139,16 +140,20 @@ We shed light on this important but underexplored topic by developing a theoreti
 		Nature of military contribution to conflict theater is predicted by a nation's location in security community because that determines its primary international objective
 
 \section{Research Design and Data}
-	We test our hypotheses through a novel dataset with information on country-level troop contributions to Afghanistan from 2001-2014. In addition we include information each country's total military size, in order to measure the magnitude of their contribution \textit{relative to their available troops}. To focus on the decision to commit troops, as opposed to
+	We test our hypotheses through a novel dataset with information on country-level troop contributions to Afghanistan from 2001-2014. In addition we include information regarding each country's total military size, in order to measure the magnitude of their contribution \textit{relative to their available troops}. To focus on the decision to commit troops, as opposed to a country's resilience to casualties -- which are not necessarily synonymous -- we focus on the opening stage of the war from 2001-2005. This data was gathered from the International Institue for Strategic Studies' (IISS) (cite) yearly ``Military Balance'' publication, which includes detailed information on every country's current military portfolio and commitments. Not only does the Military Balance include the number of troops each country contributed to the War in Afghanistan, it also contains information on the total number of troops in each country's military at the time.
+
+
+	Alongside this data on military contributions, we calculated relevant network statistics from the yearly alliance network. Also because of the potential benefits of signaling reliability to the United States, we compiled data on ideal point estimates relative to the United States in each year.
 
 	Unit of analysis: State (2001-2005)
 
-	DV: Percent of national military personnel fighting in Afghanistan War
+	Model 1: DV: Decision to commit any troops to conflict.
 
-	EV: Preference Alignment with US/UK + Military pact with US/UK
-	Controls: Military Pact, Ideal Point Distance from US,  Eigenvector Centrality in Preference Network, CINC score, Distance from Afghanistan
+	Model 2: DV: Percent of national military personnel fighting in Afghanistan War
 
-	Model: pact + ideal point + pact*ideal point + eigen + cinc + log(distance)
+	EV: Preference Alignment with US/UK + Alliance similarity
+
+	Controls: Network centrality (degree), network embeddedness (clustering coefficient), ideal point distance from the US, structural equivalence with the US.
 
 \section{Discussion}
 

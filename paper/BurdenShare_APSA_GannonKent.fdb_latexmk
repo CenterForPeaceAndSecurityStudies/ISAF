@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex BurdenShare_APSA_GannonKent"] 1535259256 "BurdenShare_APSA_GannonKent.aux" "BurdenShare_APSA_GannonKent.bbl" "BurdenShare_APSA_GannonKent" 1535259555
-  "BurdenShare_APSA_GannonKent.aux" 1535259555 3259 418ac276d9b2595f8a2ac0e399f0aac6 ""
+["bibtex BurdenShare_APSA_GannonKent"] 1535260981 "BurdenShare_APSA_GannonKent.aux" "BurdenShare_APSA_GannonKent.bbl" "BurdenShare_APSA_GannonKent" 1535261170
+  "BurdenShare_APSA_GannonKent.aux" 1535261170 3260 87831183974656862fbef366b9e22bd0 ""
   "C:/Program Files/MiKTeX 2.9/bibtex/bst/harvard/apsr.bst" 1233283740 25357 c990a86d1a60aa9370f76a9507b609ec ""
   "isaf_alliances.bib" 1535137621 1657197 64a88101167029d688844ac5812a5fcb ""
   (generated)
-  "BurdenShare_APSA_GannonKent.bbl"
   "BurdenShare_APSA_GannonKent.blg"
-["pdflatex"] 1535259553 "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" "BurdenShare_APSA_GannonKent.pdf" "BurdenShare_APSA_GannonKent" 1535259555
-  "BurdenShare_APSA_GannonKent.aux" 1535259555 3259 418ac276d9b2595f8a2ac0e399f0aac6 ""
-  "BurdenShare_APSA_GannonKent.bbl" 1535259257 3904 b856baaa6e85053ccf3bfc4773846d19 "bibtex BurdenShare_APSA_GannonKent"
-  "BurdenShare_APSA_GannonKent.tex" 1535259546 23507 5f31c796c76e7ac5c6a10e7d34ba46a1 ""
+  "BurdenShare_APSA_GannonKent.bbl"
+["pdflatex"] 1535261168 "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" "BurdenShare_APSA_GannonKent.pdf" "BurdenShare_APSA_GannonKent" 1535261170
+  "BurdenShare_APSA_GannonKent.aux" 1535261170 3260 87831183974656862fbef366b9e22bd0 ""
+  "BurdenShare_APSA_GannonKent.bbl" 1535260982 3904 b856baaa6e85053ccf3bfc4773846d19 "bibtex BurdenShare_APSA_GannonKent"
+  "BurdenShare_APSA_GannonKent.tex" 1535261166 24420 0585967791bfe13ac1cfc1e95f63d89f ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc" 1015804800 6938 5135be6a8802f13a7faf296d1959a1ab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
@@ -210,9 +210,9 @@
   "C:/Users/dnken/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi643/ectt1000.pk" 1533157814 21412 3ca152ed8e58f73c702a0ba0c3f966fd ""
   "C:/Users/dnken/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1489387781 3822843 fca2cdc9ea228658bd842e51a6435c1b ""
   "C:/Users/dnken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1527028513 322295 0955b218cb68d9fbc6281ce8ee0dc924 ""
-  "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" 1535259546 23507 5f31c796c76e7ac5c6a10e7d34ba46a1 ""
+  "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" 1535261166 24420 0585967791bfe13ac1cfc1e95f63d89f ""
   (generated)
-  "BurdenShare_APSA_GannonKent.thm"
   "BurdenShare_APSA_GannonKent.log"
-  "BurdenShare_APSA_GannonKent.pdf"
   "BurdenShare_APSA_GannonKent.aux"
+  "BurdenShare_APSA_GannonKent.thm"
+  "BurdenShare_APSA_GannonKent.pdf"
