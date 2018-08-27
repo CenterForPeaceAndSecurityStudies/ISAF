@@ -197,26 +197,22 @@ What determines the degree of alliance contributions to conflict theaters? Franc
 		\end{figure}
 
 	\subsection{Model}
-
 	 Our unit of analysis for these models is the country-year, spanning from 2001-2005. Though we include measures of network statistics, because our outcome of interest is not tie-formation, but a node-level attribute, we employ a linear regression. For each dependent variable, we estimate a baseline `network only' model and then a second with controls for distance (balance of threat) and democracy (reliable partners). For each model we estimate with and without fixed effects, in order to control for unobserved time-invariate confounders.
 
-
 		\subsubsection{Model 1: Commit troops?}
-
-		\begin{equation*}
-			\text{Contribution}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
-		\end{equation*}
-
-		\begin{figure}[H]
-			\centering
-				\includegraphics[width=0.7\textwidth]{logit_coef.png}
-			\caption{Model 1: Decision to commit any troops}
-			\label{fig:logit_reg}
+			\begin{equation*}
+				\text{Contribution}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
+			\end{equation*}
+	
+			\begin{figure}[H]
+				\centering
+					\includegraphics[width=0.7\textwidth]{logit_coef.png}
+				\caption{Model 1: Decision to commit any troops}
+				\label{fig:logit_reg}
 			\end{figure}
-
-		As we in figure \ref{fig:logit_reg}, a state's similarity to the United States in terms of its ideal point is the best predictor of whether or not it will contribute states. By plotting the data against the predicted probability of troop contributions by ideal point difference we can see this relationship more clearly.
-
-
+	
+			As we see in figure \ref{fig:logit_reg}, a state's similarity to the United States in terms of its ideal point is the best predictor of whether or not it will contribute states. By plotting the data against the predicted probability of troop contributions by ideal point difference we can see this relationship more clearly.	
+	
 			\begin{figure}[H]
 			\centering
 				\includegraphics[width=0.65\textwidth]{logit.png}
@@ -225,13 +221,11 @@ What determines the degree of alliance contributions to conflict theaters? Franc
 			\end{figure}
 
 		\subsubsection{Model 2: How many troops?}
+			\begin{equation*}
+				\text{Troop\_Ratio}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
+			\end{equation*}
 
-
-		\begin{equation*}
-			\text{Troop\_Ratio}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
-		\end{equation*}
-
-		The right hand side here mirrors model 1, but the dependent variable changes from a binary $[0,1]$ to continuous measure of the ratio of troops provided relative to total troops.
+			The right hand side here mirrors model 1, but the dependent variable changes from a binary $[0,1]$ to continuous measure of the ratio of troops provided relative to total troops.
 
 			\begin{figure}[H]
 			\centering
@@ -240,11 +234,11 @@ What determines the degree of alliance contributions to conflict theaters? Franc
 			\label{fig:linear_reg}
 			\end{figure}
 
-		EV: Preference Alignment with US/UK + Alliance similarity
-
-		Controls: Network centrality (degree), network embeddedness (clustering coefficient), ideal point distance from the US, structural equivalence with the US.
-
-		We also include a control for democracy since some have argued that democracies are less reliable allies and more likely to pull out of coalition conflicts early \citep{massie_whydemocraticallies_2016, gartzke_whydemocraciesmay_2004}. While a slightly different context than our argument, the logical extension of those findings should predict that democracies are less likely to over-contribute.
+			EV: Preference Alignment with US/UK + Alliance similarity
+	
+			Controls: Network centrality (degree), network embeddedness (clustering coefficient), ideal point distance from the US, structural equivalence with the US.
+	
+			We also include a control for democracy since some have argued that democracies are less reliable allies and more likely to pull out of coalition conflicts early \citep{massie_whydemocraticallies_2016, gartzke_whydemocraciesmay_2004}. While a slightly different context than our argument, the logical extension of those findings should predict that democracies are less likely to over-contribute.
 
 \section{Discussion}
 	\subsection{Findings}
