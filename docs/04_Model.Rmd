@@ -21,9 +21,8 @@ isaf <- rio::import('data/iiss_afghan_complete.rds')
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ## Only focus on years 2001-2005
 isaf <- dplyr::filter(isaf, year <= 2005)
-## Are there duplicates?? Yes, from building this dataset too many times?
-## Let's remove... We can fix later.
-isaf <- isaf[!duplicated(isaf[,1:2]),]
+## Why duplicates??
+isaf <- isaf[!duplicated(isaf[c("ccode", "year")]),]
 ```
 
 ## Descriptive statistics
@@ -81,12 +80,58 @@ ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = country)) +
       ggrepel::geom_text_repel(size = 3.5,
                       segment.color = 'transparent',
                       data = subset(isaf_avg_sub, avg_contr > 0)) +
-      geom_smooth(level = 0.95) + scale_x_reverse() + theme_classic() +
+      geom_smooth(level = 0.95) + theme_classic() +
       labs(title = "Average Troop Contributions by Structural Equivalence with the U.S.",
           x = "Alliance Network Structural Equivalence with the U.S.",
           y = "Average Ratio of Troops Contributed Relative to Total Troops")
 ## Ok, we are off.
+```
 
+## Network visual
+
+```{R}
+load("data/alliance_networks.RData")
+require(network)
+isaf_alliance_nets <- x
+
+## Troop data
+isaf2 <- rio::import('data/iiss_afghan_complete.rds')
+## Remove afghanistan because it is not a realistic self-contributor
+se <- sna::sedist(isaf_alliance_nets[[2]], method = "correlation")
+## contributions
+isaf02 <- dplyr::filter(isaf2, year == 2002)
+isaf02 <- dplyr::select(isaf02, c(stateabb, troops_afghan_ratio))
+countries <- network::get.vertex.attribute(isaf_alliance_nets[[2]], "vertex.names")
+countries <- data.frame(countries)
+colnames(countries) <- c("stateabb")
+troop_contr <- dplyr::left_join(countries, isaf02)
+set.vertex.attribute(isaf_alliance_nets[[2]], "contributions", troop_contr$troops_afghan_ratio)
+contributions <- get.vertex.attribute(isaf_alliance_nets[[2]], "contributions")
+
+plot(isaf_alliance_nets[[2]], displaylabels = TRUE,
+    label=network.vertex.names(isaf_alliance_nets[[1]]),
+    displayisolates = TRUE, label.cex = 0.75,
+    #vertex.cex=200*contributions,label.cex=0.75,
+     edge.col=rgb(150,150,150,100,maxColorValue=255),
+     label.pos=5,vertex.col="lightblue")
+
+plot(isaf_alliance_nets[[1]])
+## https://www.jessesadler.com/post/network-analysis-with-r/
+
+library(tidygraph)
+library(ggraph)
+
+allynet <- intergraph::asIgraph(isaf_alliance_nets[[2]])
+ally_igraph_tidy <- as_tbl_graph(allynet)
+## Not a bad idea to the extent that it gives us control over
+## size and color based on variables...
+## We can build in casualties and centrality here...
+ggraph(ally_igraph_tidy) +
+    geom_edge_link() +
+    geom_node_point() +
+    geom_node_text(aes(label = vertex.names), repel = TRUE) +
+    labs() +
+    theme_graph()
 ```
 
 # Model Estimation
@@ -100,12 +145,12 @@ A polynomial equation does not fit the data well and GAMs introduce interpretati
 isaf$contributor <- 0
 for(i in 1:nrow(isaf)){
   if(isaf[i,6] > 0){
-    isaf[i,40] <- 1
+    isaf[i,43] <- 1
   }
 }
 
 ##
-model1 <- glm(contributor ~ sequiv + abs_ideal_diff,
+model1 <- glm(contributor ~ sequiv + abs_ideal_diff + dem,
               family = binomial(link = "logit"), data = isaf)
 summary(model1)
 
@@ -116,10 +161,9 @@ summary(model2)
 
 ## Predicted probability of committing troops by structural equivalence
 ggplot(isaf, aes(x = sequiv, y = contributor)) +
-  stat_smooth(method="glm", family=binomial,
-            formula=y ~ x,
-            alpha=0.2, size=2) +
-  scale_x_reverse() +
+  stat_smooth(method="glm", family = binomial(link = "logit"),
+            formula = y ~ x,
+            alpha = 0.2, size=2) +
   labs(x ="Alliance Network Structural Equivalence with the U.S.",
   y ="Probability of Committing Troops",
   title ="Probability of Committing Troops by Structural Equivalence with the U.S.") +
@@ -131,11 +175,10 @@ isaf_contributors <- dplyr::filter(isaf, troops_afghan_total > 0)
 
 ## Note logging contributions gives us a linear relationship
 ## Make sure to transform for predicted contributions plots
-ggplot(isaf_contributors, aes(x = sequiv, y = log(troops_afghan_ratio))) +
+ggplot(isaf_contributors, aes(x = sequiv, y = troops_afghan_ratio)) +
   geom_point() + geom_smooth(method="glm", family=gaussian,
             formula=y ~ x,
             alpha=0.2, size=2) +
-  scale_x_reverse() +
   theme_classic()
 
 
@@ -158,10 +201,20 @@ model6 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
                   clustercoef + degree,
                   index = c("year", "country"), data = isaf_contributors)
 
+## Control for democracy
+model7 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
+              clustercoef + degree + dem, data = isaf_contributors)
+broom::tidy(model7)
+
+model8 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
+                  clustercoef + degree + dem,
+                  index = c("year", "country"), data = isaf_contributors)
+summary(model8)
+
 require(dotwhisker)
 ## Ideal point data inferences vary by model specification, but structural equiv does not...
 dwplot(list(model3, model4, model5, model6)) %>%
-                             relabel_predictors(c(sequiv = "Tie Differences",
+                             relabel_predictors(c(sequiv = "Structural Equivalence",
                                     abs_ideal_diff = "Ideal Point Difference",
                                     clustercoef = "Embeddedness",
                                     degree = "Degree")) +
