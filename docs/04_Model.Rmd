@@ -21,7 +21,7 @@ isaf <- rio::import('data/iiss_afghan_complete.rds')
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ## Only focus on years 2001-2005
 isaf <- dplyr::filter(isaf, year <= 2005)
-## Why duplicates??
+## Somehow still duplicates, fix later...
 isaf <- isaf[!duplicated(isaf[c("ccode", "year")]),]
 ```
 
@@ -30,6 +30,8 @@ isaf <- isaf[!duplicated(isaf[c("ccode", "year")]),]
 First, let's take a look at our DV and how it varies across key variables:
 
 ```{R}
+## need to import ggplot, gets messy as ggplot2::ggplot()
+library(ggplot2)
 ## points cluster by country, so fairly noisy
 ggplot(isaf, aes(x = degree, y = troops_afghan_ratio)) + geom_point() +
       geom_text(aes(label=stateabb),hjust=0, vjust=0, size = 2)
@@ -62,10 +64,6 @@ for(i in 1:length(countries)){
   isaf_avg[i,6] <- sum(temp$sequiv)/nrow(temp)
 }
 
-## Better -- reverse x-axis because it measures distance in terms of structural equiv
-## That way, states are more similar to the US as we get further along the x-axis
-## ggplot does work well with ggplot::ggplot()
-require(ggplot2)
 ggplot(isaf_avg, aes(x = sequiv, y = avg_contr)) + geom_point() +
       geom_text(aes(label=country),hjust=0, vjust=0, size = 2) +
       geom_smooth()
@@ -75,7 +73,7 @@ isaf_avg_sub <- dplyr::filter(isaf_avg, country != "CAN")
 
 ## Now our curvilinear plot without Canada
 ## Remove non-contributor labels to avoid mess
-ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = country)) +
+contr_plot <- ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = country)) +
       geom_point(size = 2) +
       ggrepel::geom_text_repel(size = 3.5,
                       segment.color = 'transparent',
@@ -85,6 +83,7 @@ ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = country)) +
           x = "Alliance Network Structural Equivalence with the U.S.",
           y = "Average Ratio of Troops Contributed Relative to Total Troops")
 ## Ok, we are off.
+ggsave('paper/figures/contributions.png')
 ```
 
 ## Network visual
@@ -140,203 +139,128 @@ A polynomial equation does not fit the data well and GAMs introduce interpretati
 1) who contributes at all?
 2) among contributors, what predicts the log of contributions?
 
+## Who contributes at all?
+
 ```{R}
 ## Who contributes at all?
 isaf$contributor <- 0
 for(i in 1:nrow(isaf)){
-  if(isaf[i,6] > 0){
-    isaf[i,43] <- 1
+  if(isaf[i,6] > 0){ ## if troops provided > 0
+    isaf[i,44] <- 1 ## make contributor 1
   }
 }
 
-##
-model1 <- glm(contributor ~ sequiv + abs_ideal_diff + dem,
+## plot contributor vs non contributor
+
+## Network only
+model1 <- glm(contributor ~ sequiv + abs_ideal_diff + degree,
               family = binomial(link = "logit"), data = isaf)
 summary(model1)
 
-## Makes no difference in estimate, so let's use this for plotting easily
-model2 <- glm(contributor ~ sequiv,
-              family = binomial(link = "logit"), data = isaf)
+## Network FE
+model2 <- plm::plm(contributor ~ sequiv + abs_ideal_diff + degree,
+              family = binomial(link = "logit"),
+               index = c("year", "country"), data = isaf)
 summary(model2)
 
-## Predicted probability of committing troops by structural equivalence
-ggplot(isaf, aes(x = sequiv, y = contributor)) +
-  stat_smooth(method="glm", family = binomial(link = "logit"),
-            formula = y ~ x,
-            alpha = 0.2, size=2) +
-  labs(x ="Alliance Network Structural Equivalence with the U.S.",
+
+## Network and controls
+model3 <- glm(contributor ~ sequiv + abs_ideal_diff + degree + dem + distance,
+              family = binomial(link = "logit"), data = isaf)
+summary(model3)
+
+## Network and controls, FE
+model4 <- plm::plm(contributor ~ sequiv + abs_ideal_diff + degree + dem + distance,
+              family = binomial(link = "logit"),
+              index = c("year", "country"), data = isaf)
+summary(model4)
+
+
+library(dotwhisker)
+library(dplyr)
+
+## Coefficient plot
+dwplot(list(model1, model2, model3, model4), dodge_size = 0.2) %>%
+  relabel_predictors(c(sequiv = "Structural Equivalence",
+                         abs_ideal_diff = "Ideal Point Distance",
+                         degree = "Network Degrees",
+                         dem = "Democracy",
+                         distance = "Distance")) +
+  theme_classic() +
+  xlab("Coefficient Estimate") +
+  geom_vline(xintercept = 0, colour = "grey60", linetype = 2) +
+  scale_colour_hue(name = "Models",
+                     labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
+  labs(title = "Logistic Regression Estimates of Decision to Commit Troops")
+
+ggsave('paper/figures/logit_coef.png')
+
+## Predicted probability of committing troops by absolute point ideal diff
+## Note ideology predicts whether or not to contribute best.
+## Much less uncertainty than sequiv, which visuals show.
+
+## https://stackoverflow.com/questions/39783358/ggplot2-and-glm-plot-a-predicted-probability
+logit_plot <- ggplot(isaf, aes(x = abs_ideal_diff, y = contributor)) +
+    geom_point() +
+  stat_smooth(method="glm", method.args=list(family="binomial"), se=TRUE) +
+  labs(x ="Distance from U.S. Ideal Point",
   y ="Probability of Committing Troops",
-  title ="Probability of Committing Troops by Structural Equivalence with the U.S.") +
+  title ="Probability of Committing Troops by Ideological Distance from the U.S.") +
   theme_classic()
+ggsave('paper/figures/logit.png')
 
+```
 
+## How much do they contribute?
+
+```{R}
 ## Model 2: How many troops do contributors provide?
 isaf_contributors <- dplyr::filter(isaf, troops_afghan_total > 0)
 
 ## Note logging contributions gives us a linear relationship
 ## Make sure to transform for predicted contributions plots
-ggplot(isaf_contributors, aes(x = sequiv, y = troops_afghan_ratio)) +
+## In contributors, NZL is an outlier, mostly is structural equivalence
+## Democracies contribute more, but sequiv does not go away...
+ggplot(isaf_contributors, aes(x = sequiv, y = log(troops_afghan_ratio))) +
   geom_point() + geom_smooth(method="glm", family=gaussian,
             formula=y ~ x,
             alpha=0.2, size=2) +
   theme_classic()
 
 
-model3 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff, data = isaf_contributors)
-broom::tidy(model3)
 
-model4 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff,
-                  index = c("year", "country"), data = isaf_contributors)
-summary(model4)
-
-
-## With additional network statistics -- sequiv capture US similarity,
-## but clustercoef and degree capture extent to which a state is embedded in alliance network
-model5 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
-              clustercoef + degree, data = isaf_contributors)
+model5 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree,
+              data = isaf_contributors)
 broom::tidy(model5)
 
-## Fixed effects
-model6 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
-                  clustercoef + degree,
-                  index = c("year", "country"), data = isaf_contributors)
+model6 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree,
+                index = c("year", "country"), data = isaf_contributors)
+summary(model6)
 
-## Control for democracy
-model7 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
-              clustercoef + degree + dem, data = isaf_contributors)
+
+model7 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree + dem + distance,
+              data = isaf_contributors)
 broom::tidy(model7)
 
-model8 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff +
-                  clustercoef + degree + dem,
+## No difference
+model8 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree + dem + distance,
                   index = c("year", "country"), data = isaf_contributors)
 summary(model8)
 
-require(dotwhisker)
-## Ideal point data inferences vary by model specification, but structural equiv does not...
-dwplot(list(model3, model4, model5, model6)) %>%
-                             relabel_predictors(c(sequiv = "Structural Equivalence",
-                                    abs_ideal_diff = "Ideal Point Difference",
-                                    clustercoef = "Embeddedness",
-                                    degree = "Degree")) +
-                  theme_bw() +
-                  labs(title =
-                  "Troop Contributions by U.S. Tie Strength and Network Centrality"
-                  ) +
-                  scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9", "#009E73"),
-                  labels = c("U.S. Tie Strength", "U.S. Tie Strength, FE",
-                  "U.S. Tie Strength and Network Centrality",
-                  "U.S. Tie Strength and Network Centrality, FE"))
-```
+## Structural equivalence is robust here... So once committint, it is strongly aligned allies.
 
-How best to measure 'tie strength'?
+dwplot(list(model5, model6, model7, model8), dodge_size = 0.2) %>%
+  relabel_predictors(c(sequiv = "Structural Equivalence",
+                         abs_ideal_diff = "Ideal Point Distance",
+                         degree = "Network Degrees",
+                         dem = "Democracy",
+                         distance = "Distance")) +
+  theme_classic() +
+  xlab("Coefficient Estimate") +
+  geom_vline(xintercept = 0, colour = "grey60", linetype = 2) +
+  scale_colour_hue(name = "Models",
+                     labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
+  labs(title = "Linear Regression Estimates of Amount of Troops Committed")
 
-```{R}
-## network statistics and troop contr
-ggplot(isaf, aes(x = clustercoef, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-ggplot(isaf, aes(x = degree, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-ggplot(isaf, aes(x = eigen, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-ggplot(isaf, aes(x = sequiv, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-ggplot(isaf, aes(x = abs_ideal_diff, y = troops_afghan_ratio)) +
-    geom_point() +
-    geom_smooth() +
-    coord_cartesian(xlim = c(0,3))
-
-## create a variable that captures ideology and degree. Maybe degree/ideology.
-## That way the further the distance ideologically, the smaller the number?
-isaf$test <- isaf$degree/isaf$abs_ideal_diff
-
-ggplot(isaf, aes(x = test, y = isaf$troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-## What about subsetting on contributors?
-isaf_sub <- dplyr::filter(isaf, troops_afghan_ratio > 0)
-isaf_sub$test <- isaf_sub$degree/isaf_sub$abs_ideal_diff
-ggplot(isaf_sub, aes(x = degree, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-ggplot(isaf_sub, aes(x = abs_ideal_diff, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-
-
-ggplot(isaf_sub, aes(x = test, y = troops_afghan_ratio)) +
-    geom_point() + geom_smooth()
-```
-
-## Extra code -- delete after html_document
-
-```{R}
-
-fit <- glm(troops_afghan_ratio ~ abs_ideal_diff + sequiv + I(sequiv^2), data = isaf)
-
-
-fit <- glm(avg_contr ~ ideal_point + sequiv + I(sequiv^2),
-            data = isaf_avg_sub)
-# fit <- glm(troops_afghan_ratio ~ abs_ideal_diff + sequiv, data = isaf)
-summary(fit)
-
-## predicted values, let's use fake data covering the range of sequiv 0:152
-prd <- data.frame(sequiv = seq(from = min(isaf_avg_sub$sequiv, na.rm = TRUE),
-                              to = max(isaf_avg_sub$sequiv, na.rm = TRUE),
-                              by = 0.5),
-                  ideal_point = mean(isaf_avg_sub$ideal_point, na.rm = TRUE))
-err <- predict(fit, newdata = prd, se.fit = TRUE)
-
-prd$lci <- err$fit - 1.96 * err$se.fit
-prd$fit <- err$fit
-prd$uci <- err$fit + 1.96 * err$se.fit
-
-
-ggplot(prd, aes(x = sequiv, y = fit)) +
-  theme_bw() +
-  geom_line() +
-  geom_smooth(aes(ymin = lci, ymax = uci), stat = "identity") +
-  geom_point(data = isaf_avg_sub, aes(x = sequiv, y = avg_contr)) +
-  scale_x_reverse()
-
-
-## One thought, what if we weighted sequiv by ideal point? I.e. mult by?
-## Because smaller structural eq distance means more similar and
-## smaller ideal dist is good, the smaller the product, then the closer.
-
-isaf_avg_sub$weighted_sim <- isaf_avg_sub$sequiv*isaf_avg_sub$ideal_point
-ggplot(isaf_avg_sub, aes(x = weighted_sim, y = avg_contr)) + geom_point() +
-      geom_text(aes(label=country),hjust=0, vjust=0, size = 4) +
-      geom_smooth() + scale_x_reverse()
-
-fit2 <- glm(avg_contr ~ weighted_sim + I(weighted_sim^2),
-            data = isaf_avg_sub)
-# fit <- glm(troops_afghan_ratio ~ abs_ideal_diff + sequiv, data = isaf)
-summary(fit2)
-
-## predicted values, let's use fake data covering the range of sequiv 0:152
-prd2 <- data.frame(weighted_sim = seq(from = min(isaf_avg_sub$weighted_sim, na.rm = TRUE),
-                              to = max(isaf_avg_sub$weighted_sim, na.rm = TRUE),
-                              by = 0.5))
-err2 <- predict(fit2, newdata = prd2, se.fit = TRUE)
-
-prd2$lci <- err2$fit - 1.96 * err2$se.fit
-prd2$fit <- err2$fit
-prd2$uci <- err2$fit + 1.96 * err2$se.fit
-
-
-ggplot(prd2, aes(x = weighted_sim, y = fit)) +
-  theme_bw() +
-  geom_line() +
-  geom_smooth(aes(ymin = lci, ymax = uci), stat = "identity") +
-  geom_point(data = isaf_avg_sub, aes(x = weighted_sim, y = avg_contr)) +
-  scale_x_reverse()
-
-## So we can see that the fit is funky with just a polynomial regression...
-## Instead we need something more flexible (gam)
-
-gam1 <- mgcv::gam(troops_afghan_ratio ~ s(sequiv) + s(abs_ideal_diff),
-                  method = "REML", data = isaf)
+ggsave('paper/figures/linear_coef.png')
 ```
