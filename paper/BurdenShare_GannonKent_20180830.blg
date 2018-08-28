@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: BurdenShare_GannonKent_20180830.aux
+The style file: apsr.bst
+Database file #1: isaf_alliances.bib
+Warning--empty booktitle in gartzke_contractsfriendsalliances_2012
+Warning--there's a number but no volume in keohane_biginfluencesmall_1971
+Warning--empty booktitle in massie_democraticalliesfollowership_2016
+You've used 40 entries,
+            2874 wiz_defined-function locations,
+            856 strings with 11937 characters,
+and the built_in function-call counts, 144020 in all, are:
+= -- 23575
+> -- 1352
+< -- 0
++ -- 10869
+- -- 504
+* -- 12011
+:= -- 29215
+add.period$ -- 165
+call.type$ -- 40
+change.case$ -- 523
+chr.to.int$ -- 38
+cite$ -- 43
+duplicate$ -- 617
+empty$ -- 1331
+format.name$ -- 559
+if$ -- 25862
+int.to.chr$ -- 7
+int.to.str$ -- 0
+missing$ -- 49
+newline$ -- 184
+num.names$ -- 437
+pop$ -- 194
+preamble$ -- 3
+purify$ -- 600
+quote$ -- 0
+skip$ -- 483
+stack$ -- 0
+substring$ -- 33118
+swap$ -- 74
+text.length$ -- 560
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 138
+warning$ -- 3
+while$ -- 897
+width$ -- 0
+write$ -- 569
+(There were 3 warnings)
