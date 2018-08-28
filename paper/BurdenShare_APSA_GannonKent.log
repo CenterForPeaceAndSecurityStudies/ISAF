@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  27 AUG 2018 23:52
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.4)  27 AUG 2018 23:34
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  28 AUG 2018 00:53
 entering extended mode
 **c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex
 (c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex
@@ -1385,11 +1381,79 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 {C:/Users/dnken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 11.52008pt on input line 92.
- [2] [3] [4]
+ [2] [3]
+
+Package natbib Warning: Citation `bennett_burdensharingpersiangulf_1994' on pag
+e 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `haesebrouck_democraticparticipationair_2016' 
+on page 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `olson_economictheoryalliances_1966' on page 4
+ undefined on input line 116.
+
+
+Package natbib Warning: Citation `walt_originsalliance_1987' on page 4 undefine
+d on input line 116.
+
+
+Package natbib Warning: Citation `sandler_natoburdensharing_2014' on page 4 und
+efined on input line 116.
+
+
+Package natbib Warning: Citation `baltrusaitis_coalitionpoliticsiraq_2010' on p
+age 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `snyder_securitydilemmaalliance_1984' on page 
+4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `davidson_neoclassicalrealistexplanation_2011'
+ on page 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `ashraf_politicscoalitionburdensharing_2011' o
+n page 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `saideman_ambivalentcoalitiondoing_2016' on pa
+ge 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `vonhlatky_ideologyballotsalliances_2018' on p
+age 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `mello_democraticparticipationarmed_2014' on p
+age 4 undefined on input line 116.
+
+
+Package natbib Warning: Citation `rathbun_partisaninterventionseuropean_2004' o
+n page 4 undefined on input line 116.
+
+[4]
+
+Package natbib Warning: Citation `dorussen_networkedinternationalpolitics_2016'
+ on page 5 undefined on input line 118.
+
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 13.82408pt on input line 121.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 13.82408pt on input line 121.
+
+Package natbib Warning: Citation `bennett_burdensharingpersiangulf_1994' on pag
+e 5 undefined on input line 122.
+
+
+Package natbib Warning: Citation `mello_democraticparticipationarmed_2014' on p
+age 5 undefined on input line 122.
+
+
+Package natbib Warning: Citation `haesebrouck_explainingmemberstates_2016' on p
+age 5 undefined on input line 122.
 
 [5] <./figures/troops_2001_sidebyside_scaled.png, id=25, 702.625pt x 433.62pt>
 File: ./figures/troops_2001_sidebyside_scaled.png Graphic file (type png)
@@ -1398,95 +1462,253 @@ File: ./figures/troops_2001_sidebyside_scaled.png Graphic file (type png)
 Package pdftex.def Info: ./figures/troops_2001_sidebyside_scaled.png used on in
 put line 126.
 (pdftex.def)             Requested size: 469.75502pt x 289.91518pt.
-<<<<<<< HEAD
- [6] [7 <./figures/troops_2001_sidebyside_scaled.png>] [8] [9]
+ [6]
+
+Package natbib Warning: Citation `haesebrouck_democraticparticipationair_2016' 
+on page 7 undefined on input line 131.
+
+
+Package natbib Warning: Citation `howorth_securitydefencepolicy_2014' on page 7
+ undefined on input line 131.
+
+
+Package natbib Warning: Citation `graeger_revivalatlanticismnato_2009' on page 
+7 undefined on input line 131.
+
+
+Package natbib Warning: Citation `biehl_strategiccultureseurope_2013' on page 7
+ undefined on input line 131.
+
+[7 <./figures/troops_2001_sidebyside_scaled.png>]
+
+Package natbib Warning: Citation `davidson_americaallieswar_2011' on page 8 und
+efined on input line 138.
+
+
+Package natbib Warning: Citation `massie_democraticalliesfollowership_2016' on 
+page 8 undefined on input line 138.
+
+
+Package natbib Warning: Citation `davidson_headingexitsdemocratic_2014' on page
+ 8 undefined on input line 138.
+
+
+Package natbib Warning: Citation `keohane_biginfluencesmall_1971' on page 8 und
+efined on input line 138.
+
+
+Package natbib Warning: Citation `gartzke_contractsfriendsalliances_2012' on pa
+ge 8 undefined on input line 138.
+
+
+Package natbib Warning: Citation `gibler_priorcommitmentscompatible_2004' on pa
+ge 8 undefined on input line 138.
+
+[8]
+
+Package natbib Warning: Citation `massie_democraticalliesfollowership_2016' on 
+page 9 undefined on input line 144.
+
+
+Package natbib Warning: Citation `haesebrouck_explainingmemberstates_2016' on p
+age 9 undefined on input line 144.
+
+
+Package natbib Warning: Citation `ringsmose_natoburdensharingredux_2010' on pag
+e 9 undefined on input line 144.
+
+
+Package natbib Warning: Citation `waltz_theoryinternationalpolitics_1979' on pa
+ge 9 undefined on input line 166.
+
+
+Package natbib Warning: Citation `olson_economictheoryalliances_1966' on page 9
+ undefined on input line 166.
+
+
+Package natbib Warning: Citation `bennett_friendsneedburden_1997' on page 9 und
+efined on input line 166.
+
+
+Package natbib Warning: Citation `baltrusaitis_coalitionpoliticsiraq_2010' on p
+age 9 undefined on input line 166.
+
+
+Package natbib Warning: Citation `davidson_neoclassicalrealistexplanation_2011'
+ on page 9 undefined on input line 166.
+
 
 Package natbib Warning: Citation `warren_geometrysecuritymodeling_2010a' on pag
-e 10 undefined on input line 166.
+e 9 undefined on input line 166.
 
-[10] [11]
-<./figures/country_troop_boxplot.png, id=47, 477.785pt x 368.37625pt>
-=======
- [6] [7 <./figures/troops_2001_sidebyside_scaled.png>] [8] [9] [10] [11] [12]
-<./figures/country_troop_boxplot.png, id=51, 477.785pt x 368.37625pt>
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
+[9]
+
+Package natbib Warning: Citation `barnett_domesticsourcesalliances_1991' on pag
+e 10 undefined on input line 168.
+
+
+Package natbib Warning: Citation `davidson_americaallieswar_2011' on page 10 un
+defined on input line 168.
+
+
+Package natbib Warning: Citation `gibler_costsrenegingreputation_2008' on page 
+10 undefined on input line 170.
+
+[10]
+
+Package natbib Warning: Citation `davidson_americaallieswar_2011' on page 11 un
+defined on input line 172.
+
+
+Package natbib Warning: Citation `morrow_alliancesasymmetryalternative_1991' on
+ page 11 undefined on input line 172.
+
+
+Package natbib Warning: Citation `bennett_burdensharingpersiangulf_1994' on pag
+e 11 undefined on input line 172.
+
+
+Package natbib Warning: Citation `ringsmose_natoburdensharingredux_2010' on pag
+e 11 undefined on input line 176.
+
+
+Package natbib Warning: Citation `chivvis_topplingqaddafilibya_2014' on page 11
+ undefined on input line 176.
+
+
+Package natbib Warning: Citation `haesebrouck_natoburdensharing_2017' on page 1
+1 undefined on input line 176.
+
+
+Package natbib Warning: Citation `internationalinstituteforstrategicstudies_mil
+itarybalance_' on page 11 undefined on input line 176.
+
+[11] <./figures/country_troop_boxplot.png, id=47, 477.785pt x 368.37625pt>
 File: ./figures/country_troop_boxplot.png Graphic file (type png)
 
 <use ./figures/country_troop_boxplot.png>
 Package pdftex.def Info: ./figures/country_troop_boxplot.png used on input line
  180.
 (pdftex.def)             Requested size: 234.8775pt x 181.09052pt.
-<<<<<<< HEAD
- [12]
-<./figures/troops_hist_largebin.png, id=51, 477.785pt x 368.37625pt>
-=======
-
-<./figures/troops_hist_largebin.png, id=52, 477.785pt x 368.37625pt>
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
+ [12 <./figures/country_troop_boxplot.png>] <./figures/troops_hist_largebin.png
+, id=52, 477.785pt x 368.37625pt>
 File: ./figures/troops_hist_largebin.png Graphic file (type png)
 
 <use ./figures/troops_hist_largebin.png>
 Package pdftex.def Info: ./figures/troops_hist_largebin.png used on input line 
-187.
+190.
 (pdftex.def)             Requested size: 234.8775pt x 181.09052pt.
- [13 <./figures/country_troop_boxplot.png> <./figures/troops_hist_largebin.png>
-]
-<figures/contributions.png, id=58, 505.89pt x 505.89pt>
+
+<figures/contributions.png, id=53, 505.89pt x 505.89pt>
 File: figures/contributions.png Graphic file (type png)
 
 <use figures/contributions.png>
-Package pdftex.def Info: figures/contributions.png used on input line 196.
-(pdftex.def)             Requested size: 328.82707pt x 328.8323pt.
- [14 <./figures/contributions.png>]
+Package pdftex.def Info: figures/contributions.png used on input line 198.
+(pdftex.def)             Requested size: 258.36668pt x 258.371pt.
+ [13 <./figures/troops_hist_largebin.png> <./figures/contributions.png>]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-<<<<<<< HEAD
-(Font)              scaled to size 5.76004pt on input line 210.
+(Font)              scaled to size 5.76004pt on input line 212.
 
-<./figures/logit_coef.png, id=63, 505.89pt x 505.89pt>
+<./figures/logit_coef.png, id=60, 505.89pt x 505.89pt>
 File: ./figures/logit_coef.png Graphic file (type png)
 
 <use ./figures/logit_coef.png>
-Package pdftex.def Info: ./figures/logit_coef.png used on input line 215.
+Package pdftex.def Info: ./figures/logit_coef.png used on input line 217.
 (pdftex.def)             Requested size: 281.85587pt x 281.86067pt.
- [15 <./figures/logit_coef.png>]
-<./figures/logit.png, id=70, 505.89pt x 505.6491pt>
-=======
-(Font)              scaled to size 5.76004pt on input line 204.
-
-<./figures/logit_coef.png, id=64, 505.89pt x 505.89pt>
-File: ./figures/logit_coef.png Graphic file (type png)
-
-<use ./figures/logit_coef.png>
-Package pdftex.def Info: ./figures/logit_coef.png used on input line 209.
-(pdftex.def)             Requested size: 328.82707pt x 328.8323pt.
- [15 <./figures/logit_coef.png>]
-<./figures/logit.png, id=71, 505.89pt x 505.6491pt>
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
+ [14]
+<./figures/logit.png, id=66, 505.89pt x 505.6491pt>
 File: ./figures/logit.png Graphic file (type png)
  <use ./figures/logit.png>
-Package pdftex.def Info: ./figures/logit.png used on input line 227.
+Package pdftex.def Info: ./figures/logit.png used on input line 229.
 (pdftex.def)             Requested size: 305.33789pt x 305.19724pt.
 
-<<<<<<< HEAD
-[16 <./figures/logit.png>]
-<./figures/linear_coef.png, id=75, 505.89pt x 505.89pt>
-=======
-<./figures/linear_coef.png, id=72, 505.89pt x 505.89pt>
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
+[15 <./figures/logit_coef.png>]
+<./figures/linear_coef.png, id=71, 505.89pt x 505.89pt>
 File: ./figures/linear_coef.png Graphic file (type png)
 
 <use ./figures/linear_coef.png>
-Package pdftex.def Info: ./figures/linear_coef.png used on input line 242.
+Package pdftex.def Info: ./figures/linear_coef.png used on input line 245.
 (pdftex.def)             Requested size: 317.08606pt x 317.09132pt.
-<<<<<<< HEAD
+ [16 <./figures/logit.png>]
 
-Overfull \hbox (4.59877pt too wide) in paragraph at lines 249--250
+Package natbib Warning: Citation `massie_whydemocraticallies_2016' on page 17 u
+ndefined on input line 253.
+
+
+Package natbib Warning: Citation `gartzke_whydemocraciesmay_2004' on page 17 un
+defined on input line 253.
+
+
+Overfull \hbox (4.59877pt too wide) in paragraph at lines 253--254
 []\T1/mdbch/m/n/12 Interestingly, democ-racy is as-so-ci-ated with a lower troo
 p con-tri-bu-tion than non-democracies.
  []
 
-[17 <./figures/linear_coef.png>] [18] (BurdenShare_APSA_GannonKent.bbl [19]
-[20] [21] [22])
+
+Package natbib Warning: Citation `haesebrouck_democraticparticipationair_2016' 
+on page 17 undefined on input line 259.
+
+
+Package natbib Warning: Citation `walt_originsalliance_1987' on page 17 undefin
+ed on input line 259.
+
+[17 <./figures/linear_coef.png>]
+
+Package natbib Warning: Citation `kreps_eliteconsensusdeterminant_2010' on page
+ 18 undefined on input line 261.
+
+
+Package natbib Warning: Citation `davidson_neoclassicalrealistexplanation_2011'
+ on page 18 undefined on input line 263.
+
+
+Package natbib Warning: Citation `ringsmose_natoburdensharingredux_2010' on pag
+e 18 undefined on input line 263.
+
+
+Package natbib Warning: Citation `kupchan_natopersiangulf_1988' on page 18 unde
+fined on input line 263.
+
+[18]
+
+Package natbib Warning: Citation `jakobsen_prestigeseekingsmallstates_2018' on 
+page 19 undefined on input line 265.
+
+
+Package natbib Warning: Citation `dicke_natoburdensharinglibya_2013' on page 19
+ undefined on input line 265.
+
+(BurdenShare_APSA_GannonKent.bbl
+BurdenShare_APSA_GannonKent.bbl:1: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+BurdenShare_APSA_GannonKent.bbl:3: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[19] [20]
+BurdenShare_APSA_GannonKent.bbl:138: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+BurdenShare_APSA_GannonKent.bbl:139: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[21] [22])
 \tf@thm=\write4
 \openout4 = `BurdenShare_APSA_GannonKent.thm'.
 
@@ -1494,72 +1716,31 @@ p con-tri-bu-tion than non-democracies.
 
 Package natbib Warning: There were undefined citations.
 
-[23] (BurdenShare_APSA_GannonKent.aux) ) 
-=======
- [16 <./figures/logit.png>] [17 <./figures/linear_coef.png>] [18] (./BurdenShar
-e_APSA_GannonKent.bbl [19] [20]
-! Undefined control sequence.
-<write> ...}{{\the \c@NAT@ctr }{2018}{{{\noopsort 
-                                                  {hlatky}}{von Hlatky} \har...
-l.134 ...{vonhlatky_ideologyballotsalliances_2018}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[23] (BurdenShare_APSA_GannonKent.aux
 
-! Undefined control sequence.
-l.135 {\noopsort
-                {hlatky}}{von Hlatky}, Stefanie \harvardand\ Justin Massie. ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
 
-[21])
-\tf@thm=\write4
-\openout4 = `BurdenShare_APSA_GannonKent.thm'.
-
- [22] (./BurdenShare_APSA_GannonKent.aux) ) 
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
+) ) 
 Here is how much of TeX's memory you used:
- 18899 strings out of 493333
- 367681 string characters out of 3139194
- 391844 words of memory out of 3000000
- 21971 multiletter control sequences out of 15000+200000
+ 18900 strings out of 493333
+ 367647 string characters out of 3139194
+ 390347 words of memory out of 3000000
+ 21972 multiletter control sequences out of 15000+200000
  60542 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
-<<<<<<< HEAD
  55i,8n,77p,3188b,688s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\dnken\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi643\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/
-fonts/enc/dvips/ly1/texnansi.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/bitst
-rea/charter/bchb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charte
-r/bchr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchri8a.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb>
-Output written on BurdenShare_APSA_GannonKent.pdf (23 pages, 311885 bytes).
+ <C:\Users\dnken\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi643
+\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc}<C:/
+Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesi
+gn/mdbch/md-chri7m.pfb>
+Output written on BurdenShare_APSA_GannonKent.pdf (23 pages, 311921 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
-=======
- 55i,8n,77p,3145b,688s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm
--super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ly1/texna
-nsi.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on BurdenShare_APSA_GannonKent.pdf (22 pages, 313822 bytes).
-PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
->>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

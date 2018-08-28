@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex BurdenShare_APSA_GannonKent"] 1535428371 "BurdenShare_APSA_GannonKent.aux" "BurdenShare_APSA_GannonKent.bbl" "BurdenShare_APSA_GannonKent" 1535428377
-  "BurdenShare_APSA_GannonKent.aux" 1535428376 9024 a502624bbcf40727bd9b219a5ec2e2c6 ""
+["bibtex BurdenShare_APSA_GannonKent"] 1535432023 "BurdenShare_APSA_GannonKent.aux" "BurdenShare_APSA_GannonKent.bbl" "BurdenShare_APSA_GannonKent" 1535432023
+  "BurdenShare_APSA_GannonKent.aux" 1535432021 5588 4dceffe4a8a89d2a85f17acf56ab159d ""
   "C:/Program Files/MiKTeX 2.9/bibtex/bst/harvard/apsr.bst" 1233283740 25357 c990a86d1a60aa9370f76a9507b609ec ""
-  "isaf_alliances.bib" 1535424793 1689258 b742ccfd42d4d3f6404d27a5c7795e31 ""
+  "isaf_alliances.bib" 1535428629 1672457 dd7685146380ba12785c4e192911dda6 ""
   (generated)
-  "BurdenShare_APSA_GannonKent.bbl"
   "BurdenShare_APSA_GannonKent.blg"
-["pdflatex"] 1535428372 "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" "BurdenShare_APSA_GannonKent.pdf" "BurdenShare_APSA_GannonKent" 1535428377
-  "BurdenShare_APSA_GannonKent.aux" 1535428376 9024 a502624bbcf40727bd9b219a5ec2e2c6 ""
-  "BurdenShare_APSA_GannonKent.bbl" 1535428372 11162 a9477d1a57f556e6ee1a3d292fbb2103 "bibtex BurdenShare_APSA_GannonKent"
-  "BurdenShare_APSA_GannonKent.tex" 1535428351 38671 3921f7a72f5af7f7b5699e119654364e ""
+  "BurdenShare_APSA_GannonKent.bbl"
+["pdflatex"] 1535432024 "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" "BurdenShare_APSA_GannonKent.pdf" "BurdenShare_APSA_GannonKent" 1535432023
+  "BurdenShare_APSA_GannonKent.aux" 1535432021 5588 4dceffe4a8a89d2a85f17acf56ab159d ""
+  "BurdenShare_APSA_GannonKent.bbl" 1535432023 11246 c18db8dbb1b87923130c2245da32b013 "bibtex BurdenShare_APSA_GannonKent"
+  "BurdenShare_APSA_GannonKent.tex" 1535432006 39191 dabe65852f012596402e7a043f42d3d2 ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc" 1015804800 6938 5135be6a8802f13a7faf296d1959a1ab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
@@ -205,7 +205,7 @@
   "C:/Users/dnken/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi643/ectt1000.pk" 1533157814 21412 3ca152ed8e58f73c702a0ba0c3f966fd ""
   "C:/Users/dnken/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1489387781 3822843 fca2cdc9ea228658bd842e51a6435c1b ""
   "C:/Users/dnken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1527028513 322295 0955b218cb68d9fbc6281ce8ee0dc924 ""
-  "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" 1535428351 38671 3921f7a72f5af7f7b5699e119654364e ""
+  "c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex" 1535432006 39191 dabe65852f012596402e7a043f42d3d2 ""
   "figures/contributions.png" 1535396373 68939 396b11dc9315407713dc5199cfb82cdc ""
   "figures/country_troop_boxplot.png" 1534888900 25613 c2229c8dc404d3a318137d2cac445b15 ""
   "figures/linear_coef.png" 1535411535 40043 c620aeb4fde3f4b7fe3e6d4c6ed133cc ""
@@ -214,7 +214,7 @@
   "figures/troops_2001_sidebyside_scaled.png" 1535137621 33378 f5df26660294f0f093c1c78cc94cb407 ""
   "figures/troops_hist_largebin.png" 1534888900 29638 dbce80d67f7864d44828c668062c7600 ""
   (generated)
-  "BurdenShare_APSA_GannonKent.log"
   "BurdenShare_APSA_GannonKent.aux"
   "BurdenShare_APSA_GannonKent.pdf"
+  "BurdenShare_APSA_GannonKent.log"
   "BurdenShare_APSA_GannonKent.thm"

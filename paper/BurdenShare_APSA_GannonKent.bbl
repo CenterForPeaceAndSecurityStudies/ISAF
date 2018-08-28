@@ -1,3 +1,7 @@
+\harvardpreambledefs{%
+\newcommand{\noopsort}[1]{} }
+\harvardpreambletext{%
+\newcommand{\noopsort}[1]{} }
 \begin{thebibliography}{xx}
 
 \harvarditem{Ashraf}{2011}{ashraf_politicscoalitionburdensharing_2011}
@@ -130,19 +134,19 @@ Haesebrouck, Tim. 2017.
   Comparative Analysis}}.'' {\em Journal of Conflict Resolution}
   61(10):2235--2261.
 
+\harvarditem{{\noopsort{hlatky}}{von Hlatky} \harvardand\
+  Massie}{2018}{vonhlatky_ideologyballotsalliances_2018}
+{\noopsort{hlatky}}{von Hlatky}, Stefanie \harvardand\ Justin Massie. 2018.
+\newblock ``Ideology, Ballots, and Alliances: {{Canadian}} Participation in
+  Multinational Military Operations.'' {\em Contemporary Security Policy}
+  0(0):1--15.
+
 \harvarditem{Howorth}{2014}{howorth_securitydefencepolicy_2014}
 Howorth, Jolyon. 2014.
 \newblock {\em Security and Defence Policy in the {{European Union}}}.
 \newblock The European Union series 2. ed ed. Basingstoke:  {Palgrave
   Macmillan}.
 \newblock OCLC: 883290816.
-
-\harvarditem{{International Institute for Strategic
-  Studies}}{N.d.}{internationalinstituteforstrategicstudies_militarybalance_}
-{International Institute for Strategic Studies}. N.d.
-\newblock {\em The {{Military Balance}}}.
-\newblock Oxford:  {Oxford University Press}.
-\newblock OCLC: 440259871.
 
 \harvarditem[Jakobsen, Ringsmose \harvardand\ Saxi]{Jakobsen, Ringsmose
   \harvardand\ Saxi}{2018}{jakobsen_prestigeseekingsmallstates_2018}
@@ -225,13 +229,6 @@ Snyder, Glenn~H. 1984.
 \newblock ``The {{Security Dilemma}} in {{Alliance Politics}}.'' {\em World
   Politics} 36(4):461--495.
 
-\harvarditem{{von Hlatky} \harvardand\
-  Massie}{2018}{vonhlatky_ideologyballotsalliances_2018}
-{von Hlatky}, Stefanie \harvardand\ Justin Massie. 2018.
-\newblock ``Ideology, Ballots, and Alliances: {{Canadian}} Participation in
-  Multinational Military Operations.'' {\em Contemporary Security Policy}
-  0(0):1--15.
-
 \harvarditem{Walt}{1987}{walt_originsalliance_1987}
 Walt, Stephen~M. 1987.
 \newblock {\em The {{Origins}} of {{Alliance}}}.
@@ -241,5 +238,10 @@ Walt, Stephen~M. 1987.
 Waltz, Kenneth~N. 1979.
 \newblock {\em Theory of {{International Politics}}}.
 \newblock {Waveland Press}.
+
+\harvarditem{Warren}{2010}{warren_geometrysecuritymodeling_2010a}
+Warren, T.~Camber. 2010.
+\newblock ``The Geometry of Security: {{Modeling}} Interstate Alliances as
+  Evolving Networks.'' {\em Journal of Peace Research} 47(6):697--709.
 
 \end{thebibliography}
