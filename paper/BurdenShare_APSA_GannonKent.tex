@@ -171,7 +171,7 @@ What determines the degree of alliance contributions to conflict theaters? Franc
 
 \section{Research Design}
 	\subsection{Data}
-		We test our hypotheses through a novel dataset with information on country-level troop contributions to the war in Afghanistan (ISAF and OEF) from 2001-2014. In addition we include information regarding each country's total military size, in order to measure the magnitude of their contribution \textit{relative to their available troops}. To focus on the decision to commit troops, as opposed to a country's resilience to casualties -- which are not necessarily synonymous -- we focus on the opening stage of the war from 2001-2005. The costliness of a state's contribution is measured using troop ratios as opposed to financial cost since the risk of casualties and collateral damage are two costs unique to personnel contributions that states are attentive to when deciding whether and to what extent they should participate in coalition warfare \citep{ringsmose_natoburdensharingredux_2010, chivvis_topplingqaddafilibya_2014, haesebrouck_natoburdensharing_2017}. This data was gathered from the International Institute for Strategic Studies' (IISS) annual ``Military Balance'' reports \citep{internationalinstituteforstrategicstudies_militarybalance_}, which includes detailed information on every country's current military portfolio and overseas commitments. Not only does the Military Balance include the number of troops each country contributed to the War in Afghanistan, it also contains information on the total number of troops in each country's military at the time. Fable \ref{fig:afghan_total} shows the total number of troops in Afghanistan during the initial years of the war and figure \ref{fig:troop_hist} shows the distribution across states. Some states like Denmark, New Zealand, the United States and Romania contributed roughly 3 times the size of their armed forces than did the median contributor.
+		Our dependent variable is country-year troops contributions to the war in Afghanistan. For the first model, we measure this as a binary variable coded 1 if the country-state contributed any military forces and coded 0 otherwise. The second model measures country-year contributions as a ratio of the count of troops contributed divided by the number of troops in that country-years armed forces. As such, the second dependent variable is a measure of the cost a state accepts for a given contribution. To focus on the decision to commit troops, as opposed to a country's resilience to casualties -- which are not necessarily synonymous -- we focus on the opening stage of the war from 2001-2005. The costliness of a state's contribution is measured using troop ratios as opposed to financial cost since the risk of casualties and collateral damage are two costs unique to personnel contributions that states are attentive to when deciding whether and to what extent they should participate in coalition warfare \citep{ringsmose_natoburdensharingredux_2010, chivvis_topplingqaddafilibya_2014, haesebrouck_natoburdensharing_2017}. The troop data was gathered from the International Institute for Strategic Studies' (IISS) annual ``Military Balance'' reports \citep{internationalinstituteforstrategicstudies_militarybalance_} which includes detailed information on every country's current military portfolio and overseas commitments. Not only does the Military Balance include the number of troops each country contributed to the War in Afghanistan, it also contains information on the total number of troops in each country's military at the time. Fable \ref{fig:afghan_total} shows the total number of troops in Afghanistan during the initial years of the war and figure \ref{fig:troop_hist} shows the distribution across states. Some states like Denmark, New Zealand, the United States and Romania contributed roughly 3 times the size of their armed forces than did the median contributor.
 
 			\begin{figure}[H]
 			\centering
@@ -186,8 +186,8 @@ What determines the degree of alliance contributions to conflict theaters? Franc
 			\caption{Distribution of Country Contributions to Afghan war (2001-2005) Source: IISS Military Balance report}
 			\label{fig:troop_hist}
 			\end{figure}
-
-		Alongside this data on military contributions, we calculated relevant network statistics from the yearly alliance network. Also because of the potential benefits of signaling reliability to the United States, we compiled data on ideal point estimates relative to the United States in each year. Our primary network statistic of interest is a country's structural equivalence with the United States in the alliance network. This serves as a useful means of capturing the degree to which the country is deeply embedded within or sits on the periphery of the initiating state's security community. As \ref{fig:contr_sequiv} demonstrates, the relationship between structural equivalence and troop contributions follows our expectation reasonably well, with a curvilinear relationship between a country's average contribution and their structural equivalence with the United States.
+		
+		Our explanatory variable is a state's relationship with the United States. We predict that states with moderate-strength relationship ties that desire improved ties will be more likely to choose costly contributions to signal that desire to the United States. We operationalize this using network statistics from the yearly alliance network. Also because of the potential benefits of signaling reliability to the United States, we compiled data on ideal point estimates relative to the United States in each year. Our primary network statistic of interest is a country's structural equivalence with the United States in the alliance network. This serves as a useful means of capturing the degree to which the country is deeply embedded within or sits on the periphery of the initiating state's security community. As \ref{fig:contr_sequiv} demonstrates, the relationship between structural equivalence and troop contributions follows our expectation reasonably well, with a curvilinear relationship between a country's average contribution and their structural equivalence with the United States.
 
 		\begin{figure}[H]
 			\centering
@@ -197,61 +197,53 @@ What determines the degree of alliance contributions to conflict theaters? Franc
 		\end{figure}
 
 	\subsection{Model}
-	 Our unit of analysis for these models is the country-year, spanning from 2001-2005. Though we include measures of network statistics, because our outcome of interest is not tie-formation, but a node-level attribute, we employ a linear regression. For each dependent variable, we estimate a baseline `network only' model and then a second with controls for distance (balance of threat) and democracy (reliable partners). For each model we estimate with and without fixed effects, in order to control for unobserved time-invariate confounders.
+	 Our unit of analysis is the country-year, spanning from 2001-2005. Though we include measures of network statistics, because our outcome of interest is not tie-formation, but a node-level attribute, we employ a linear regression. For each dependent variable, we estimate a baseline `network only' model and then a second with controls for distance and democracy. The former captures the theoretical prediction of the balance of threats hypothesis. We include a control for democracy since some have argued that democracies are less reliable allies and more likely to pull out of coalition conflicts early \citep{massie_whydemocraticallies_2016, gartzke_whydemocraciesmay_2004}. While a slightly different context than our argument, the logical extension of those findings should predict that democracies are less likely to over-contribute. For each model we estimate with and without fixed effects, in order to control for unobserved time-invariate confounders.
 
-		\subsubsection{Model 1: Commit troops?}
-			\begin{equation*}
-				\text{Contribution}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
-			\end{equation*}
+	\subsubsection{Model 1: Commit troops?}
+		\begin{equation*}
+			\text{Contribution}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
+		\end{equation*}
 	
-			\begin{figure}[H]
-				\centering
-					\includegraphics[width=0.7\textwidth]{logit_coef.png}
-				\caption{Model 1: Decision to commit any troops}
-				\label{fig:logit_reg}
-			\end{figure}
+		\begin{figure}[H]
+		\centering
+			\includegraphics[width=0.7\textwidth]{logit_coef.png}
+		\caption{Model 1: Decision to commit any troops}
+		\label{fig:logit_reg}
+		\end{figure}
 	
-			As we see in figure \ref{fig:logit_reg}, a state's similarity to the United States in terms of its ideal point is the best predictor of whether or not it will contribute states. By plotting the data against the predicted probability of troop contributions by ideal point difference we can see this relationship more clearly.	
+		As we see in figure \ref{fig:logit_reg}, a state's similarity to the United States in terms of its ideal point is the best predictor of whether or not it will contribute states. By plotting the data against the predicted probability of troop contributions by ideal point difference we can see this relationship more clearly.	
 	
-			\begin{figure}[H]
-			\centering
-				\includegraphics[width=0.65\textwidth]{logit.png}
-			\caption{Predicted probability of committing troops against actual decision}
-			\label{fig:logit}
-			\end{figure}
+		\begin{figure}[H]
+		\centering
+			\includegraphics[width=0.65\textwidth]{logit.png}
+		\caption{Predicted probability of committing troops against actual decision}
+		\label{fig:logit}
+		\end{figure}
 
 		\subsubsection{Model 2: How many troops?}
-			\begin{equation*}
-				\text{Troop\_Ratio}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
-			\end{equation*}
+		\begin{equation*}
+			\text{Troop\_Ratio}_{it} = \beta_0 + \beta_1\text{equiv}_{it} + \beta_2\text{ideology}_{it} + \beta_3\text{centrality}_{it} + \beta_4\text{dem}_{it} + \beta_5\text{dist}_{it}
+		\end{equation*}
 
-			The right hand side here mirrors model 1, but the dependent variable changes from a binary $[0,1]$ to continuous measure of the ratio of troops provided relative to total troops.
+		The right hand side here mirrors model 1, but the dependent variable changes from a binary $[0,1]$ to continuous measure of the ratio of troops provided relative to total troops.
 
-			\begin{figure}[H]
-			\centering
-				\includegraphics[width=0.675\textwidth]{linear_coef.png}
-			\caption{Model 2: Number of troops contributed}
-			\label{fig:linear_reg}
-			\end{figure}
+		\begin{figure}[H]
+		\centering
+			\includegraphics[width=0.675\textwidth]{linear_coef.png}
+		\caption{Model 2: Number of troops contributed}
+		\label{fig:linear_reg}
+		\end{figure}
 
-			EV: Preference Alignment with US/UK + Alliance similarity
-	
-			Controls: Network centrality (degree), network embeddedness (clustering coefficient), ideal point distance from the US, structural equivalence with the US.
-	
-			We also include a control for democracy since some have argued that democracies are less reliable allies and more likely to pull out of coalition conflicts early \citep{massie_whydemocraticallies_2016, gartzke_whydemocraciesmay_2004}. While a slightly different context than our argument, the logical extension of those findings should predict that democracies are less likely to over-contribute.
-
-\section{Discussion}
-	\subsection{Findings}
+\section{Results}
 	***Explanation of findings***
 
-	\subsection{Contribution}
-		Our findings runs counter to that expected by theories about the balance of threats. For the balance of threat hypothesis, the states with the highest contributions are those that are most concerned about the threat the opposing state presents to their security \citep{haesebrouck_democraticparticipationair_2016}. Yet, when contributions are measured as internal costs relative to the contribution a state could have made, the highest contributions are from states that appear to be opting into a war in which they have no material stake. Denmark, New Zealand, and Romania, 3 of the top 4 contributors to ISAF by our measure, are not the states that are most concerned about the threat that the Taliban and Al Qaeda posed to their national security. This empirical observation is not explained by the theory that states enter an alliance in order to balance against threats \citep{walt_originsalliance_1987}.
+	Our findings runs counter to that expected by theories about the balance of threats. For the balance of threat hypothesis, the states with the highest contributions are those that are most concerned about the threat the opposing state presents to their security \citep{haesebrouck_democraticparticipationair_2016}. Yet, when contributions are measured as internal costs relative to the contribution a state could have made, the highest contributions are from states that appear to be opting into a war in which they have no material stake. Denmark, New Zealand, and Romania, 3 of the top 4 contributors to ISAF by our measure, are not the states that are most concerned about the threat that the Taliban and Al Qaeda posed to their national security. This empirical observation is not explained by the theory that states enter an alliance in order to balance against threats \citep{walt_originsalliance_1987}.
 
-		Our findings also contrast those who have tested domestic politics explanations in the context of the war in Afghanistan. NATO's formal institutional structure was supposed to render public opinion less relevant as an explanation for coalition participation \citep{kreps_eliteconsensusdeterminant_2010}. However, we find that while NATO membership and its accompanying obligations to avoid accusations of defection may be sufficient to explain why states do not free ride, that does not explain why states like New Zealand that are not bound by alliance obligations end up over-contributing.
+	Our findings also contrast those who have tested domestic politics explanations in the context of the war in Afghanistan. NATO's formal institutional structure was supposed to render public opinion less relevant as an explanation for coalition participation \citep{kreps_eliteconsensusdeterminant_2010}. However, we find that while NATO membership and its accompanying obligations to avoid accusations of defection may be sufficient to explain why states do not free ride, that does not explain why states like New Zealand that are not bound by alliance obligations end up over-contributing.
 
-		Previous theories described under the rubric of the alliance hypothesis also fail to explain this findings. For previous theories, ally support is expected when you can leverage your allies power in your favor and is thus a measure of closeness \citep{davidson_neoclassicalrealistexplanation_2011}. This expects states that are the closest allies with the United States to be the largest contributors to US war efforts. Yet the relationship we see appears non-linear. These states do not over-contribute because the United States is their best protector or because they think they have the ability to influence the United States through their international clout as \citet{ringsmose_natoburdensharingredux_2010} finds. Rather, it is the states that want the United States to be their best protector or that \textit{want} the ability to influence international relations with the United States that are most likely to over-contribute. It's also not the case that the US coerced its closest allies into participating as argued by \citet{kupchan_natopersiangulf_1988} because those are not the states that ended up doing the most participating relative to what they could have contributed. Thus, desire for stronger ties and the expectation that over-contribution will positively signal that desire explains our findings in a way that differs from previous theories.
+	Previous theories described under the rubric of the alliance hypothesis also fail to explain this findings. For previous theories, ally support is expected when you can leverage your allies power in your favor and is thus a measure of closeness \citep{davidson_neoclassicalrealistexplanation_2011}. This expects states that are the closest allies with the United States to be the largest contributors to US war efforts. Yet the relationship we see appears non-linear. These states do not over-contribute because the United States is their best protector or because they think they have the ability to influence the United States through their international clout as \citet{ringsmose_natoburdensharingredux_2010} finds. Rather, it is the states that want the United States to be their best protector or that \textit{want} the ability to influence international relations with the United States that are most likely to over-contribute. It's also not the case that the US coerced its closest allies into participating as argued by \citet{kupchan_natopersiangulf_1988} because those are not the states that ended up doing the most participating relative to what they could have contributed. Thus, desire for stronger ties and the expectation that over-contribution will positively signal that desire explains our findings in a way that differs from previous theories.
 
-		While this analysis is limited to an examination of the war in Afghanistan, there is suggestive evidence that the theory holds for other coalition conflicts. During the war in Libya, Denmark make a concerted effort to over-contributed forces, particularly air forces to the bombing campaign, in order to demonstrates their ``relevance and trustworthiness to its great power allies in NATO, especially the United States" \citep{jakobsen_prestigeseekingsmallstates_2018, dicke_natoburdensharinglibya_2013}. This effort appears to have paid off. US Secretary of Defense Robert Gates commended Denmark for its costly contribution to the conflict when he publicly noted that Denmark ``...with their constrained resources, found ways to do the training, buy the equipment, and field the platforms necessary to make a credible military contribution."
+	While this analysis is limited to an examination of the war in Afghanistan, there is suggestive evidence that the theory holds for other coalition conflicts. During the war in Libya, Denmark make a concerted effort to over-contributed forces, particularly air forces to the bombing campaign, in order to demonstrates their ``relevance and trustworthiness to its great power allies in NATO, especially the United States" \citep{jakobsen_prestigeseekingsmallstates_2018, dicke_natoburdensharinglibya_2013}. This effort appears to have paid off. US Secretary of Defense Robert Gates commended Denmark for its costly contribution to the conflict when he publicly noted that Denmark ``...with their constrained resources, found ways to do the training, buy the equipment, and field the platforms necessary to make a credible military contribution."
 
 \section{Conclusion}
 
