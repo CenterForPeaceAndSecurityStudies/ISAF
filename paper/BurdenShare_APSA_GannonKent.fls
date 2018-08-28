@@ -400,6 +400,8 @@ INPUT ./figures/logit_coef.png
 INPUT ./figures/logit_coef.png
 INPUT ./figures/logit_coef.png
 INPUT ./figures/logit_coef.png
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr8t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchri7m.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chri7m.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chri8y.tfm
@@ -409,6 +411,8 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchri7m.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chri7m.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr7t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr7t.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr8t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
 INPUT ./figures/logit.png
 INPUT ./figures/logit.png
 INPUT ./figures/logit.png
@@ -438,7 +442,5 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7t.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7t.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb
-INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr8t.pfb
-INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr8t.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb
