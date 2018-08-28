@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.13)  27 AUG 2018 23:52
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.4)  27 AUG 2018 23:34
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
 entering extended mode
 **c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex
 (c:/Users/dnken/Documents/GitHub/ISAF/paper/BurdenShare_APSA_GannonKent.tex
@@ -1394,6 +1398,7 @@ File: ./figures/troops_2001_sidebyside_scaled.png Graphic file (type png)
 Package pdftex.def Info: ./figures/troops_2001_sidebyside_scaled.png used on in
 put line 126.
 (pdftex.def)             Requested size: 469.75502pt x 289.91518pt.
+<<<<<<< HEAD
  [6] [7 <./figures/troops_2001_sidebyside_scaled.png>] [8] [9]
 
 Package natbib Warning: Citation `warren_geometrysecuritymodeling_2010a' on pag
@@ -1401,14 +1406,23 @@ e 10 undefined on input line 166.
 
 [10] [11]
 <./figures/country_troop_boxplot.png, id=47, 477.785pt x 368.37625pt>
+=======
+ [6] [7 <./figures/troops_2001_sidebyside_scaled.png>] [8] [9] [10] [11] [12]
+<./figures/country_troop_boxplot.png, id=51, 477.785pt x 368.37625pt>
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
 File: ./figures/country_troop_boxplot.png Graphic file (type png)
 
 <use ./figures/country_troop_boxplot.png>
 Package pdftex.def Info: ./figures/country_troop_boxplot.png used on input line
  180.
 (pdftex.def)             Requested size: 234.8775pt x 181.09052pt.
+<<<<<<< HEAD
  [12]
 <./figures/troops_hist_largebin.png, id=51, 477.785pt x 368.37625pt>
+=======
+
+<./figures/troops_hist_largebin.png, id=52, 477.785pt x 368.37625pt>
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
 File: ./figures/troops_hist_largebin.png Graphic file (type png)
 
 <use ./figures/troops_hist_largebin.png>
@@ -1425,6 +1439,7 @@ Package pdftex.def Info: figures/contributions.png used on input line 196.
 (pdftex.def)             Requested size: 328.82707pt x 328.8323pt.
  [14 <./figures/contributions.png>]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+<<<<<<< HEAD
 (Font)              scaled to size 5.76004pt on input line 210.
 
 <./figures/logit_coef.png, id=63, 505.89pt x 505.89pt>
@@ -1435,18 +1450,35 @@ Package pdftex.def Info: ./figures/logit_coef.png used on input line 215.
 (pdftex.def)             Requested size: 281.85587pt x 281.86067pt.
  [15 <./figures/logit_coef.png>]
 <./figures/logit.png, id=70, 505.89pt x 505.6491pt>
+=======
+(Font)              scaled to size 5.76004pt on input line 204.
+
+<./figures/logit_coef.png, id=64, 505.89pt x 505.89pt>
+File: ./figures/logit_coef.png Graphic file (type png)
+
+<use ./figures/logit_coef.png>
+Package pdftex.def Info: ./figures/logit_coef.png used on input line 209.
+(pdftex.def)             Requested size: 328.82707pt x 328.8323pt.
+ [15 <./figures/logit_coef.png>]
+<./figures/logit.png, id=71, 505.89pt x 505.6491pt>
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
 File: ./figures/logit.png Graphic file (type png)
  <use ./figures/logit.png>
 Package pdftex.def Info: ./figures/logit.png used on input line 227.
 (pdftex.def)             Requested size: 305.33789pt x 305.19724pt.
 
+<<<<<<< HEAD
 [16 <./figures/logit.png>]
 <./figures/linear_coef.png, id=75, 505.89pt x 505.89pt>
+=======
+<./figures/linear_coef.png, id=72, 505.89pt x 505.89pt>
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
 File: ./figures/linear_coef.png Graphic file (type png)
 
 <use ./figures/linear_coef.png>
 Package pdftex.def Info: ./figures/linear_coef.png used on input line 242.
 (pdftex.def)             Requested size: 317.08606pt x 317.09132pt.
+<<<<<<< HEAD
 
 Overfull \hbox (4.59877pt too wide) in paragraph at lines 249--250
 []\T1/mdbch/m/n/12 Interestingly, democ-racy is as-so-ci-ated with a lower troo
@@ -1463,6 +1495,35 @@ p con-tri-bu-tion than non-democracies.
 Package natbib Warning: There were undefined citations.
 
 [23] (BurdenShare_APSA_GannonKent.aux) ) 
+=======
+ [16 <./figures/logit.png>] [17 <./figures/linear_coef.png>] [18] (./BurdenShar
+e_APSA_GannonKent.bbl [19] [20]
+! Undefined control sequence.
+<write> ...}{{\the \c@NAT@ctr }{2018}{{{\noopsort 
+                                                  {hlatky}}{von Hlatky} \har...
+l.134 ...{vonhlatky_ideologyballotsalliances_2018}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.135 {\noopsort
+                {hlatky}}{von Hlatky}, Stefanie \harvardand\ Justin Massie. ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[21])
+\tf@thm=\write4
+\openout4 = `BurdenShare_APSA_GannonKent.thm'.
+
+ [22] (./BurdenShare_APSA_GannonKent.aux) ) 
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
 Here is how much of TeX's memory you used:
  18899 strings out of 493333
  367681 string characters out of 3139194
@@ -1470,6 +1531,7 @@ Here is how much of TeX's memory you used:
  21971 multiletter control sequences out of 15000+200000
  60542 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
+<<<<<<< HEAD
  55i,8n,77p,3188b,688s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dnken\AppData\Local\MiKTeX\2
 .9\fonts\pk\ljfour\jknappen\ec\dpi643\ectt1000.pk>{C:/Program Files/MiKTeX 2.9/
@@ -1482,6 +1544,22 @@ Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb>
 Output written on BurdenShare_APSA_GannonKent.pdf (23 pages, 311885 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
+=======
+ 55i,8n,77p,3145b,688s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm
+-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ly1/texna
+nsi.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on BurdenShare_APSA_GannonKent.pdf (22 pages, 313822 bytes).
+PDF statistics:
+ 123 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+>>>>>>> b66eed1916bc9c3814d001605191b283326da1fd
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
