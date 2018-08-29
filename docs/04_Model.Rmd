@@ -73,7 +73,8 @@ isaf_avg_sub <- dplyr::filter(isaf_avg, country != "CAN")
 
 ## Now our curvilinear plot without Canada
 ## Remove non-contributor labels to avoid mess
-contr_plot <- ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = country)) +
+contr_plot <- ggplot(isaf_avg_sub,
+              aes(x = sequiv, y = avg_contr, label = country)) +
       geom_point(size = 2) +
       ggrepel::geom_text_repel(size = 3.5,
                       segment.color = 'transparent',
@@ -81,9 +82,29 @@ contr_plot <- ggplot(isaf_avg_sub, aes(x = sequiv, y = avg_contr, label = countr
       geom_smooth(level = 0.95) + theme_classic() +
       labs(title = "Average Troop Contributions by Structural Equivalence with the U.S.",
           x = "Alliance Network Structural Equivalence with the U.S.",
-          y = "Average Ratio of Troops Contributed Relative to Total Troops")
+          y = "Average Ratio of Troops Contributed Relative to Total Troops") +
+      theme(text = element_text(size = 13),
+      plot.title = element_text(size = 13))
 ## Ok, we are off.
 ggsave('paper/figures/contributions.png')
+
+## Version with linear model also
+
+contr_plot2 <- ggplot(isaf_avg_sub,
+              aes(x = sequiv, y = avg_contr, label = country)) +
+      geom_point(size = 2) +
+      ggrepel::geom_text_repel(size = 3.5,
+                      segment.color = 'transparent',
+                      data = subset(isaf_avg_sub, avg_contr > 0)) +
+      geom_smooth(level = 0.95) +
+      stat_smooth(method = "glm") +
+      theme_classic() +
+      labs(title = "Average Troop Contributions by Structural Equivalence with the U.S.",
+          x = "Alliance Network Structural Equivalence with the U.S.",
+          y = "Average Ratio of Troops Contributed Relative to Total Troops") +
+      theme(text = element_text(size = 13),
+      plot.title = element_text(size = 13))
+
 ```
 
 ## Network visual
