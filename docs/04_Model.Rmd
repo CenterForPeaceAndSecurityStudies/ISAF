@@ -104,7 +104,7 @@ contr_plot2 <- ggplot(isaf_avg_sub,
           y = "Average Ratio of Troops Contributed Relative to Total Troops") +
       theme(text = element_text(size = 13),
       plot.title = element_text(size = 13))
-
+ggsave('paper/figures/contributions_loess_linear.png')
 ```
 
 ## Network visual
@@ -212,7 +212,9 @@ dwplot(list(model1, model2, model3, model4), dodge_size = 0.2) %>%
   geom_vline(xintercept = 0, colour = "grey60", linetype = 2) +
   scale_colour_hue(name = "Models",
                      labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
-  labs(title = "Logistic Regression Estimates of Decision to Commit Troops")
+  labs(title = "Logistic Regression Estimates of Decision to Commit Troops") +
+  theme(text = element_text(size = 13),
+      plot.title = element_text(size = 13))
 
 ggsave('paper/figures/logit_coef.png')
 
@@ -227,7 +229,10 @@ logit_plot <- ggplot(isaf, aes(x = abs_ideal_diff, y = contributor)) +
   labs(x ="Distance from U.S. Ideal Point",
   y ="Probability of Committing Troops",
   title ="Probability of Committing Troops by Ideological Distance from the U.S.") +
-  theme_classic()
+  theme_classic() +
+  theme(text = element_text(size = 13),
+      plot.title = element_text(size = 13))
+
 ggsave('paper/figures/logit.png')
 
 ```
@@ -281,7 +286,10 @@ dwplot(list(model5, model6, model7, model8), dodge_size = 0.2) %>%
   geom_vline(xintercept = 0, colour = "grey60", linetype = 2) +
   scale_colour_hue(name = "Models",
                      labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
-  labs(title = "Linear Regression Estimates of Amount of Troops Committed")
+  labs(title = "Linear Regression Estimates of Amount of Troops Committed") +
+    theme(text = element_text(size = 13),
+      plot.title = element_text(size = 13))
+
 
 ggsave('paper/figures/linear_coef.png')
 ```
