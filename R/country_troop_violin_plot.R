@@ -1,4 +1,4 @@
-country_troop_boxplot <- function(iiss_afghan){
+country_troop_violin_plot <- function(iiss_afghan){
 
   troops_subset <- subset(iiss_afghan, iiss_afghan$troops_total > 0)
   troops_subset <- troops_subset %>% filter(troops_subset$year > 2000 & troops_subset$year < 2006)
@@ -33,7 +33,7 @@ country_troop_boxplot <- function(iiss_afghan){
   my_df <- my_df[which(my_df$total > 0),]
 
   g <- ggplot(my_df, aes(x=my_df$year, y=my_df$log_tot,group=my_df$year)) +
-    geom_boxplot(varwidth=T,colour="deepskyblue4") +
+    geom_violin(colour="deepskyblue4") +
     theme_light() +
     theme(axis.text.x = element_text(size = 12,vjust=0.6),
           axis.text.y = element_text(size = 12)) +

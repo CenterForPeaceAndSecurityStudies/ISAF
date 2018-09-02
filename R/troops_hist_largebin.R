@@ -30,7 +30,7 @@ troops_hist_largebin <- function(iiss_afghan){
   axis(2, labels = FALSE, lwd.ticks = 0)
   rug(jitter(my_df$percent))
   mtext("Percent of Armed Forces", side = 1, line = 2.5, cex = 1.5, font = 2)
-  mtext("Density of Countries", side = 2, line = 3, cex = 1.5, font = 2, las = 0)
+  mtext("Density", side = 2, line = 3, cex = 1.5, font = 2, las = 0)
   lines(density(my_df$percent), lwd = 2)
 
 }
