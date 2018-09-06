@@ -34,12 +34,14 @@ country_troop_violin_plot <- function(iiss_afghan){
   my_df <- my_df[which(my_df$total > 0),]
 
   g <- ggplot(my_df, aes(x=my_df$year, y=my_df$log_tot,group=my_df$year)) +
-    geom_violin(colour="deepskyblue4") +
+    geom_violin(colour="deepskyblue4", na.rm = TRUE,
+                draw_quantiles = c(0.5)) +
     theme_light() +
     theme(axis.text.x = element_text(size = 12,vjust=0.6),
           axis.text.y = element_text(size = 12)) +
     ylim(0,max(my_df$log_tot)+0.5) +
-    geom_text_repel(aes(label = my_df$outlier), point.padding = 2) +
+    geom_text_repel(aes(label = my_df$outlier), point.padding = 2,
+                    na.rm = TRUE) +
     labs(title="Average country contributions to ISAF by year",
          subtitle="2001-2014",
          y="Log National Troop Deployment",x = "Year")

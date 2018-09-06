@@ -43,6 +43,10 @@ country_troop_violin_plot(troops)
 country_percent_boxplot(troops)
 ```
 
+# Country percent boxplot
+```{r}
+country_overall_percent_boxplot(troops)
+```
 
 # Troops Contribution Maps
 ## Year 2001 contributions
