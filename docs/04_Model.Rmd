@@ -64,10 +64,25 @@ for(i in 1:length(countries)){
   isaf_avg[i,6] <- sum(temp$sequiv)/nrow(temp)
 }
 
-ggplot(isaf_avg, aes(x = sequiv, y = avg_contr)) + geom_point() +
-      geom_text(aes(label=country),hjust=0, vjust=0, size = 2) +
-      geom_smooth()
 
+## Plot with Canada
+contr_plot_can <- ggplot(isaf_avg,
+              aes(x = sequiv, y = avg_contr, label = country)) +
+      geom_point(size = 2) +
+      ggrepel::geom_text_repel(size = 3.5,
+                      segment.color = 'transparent',
+                      data = subset(isaf_avg, avg_contr > 0)) +
+      geom_smooth(level = 0.95) + theme_classic() +
+      labs(title = "Average Troop Contributions by Structural Equivalence with the U.S.",
+          x = "Alliance Network Structural Equivalence with the U.S.",
+          y = "Average Ratio of Troops Contributed Relative to Total Troops") +
+      theme(text = element_text(size = 13),
+      plot.title = element_text(size = 13))
+
+ggsave('paper/figures/contributions_canada.png')
+
+
+## Plot without Canada
 ## Remove Canada for curvilinear plot, but not analysis
 isaf_avg_sub <- dplyr::filter(isaf_avg, country != "CAN")
 
@@ -85,26 +100,14 @@ contr_plot <- ggplot(isaf_avg_sub,
           y = "Average Ratio of Troops Contributed Relative to Total Troops") +
       theme(text = element_text(size = 13),
       plot.title = element_text(size = 13))
-## Ok, we are off.
+
 ggsave('paper/figures/contributions.png')
 
-## Version with linear model also
 
-contr_plot2 <- ggplot(isaf_avg_sub,
-              aes(x = sequiv, y = avg_contr, label = country)) +
-      geom_point(size = 2) +
-      ggrepel::geom_text_repel(size = 3.5,
-                      segment.color = 'transparent',
-                      data = subset(isaf_avg_sub, avg_contr > 0)) +
-      geom_smooth(level = 0.95) +
-      stat_smooth(method = "glm") +
-      theme_classic() +
-      labs(title = "Average Troop Contributions by Structural Equivalence with the U.S.",
-          x = "Alliance Network Structural Equivalence with the U.S.",
-          y = "Average Ratio of Troops Contributed Relative to Total Troops") +
-      theme(text = element_text(size = 13),
-      plot.title = element_text(size = 13))
-ggsave('paper/figures/contributions_loess_linear.png')
+side_plot <- cowplot::plot_grid(contr_plot, contr_plot_can,
+              width = 8, height = 5)
+
+ggsave('paper/figures/contributions_side.png', width = 10, height = 7)
 ```
 
 ## Network visual
@@ -121,19 +124,21 @@ se <- sna::sedist(isaf_alliance_nets[[2]], method = "correlation")
 ## contributions
 isaf02 <- dplyr::filter(isaf2, year == 2002)
 isaf02 <- dplyr::select(isaf02, c(stateabb, troops_afghan_ratio))
-countries <- network::get.vertex.attribute(isaf_alliance_nets[[2]], "vertex.names")
+countries <- network::get.vertex.attribute(isaf_alliance_nets[[2]],
+              "vertex.names")
 countries <- data.frame(countries)
 colnames(countries) <- c("stateabb")
 troop_contr <- dplyr::left_join(countries, isaf02)
-set.vertex.attribute(isaf_alliance_nets[[2]], "contributions", troop_contr$troops_afghan_ratio)
+set.vertex.attribute(isaf_alliance_nets[[2]], "contributions",
+                    troop_contr$troops_afghan_ratio)
 contributions <- get.vertex.attribute(isaf_alliance_nets[[2]], "contributions")
 
 plot(isaf_alliance_nets[[2]], displaylabels = TRUE,
     label=network.vertex.names(isaf_alliance_nets[[1]]),
     displayisolates = TRUE, label.cex = 0.75,
     #vertex.cex=200*contributions,label.cex=0.75,
-     edge.col=rgb(150,150,150,100,maxColorValue=255),
-     label.pos=5,vertex.col="lightblue")
+    edge.col=rgb(150,150,150,100,maxColorValue=255),
+    label.pos=5,vertex.col="lightblue")
 
 plot(isaf_alliance_nets[[1]])
 ## https://www.jessesadler.com/post/network-analysis-with-r/
@@ -162,6 +167,8 @@ A polynomial equation does not fit the data well and GAMs introduce interpretati
 
 ## Who contributes at all?
 
+This relationship is not hypothesized to be non-linear. That applies instead to the amount that a state contributes. Here ideological distance is the best predictor of contributions.
+
 ```{R}
 ## Who contributes at all?
 isaf$contributor <- 0
@@ -170,28 +177,32 @@ for(i in 1:nrow(isaf)){
     isaf[i,44] <- 1 ## make contributor 1
   }
 }
+```
 
+
+```{R}
 ## plot contributor vs non contributor
 
 ## Network only
-model1 <- glm(contributor ~ sequiv + abs_ideal_diff + degree,
+model1 <- glm(contributor ~ sequiv + abs_ideal_diff,
               family = binomial(link = "logit"), data = isaf)
 summary(model1)
 
 ## Network FE
-model2 <- plm::plm(contributor ~ sequiv + abs_ideal_diff + degree,
+model2 <- plm::plm(contributor ~ sequiv + abs_ideal_diff,
               family = binomial(link = "logit"),
-               index = c("year", "country"), data = isaf)
+              index = c("year", "country"), data = isaf)
 summary(model2)
 
 
 ## Network and controls
-model3 <- glm(contributor ~ sequiv + abs_ideal_diff + degree + dem + distance,
+model3 <- glm(contributor ~ sequiv + abs_ideal_diff + dem + distance,
               family = binomial(link = "logit"), data = isaf)
 summary(model3)
 
 ## Network and controls, FE
-model4 <- plm::plm(contributor ~ sequiv + abs_ideal_diff + degree + dem + distance,
+model4 <- plm::plm(contributor ~ sequiv + abs_ideal_diff +
+                    dem + distance,
               family = binomial(link = "logit"),
               index = c("year", "country"), data = isaf)
 summary(model4)
@@ -203,15 +214,15 @@ library(dplyr)
 ## Coefficient plot
 dwplot(list(model1, model2, model3, model4), dodge_size = 0.2) %>%
   relabel_predictors(c(sequiv = "Structural Equivalence",
-                         abs_ideal_diff = "Ideal Point Distance",
-                         degree = "Network Degrees",
-                         dem = "Democracy",
-                         distance = "Distance")) +
+                        abs_ideal_diff = "Ideal Point Distance",
+                        degree = "Network Degrees",
+                        dem = "Democracy",
+                        distance = "Distance")) +
   theme_classic() +
   xlab("Coefficient Estimate") +
   geom_vline(xintercept = 0, colour = "grey60", linetype = 2) +
   scale_colour_hue(name = "Models",
-                     labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
+                    labels = c("Network Only", "Network Only, FE", "Full Model","Full Model, FE")) +
   labs(title = "Logistic Regression Estimates of Decision to Commit Troops") +
   theme(text = element_text(size = 13),
       plot.title = element_text(size = 13))
@@ -243,53 +254,90 @@ ggsave('paper/figures/logit.png')
 ## Model 2: How many troops do contributors provide?
 isaf_contributors <- dplyr::filter(isaf, troops_afghan_total > 0)
 
-## Note logging contributions gives us a linear relationship
-## Make sure to transform for predicted contributions plots
-## In contributors, NZL is an outlier, mostly is structural equivalence
-## Democracies contribute more, but sequiv does not go away...
-ggplot(isaf_contributors, aes(x = sequiv, y = log(troops_afghan_ratio))) +
-  geom_point() + geom_smooth(method="glm", family=gaussian,
-            formula=y ~ x,
-            alpha=0.2, size=2) +
-  theme_classic()
+## Without Canada
+isaf_con_no_canada <- dplyr::filter(isaf_contributors, country != "Canada")
+```
 
 
+Including a squared term can tell you if the forced-polynomial term is reasonably non-zero. But it can't tell you if the polynomial relationship that we have chosen is the best way to describe the relationship. So we use a gam and find a similar story.
 
-model5 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree,
+```{R}
+model5 <- glm(troops_afghan_ratio ~ sequiv + abs_ideal_diff,
               data = isaf_contributors)
 broom::tidy(model5)
 
-model6 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree,
+model6 <- plm::plm(troops_afghan_ratio ~ sequiv + abs_ideal_diff,
                 index = c("year", "country"), data = isaf_contributors)
-summary(model6)
+broom::tidy(model6)
 
-
-model7 <- glm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree + dem + distance,
+model7 <- glm(troops_afghan_ratio ~ sequiv + abs_ideal_diff +
+              dem + distance,
               data = isaf_contributors)
 broom::tidy(model7)
 
 ## No difference
-model8 <- plm::plm(log(troops_afghan_ratio) ~ sequiv + abs_ideal_diff + degree + dem + distance,
+model8 <- plm::plm(troops_afghan_ratio ~ sequiv + abs_ideal_diff +
+              dem + distance,
                   index = c("year", "country"), data = isaf_contributors)
-summary(model8)
+broom::tidy(model8)
 
-## Structural equivalence is robust here... So once committint, it is strongly aligned allies.
+## Structural equivalence polynomial is robust here...
 
 dwplot(list(model5, model6, model7, model8), dodge_size = 0.2) %>%
   relabel_predictors(c(sequiv = "Structural Equivalence",
-                         abs_ideal_diff = "Ideal Point Distance",
-                         degree = "Network Degrees",
-                         dem = "Democracy",
-                         distance = "Distance")) +
+                        abs_ideal_diff = "Ideal Point Distance",
+                        dem = "Democracy",
+                        distance = "Distance")) +
   theme_classic() +
   xlab("Coefficient Estimate") +
   geom_vline(xintercept = 0, colour = "grey60", linetype = 2) +
   scale_colour_hue(name = "Models",
-                     labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
+                    labels = c("Network Only", "Network Only, FE", "Full Model", "Full Model, FE")) +
   labs(title = "Linear Regression Estimates of Amount of Troops Committed") +
     theme(text = element_text(size = 13),
       plot.title = element_text(size = 13))
 
 
 ggsave('paper/figures/linear_coef.png')
+```
+
+- GAM -- structural equivalence. Should we include other variables?
+For differentiating post-treatment bias and multicollinearity: https://stats.stackexchange.com/questions/163174/why-is-post-treatment-bias-a-bias-and-not-just-multicollinearity
+
+```{R}
+library(mgcv)
+
+## No Canada
+gam1 <- gam(troops_afghan_ratio ~ s(sequiv), data = isaf_con_no_canada)
+pdf("paper/figures/no_can_gam.pdf")
+plot(gam1, se = TRUE)
+dev.off()
+summary(gam1)
+
+## With Canada
+gam2 <- gam(troops_afghan_ratio ~ s(sequiv), data = isaf_contributors)
+pdf("paper/figures/can_gam.pdf")
+can_plot <- plot(gam2)
+dev.off()
+summary(gam2)
+
+## Don't want degree b/c correlated with sequiv w/US, and isn't part of story.
+## Our story is not how many alliance ties a state has, but how closely it is tied to the US. This is captured by how similar its network is to the US.
+## Ideological distance is cool, but risks post-treatment bias. That means that a state has similar preferences as the US. Cor is -0.39467. So ideological distance shrinks when more structurally equivalent. But again,
+## Why to not include degree: Multicollinearity -- so hard to interpret coefficients
+## cor(isaf_contributors$sequiv, isaf_contributors$degree)
+## [1] 0.8911621
+
+# Don't expect that ideological agreement predicts non-linear relationship.
+# The story is about gains in additional allies.
+# If preferences align, then expect to care about the conflict and give more.
+gam3 <- gam(troops_afghan_ratio ~ s(sequiv) + abs_ideal_diff,
+            data = isaf_con_no_canada)
+plot(gam3, se = TRUE)
+summary(gam3)
+
+gam4 <- gam(troops_afghan_ratio ~ s(sequiv) + abs_ideal_diff,
+            data = isaf_contributors)
+plot(gam4)
+summary(gam4)
 ```
