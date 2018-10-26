@@ -266,7 +266,7 @@ model5 <- glm(troops_afghan_ratio ~ sequiv + abs_ideal_diff,
               data = isaf_contributors)
 broom::tidy(model5)
 
-model6 <- plm::plm(troops_afghan_ratio ~ sequiv + abs_ideal_diff,
+model6 <- plm::plm(troops_afghan_ratio ~ poly(sequiv, 2) + abs_ideal_diff,
                 index = c("year", "country"), data = isaf_contributors)
 broom::tidy(model6)
 
@@ -305,14 +305,17 @@ ggsave('paper/figures/linear_coef.png')
 For differentiating post-treatment bias and multicollinearity: https://stats.stackexchange.com/questions/163174/why-is-post-treatment-bias-a-bias-and-not-just-multicollinearity
 
 ```{R}
-library(mgcv)
-
 ## No Canada
-gam1 <- gam(troops_afghan_ratio ~ s(sequiv), data = isaf_con_no_canada)
-pdf("paper/figures/no_can_gam.pdf")
+gam1 <- mgcv::gam(troops_afghan_ratio ~ s(sequiv), data = isaf_con_no_canada)
+## pdf("paper/figures/no_can_gam.pdf")
 plot(gam1, se = TRUE)
-dev.off()
+plot1 <- gratia:: draw(gam1)
+plot1 + theme_classic()
+## dev.off()
 summary(gam1)
+
+
+
 
 ## With Canada
 gam2 <- gam(troops_afghan_ratio ~ s(sequiv), data = isaf_contributors)
