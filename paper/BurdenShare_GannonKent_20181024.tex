@@ -52,14 +52,14 @@
 				\@author
 			\end{tabular}\par}%
 		%\vskip 1em%
-		{\normalsize October 23, 2018}%
+		{\normalsize \today}%
 	\end{center}%
 	\par
 	%\vskip 1.5em
 	}
 \makeatother
 
-\title{Friends Without Benefits: Explaining Costly Contributions to Unnecessary Wartime Coalitions}
+\title{Keeping Your Friends Close But Acquaintances Closer: Why Weakly Allied States Join Wartime Coalitions}
 
 \author{J Andr\'{e}s Gannon%
 	\thanks{Electronic address: \texttt{jagannon@ucsd.edu} Web: \texttt{jandresgannon.com}}}
@@ -176,7 +176,7 @@ This is exemplary of a broader trend in coalition warfare. Some states contribut
 
 \section{Research Design}
 	\subsection{Data}
-		Our dependent variable is country-year troops contributions to the war in Afghanistan. For the first model, we measure this as a binary variable coded 1 if the country-state contributed any military forces and coded 0 otherwise. The second model measures country-year contributions as a ratio of the count of troops contributed divided by the number of troops in that country-years armed forces. As such, the second dependent variable is a measure of the cost a state accepts for a given contribution. To focus on the decision to commit troops, as opposed to a country's resilience to casualties -- which are not necessarily synonymous -- we focus on the opening stage of the war from 2001-2005. The costliness of a state's contribution is measured using troop ratios as opposed to financial cost since the risk of casualties and collateral damage are two costs unique to personnel contributions that states are attentive to when deciding whether and to what extent they should participate in coalition warfare \citep{ringsmose_natoburdensharingredux_2010, chivvis_topplingqaddafilibya_2014, haesebrouck_natoburdensharing_2017}. The troop data was gathered from the International Institute for Strategic Studies' (IISS) annual ``Military Balance'' reports \citep{internationalinstituteforstrategicstudies_militarybalance_} which includes detailed information on every country's current military portfolio and overseas commitments. Not only does the Military Balance include the number of troops each country contributed to the War in Afghanistan, it also contains information on the total number of troops in each country's military at the time. Figure \ref{fig:afghan_total} shows the total number of troops in Afghanistan during the initial years of the war and figure \ref{fig:troop_hist} shows the distribution across states. Some states like Denmark, New Zealand, the United States and Romania contributed roughly 3 times the size of their armed forces than did the median contributor.
+		Our dependent variable is country-year troops contributions to the war in Afghanistan. For the first model, we measure this as a binary variable coded 1 if the country-state contributed any military forces and coded 0 otherwise. The second model measures country-year contributions as a ratio of the count of troops contributed divided by the number of troops in that country-years armed forces. As such, the second dependent variable is a measure of the cost a state accepts for a given contribution. To focus on the decision to commit troops, as opposed to a country's resilience to casualties -- which are not necessarily synonymous -- we focus on the opening stage of the war from 2001-2005. The costliness of a state's contribution is measured using troop ratios as opposed to financial cost since the risk of casualties and collateral damage are two costs unique to personnel contributions that states are attentive to when deciding whether and to what extent they should participate in coalition warfare \citep{ringsmose_natoburdensharingredux_2010, chivvis_topplingqaddafilibya_2014, haesebrouck_natoburdensharing_2017}. The troop data was gathered from the International Institute for Strategic Studies' (IISS) annual ``Military Balance'' reports \citep{internationalinstituteforstrategicstudies_militarybalance_2002} which includes detailed information on every country's current military portfolio and overseas commitments. Not only does the Military Balance include the number of troops each country contributed to the War in Afghanistan, it also contains information on the total number of troops in each country's military at the time. Figure \ref{fig:afghan_total} shows the total number of troops in Afghanistan during the initial years of the war and figure \ref{fig:troop_hist} shows the distribution across states. Some states like Denmark, New Zealand, the United States and Romania contributed roughly 3 times the size of their armed forces than did the median contributor.
 
 			\begin{figure}[H]
 			\centering
@@ -204,35 +204,21 @@ This is exemplary of a broader trend in coalition warfare. Some states contribut
 			\label{fig:contr_sequiv}
 			\end{figure}
 
-	\subsection{Models and Findings}
-	Our unit of analysis for these models is the country-year, spanning from 2001-2005. Though we include and are primarily interested in measures of network statistics, because our outcome of interest is a node-level attribute, we employ generalized linear models and generalized additive models (GAMs) as opposed to methods for modeling tie formation (e.g. exponential random graph and latent space models).\footnote{We are also considering extensions of network models for node formation, i.e. \citet{fosdick2015}, at least as a robustness check of sorts. The only issue with the network approach being that said models are not designed to have the same effect flexibility as GAMs.} For each dependent variable, we estimate a baseline model focused only on effects of interest and then a second which includes controls for distance and democracy. In the former, we first fit a GLM with a polynomial term. But because a polynomial term forces a specific curvilinear relationship upon the data, we also fit a generalized additive model with smoothing terms to see if a similar relationship emerges under a less restrictive format.
+	\subsection{Measures}
+		
+
+	\subsection{Methods}
+		Our unit of analysis for these models is the country-year, spanning from 2001-2005. Though we include and are primarily interested in measures of network statistics, because our outcome of interest is a node-level attribute, we employ generalized linear models and generalized additive models (GAMs) as opposed to methods for modeling tie formation (e.g. exponential random graph and latent space models).\footnote{We are also considering extensions of network models for node formation, i.e. \citet{fosdick_testingmodelingdependencies_2015}, at least as a robustness check of sorts. The only issue with the network approach being that said models are not designed to have the same effect flexibility as GAMs.} For each dependent variable, we estimate a baseline model focused only on effects of interest and then a second which includes controls for distance and democracy. In the former, we first fit a GLM with a polynomial term. But because a polynomial term forces a specific curvilinear relationship upon the data, we also fit a generalized additive model with smoothing terms to see if a similar relationship emerges under a less restrictive format.
 
 		\subsubsection{Model 1: Decision to Commit Troops}
-		The curvilinear relationship in figure \ref{fig:contr_sequiv} largely results from the data likely capturing two separate processes. First, capturing why the data is zero-inflated, states initially decide whether or not they will contribute any troops. In this section we model that choice, leaving the amount of troops provided for the next part. Our model for sending troops is represented by equation (1), where `equiv' represents structural equivalence in the alliance network with the United States\footnote{There are multiple possible measures of structural equivalence. We draw upon the Pearson coefficient, which compares the number of actual shared numbers to that one would expect in a truly random network.}. A state's distance from the U.S. in terms of its ideal point estimate is captured by `ideal'. \citep{bailey_twodimensionalanalysisseventy_2018} Last we include terms controlling for democracy and the state's distance from Afghanistan.
+			The curvilinear relationship in figure \ref{fig:contr_sequiv} largely results from the data likely capturing two separate processes. First, capturing why the data is zero-inflated, states initially decide whether or not they will contribute any troops. In this section we model that choice, leaving the amount of troops provided for the next part. Our model for sending troops is represented by equation (1), where `equiv' represents structural equivalence in the alliance network with the United States\footnote{There are multiple possible measures of structural equivalence. We draw upon the Pearson coefficient, which compares the number of actual shared numbers to that one would expect in a truly random network.}. A state's distance from the U.S. in terms of its ideal point estimate is captured by `ideal'. \citep{bailey_twodimensionalanalysisseventy_2018} Last we include terms controlling for democracy and the state's distance from Afghanistan.
 
-		%% Note I've dropped centrality (density) because it is multicollinear with structural equivalence
+			%% Note I've dropped centrality (density) because it is multicollinear with structural equivalence
 			\vspace{-2em}
 			\begin{equation}
-				\text{Contribution}_{it} = \beta_0 + \beta_1\text{equiv}_{it} +  \beta_2\text{ideology}_{it} + \beta_3\text{dem}_{it} + \beta_4\text{dist}_{it}
+			\text{Contribution}_{it} = \beta_0 + \beta_1\text{equiv}_{it} +  \beta_2\text{ideology}_{it} + \beta_3\text{dem}_{it} + \beta_4\text{dist}_{it}
 			\end{equation}
-
-			\begin{figure}[H]
-				\centering
-					\includegraphics[width=0.725\textwidth]{logit_coef.png}
-				\caption{Model 1: Decision to commit any troops. FE corresponds to fixed effects.}
-				\label{fig:logit_reg}
-			\end{figure}
-
-		With respect to a state's decision to commit any troops to Afghanistan, we see that estimates for structural equivalence and ideal point distance are robust to specification and move in the expected directions. In particular, when it comes to the decision to commit troops at all, we see that ideological similarity with the United States is particularly powerful as a predictor. Figure \ref{fig:logit} demonstrates that the relationship is quite clear, with almost all contributors sitting close to the United States ideologically. Moreover, the predicted probabilities, which we derive from our logistic regression estimates, map on relatively cleanly to the actual data. However, it is important to note that our theory is focused on the \textit{amount} of troops contributed, meaning the curvilinear relationship corresponds to the next set of models.
-		%However, it is important to note that the cluster of states which contribute are not those perfectly aligned with the US, but those closely aligned -- meaning they have room to gain from subsequent cooperation and, presumably, grow closer, as our theory expects.
-
-			\begin{figure}[H]
-			\centering
-				\includegraphics[width=0.65\textwidth]{figures/logit.png}
-			\caption{Predicted probability of committing troops against actual decision}
-			\label{fig:logit}
-			\end{figure}
-
+	
 		\subsubsection{Model 2: Decision to Over-commit Troops}
 			Next, we subset the data to only look at contributors and then examine the predictors of how many troops a country commits, relative to its available number of troops. Here our equations are almost the same, but we include a squared employ linear, as opposed to logistic, regressions because the dependent variable is continuous. With respect to the linear model, we avoid polynomial terms because they force the specified relationship onto the data, instead testing for the expected positive relationship if a linear model is fit.\footnote{Note that we expect strong ties to commit more than weak ties, meaning an expected positive slope.} After confirming these results we switch to a generalized additive model to explicitly capture non-linear effects.
 
@@ -242,43 +228,60 @@ This is exemplary of a broader trend in coalition warfare. Some states contribut
 				\beta_2\text{ideology}_{it} + \beta_3\text{dem}_{it} + \beta_4\text{dist}_{it}
 			\end{equation*}
 
-			\begin{figure}[H]
-			\centering
-				\includegraphics[width=0.725\textwidth]{figures/linear_coef.png}
-			\caption{Model 2: Number of troops contributed, relative to number of available troops}
-			\label{fig:linear_reg}
-			\end{figure}
+\section{Results}
+	With respect to a state's decision to commit any troops to Afghanistan, we see that estimates for structural equivalence and ideal point distance are robust to specification and move in the expected directions. In particular, when it comes to the decision to commit troops at all, we see that ideological similarity with the United States is particularly powerful as a predictor. Figure \ref{fig:logit} demonstrates that the relationship is quite clear, with almost all contributors sitting close to the United States ideologically. Moreover, the predicted probabilities, which we derive from our logistic regression estimates, map on relatively cleanly to the actual data. However, it is important to note that our theory is focused on the \textit{amount} of troops contributed, meaning the curvilinear relationship corresponds to the next set of models.
+	%However, it is important to note that the cluster of states which contribute are not those perfectly aligned with the US, but those closely aligned -- meaning they have room to gain from subsequent cooperation and, presumably, grow closer, as our theory expects.
 
-		Now that we are looking solely at the size of a state's contributions, we see that structural equivalence emerges clearly as the primary predictor. Though some of the largest contributors, such as New Zealand, sit on the periphery of the alliance network, the more deeply a state is embedded in the United States' security community, then the greater its expected contribution, on average. This fits generally with our expectation, where, even though the relationship is not perfectly linear, we expect states that are closely aligned with the initiating state to contribute more than than those weakly aligned.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.725\textwidth]{logit_coef.png}
+		\caption{Model 1: Decision to commit any troops. FE corresponds to fixed effects.}
+		\label{fig:logit_reg}
+	\end{figure}
+	
+	Now that we are looking solely at the size of a state's contributions, we see that structural equivalence emerges clearly as the primary predictor. Though some of the largest contributors, such as New Zealand, sit on the periphery of the alliance network, the more deeply a state is embedded in the United States' security community, then the greater its expected contribution, on average. This fits generally with our expectation, where, even though the relationship is not perfectly linear, we expect states that are closely aligned with the initiating state to contribute more than than those weakly aligned.
 
-		Interestingly, democracy is associated with a lower troop contribution than non-democracies. This actually aligns with work that has argued that that democracies are less reliable allies and more likely to pull out of coalition conflicts early \citep{massie_whydemocraticallies_2016, gartzke_whydemocraciesmay_2004}. While a slightly different context than our theory, these arguments provide a logical extension as to why we should expect that democracies may actually be less likely to over-contribute.
+	Interestingly, democracy is associated with a lower troop contribution than non-democracies. This actually aligns with work that has argued that that democracies are less reliable allies and more likely to pull out of coalition conflicts early \citep{massie_whydemocraticallies_2016, gartzke_whydemocraciesmay_2004}. While a slightly different context than our theory, these arguments provide a logical extension as to why we should expect that democracies may actually be less likely to over-contribute.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\textwidth]{figures/logit.png}
+		\caption{Predicted probability of committing troops against actual decision}
+		\label{fig:logit}
+	\end{figure}
 
-
-		Moving forward, we estimate a series of GAMs to test our core curvilinear hypothesis. GAMs are similar in structure to GLMs, but model relationships as a result of functions (which can be non-linear) rather than a constant coefficient. This generally takes the form of:
-
-		\begin{equation*}
-			f(x) = y_i = \alpha + f_1(x_{i1}) + f_2(x_{i2}) + ... + f_p(x_{ip}) + \varepsilon_i
-		\end{equation*}
-
-		where each function, $f_1, f_2, f_3, ..., f_p$ models the relationship between predictor and outcome, but can easily accommodate linear and non-linear effects.
-
-		\begin{figure}[ht]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.725\textwidth]{figures/linear_coef.png}
+		\caption{Model 2: Number of troops contributed, relative to number of available troops}
+		\label{fig:linear_reg}
+	\end{figure}
+	
+	Moving forward, we estimate a series of GAMs to test our core curvilinear hypothesis. GAMs are similar in structure to GLMs, but model relationships as a result of functions (which can be non-linear) rather than a constant coefficient. This generally takes the form of:
+	
+	\begin{equation*}
+	f(x) = y_i = \alpha + f_1(x_{i1}) + f_2(x_{i2}) + ... + f_p(x_{ip}) + \varepsilon_i
+	\end{equation*}
+	
+	where each function, $f_1, f_2, f_3, ..., f_p$ models the relationship between predictor and outcome, but can easily accommodate linear and non-linear effects.
+	
+	\begin{figure}[ht]
 		\centering
 		\begin{minipage}{.5\textwidth}
-		  \centering
-		  \includegraphics[width = \linewidth]{figures/no_can_gam.pdf}
-		  \captionof{figure}{GAM without Canada}
-		  \label{fig:test1}
+			\centering
+			\includegraphics[width = \linewidth]{figures/no_can_gam.pdf}
+			\captionof{figure}{GAM without Canada}
+			\label{fig:test1}
 		\end{minipage}%
 		\begin{minipage}{.5\textwidth}
-		  \centering
-		  \includegraphics[width= \linewidth]{figures/can_gam.pdf}
-		  \captionof{figure}{GAM including Canada}
-		  \label{fig:test2}
+			\centering
+			\includegraphics[width= \linewidth]{figures/can_gam.pdf}
+			\captionof{figure}{GAM including Canada}
+			\label{fig:test2}
 		\end{minipage}
-		\end{figure}
-
-		Across both models -- with and without Canada -- we find that smoothing function is statistically significant and the function corresponds well to the hypothesis, with a non-linear curve corresponding to moderately structurally equivalent states.
+	\end{figure}
+	
+	Across both models -- with and without Canada -- we find that smoothing function is statistically significant and the function corresponds well to the hypothesis, with a non-linear curve corresponding to moderately structurally equivalent states.
 
 \section{Discussion}
 	Our findings runs counter to that expected by theories about the balance of threats. For the balance of threat hypothesis, the states with the highest contributions are those that are most concerned about the threat the opposing state presents to their security \citep{haesebrouck_democraticparticipationair_2016}. Yet, when contributions are measured as internal costs relative to the contribution a state could have made, the highest contributions are from states that appear to be opting into a war in which they have no material stake. Denmark, New Zealand, and Romania, 3 of the top 4 contributors to ISAF in 2001 by our measure, are not the states that are most concerned about the threat that the Taliban and Al Qaeda posed to their national security. This empirical observation is not explained by the theory that states enter an alliance in order to balance against threats \citep{walt_originsalliance_1987}.
@@ -294,39 +297,6 @@ This is exemplary of a broader trend in coalition warfare. Some states contribut
 
 	Rather, because war is costly, it can serve as a signaling function for states that want to convey their desire to improve their relationship with other states in the international system. By accepting comparatively large costs to fighting alongside another state, especially when such fighting does not otherwise benefit you, states can signal how much they value an alliance relationship in a way that they anticipate generating reciprocity and payoffs down the road. Future work should examine whether states are making a smart bet in anticipating future payoffs from costly over-contributions; it is possible their gamble is incorrect. But for now, it suffices to say that states with the most interest in future payoffs from a better alliance relationship are the same states most likely to separate themselves from the rest of the coalition pact by over-contributing to wartime coalitions in the hopes that doing so signals their reliability.
 	%that they are not a friend without benefits.
-
-
-\section{Next Steps}
-
-Below we include a few areas where we could use some feedback.
-
-\begin{enumerate}
-
-	\item Is structural equivalence the right measure of the strength of a tie?
-		\begin{enumerate}
-			\item It has been convenient and readers will likely be familiar, but it also is not exactly what we are aiming for. If two states have very similar networks, then they are not necessarily strong allies, though the probability they are seems to increase. Another option is to fit a latent space model of alliance tie formation \citep{hoff2002} and then use the estimated Euclidean distances as a measure of tie strength.
-			\item We could also construct multiple networks (alliances, trade, diplomatic ties, arms trade) and use similarity across the multiplex network to construct a multidimensional strength of tie measure.
-		\end{enumerate}
-	\item Canada's outsized contributions:
-			\begin{figure}[H]
-			\centering
-				\includegraphics[width=0.55\textwidth]{figures/contributions_canada.png}
-			\caption{Troop Ratio by Structural Equivalence with the United States}
-			\label{fig:contr_sequiv_can}
-			\end{figure}
-
-		\begin{enumerate}
-			\item Any thoughts on how to deal with this are appreciated.
-		\end{enumerate}
-
-
-	\item Next modeling steps:
-	\begin{enumerate}
-		\item Fit the model on 2001-2014 with Afghanistan, not just 2001-2005. But we need to deal with casualty aversion. Right now the plan is to just control for casualties on the right-hand side.
-		\item We've received feedback to test the theory with the Iraq War. Though we haven't fit any models for Iraq yet, the data is almost ready and in identical format. So our plan is to finalize the empirical models for Afghanistan. treating it as a training set, and then we will test the models on Iraq. If the theory is accurate, then a model that captures the theory should have similar results -- not necessarily identical but similar in general relationship -- across conflicts. Iraq then will serve as a literal means of assessing out-of-sample performance.
-	\end{enumerate}
-\end{enumerate}
-
 
 \bibliographystyle{apsr}
 \bibliography{isaf_alliances}
