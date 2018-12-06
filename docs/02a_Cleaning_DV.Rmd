@@ -7,11 +7,16 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(dplyr)
-library(data.table)
 ```
 
-# Load and clean
+# Set-up
+## Load packages
+Pipe function breaks unless package is loaded. All other packages are referrened only for their specified functions.
+```{r}
+library(magrittr)
+```
+
+## Load and subset data
 Load the RData files containing the spreadsheets for the IISS deployment to Afghanistan data and country-year troop levels
 ```{r}
 iiss_deployment <- readRDS(file = paste0(here::here(), '/data/iiss_deployment.rds'))
@@ -27,15 +32,13 @@ iiss_troops$year <- iiss_troops$year - 1
 Narrow the datasets to just the years 2001-2014, the scope of the Afghanistan war
 ```{r}
 # Subset deployment data
-iiss_deployment <- iiss_deployment %>% filter(iiss_deployment$year > 2000 & 
-                                                iiss_deployment$year < 2015)
+iiss_deployment <- subset(iiss_deployment, year > 2000 & year < 2015)
 
 # Subset troop data
-iiss_troops <- iiss_troops %>% filter(iiss_troops$year > 2000 & 
-                                                iiss_troops$year < 2015)
-
+iiss_troops <- subset(iiss_troops, year > 2000 & year < 2015)
 ```
 
+### Clean names
 Clean the country string names from both data frames.
 ```{r}
 iiss_deployment$country[iiss_deployment$country == "Belqium"] <- "Belgium"
@@ -80,7 +83,7 @@ iiss_deployment$country[iiss_deployment$country == "Timor-Leste"] <- "Timor Lest
 # Merge
 Merge the two datasets into a single dataframe
 ```{r,message=FALSE, warning=FALSE, include=FALSE}
-years <- c(2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001)
+years <- c(2001:2014)
 myList <- list()
 index <- 1
 
