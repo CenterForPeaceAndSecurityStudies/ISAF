@@ -4,6 +4,7 @@ author: "Kent and Gannon"
 output:
     tint::tintHtml:
         toc: true
+    pandoc_args: ["+RTS", "-M1024M", "-RTS"]
 ---
 
 
@@ -223,16 +224,10 @@ for(i in 1:length(alliances)){
 }
 ```
 
-+ Remove observations not in original paper:
-
-```{R}
-## test <- all_alliances[8:1766,]
-```
-
 + Last, for merging purposes, let's drop NA observations.
 
 ```{R}
-test <- tidyr::drop_na(all_alliances)
+all_alliances <- tidyr::drop_na(all_alliances)
 ```
 
 + Code for scope estimates:
@@ -243,7 +238,7 @@ scope <- MCMCpack::MCMCfactanal(
     ~ macowe + maconc + maconp + nmacowe + nmaroir + 
     condother + renounceok + renounceproh + renouncecond + 
     offenseatop + defenseatop + neutatop + consultatop,
-    data = test,
+    data = all_alliances,
     factors = 1,
     lambda.constraints = list(compel = list(1, "+")),
     std.mean = TRUE, 
@@ -266,7 +261,7 @@ scope.score <- apply(rbd, 2, mean)
 depth <- MCMCpack::MCMCfactanal(
     ~ milcontact + commondef + intcom + milaid + base +
     contrib + organ1 + ecaid + secrecy,
-    data = test,
+    data = all_alliances,
     factors = 1,
     lambda.constraints = list(compel = list(1, "+")),
     std.mean = TRUE, 
@@ -295,21 +290,40 @@ AllianceDataScore <- round(AllianceDataScore, digits = 3)
 
 + How different?
 
-```{R}
+```{R eval = FALSE}
 original <- readr::read_csv("AllianceDataScore.csv")
 ```
 
 + Let's just use depth because the data for scope is not available. 
 
-```{R}
-## Load ATOP dyad data
+# US-Tie Strength
 
-## Merge by atopid
-
-## Filter
+```{R warning = FALSE}
+alliance <- readr::read_csv("AllianceDataScore_Kent.csv")
 ```
 
-# US-Tie Strength
++ Get all dyads involving the US from 2001 forward
+
+```{R}
+atop_dyad <- readr::read_csv("../atop/atop4_01dy.csv")
+
+## year > 2001, mem1 or mem2 == 2
+us_ally <- dplyr::filter(atop_dyad, year >= 2001)
+us_ally <- dplyr::filter(us_ally, mem1 == 2 | mem2 == 2)
+
+## Only keep useful columns
+us_ally <- dplyr::select(us_ally, c("atopid1", "year", "mem1", "mem2"))
+colnames(us_ally) <- c("atopid", "year", "mem1", "mem2")
+
+## Depth for each observation
+depth <- dplyr::select(alliance, c(V1, depth.score))
+colnames(depth) <- c("atopid", "depth")
+
+
+depth_dyad <- dplyr::left_join(us_ally, depth)
+
+## Now just use member 2 to merge to existing data
+```
 
 + Take average of scope and depth for each alliance with the US. Sum and standardize. How to best standardize.
 

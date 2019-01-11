@@ -343,7 +343,7 @@ if (window.hljs) {
 <li><em>compel</em>: Compellent: promises military action to change the status quo. Coded as 1 if an alliance member makes a compellent promise, otherwise 0.</li>
 <li><em>prob</em>: IGNORE</li>
 <li><em>deter</em>: Deterrent: promises military action to secure the status quo. Coded as 1 if an alliance member makes a deterrent promise, otherwise 0.</li>
-<li><em>deterministic</em>: Promises military action without options for flexible or probabilistic escape. Coded as 1 if an agreement contains non-flexible or non-probabilistic obligation to provide compellent or deterrent military support, 0 otherwise.</li>
+<li><em>deterministic</em>: Promises military action without options for flexible or probabilistic escape. Coded as 1 if an agreement contains non-flexibl e or non-probabilistic obligation to provide compellent or deterrent military support, 0 otherwise.</li>
 <li><em>unconditional</em>: Promises military action without conditions on <em>casus foederis</em>. Coded as 1 if an agreement requires compellent or deterrent military support without any conditions for <em>casus foederis</em>, 0 otherwise.</li>
 </ul>
 <div id="compellent-and-deterrent-alliances" class="section level2">
@@ -360,6 +360,11 @@ if (window.hljs) {
 </ul>
 <pre class="r"><code>atop &lt;- readr::read_csv(&quot;../atop/atop4_01m.csv&quot;)</code></pre>
 <ul>
+<li>Benson and Clinton drop obs that are only non-aggression pacts.</li>
+</ul>
+<pre class="r"><code>atop &lt;- dplyr::filter(atop, !(nonagg ==1 &amp; consul == 0 &amp; 
+    neutral == 0 &amp; offense == 0 &amp; defense == 0))</code></pre>
+<ul>
 <li><p>I’m only working with the variables that Benson and Clinton use to estimate alliance depth and scope.</p></li>
 <li>Ready data – this is member-alliance observations.
 <ul>
@@ -371,65 +376,154 @@ if (window.hljs) {
     &quot;member&quot; = atop$member, 
     &quot;yrent&quot; = atop$yrent, 
     &quot;yrexit&quot; = atop$yrexit, 
+    ## Military action conditional war environment
     &quot;macowe&quot; = with(atop, ifelse(
         defcoadv == 1 | defcoloc == 1 | defcocon == 1| 
         defconum == 1| offcoadv == 1| offcoloc == 1 |
         offcocon == 1 | offconum == 1, 
         1, 0
     )),
-    &quot;maconc&quot; = atop$defcodem,
+    ## Military action conditional on non-compliance
+    &quot;maconc&quot; = with(atop, ifelse(
+        defcodem == 1 | offcodem == 1,
+        1, 0
+    )),
+    ## Military action conditional on non-provocation
     &quot;maconp&quot; = atop$defconpr,
+    ## Non-military action conditional on war environment
     &quot;nmacowe&quot; = with(atop, ifelse(
         neucoadv == 1 | neucoloc == 1 | neucocon == 1 | 
         neuconum == 1 | neucoatt == 1 | concoadv == 1 |
         concoloc == 1 | concocon == 1, 
         1, 0 
     )),
+    ## Non-military action required only if requested
     &quot;nmaroir&quot; = atop$concoreq,
+    ## Other conditions
     &quot;condother&quot; = atop$olimob,
+    ## Renunciation allowed
     &quot;renounceok&quot; = with(atop, ifelse(
         renounce == 1,
         1, 0
     )),
+    ## Renunciation prohibited
     &quot;renounceproh&quot; = with(atop, ifelse(
         renounce == 2,
         1, 0 
     )),
+    ## Renunciation conditional
     &quot;renouncecond&quot; = with(atop, ifelse(
         renounce == 3,
         1, 0 
     )),
+    ## Offense alliance
     &quot;offenseatop&quot; = atop$offense,
+    ## Defense alliance
     &quot;defenseatop&quot; = atop$defense,
+    ## Neutrality pact
+    &quot;neutatop&quot; = atop$neutral,
+    ## Consultation
+    &quot;consultatop&quot; = atop$consul,
+    ## Military contact
     &quot;milcontact&quot; = with(atop, ifelse(
         milcon == 2,
         1, 0
     )),
+    ## Common defense pact
     &quot;commondef&quot; = with(atop, ifelse(
         milcon == 3,
         1, 0
     )),
+    ## Integrated command
     &quot;intcom&quot; = atop$intcom,
+    ## Military aid
     &quot;milaid&quot; = atop$milaid,
+    ## Military base
     &quot;base&quot; = atop$base,
+    ## Specific contribution
     &quot;contrib&quot; = atop$contrib,
+    ## Requires the creation of any organization
     &quot;organ1&quot; = atop$organ1,
+    ## Economic aid
     &quot;ecaid&quot; = with(atop, ifelse(
         ecaid &gt; 0, 
         1, 0
     )),
+    ## Secret pact
     &quot;secrecy&quot; = atop$pubsecr
 )</code></pre>
 <ul>
-<li><p>Now, let’s take all unique alliances, create a subset, and fill in each observation based on members, and then append to master.</p></li>
-<li><p>Code for scope estimates:</p></li>
+<li>Now, let’s take all unique alliances, create a subset, and fill in each observation based on members, and then append to master.</li>
 </ul>
-<pre class="r"><code>scope &lt;- MCMCfactanal(
+<pre class="r"><code>## blank template
+all_alliances &lt;- dplyr::tibble(
+    &quot;atopid&quot; = as.integer(),
+    &quot;macowe&quot; = as.integer(),
+    &quot;maconc&quot; = as.integer(),
+    &quot;maconp&quot; = as.integer(),
+    &quot;nmacowe&quot; = as.integer(),
+    &quot;nmaroir&quot; = as.integer(),
+    &quot;condother&quot; = as.integer(),
+    &quot;renounceok&quot; = as.integer(),
+    &quot;renounceproh&quot; = as.integer(),
+    &quot;renouncecond&quot; = as.integer(),
+    &quot;offenseatop&quot; = as.integer(),
+    &quot;defenseatop&quot; = as.integer(),
+    &quot;neutatop&quot; = as.integer(),
+    &quot;consultatop&quot; = as.integer(),
+    &quot;milcontact&quot; = as.integer(),
+    &quot;commondef&quot; = as.integer(),
+    &quot;intcom&quot; = as.integer(),
+    &quot;milaid&quot; = as.integer(),
+    &quot;base&quot; = as.integer(),
+    &quot;contrib&quot; = as.integer(),
+    &quot;organ1&quot; = as.integer(),
+    &quot;ecaid&quot; = as.integer(),
+    &quot;secrecy&quot; = as.integer()
+)
+
+## First, list of unique alliance
+alliances &lt;- unique(bc_ext$atopid)
+
+for(i in 1:length(alliances)){
+    ## subset data on all states in alliance
+    temp &lt;- dplyr::filter(bc_ext, atop$atopid == alliances[i])
+    all_alliances[i, 1] &lt;- temp$atopid[1]
+    all_alliances[i, 2] &lt;- sum(temp$macowe)/nrow(temp)
+    all_alliances[i, 3] &lt;- sum(temp$maconc)/nrow(temp)
+    all_alliances[i, 4] &lt;- sum(temp$maconp)/nrow(temp)
+    all_alliances[i, 5] &lt;- sum(temp$nmacowe)/nrow(temp) 
+    all_alliances[i, 6] &lt;- sum(temp$nmaroir)/nrow(temp) 
+    all_alliances[i, 7] &lt;- sum(temp$condother)/nrow(temp) 
+    all_alliances[i, 8] &lt;- sum(temp$renounceok)/nrow(temp) 
+    all_alliances[i, 9] &lt;- sum(temp$renounceproh)/nrow(temp) 
+    all_alliances[i, 10] &lt;- sum(temp$renouncecond)/nrow(temp) 
+    all_alliances[i, 11] &lt;- sum(temp$offenseatop)/nrow(temp) 
+    all_alliances[i, 12] &lt;- sum(temp$defenseatop)/nrow(temp)
+    all_alliances[i, 13] &lt;- sum(temp$neutatop)/nrow(temp) 
+    all_alliances[i, 14] &lt;- sum(temp$consultatop)/nrow(temp)
+    all_alliances[i, 15] &lt;- sum(temp$milcontact)/nrow(temp) 
+    all_alliances[i, 16] &lt;- sum(temp$commondef)/nrow(temp)
+    all_alliances[i, 17] &lt;- sum(temp$intcom)/nrow(temp)
+    all_alliances[i, 18] &lt;- sum(temp$milaid)/nrow(temp) 
+    all_alliances[i, 19] &lt;- sum(temp$base)/nrow(temp)
+    all_alliances[i, 20] &lt;- sum(temp$contrib)/nrow(temp) 
+    all_alliances[i, 21] &lt;- sum(temp$organ1)/nrow(temp)
+    all_alliances[i, 22] &lt;- sum(temp$ecaid)/nrow(temp) 
+    all_alliances[i, 23] &lt;- sum(temp$secrecy)/nrow(temp) 
+}</code></pre>
+<ul>
+<li>Last, for merging purposes, let’s drop NA observations.</li>
+</ul>
+<pre class="r"><code>test &lt;- tidyr::drop_na(all_alliances)</code></pre>
+<ul>
+<li>Code for scope estimates:</li>
+</ul>
+<pre class="r"><code>scope &lt;- MCMCpack::MCMCfactanal(
     ~ macowe + maconc + maconp + nmacowe + nmaroir + 
     condother + renounceok + renounceproh + renouncecond + 
-    compel + deterministic + unconditional + offenseatop + 
-    defenseatop + neutatop + consultatop,
-    data = alldata,
+    offenseatop + defenseatop + neutatop + consultatop,
+    data = test,
     factors = 1,
     lambda.constraints = list(compel = list(1, &quot;+&quot;)),
     std.mean = TRUE, 
@@ -440,40 +534,46 @@ if (window.hljs) {
     thin = 1000,
     store.scores = TRUE)
 
-factor.load3 &lt;- scope[, 1:32]
+factor.load3 &lt;- scope[, 1:26]
 apply(factor.load3, 2, mean)
-rbd &lt;- scope[ , -seq(1:32)]
+rbd &lt;- scope[ , -seq(1:26)]
 scope.score &lt;- apply(rbd, 2, mean)</code></pre>
 <ul>
 <li>Code for depth estimates:</li>
 </ul>
-<pre class="r"><code>depth &lt;- MCMCfactanal(
-    ~ milcontact + commondef + intcom + milaid + base + 
+<pre class="r"><code>depth &lt;- MCMCpack::MCMCfactanal(
+    ~ milcontact + commondef + intcom + milaid + base +
     contrib + organ1 + ecaid + secrecy,
-    data = alldata,
+    data = test,
     factors = 1,
-    lambda.constraints = list(base = list(1, &quot;+&quot;)),
-    std.mean = TRUE,
+    lambda.constraints = list(compel = list(1, &quot;+&quot;)),
+    std.mean = TRUE, 
     std.var = TRUE,
     verbose = 100000,
-    mcmc = 1000000,
-    burnin = 100000,
+    mcmc = 1000000, 
+    burnin = 100000, 
     thin = 1000,
-    store.scores = TRUE
-)
+    store.scores = TRUE)
 
 factor.load2 &lt;- depth[, 1:18]
 apply(factor.load2, 2, mean)
-rbd &lt; -depth[,-seq(1:18)]
+rbd &lt;- depth[,-seq(1:18)]
 depth.score &lt;- apply(rbd, 2, mean)</code></pre>
 <ul>
 <li>Full alliance score data:</li>
 </ul>
-<pre class="r"><code>AllianceDataScore &lt;- as.data.frame(cbind(alldata$atopid,
-    Dimension1.score, depth.score, scope.score))
+<pre class="r"><code>AllianceDataScore &lt;- as.data.frame(cbind(test$atopid,
+    depth.score, scope.score))
 
 AllianceDataScore &lt;- round(AllianceDataScore, digits = 3)
-write.csv(AllianceDataScore, file = &quot;AllianceDataScore.csv&quot;)</code></pre>
+## write.csv(AllianceDataScore, file = &quot;AllianceDataScore_Kent.csv&quot;)</code></pre>
+<ul>
+<li>How different?</li>
+</ul>
+<pre class="r"><code>original &lt;- readr::read_csv(&quot;AllianceDataScore.csv&quot;)</code></pre>
+<ul>
+<li>Let’s just use depth because the data for scope is not available.</li>
+</ul>
 </div>
 <div id="us-tie-strength" class="section level1">
 <h1>US-Tie Strength</h1>
