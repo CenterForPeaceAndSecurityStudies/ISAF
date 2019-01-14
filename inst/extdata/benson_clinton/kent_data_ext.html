@@ -295,6 +295,10 @@ if (window.hljs) {
 </ul>
 </div>
 
+<ul>
+<li>Scope: “Alliances vary in the breadth of the circumstances to which the obligations of a military alliance have application.” p868</li>
+<li>Depth: “as well as the costliness of the obligations to which signatories commit themselves when they join the alliance.” p868</li>
+</ul>
 <div id="variables-what-are-they-and-where-are-they-from" class="section level1">
 <h1>Variables: What are they and where are they from?</h1>
 <ul>
@@ -360,7 +364,7 @@ if (window.hljs) {
 </ul>
 <pre class="r"><code>atop &lt;- readr::read_csv(&quot;../atop/atop4_01m.csv&quot;)</code></pre>
 <ul>
-<li>Benson and Clinton drop obs that are only non-aggression pacts.</li>
+<li>Benson and Clinton drop obs that are only non-aggression pacts. This is a bunch and drives the NAs later on.</li>
 </ul>
 <pre class="r"><code>atop &lt;- dplyr::filter(atop, !(nonagg ==1 &amp; consul == 0 &amp; 
     neutral == 0 &amp; offense == 0 &amp; defense == 0))</code></pre>
@@ -515,7 +519,7 @@ for(i in 1:length(alliances)){
 <ul>
 <li>Last, for merging purposes, let’s drop NA observations.</li>
 </ul>
-<pre class="r"><code>test &lt;- tidyr::drop_na(all_alliances)</code></pre>
+<pre class="r"><code>all_alliances &lt;- tidyr::drop_na(all_alliances)</code></pre>
 <ul>
 <li>Code for scope estimates:</li>
 </ul>
@@ -523,7 +527,7 @@ for(i in 1:length(alliances)){
     ~ macowe + maconc + maconp + nmacowe + nmaroir + 
     condother + renounceok + renounceproh + renouncecond + 
     offenseatop + defenseatop + neutatop + consultatop,
-    data = test,
+    data = all_alliances,
     factors = 1,
     lambda.constraints = list(compel = list(1, &quot;+&quot;)),
     std.mean = TRUE, 
@@ -544,7 +548,7 @@ scope.score &lt;- apply(rbd, 2, mean)</code></pre>
 <pre class="r"><code>depth &lt;- MCMCpack::MCMCfactanal(
     ~ milcontact + commondef + intcom + milaid + base +
     contrib + organ1 + ecaid + secrecy,
-    data = test,
+    data = all_alliances,
     factors = 1,
     lambda.constraints = list(compel = list(1, &quot;+&quot;)),
     std.mean = TRUE, 
@@ -568,19 +572,50 @@ depth.score &lt;- apply(rbd, 2, mean)</code></pre>
 AllianceDataScore &lt;- round(AllianceDataScore, digits = 3)
 ## write.csv(AllianceDataScore, file = &quot;AllianceDataScore_Kent.csv&quot;)</code></pre>
 <ul>
-<li>How different?</li>
-</ul>
-<pre class="r"><code>original &lt;- readr::read_csv(&quot;AllianceDataScore.csv&quot;)</code></pre>
-<ul>
 <li>Let’s just use depth because the data for scope is not available.</li>
 </ul>
 </div>
 <div id="us-tie-strength" class="section level1">
 <h1>US-Tie Strength</h1>
+<pre class="r"><code>alliance &lt;- readr::read_csv(&quot;AllianceDataScore_Kent.csv&quot;)</code></pre>
 <ul>
-<li><p>Take average of scope and depth for each alliance with the US. Sum and standardize. How to best standardize.</p></li>
-<li><p>Take dyadic data and select all relevant alliances, then sum and standardize.</p></li>
+<li>Get all dyads involving the US from 2001 forward</li>
 </ul>
+<pre class="r"><code>atop_dyad &lt;- readr::read_csv(&quot;../atop/atop4_01dy.csv&quot;)
+
+## year &gt; 2001, mem1 or mem2 == 2
+us_ally &lt;- dplyr::filter(atop_dyad, year &gt;= 2001)
+us_ally &lt;- dplyr::filter(us_ally, mem1 == 2 | mem2 == 2)
+
+## Only keep useful columns
+us_ally &lt;- dplyr::select(us_ally, c(&quot;atopid1&quot;, &quot;year&quot;, &quot;mem1&quot;, &quot;mem2&quot;))
+colnames(us_ally) &lt;- c(&quot;atopid&quot;, &quot;year&quot;, &quot;mem1&quot;, &quot;mem2&quot;)
+
+## Depth for each observation
+depth &lt;- dplyr::select(alliance, c(V1, depth.score))
+colnames(depth) &lt;- c(&quot;atopid&quot;, &quot;depth&quot;)
+
+## Join depth values and us_ally list
+depth_dyad &lt;- dplyr::left_join(us_ally, depth)
+
+## Remove NAs -- lose a lot because of non-aggression pacts
+depth_dyad &lt;- tidyr::drop_na(depth_dyad)</code></pre>
+<pre class="r"><code>## What does the data look like?
+head(depth_dyad)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   atopid  year  mem1  mem2  depth
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
+## 1   3180  2001     2    20 -0.581
+## 2   3180  2002     2    20 -0.581
+## 3   3180  2003     2    20 -0.581
+## 4   3180  2004     2    20 -0.581
+## 5   3180  2005     2    20 -0.581
+## 6   3180  2006     2    20 -0.581</code></pre>
+<ul>
+<li><p>The reason there are NAs is that they are non-aggression pacts, which, per Benson and Clinton, are dropped.</p></li>
+<li><p>Lets save the data for merging.</p></li>
+</ul>
+<pre class="r"><code>rio::export(depth_dyad, &quot;depth_scores.Rds&quot;)</code></pre>
 </div>
 
 

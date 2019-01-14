@@ -8,6 +8,10 @@ output:
 ---
 
 
++ Scope: "Alliances vary in the breadth of the circumstances to which the
+obligations of a military alliance have application." p868
++ Depth: "as well as the costliness of the obligations to which signatories commit themselves when they join the alliance." p868
+
 # Variables: What are they and where are they from?
 
 + *atopid*: Alliance ID.
@@ -62,13 +66,13 @@ output:
 
 + Import data
 
-```{R message = FALSE}
+```{R message = FALSE, eval = FALSE}
 atop <- readr::read_csv("../atop/atop4_01m.csv")
 ```
 
-+ Benson and Clinton drop obs that are only non-aggression pacts.
++ Benson and Clinton drop obs that are only non-aggression pacts. This is a bunch and drives the NAs later on.
 
-```{R}
+```{R eval = FALSE}
 atop <- dplyr::filter(atop, !(nonagg ==1 & consul == 0 & 
     neutral == 0 & offense == 0 & defense == 0))
 ```
@@ -78,7 +82,7 @@ atop <- dplyr::filter(atop, !(nonagg ==1 & consul == 0 &
 + Ready data -- this is member-alliance observations.
     + **Problem: compellent, deterrence, and unconditional variables are all hand-coded by Benson in an earlier paper.** So I can't extend them with ATOP. I'll write him in the meantime, but am not hopeful.
 
-```{R}
+```{R eval = FALSE}
 bc_ext <- dplyr::tibble(
     "atopid" = atop$atopid, 
     "member" = atop$member, 
@@ -164,7 +168,7 @@ bc_ext <- dplyr::tibble(
 
 + Now, let's take all unique alliances, create a subset, and fill in each observation based on members, and then append to master.
 
-```{R}
+```{R eval = FALSE}
 ## blank template
 all_alliances <- dplyr::tibble(
     "atopid" = as.integer(),
@@ -226,7 +230,7 @@ for(i in 1:length(alliances)){
 
 + Last, for merging purposes, let's drop NA observations.
 
-```{R}
+```{R eval = FALSE}
 all_alliances <- tidyr::drop_na(all_alliances)
 ```
 
@@ -288,23 +292,18 @@ AllianceDataScore <- round(AllianceDataScore, digits = 3)
 ## write.csv(AllianceDataScore, file = "AllianceDataScore_Kent.csv")
 ```
 
-+ How different?
-
-```{R eval = FALSE}
-original <- readr::read_csv("AllianceDataScore.csv")
-```
-
 + Let's just use depth because the data for scope is not available. 
 
 # US-Tie Strength
 
-```{R warning = FALSE}
+
+```{R eval = FALSE}
 alliance <- readr::read_csv("AllianceDataScore_Kent.csv")
 ```
 
 + Get all dyads involving the US from 2001 forward
 
-```{R}
+```{R eval = FALSE}
 atop_dyad <- readr::read_csv("../atop/atop4_01dy.csv")
 
 ## year > 2001, mem1 or mem2 == 2
@@ -319,14 +318,22 @@ colnames(us_ally) <- c("atopid", "year", "mem1", "mem2")
 depth <- dplyr::select(alliance, c(V1, depth.score))
 colnames(depth) <- c("atopid", "depth")
 
-
+## Join depth values and us_ally list
 depth_dyad <- dplyr::left_join(us_ally, depth)
 
-## Now just use member 2 to merge to existing data
+## Remove NAs -- lose a lot because of non-aggression pacts
+depth_dyad <- tidyr::drop_na(depth_dyad)
 ```
 
-+ Take average of scope and depth for each alliance with the US. Sum and standardize. How to best standardize.
+```{R}
+## What does the data look like?
+head(depth_dyad)
+```
 
-+ Take dyadic data and select all relevant alliances, then sum and standardize.
++ The reason there are NAs is that they are non-aggression pacts, which, per Benson and Clinton, are dropped. 
 
++ Lets save the data for merging.
 
+```{R eval = FALSE}
+rio::export(depth_dyad, "depth_scores.Rds")
+```
