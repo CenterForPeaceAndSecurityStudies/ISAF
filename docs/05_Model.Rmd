@@ -19,10 +19,6 @@ isaf <- rio::import('../data/iiss_afghan_complete.rds')
 ## Remove afghanistan because it is not a realistic self-contributor
 ## Remove US because paper is about relations with the US
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
-## Only focus on years 2001-2005
-##isaf <- dplyr::filter(isaf, year <= 2005)
-## Somehow still duplicates, fix later...
-## isaf <- isaf[!duplicated(isaf[c("ccode", "year")]),]
 ```
 
 # Key predictor -- diff between ideal point and alliance depth
@@ -40,9 +36,25 @@ isaf$depth <- isaf$depth/summary(isaf$depth)[6]
 
 ```{R}
 isaf$pot_gain <- isaf$pctagreeus - isaf$depth
+```
 
++ US ally variable
+
+```{R}
+## Create alliance (not including non-aggression pact) variable
+isaf$us_ally <- ifelse(
+  !is.na(isaf$depth), ## if there is a depth score
+  1, 0 ## 0 if no depth score (no alliance), 1 if there is a depth score
+)
+```
+
++ Exploratory Models
+
+```{R}
 m1 <- glm(troops_afghan_ratio ~ pot_gain + dem, 
-  data = dplyr::filter(isaf, us_ally == 1))
+  data = dplyr::filter(isaf, us_ally == 1)) 
+  ## unnecessary to filter by us ally, because gets dropped, but I want 
+  ## to keep track of the data partitions
 summary(m1)
 
 m2 <- glm(troops_afghan_ratio ~ pctagreeus,
@@ -54,36 +66,119 @@ summary(m2)
 m3 <- glm(troops_afghan_ratio ~ pctagreeus,
   data = dplyr::filter(isaf, ccode != 395))
 summary(m3)
+
+## Need to drop Iceland
+m4 <- glm(troops_afghan_ratio ~ pot_gain ,
+  data = dplyr::filter(test, ccode != 395))
+summary(m4)
+
+## Israel??
 ```
 
 + Idea: All models have a positive coefficient. Show that the first one -- potential gain -- has the best fit with cross-validation. 
 
 ## Descriptive statistics
 
++ Look at which observations actually contribute the most:
+
+```{R}
+contributions <- dplyr::select(dplyr::filter(isaf, country != "Iceland"), 
+  c(year, country, troops_afghan_ratio))
+
+## Biggest contributors
+contributions[order(-contributions$troops_afghan_ratio),][1:100,]
+
+## Start of conflict
+contributions2 <- dplyr::select(dplyr::filter(isaf, 
+  country != "Iceland" & year == 2001), 
+  c(year, country, troops_afghan_ratio))
+
+contributions2[order(-contributions2$troops_afghan_ratio),][1:20,]
+```
+
++ What happens if we just have all countries without alliances be coded as zero in depth:
+
+```{R}
+colnames(isaf)
+
+test <- isaf
+for(i in 1:nrow(test)){
+  if(test[i,27] == 0){
+    test[i,25] <- 0
+  }
+}
+
+test$pot_gain <- test$pctagreeus - test$depth
+
+ggplot(dplyr::filter(test, country != "Iceland"), aes(x = pot_gain, y = troops_afghan_ratio)) + 
+  geom_point() + 
+  geom_text(aes(label=stateabb), hjust=0, vjust=1, size = 2) +
+  geom_smooth(method = "glm") +
+  theme_bw()
+
+contributions3 <- dplyr::select(dplyr::filter(test, country != "Iceland"), 
+  c(year, country, troops_afghan_ratio))
+
+## Biggest contributors
+contributions3[order(-contributions3$troops_afghan_ratio),][1:100,]
+
+pot_gain <- dplyr::select(dplyr::filter(test, country != "Iceland"), 
+  c(year, country, pot_gain))
+
+pot_gain[order(-pot_gain$pot_gain),][1:100,]
+```
+
++ If we include all non-allies as zero depth with US, then Israel has the most to gain because it votes in tandem with the US, but no troop contributions.
+  + Also, Israel lacks a formal military alliance but has intense US military cooperation and aid, so doesn't need to signal.
+    + Israel not in graph:
+
+```{R}
+ggplot(dplyr::filter(test, country != "Iceland" & country != "Israel"), 
+  aes(x = pot_gain, y = troops_afghan_ratio)) + 
+  geom_point() + 
+  geom_text(aes(label=stateabb), hjust=0, vjust=1, size = 2) +
+  geom_smooth() +
+  theme_bw()
+```
+
++ PLot also reveals that the United Kingdom's ideological baseline is so close with the US that the degree of military cooperation realistically still has room to grow.
+
++ So if we look at the entire dataset, UK is first which follows closeness of alliance hypothesis. But then we have Georgia, Denmark, Netherlands, Canada, Georgia, Latvia, Estonia, New Zealand, etc. 
+  + For other contributors, the big ones are those with room to gain. 
+
+```{R}
+pot_gain <- dplyr::select(dplyr::filter(isaf, country != "Iceland"), 
+  c(year, country, pot_gain))
+
+## Biggest contributors
+contributions[order(-contributions$troops_afghan_ratio),][1:100,]
+```
+
 + First, let's see how our DV varies by our predictors:
 
 + Alliance with the US, faceted by voting similarity with the United States.
+
 
 ```{R}
 ## need to import ggplot, gets messy as ggplot2::ggplot()
 library(ggplot2)
 
-## Create alliance (not including non-aggression pact) variable
-isaf$us_ally <- ifelse(
-  !is.na(isaf$depth), ## if there is a depth score
-  1, 0 ## 0 if no depth score (no alliance), 1 if there is a depth score
-)
-
-
-ggplot(isaf, aes(x = pctagreeus, y = troops_afghan_ratio)) + 
+## Remove Iceland because of strange infinity values
+ggplot(dplyr::filter(isaf, country != "Iceland"), aes(x = pot_gain, y = troops_afghan_ratio)) + 
   geom_point() + 
-  geom_smooth(method = "glm") + 
-  facet_grid(rows = vars(us_ally)) + 
+  geom_text(aes(label=stateabb), hjust=0, vjust=1, size = 2) +
+  geom_smooth() +
   theme_bw()
 
-ggplot(isaf, aes(x = pot_gain, y = troops_afghan_ratio)) + 
+## What about percent shared vote?
+ggplot(dplyr::filter(isaf, country != "Iceland"), 
+  aes(x = idealpoint, y = troops_afghan_ratio)) + 
   geom_point() + 
-  geom_smooth(method = "glm")
+  geom_text(aes(label=stateabb), hjust=0, vjust=1, size = 2) +
+  geom_smooth() +
+  theme_bw()
+
+
 ```
 
 
