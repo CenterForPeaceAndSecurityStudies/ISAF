@@ -1,0 +1,76 @@
+% !BIB program = bibtex
+
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{titlesec}
+\setcounter{tocdepth}{2}
+\usepackage[margin=1in]{geometry}
+\usepackage{ntheorem}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage[stable]{footmisc}
+\usepackage{setspace}
+\onehalfspacing
+
+% font
+\usepackage[charter,cal=cmcal]{mathdesign}
+
+\usepackage{ntheorem}
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand\thesubhyp{\thehyp.\alph{subhyp}}
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.pathmorphing, backgrounds, fit, positioning, shapes.symbols, chains, decorations.pathreplacing}
+\usepackage[round]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,~}
+\usepackage[space]{grffile}
+\graphicspath{{./figures/}}
+\usepackage[affil-it]{authblk}
+\makeatletter
+
+\def\@maketitle{%
+	\newpage
+	\null
+%	\vskip 2em%
+	\begin{center}%
+		\let \footnote \thanks
+		{\Large\bfseries \@title \par}%
+		%\vskip 1.5em%
+		{\normalsize
+		%	\lineskip .5em%
+			\begin{tabular}[t]{c}%
+				\@author
+			\end{tabular}\par}%
+		%\vskip 1em%
+		{\normalsize \today}%
+	\end{center}%
+	\par
+	%\vskip 1.5em
+	}
+\makeatother
+
+\title{Keeping Your Friends Close, But Acquaintances Closer: Why Weakly Allied States Make Loyal Coalition Partners}
+
+\author{J Andr\'{e}s Gannon%
+	\thanks{Electronic address: \texttt{jagannon@ucsd.edu} Web: \texttt{jandresgannon.com}}}
+\affil{Department of Political Science \\ University of California, San Diego}
+
+\author{Daniel Kent%
+	\thanks{Electronic address: \texttt{kent.249@osu.edu} Web: \texttt{dnkent.github.io} \\ Draft version, please do not circulate. We thank members of the Center for Peace and Security Studies (cPASS), in particular Erik Gartzke, Rex Douglass, Matthew Millard, Michael Rubin, Thomas Scherer, and Alexandra Woodruff as well as Jan Angstrom, James Fowler, Luke Sanford, Rachel Schoner, and Camber Warren for their comments and suggestions. Erin Ling, Amanda Madany, Cole Reynolds, Effie Sun, Alexandra Vignau, Erin Werner, and Lisa Yen provided invaluable research assistance. Previous drafts were presented at the 2018 American Political Science Association conference and 2018 Political Networks Conference. This research was sponsored by Office of Naval Research Grant N00014-14-1-0071 and the Department of Defense Minerva Research Initiative. Any opinions, findings, and conclusions or recommendations expressed in this publication are those of the authors and do not necessarily reflect the view of the Office of Naval Research.}}
+\affil{Department of Political Science \\ The Ohio State University}
+
+\begin{document}
+\maketitle
+
+\end{document}
