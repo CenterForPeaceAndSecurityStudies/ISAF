@@ -6,17 +6,34 @@ output:
         toc: true
 ---
 
-
-# Baseline data
-
-First, we load the data for 2001-2012. This is a cleaned version of the national military capabilities dataset, which serves as a nice starting point because we are generally interested in contributions relative to a country's total military capacity.
-
-It is worth noting that we have troop data for Afghanistan through 2014, so we may have to revisit this setup to see if we can find a way to get our right-hand side through 2014.
+# State List
 
 ```{R}
-isaf <- rio::import('../inst/extdata/isaf_rhs.rds')
-## Remove duplicates...
-isaf <- isaf[!duplicated(isaf[c("ccode", "year")]),]
+states <- readr::read_csv('../inst/extdata/states2016.csv')
+
+isaf_ext <- dplyr::tibble(
+    year = as.integer(),
+    stateabb = as.character(),
+    statenme = as.character(),
+    ccode = as.integer()
+)
+
+for (i in 1:14){
+    year <- 2000 + i ## set year
+    ## what countries exist at that time? 
+    temp <- dplyr::filter(states, endyear >= year)
+    temp$year <- year ## add year column
+    temp <- dplyr::select(temp, c(year, stateabb, ccode, statenme)) ## reorder
+    isaf_ext <- rbind(isaf_ext, temp) ## append
+}
+```
+
+# CINC Scores
+
+```{R}
+cinc <- readr::read_csv('../inst/extdata/NMC_5_0.csv')
+cinc <- dplyr::select(cinc, -c(version))
+isaf_ext <- dplyr::left_join(isaf_ext, cinc)
 ```
 
 # Ideal Points
@@ -33,38 +50,7 @@ ideal <- dplyr::select(ideal, c(ccode, year, CountryName, Idealpoint,
 colnames(ideal) <- c("ccode", "year", "statenme", "idealpoint", "pctagreeus")
 
 ## merge data
-isaf <- dplyr::left_join(isaf, ideal)
-```
-
-# Lebovic and Saunders
-
-Second, let's add the the Lebovic and Saunders data on diplomatic visits. This only goes to 2012.
-    + **Update**: Let's hold off on using this data. 
-
-```{R eval = FALSE}
-diplomatic <- rio::import ('../inst/extdata/lebovich_saunders_diplomacy/dipl_core.csv')
-
-## There is a lot going on here. Let's just look at US visits and arms relations.
-dipl <- dplyr::select(diplomatic, c(cowid, year, bi_SOS, bi_PRE, bi_str_SOS,
-    bi_str_PRE, USmilaid, allies, USdefense, UStrade, USalign, UNpart))
-
-## colnames that make more sense
-colnames(dipl) <- c("ccode", "year", "sec_st", "pres", "sec_only", "pres_only",
-    "us_mil_aid", "us_ally", "us_def_pact", "us_trade", "us_un_vote_sim", 
-    "un_particip")
-
-## merge datasets
-isaf <- dplyr::left_join(isaf, dipl)
-```
-
-# Kinne
-
-This is a cleaned version of the original dataset, as the original was too large for GitHub and contained variables and observations we did not need. Note that this data ends in 2010.
-+ **Update:** Same thing, let's hold off on using for now.
-
-```{R eval = FALSE}
-kinne <- rio::import('../inst/extdata/kinne_defense_cooperation_agreements/kinne_dca.rds')
-isaf <- dplyr::left_join(isaf, kinne)
+isaf_ext <- dplyr::left_join(isaf_ext, ideal)
 ```
 
 # Polity
@@ -84,13 +70,233 @@ for(i in 1:nrow(polity)){
     }
 }
 ## merge
-isaf <- dplyr::left_join(isaf, polity)
+isaf_ext <- dplyr::left_join(isaf_ext, polity)
 ```
 
-# Network measures
+# Alliance Depth
 
-Let's also build the alliance network for each year so that we can calculate statistics for network position. Note, it is OK that this only includes states with an alliance. Any state not in the alliance network will be categorized as an NA for network statistics.
-+ **Update:** This is not necessary for the final models, but let's keep the code in case. 
+```{R}
+depth_dyad <- rio::import('../inst/extdata/benson_clinton/depth_scores.Rds')
+```
+
+```{R}
+## Use the year, country-code and depth for merging
+depth_sub <- dplyr::select(depth_dyad, c("year", "mem2", "atopid", "depth"))
+colnames(depth_sub) <- c("year", "ccode", "atopid", "depth")
+## Note, there do not appear to be repeat country-years.
+
+## Merge
+isaf_ext <- dplyr::left_join(isaf_ext, depth_sub)
+```
+
+# Potential Gain
+
++ Standardize depth to be between 0 and 1. 
+
+```{R}
+## Make all values positive
+isaf_ext$depth <- isaf_ext$depth + abs(summary(isaf_ext$depth)[1]) 
+## Divide by max to make between 0 and 1
+isaf_ext$depth <- isaf_ext$depth/summary(isaf_ext$depth)[6]
+```
+
++ Create potential gain variable:
+
+```{R}
+isaf_ext$pot_gain <- isaf_ext$pctagreeus - isaf_ext$depth
+```
+
+# US ally variable
+
+```{R}
+## Create alliance (not including non-aggression pact) variable
+isaf_ext$us_ally <- ifelse(
+    !is.na(isaf_ext$depth), ## if there is a depth score
+    1, 0 ## 0 if no depth score (no alliance), 1 if there is a depth score
+)
+```
+
+# DV
+
+Let's import the iiss data about troop levels in Afghanistan.
+
+```{R}
+iiss_troops <- rio::import('../data/iiss_afghan.rds')
+iiss_troops <- dplyr::arrange(iiss_troops, year)
+```
+
+There are some repeats because of data listed in separate places. Clean and combine.
+
+```{R}
+dups <- which(duplicated(iiss_troops[,1:2]) == TRUE)
+
+for(i in 1:length(dups)){
+    ## troops_afghan_total
+    iiss_troops[dups[i] - 1,5] <- iiss_troops[dups[i] - 1,5] + 
+        iiss_troops[dups[i],5]
+    ## troops_afghan_oef
+    iiss_troops[dups[i] - 1,6] <- iiss_troops[dups[i] - 1,6] + 
+        iiss_troops[dups[i],6]
+    ## troops_afghan_isaf
+    iiss_troops[dups[i] - 1,7] <- iiss_troops[dups[i] - 1,7] + 
+        iiss_troops[dups[i],7]
+    ## troops_afghan_unama
+    iiss_troops[dups[i] - 1,8] <- iiss_troops[dups[i] - 1,8] + 
+        iiss_troops[dups[i],8]
+    ## troops_afghan_ratio -- recalculate
+    iiss_troops[dups[i]-1,9] <- iiss_troops[dups[i]-1,5] / 
+        iiss_troops[dups[i]-1,4] 
+}
+
+## remove dups
+iiss_troops <- iiss_troops[!duplicated(iiss_troops[,1:2]),]
+```
+
+# Controls
+
++ Distance from Afghanistan, GDP, GDPPC, and casualties.
+
+```{R}
+## Distance
+distance <- readr::read_csv('../inst/extdata/distance.csv')
+## Afghanistan = 700
+afgh_dist <- dplyr::filter(distance, ccode1 == 700 | ccode2 == 700)
+## Not sure how to do this elegantly... Just going with brute force.
+afgh_dist2 <- dplyr::tibble(
+    ccode = as.integer(),
+    distance = as.integer()
+)
+for(i in 1:nrow(afgh_dist)){
+    ## Ccode -- get non-Afghanistan country
+    if(afgh_dist[i,2] == 700){ 
+        afgh_dist2[i,1] <- afgh_dist[i,1] 
+    }else(
+        afgh_dist2[i,1] <- afgh_dist[i,2]
+    )
+    ## Distance
+    afgh_dist2[i,2] <- afgh_dist[i,4]
+}
+## which are unique?
+unique_countries <- afgh_dist2[!duplicated(afgh_dist2[,c('ccode')]),]
+
+## Merge with isaf
+isaf_ext <- dplyr::left_join(isaf_ext, unique_countries)
+```
+
++ GDP and GDPPC
+
+```{R}
+gdp <- wbstats::wb(indicator = c("NY.GDP.MKTP.CD"))
+gdp <- dplyr::select(gdp, c(iso3c, date, value))
+colnames(gdp) <- c("stateabb", "year", "gdp")
+gdp$year <- as.numeric(gdp$year)
+isaf_ext <- dplyr::left_join(isaf_ext, gdp)
+
+gdppc <- wbstats::wb(indicator = c("NY.GDP.PCAP.CD"))
+gdppc <- dplyr::select(gdppc, c(iso3c, date, value))
+colnames(gdppc) <- c("stateabb", "year", "gdppc")
+gdppc$year <- as.numeric(gdppc$year)
+isaf_ext <- dplyr::left_join(isaf_ext, gdppc)
+```
+
++ Casualties
+
+```{R}
+casualties <- rio::import('../data/afghan_casualties.csv')
+## Tidy
+## remove total column
+casualties <- casualties[,-31]
+casualties <- tidyr::gather(data = casualties, "country", "casualties", 2:30)
+colnames(casualties) <- c("year", "statenme", "casualties")
+## fix naming inconsistencies for emrging
+casualties[501:522,2] <- "United States of America"
+## Merge
+isaf_ext <- dplyr::left_join(isaf_ext, casualties)
+## If NA for casualties, then have equal 0
+isaf_ext$casualties <- ifelse(is.na(isaf_ext$casualties), 0,    
+    isaf_ext$casualties)
+```
+
+## Merge
+
++ Now we can merge everything together.
+
+```{R}
+iiss_troops$ccode <- as.integer(iiss_troops$ccode)
+final_data <- dplyr::left_join(iiss_troops, isaf_ext)
+```
+
++ And drop Northern Cyprus, because not internationally recognized and their troops were not available to Cyprus.
+
+```{R}
+final_data <- dplyr::filter(final_data, 
+    country != "Turkish Republic of Northern Cyprus")
+```
+
+# Finalize
+
++ Last, let's clean everything up.
+
+```{R}
+## Remove redundant id var
+final_data <- dplyr::select(final_data, -c(statenme)) 
+## Reorder so that stateabb is not in the middle of the dataset
+final_data <- dplyr::select(final_data, c(year, country, stateabb, 
+    dplyr::everything()))
+```
+
+# Save files
+
+```{R}
+iiss_rhs <- dplyr::select(final_data, -c(troops_total, troops_afghan_total,
+    troops_afghan_oef, troops_afghan_isaf,
+    troops_afghan_unama, troops_afghan_ratio))
+
+## right hand side data
+rio::export(iiss_rhs, '../data/iiss_afghan_rhs.rds')
+## merged complete data
+rio::export(final_data, '../data/iiss_afghan_complete.rds')
+```
+
+
+# Other data -- ignore
+
++ Keeping this for later in case.
+
+## Lebovic and Saunders
+
+Second, let's add the the Lebovic and Saunders data on diplomatic visits. This only goes to 2012. **Update**: Let's hold off on using this data. 
+
+```{R eval = FALSE}
+diplomatic <- rio::import ('../inst/extdata/lebovich_saunders_diplomacy/dipl_core.csv')
+
+## There is a lot going on here. Let's just look at US visits and arms relations.
+dipl <- dplyr::select(diplomatic, c(cowid, year, bi_SOS, bi_PRE, bi_str_SOS,
+    bi_str_PRE, USmilaid, allies, USdefense, UStrade, USalign, UNpart))
+
+## colnames that make more sense
+colnames(dipl) <- c("ccode", "year", "sec_st", "pres", "sec_only", "pres_only",
+    "us_mil_aid", "us_ally", "us_def_pact", "us_trade", "us_un_vote_sim", 
+    "un_particip")
+
+## merge datasets
+isaf <- dplyr::left_join(isaf, dipl)
+```
+
+## Kinne
+
+This is a cleaned version of the original dataset, as the original was too large for GitHub and contained variables and observations we did not need. Note that this data ends in 2010.
++ **Update:** Same thing, let's hold off on using for now.
+
+```{R eval = FALSE}
+kinne <- rio::import('../inst/extdata/kinne_defense_cooperation_agreements/kinne_dca.rds')
+isaf <- dplyr::left_join(isaf, kinne)
+```
+
+
+## Network measures
+
+Let's also build the alliance network for each year so that we can calculate statistics for network position. Note, it is OK that this only includes states with an alliance. Any state not in the alliance network will be categorized as an NA for network statistics. **Update:** This is not necessary for the final models, but let's keep the code in case. 
 
 
 ```{R eval = FALSE}
@@ -205,7 +411,7 @@ rlist::list.save(isaf_alliance_nets, file = "../data/alliance_networks.RData")
 
 ## Network statistics
 
-We can now calculate statistics for a node's network position each year and input them into the isaf dataset.
+We can now calculate statistics for a node's network position each year and input them into the isaf dataset. **Again, don't use for final project.**
 
 ```{R eval = FALSE}
 ## create an ongoing tibble (append year after year) with each measure and ccode
@@ -241,76 +447,6 @@ for(i in 1:length(isaf_alliance_nets)){
 
 Last, we merge the network stats with isaf. Note we can calculate any network statistic we want at this point and merge on easily.
 
-```{R}
+```{R eval = FALSE}
 isaf <- dplyr::left_join(isaf, netstats)
 ```
-
-# Alliance Depth
-
-```{R}
-depth_dyad <- rio::import('../inst/extdata/benson_clinton/depth_scores.Rds')
-```
-
-```{R}
-## Use the year, country-code and depth for merging
-depth_sub <- dplyr::select(depth_dyad, c("year", "mem2", "atopid", "depth"))
-colnames(depth_sub) <- c("year", "ccode", "atopid", "depth")
-## Note, there do not appear to be repeat country-years.
-
-## Merge
-isaf <- dplyr::left_join(isaf, depth_sub)
-```
-
-# DV
-
-Let's import the iiss data about troop levels in Afghanistan.
-
-```{R}
-iiss_troops <- rio::import('../data/iiss_afghan.rds')
-iiss_troops <- dplyr::arrange(iiss_troops, year)
-```
-
-## Merge
-
-Now we can merge everything together.
-
-```{R}
-iiss_troops$ccode <- as.integer(iiss_troops$ccode)
-final_data <- dplyr::left_join(iiss_troops, isaf)
-```
-
-# Finalize
-
-Last, let's clean everything up.
-
-```{R}
-colnames(final_data)
-
-final_data <- dplyr::select(final_data, -c(statenme))
-final_data <- dplyr::select(final_data, c(
-    year, country, stateabb, ccode,
-    troops_total, troops_afghan_total, troops_afghan_oef, troops_afghan_isaf,
-    troops_afghan_unama, troops_afghan_ratio, milex, milper, irst, pec, tpop,
-    upop, cinc, idealpoint, pctagreeus, 
-    #us_un_vote_sim, un_particip, sec_st, pres, sec_only, pres_only, us_mil_aid,
-    #us_ally, us_def_pact, us_trade, dca, dca_ongoing, abs_ideal_diff, 
-    #arms_imports, NATO,
-    democ, autoc, polity2, dem, #eigen, clustercoef, degree, sequiv, 
-    atopid, depth
-    ))
-```
-
-# Save files
-
-```{R}
-iiss_rhs <- dplyr::select(final_data, -c(troops_total, troops_afghan_total,
-                        troops_afghan_oef, troops_afghan_isaf,
-                        troops_afghan_unama, troops_afghan_ratio))
-
-## right hand side data
-rio::export(iiss_rhs, '../data/iiss_afghan_rhs.rds')
-## merged complete data
-rio::export(final_data, '../data/iiss_afghan_complete.rds')
-```
-
-
