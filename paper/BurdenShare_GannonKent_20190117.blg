@@ -3,47 +3,46 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: BurdenShare_GannonKent_20190117.aux
 The style file: apsr.bst
 Database file #1: isaf_alliances.bib
-Warning--I didn't find a database entry for "internationalinstituteforstrategicstudies_militarybalance_"
 Warning--there's a number but no volume in keohane_biginfluencesmall_1971
-You've used 69 entries,
+You've used 75 entries,
             2874 wiz_defined-function locations,
-            994 strings with 16668 characters,
-and the built_in function-call counts, 226093 in all, are:
-= -- 36705
-> -- 2201
+            1024 strings with 17717 characters,
+and the built_in function-call counts, 251192 in all, are:
+= -- 40867
+> -- 2405
 < -- 0
-+ -- 16705
-- -- 828
-* -- 18727
-:= -- 46291
-add.period$ -- 278
-call.type$ -- 69
-change.case$ -- 901
-chr.to.int$ -- 67
-cite$ -- 70
-duplicate$ -- 1049
-empty$ -- 2314
-format.name$ -- 919
-if$ -- 40557
++ -- 18648
+- -- 904
+* -- 20861
+:= -- 51302
+add.period$ -- 303
+call.type$ -- 75
+change.case$ -- 979
+chr.to.int$ -- 73
+cite$ -- 76
+duplicate$ -- 1140
+empty$ -- 2523
+format.name$ -- 1003
+if$ -- 45070
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 81
-newline$ -- 299
-num.names$ -- 749
-pop$ -- 310
+missing$ -- 88
+newline$ -- 325
+num.names$ -- 815
+pop$ -- 333
 preamble$ -- 1
-purify$ -- 1035
+purify$ -- 1125
 quote$ -- 0
-skip$ -- 841
+skip$ -- 914
 stack$ -- 0
-substring$ -- 51255
-swap$ -- 127
-text.length$ -- 966
+substring$ -- 57184
+swap$ -- 138
+text.length$ -- 1050
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 244
+type$ -- 266
 warning$ -- 1
-while$ -- 1553
+while$ -- 1689
 width$ -- 0
-write$ -- 943
-(There were 2 warnings)
+write$ -- 1027
+(There was 1 warning)
