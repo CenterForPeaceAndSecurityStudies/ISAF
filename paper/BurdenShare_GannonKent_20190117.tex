@@ -171,26 +171,41 @@ Why do states join wartime coalitions despite an absence of salient national thr
 			A state with an interest in improving its security alliance with the United States will make more costly contributions than a state that is satisfied with its current security alliance.
 		\end{hyp}
 
-		Our theory, presented in figure \ref{fig:theory}, thus predicts a non-linear relationship between the current strength of a state's alliance with the central coalition actor and that state's expected cost of contributing to the coalition war effort. The closest allies of the central coalition actor may make the highest absolute contributions by virtue of their size and military strength, but they are not the states that make the highest relative contributions since they have no incentive to incur the costs that high relative contributions entail. Instead, it's those that want to be closer allies, relatively speaking, that contribute the most. This more closely aligns with the simple observation in figure \ref{fig:contr_sequiv} that shows a curvilinear relationship.
+		Our theory, presented in figure \ref{fig:theory}, thus predicts a non-linear relationship between the current strength of a state's alliance with the central coalition actor and that state's expected cost of contributing to the coalition war effort. The closest allies of the central coalition actor may make the highest absolute contributions by virtue of their size and military strength, but they are not the states that make the highest relative contributions since they have no incentive to incur the costs that high relative contributions entail. Instead, it's those that want to be closer allies, relatively speaking, that contribute the most.
 
 		\begin{figure}[H]
-			\centering
+		\begin{subfigure}{.5\textwidth}
 			\begin{tikzpicture}
-			% Graph axes
-			\draw[thick,<->] (0,5) node[above]{Expected Cost of Contribution} -- (0,0) -- (8,0) node[right]{Relationship Tie Strength};
-
-			% Contribution Curve
-			\draw[thick] (0,0)..controls (5,5) ..(8,2.5);
-
-			% Desired Relationship Tie
-			\draw[dashed] (4,0) -- (4,3.5);
-			\draw[dashed] (6.5,0) -- (6.5,3.5);
-			\draw[decorate,decoration={brace,mirror,raise=5pt}, thick]
-			(4,0) -- (6.5,0);
-			\node at (5.25,-0.7) {Desire Improved Tie};
+				% Graph axes
+				\draw[thick,<->] (0,5) node[above]{\begin{tabular}{c}
+					Expected Cost \\ of Contribution
+					\end{tabular}} -- (0,0) -- (5,0) node[below]{\begin{tabular}{c}
+					\textbf{Current} Alliance \\ Strength
+					\end{tabular}};
+	
+				% Contribution Curve
+				\draw[->] (0.2,0.2) -- (4,3);
 			\end{tikzpicture}
-			\caption{Theory of State Contributions to Wartime Coalitions}
-			\label{fig:theory}
+			\caption{Current Alliance Theory}
+			\label{fig:theory_old}
+		\end{subfigure}
+		\begin{subfigure}{.5\textwidth}
+		\begin{tikzpicture}
+		% Graph axes
+			\draw[thick,<->] (0,5) node[above]{\begin{tabular}{c}
+				Expected Cost \\ of Contribution
+				\end{tabular}} -- (0,0) -- (5,0) node[below]{\begin{tabular}{c}
+				\textbf{Desired} Alliance \\ Strength
+				\end{tabular}};
+		
+		% Contribution Curve
+		\draw[->] (0.2,0.2) -- (4,3);
+		\end{tikzpicture}
+		\caption{Latent Alliance Theory}
+		\label{fig:theory_new}
+		\end{subfigure}
+		\caption{Theory of State Contributions to Wartime Coalitions}
+		\label{fig:theory}
 		\end{figure}
 
 \section{Research Design}
