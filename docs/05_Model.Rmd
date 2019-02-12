@@ -4,14 +4,6 @@ author: Gannon and Kent
 output: html_document
 ---
 
-# Steps
-
-1. Load ISAF Data
-2. Descriptive statistics
-3. Models
-  3a. Why contribute amount of troops?
-  3b. Does it pay off?
-
 # Data loading
 
 ```{R}
@@ -21,7 +13,7 @@ isaf <- rio::import('../data/iiss_afghan_complete.rds')
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ```
 
-+ Until we sort out the Iceland data (they are listed as having no available troops in most sources, but did send people to Afghanistan), let's drop those observations. Once we update the Iceland data we can re-estimate all models.
++ Iceland -- drop for now until we figure out total available troops.
 
 ```{R}
 isaf <- dplyr::filter(isaf, stateabb != "ICE")
@@ -41,6 +33,11 @@ isaf$pot_gain_recode <- ifelse(
   0, 
   isaf$pot_gain_recode
   )
+
+## Rescale to be between 0 and 1 via min/max
+isaf$pot_gain_recode = (isaf$pot_gain_recode - 
+  min(isaf$pot_gain_recode))/(
+  max(isaf$pot_gain_recode)-min(isaf$pot_gain_recode))  
 ```
 
 ```{R}
@@ -55,56 +52,416 @@ GGally::ggpairs(dplyr::select(descrip,
 
 + Ok, so looks good. Some important points to consider. Notice that, by construction, `idealpoint` and `pctagreeus` are strongly associated with `pot_gain`. 
 
+## Distribution of troops
+
++ Custom font
+
+```{R}
+## Custom font
+library(showtext)
+## Slabo 27px is close enough to bitstream
+## Need to download slabo 27 from google fonts and install
+font_add_google(name = "Slabo 27px")
+font_add("Slabo", "Slabo27px-Regular.ttf")
+showtext_auto() ## automatically use showtext for new devices
+myfont1 <- "Slabo"
+```
+
++ Boxplot by year
+
+```{R}
+library(ggplot2)
+troop_year <- ggplot(dplyr::filter(isaf, troops_afghan_total > 0)) +
+  geom_boxplot(aes(x = year, y = troops_afghan_total, 
+    group = year), size = 0.5, color = "#004570") + 
+    theme_bw() +
+    theme(text = element_text(size = 16, family = myfont1),
+        axis.text.x = element_text(colour="black"), 
+        axis.text.y = element_text(colour="black")) + 
+    scale_x_discrete(name ="Year", 
+                    limits=c(2001:2013)) + 
+    labs(title = "Troop Contributions to ISAF by Year",
+        subtitle = "2001 - 2013",
+        y = "Troops")
+
+ggsave(troop_year, file = "../paper/figures/troop_year.pdf",
+      width = 8, height = 5, dpi = 1000)
+```
+
++ Troop percent
+
+```{R}
+troop_dist <- ggplot(isaf, aes(x = troops_afghan_ratio)) + 
+  geom_histogram(binwidth = 0.01) + 
+  theme_bw() +
+  theme(text = element_text(size = 14, family = myfont1),
+        axis.text.x = element_text(colour="black"), 
+        axis.text.y = element_text(colour="black")) + 
+  labs(title = "Troop Contributions to ISAF",
+    subtitle = "2001 - 2013",
+    x = "Percent of Total Troops",
+    y = "Frequency")
+
+ggsave(troop_dist, file = "../paper/figures/troop_dist.pdf",
+      width = 5, height = 5, dpi = 1000)
+```
+
 # Models
 
 ```{R}
-m1 <- glm(troops_afghan_ratio ~ pot_gain_recode, 
-  data = isaf) 
-  ## unnecessary to filter by us ally, because gets dropped, but I want 
-  ## to keep track of the data partitions
+m1 <- glm(
+  troops_afghan_ratio ~ pot_gain_recode, 
+  data = isaf
+  ) 
 summary(m1)
 
-m2 <- glm(troops_afghan_ratio ~ pctagreeus,
-  data = dplyr::filter(isaf, us_ally == 0))
+## Keeping out gdp and gdppc because they drop so many observations
+## Drop pctagreeus cuz used for indicator construction
+m2 <- glm(
+  troops_afghan_ratio ~ pot_gain_recode + idealpoint + dem + casualties + us_ally + cinc,
+  data = isaf
+  )
 summary(m2)
 
-## Remove for now
-m3 <- glm(troops_afghan_ratio ~ pctagreeus,
-  data = isaf)
+
+## And let's control for gdp and gdppc and keep pctagreeus -- though loses obs
+
+m3 <- glm(
+  troops_afghan_ratio ~ pot_gain_recode + idealpoint + dem + casualties + us_ally + cinc + log(gdp) + log(gdppc) + distance,
+  data = isaf
+  )
 summary(m3)
 
-## Keeping out gdp and gdppc because they drop so many observations
-full_form <- as.formula(
-  troops_afghan_ratio ~ pot_gain_recode + pctagreeus + idealpoint + dem + 
-  distance + casualties + us_ally + cinc
-  )
-
-m4 <- glm(
-  full_form,
-  data = isaf)
-summary(m4)
-## Cool -- variables have expected direction, but potential gain has arguably largest size.
-
-## fixed effects? Same coefficient as m1
-m5 <- plm::plm(full_form,
+## fixed effects? 
+## note distance coefficient not estimated, because it has 
+## no within-unit variation
+## gdp and gdppc dropped because lack of observations 
+## worsens fixed effects bias-variance tradeoff
+m4 <- plm::plm(
+  troops_afghan_ratio ~ pot_gain_recode + idealpoint + 
+  dem + casualties + us_ally + cinc,
   model = "within",
   index = c("ccode", "year"),
   data = isaf)
-summary(m5)
+summary(m4)
+
+texreg::texreg(
+  list(m1, m2, m3, m4),
+  custom.model.names = c(
+    "Baseline",
+    "Political Controls",
+    "All Controls",
+    "Fixed Effects"
+  ),
+  custom.coef.names = c(
+    "Intercept", "Potential Gain", "Ideal Point", "Democracy", 
+    "Casualties", "U.S. Ally", "CINC Score", "Log GDP",
+    "Log GDPPC", "Distance"),
+  digits = 3,
+  ci.force = TRUE,
+  ci.force.level = 0.95,
+  file = "../paper/table.tex"
+)
+
+
+## Latex table -- https://github.com/vincentarelbundock/gtsummary
+#models <- list()
+#models[['Model 1: Baseline']] <- m1
+#models[['Model 2: Political Controls']] <- m2
+#models[['Model 3: All Controls']] <- m3
+#models[['Model 4: Fixed Effects']] <- m4
+#gtsummary::gtsummary(
+#  models, 
+#  statistic = 'conf.int', 
+#  conf_level = .95,
+#  file = "../paper/table.tex") 
+
+
+## And let's build figures for contributions -- use code from mershon
+library(dotwhisker)
+library(dplyr)
+dw1 <- dwplot(
+  list(m1, m2, m3, m4), dot_args = list(size = 2.5),
+    whisker_args = list(size = 1.5), 
+    color = "black") %>%
+    relabel_predictors(c(
+        pot_gain_recode = "Potential Gain With U.S.",
+        idealpoint = "Ideal Point Similarity With U.S.",
+        dem = "Democracy",
+        casualties = "Casualties",
+        us_ally = "U.S. Ally", 
+        cinc = "CINC",
+        gdp = "Log GDP",
+        gdppc = "Log GDPPC",
+        distance = "Distance"
+        )) +
+    geom_vline(xintercept = 0) +
+    ## labs(x = "Perceived Threat (0 to 4 Scale)") +
+    ggtitle("Coefficient Estimates") +
+        theme(plot.title = element_text(face="bold", hjust = -0.0),
+        legend.justification=c(0, 0), legend.position=c(0, 0),
+        legend.title = element_blank()) +
+    scale_colour_discrete(breaks=c(
+      "Model 1", "Model 2", "Model 3", "Model 4"
+      ),
+        labels = c(
+        "Potential Gain Only", 
+        "Political Controls", 
+        "All Controls", 
+        "Fixed Effects")) +
+    labs(x = "Percent of Total Troops Provided") + 
+    theme_bw() +
+    theme(text = element_text(size = 24, family = myfont1),
+        axis.text.x = element_text(colour="black"), 
+        axis.text.y = element_text(colour="black"),
+        legend.position = c(0.8, 0.01),
+        legend.justification = c(0, 0), 
+        legend.background = element_rect(colour="grey80"),
+        legend.title = element_blank())
+
+## Save the figure
+ggsave(dw1, file = "../paper/figures/coefs.pdf",
+      width = 19, height = 8, dpi = 600)
 ```
 
 + Note that the max contribution is 0.057381, the mean is 0.0018, and the median is 0. So a range of 0 to 0.01225 is not minimal. 
 
-+ How does the model fit? Not ideal, but we can work on it.
+## How does the model fit? 
 
 ```{R}
-library(ggplot2) ## easier to load ggplot than call before each function
-ggplot(m4) + 
-    geom_point(aes(x=.fitted, y=.resid)) + 
+## Easier to just load ggplot than call before each geom
+library(ggplot2) 
+## Initialize tibble
+mod_perf <- dplyr::tibble(
+  resids = as.numeric(rep(NA, 1813)),
+  fitted = as.numeric(rep(NA, 1813))
+)
+mod_perf$resids <- m4$residuals ## residuals
+mod_perf$fitted <- predict(m4) ## fitted values
+
+## Plot
+ggplot(mod_perf) + 
+    geom_point(aes(x=fitted, y=resids)) + 
     theme_classic() + 
     labs(title = "Residuals Versus Fitted Values",
         x = "Fitted Values",
         y = "Residuals")
 ```
 
-+ Predicted contributions? Set all variables to mean and predict range.
++ Not perfect, it looks like we have some heteroskedasticity. But this is not unreasonable.
+
+## Predicted contributions
+
++ Predicted contributions? Let's hold all variables at their central value (mean or median, depending on the distribution) and then look at the predicted troop ratio for each value of potential gain.
+
+```{R}
+## Simulated Data
+us_ally0 <- with(
+    isaf, 
+    dplyr::tibble(
+      pot_gain_recode = seq(
+        min(pot_gain_recode), 
+        max(pot_gain_recode),
+        length = 101
+        ),
+      pctagreeus = mean(pctagreeus, na.rm = TRUE),
+      idealpoint = mean(idealpoint, na.rm = TRUE),
+      #distance = median(distance, na.rm = TRUE),
+      dem = 1,
+      casualties = mean(casualties),
+      us_ally = 0, 
+      cinc = median(cinc, na.rm = TRUE)
+      )
+    )
+
+## Predicted contributions
+## useful walkthrough: https://www.fromthebottomoftheheap.net/2017/05/01/glm-prediction-intervals-i/
+
+us_ally0$pred_contr <- predict(m2, newdata = us_ally0)
+
+pred_int <- predict(m2, newdata = us_ally0, se.fit = TRUE)
+
+pd <- transform(pred_int, 
+  Contributions = fit, 
+  Upper = fit + (2 * se.fit),
+  Lower = fit - (2 * se.fit),
+  Gain = seq(from = 0, to = 1, by = 0.01)
+  )
+
+
+## Visualize
+pred_fig <- ggplot(pd) +
+    geom_ribbon(aes(x = Gain, ymin = Lower, ymax = Upper),
+                fill = "steelblue2", 
+                alpha = 0.3, inherit.aes = FALSE) +
+    geom_line(aes(x = Gain, y = Contributions), size = 1.25) +
+    geom_line(aes(x = Gain, y = Lower), size = 1) + 
+    geom_line(aes(x = Gain, y = Upper), size = 1) + 
+    labs(
+      x = "Potential Alliance Gain", 
+      y = "Predicted Contribution Percentage", 
+      title = "Predicted Contributions by Potential Alliance Gain With the United States") +
+    ylim(c(0, 0.02)) +  
+    theme_bw() +
+    theme(
+      text = element_text(size = 14, family = myfont1),
+      axis.text.x = element_text(color = "black"),
+      axis.text.y = element_text(color = "black"))
+      ## Median troop number is 26,500 -- discuss what this means in caption
+
+## Save the figure
+ggsave(pred_fig, file = "../paper/figures/pred_contr.pdf",
+      width = 8, height = 5, dpi = 1000)
+```
+
+## Map location
+
++ Set up world map data:
+
+```{R}
+isaf <- rio::import('../data/iiss_afghan_complete.rds')
+isaf <- dplyr::filter(isaf, stateabb != "ICE") ## Iceland
+library(ggplot2)
+WorldData <- map_data('world')
+isaf_map <- dplyr::select(isaf, c("year", "country", 
+  "troops_afghan_ratio", "troops_afghan_total"))
+isaf_map$country <- as.character(isaf_map$country)
+
+
+## Labels -- Make sure the same for both datasets
+for(i in 1:nrow(isaf_map)){
+  ## Korea, Republic
+  if(isaf_map[i,2] == "Korea, Republic of"){
+    isaf_map[i,2] <- "South Korea"
+  }
+  ## Macedonia
+  if(isaf_map[i,2] == "Macedonia, Former Yugoslav Republic of"){
+    isaf_map[i,2] <- "Macedonia"
+  }
+  ## United Kingdom
+  if(isaf_map[i,2] == "United Kingdom"){
+    isaf_map[i,2] <- "UK"
+  }
+  ## USA
+  if(isaf_map[i,2] == "United States"){
+    isaf_map[i,2] <- "USA"
+  }
+}
+
+isaf_map2 <- dplyr::tibble(
+  region = as.character(),
+  Contribution = as.numeric(),
+  Troops = as.integer()
+)
+
+for(i in 1:length(unique(isaf_map$country))){
+  ## Subset by unique obs
+  temp <- dplyr::filter(
+    isaf_map, country == unique(isaf_map$country)[i])
+  isaf_map2[i,1] <- unique(isaf_map$country)[i]
+  ## Most ever contributed
+  isaf_map2[i,2] <- max(temp$troops_afghan_ratio)
+  isaf_map2[i,3] <- max(temp$troops_afghan_total)
+}
+
+countries <- unique(isaf_map2$region)
+countries2 <- unique(WorldData$region)
+missing_countries <- setdiff(countries2, countries)
+
+for(i in 1:length(missing_countries)){
+  #row <- i + 173
+  temp <- dplyr::tibble(
+    region = as.character(),
+    Contribution = as.numeric(),
+    Troops = as.integer() 
+  )
+  temp[1,1] <- missing_countries[i]
+  temp[1,2] <- 0
+  temp[1,3] <- 0
+
+  ## append
+  isaf_map2 <- rbind(isaf_map2, temp)
+}
+
+## Theme_map() https://github.com/jrnold/ggthemes/blob/master/R/theme-map.R
+library(dplyr)
+theme_map <- function(base_size = 9, base_family = "") {
+  theme_bw(base_size = base_size, base_family = base_family) %+replace%
+    theme(axis.line = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank(),
+          panel.background = element_blank(),
+          panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.spacing = unit(0, "lines"),
+          plot.background = element_blank(),
+          legend.justification = c(0, 0)#,
+          #legend.position = c(1,1)
+          )
+}
+
+isaf_map2$perc_total <- isaf_map2$Contribution * 100
+
+
+## what is the best palette? 
+contr_map1 <- ggplot() + 
+  geom_map(data = WorldData, map = WorldData,
+    aes(x = long, y = lat, group = group, map_id = region),
+    fill = "white", size = 0.35) + 
+  geom_map(data = isaf_map2, map = WorldData,
+    aes(fill = perc_total, map_id = region)) + 
+    borders("world", size = 0.425, colour = "black") + 
+    #viridis::scale_fill_viridis() + 
+    #scale_fill_continuous(
+    #  low = "white", high = "midnightblue", guide = "colorbar") + 
+    scale_fill_gradientn(
+    colours = c(
+      "white", "#adccff", "#004570"), 
+    values = c(0,0.025,1)) +
+    theme_map() + 
+    labs(title = "Percent of Country's Total Troops Contributed",
+    fill = "Percent") + 
+    theme(text = element_text(size = 12, family = myfont1))
+
+## Save the figure
+ggsave(contr_map1, file = "../paper/figures/contr_map_total.pdf",
+      width = 8, height = 4, dpi = 600)
+```
+
++ Map but for percent of all troops in ISAF.
+
+```{R}
+isaf_map2$perc_isaf <- isaf_map2$Troops/sum(isaf_map2$Troops)
+isaf_map2$perc_isaf <- isaf_map2$perc_isaf * 100
+
+contr_map2 <- ggplot() + 
+  geom_map(data = WorldData, map = WorldData,
+    aes(x = long, y = lat, group = group, map_id = region),
+    fill = "white", size = 0.35) + 
+  geom_map(data = isaf_map2, map = WorldData,
+    aes(fill = perc_isaf, map_id = region)) + 
+  borders("world", size = 0.425, colour = "black") + 
+  scale_fill_gradientn(
+    colours = c(
+      "white", "#adccff", "#004570"), 
+    values = c(0,0.025,1)) +
+    #scale_fill_continuous(
+    #  low = "white", high = "midnightblue", guide = "colorbar") + 
+    theme_map() + 
+    labs(title = "Percent of Total ISAF Coalition Contributed",
+      fill = "Percent") + 
+    theme(text = element_text(size = 12, family = myfont1))
+
+## Save the figure
+ggsave(contr_map2, file = "../paper/figures/contr_map_isaf.pdf",
+      width = 8, height = 4, dpi = 600)
+```
+
++ Maps side-by-side
+
+```{R}
+side_by_side <- cowplot::plot_grid(contr_map2, contr_map1, nrow = 2)
+ggsave(side_by_side, file = "../paper/figures/contr_map_both.pdf",
+  width = 8, height = 8, dpi = 1000 )
+```
