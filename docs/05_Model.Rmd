@@ -91,8 +91,8 @@ ggsave(troop_year, file = "../paper/figures/troop_year.pdf",
 + Troop percent
 
 ```{R}
-troop_dist <- ggplot(isaf, aes(x = troops_afghan_ratio)) + 
-  geom_histogram(binwidth = 0.01) + 
+troop_dist <- ggplot(isaf, aes(x = troops_total)) + 
+  geom_histogram() + #binwidth = 0.01) + 
   theme_bw() +
   theme(text = element_text(size = 14, family = myfont1),
         axis.text.x = element_text(colour="black"), 
@@ -402,7 +402,6 @@ theme_map <- function(base_size = 9, base_family = "") {
 }
 
 isaf_map2$perc_total <- isaf_map2$Contribution * 100
-
 
 ## what is the best palette? 
 contr_map1 <- ggplot() + 
