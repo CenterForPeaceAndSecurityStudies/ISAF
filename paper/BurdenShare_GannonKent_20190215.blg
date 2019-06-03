@@ -4,46 +4,47 @@ The top-level auxiliary file: BurdenShare_GannonKent_20190215.aux
 The style file: apsr.bst
 Database file #1: isaf_alliances.bib
 Warning--there's a number but no volume in keohane_biginfluencesmall_1971
+Warning--there's a number but no volume in rathbone_piedmont1850s_2008
 Warning--empty author in whatalliesare_2003
-You've used 88 entries,
+You've used 91 entries,
             2874 wiz_defined-function locations,
-            1093 strings with 20138 characters,
-and the built_in function-call counts, 303956 in all, are:
-= -- 49643
-> -- 2849
+            1109 strings with 20637 characters,
+and the built_in function-call counts, 316342 in all, are:
+= -- 51671
+> -- 2985
 < -- 0
-+ -- 22734
-- -- 1068
-* -- 25321
-:= -- 61801
-add.period$ -- 358
-call.type$ -- 88
-change.case$ -- 1143
-chr.to.int$ -- 86
-cite$ -- 90
-duplicate$ -- 1355
-empty$ -- 2942
-format.name$ -- 1186
-if$ -- 54593
++ -- 23694
+- -- 1117
+* -- 26385
+:= -- 64280
+add.period$ -- 370
+call.type$ -- 91
+change.case$ -- 1182
+chr.to.int$ -- 89
+cite$ -- 94
+duplicate$ -- 1401
+empty$ -- 3040
+format.name$ -- 1242
+if$ -- 56816
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 101
-newline$ -- 381
-num.names$ -- 947
-pop$ -- 394
+missing$ -- 105
+newline$ -- 394
+num.names$ -- 978
+pop$ -- 409
 preamble$ -- 1
-purify$ -- 1315
+purify$ -- 1360
 quote$ -- 0
-skip$ -- 1101
+skip$ -- 1135
 stack$ -- 0
-substring$ -- 69556
-swap$ -- 182
-text.length$ -- 1222
+substring$ -- 72435
+swap$ -- 187
+text.length$ -- 1264
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 318
-warning$ -- 2
-while$ -- 1962
+type$ -- 328
+warning$ -- 3
+while$ -- 2027
 width$ -- 0
-write$ -- 1210
-(There were 2 warnings)
+write$ -- 1252
+(There were 3 warnings)
