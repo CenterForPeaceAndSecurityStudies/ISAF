@@ -3,49 +3,51 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: BurdenShare_GannonKent_20190215.aux
 The style file: apsr.bst
 Database file #1: isaf_alliances.bib
-Warning--I didn't find a database entry for "boselli_napoleoniiivictor_1926"
+Warning--I didn't find a database entry for "chiozza_leadersinternationalconflict_2011"
 Warning--there's a number but no volume in keohane_biginfluencesmall_1971
+Warning--empty author in boselli_napoleoniiivictor_1926
+Warning--empty publisher in boselli_napoleoniiivictor_1926
 Warning--there's a number but no volume in rathbone_piedmont1850s_2008
-Warning--empty author in whatalliesare_2003
-You've used 92 entries,
+Warning--empty author in reportprogresssecurity_2010
+You've used 98 entries,
             2874 wiz_defined-function locations,
-            1115 strings with 20762 characters,
-and the built_in function-call counts, 318623 in all, are:
-= -- 52035
-> -- 3001
-< -- 0
-+ -- 23851
-- -- 1124
-* -- 26557
-:= -- 64769
-add.period$ -- 374
-call.type$ -- 92
-change.case$ -- 1195
-chr.to.int$ -- 90
-cite$ -- 95
-duplicate$ -- 1417
-empty$ -- 3070
-format.name$ -- 1251
-if$ -- 57222
-int.to.chr$ -- 7
+            1145 strings with 22237 characters,
+and the built_in function-call counts, 344618 in all, are:
+= -- 56494
+> -- 3085
+< -- 1
++ -- 25915
+- -- 1161
+* -- 28752
+:= -- 69844
+add.period$ -- 398
+call.type$ -- 98
+change.case$ -- 1269
+chr.to.int$ -- 95
+cite$ -- 103
+duplicate$ -- 1508
+empty$ -- 3248
+format.name$ -- 1298
+if$ -- 61934
+int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 107
-newline$ -- 399
-num.names$ -- 988
-pop$ -- 418
+missing$ -- 109
+newline$ -- 424
+num.names$ -- 1039
+pop$ -- 456
 preamble$ -- 1
-purify$ -- 1375
+purify$ -- 1460
 quote$ -- 0
-skip$ -- 1144
+skip$ -- 1221
 stack$ -- 0
-substring$ -- 72928
-swap$ -- 188
-text.length$ -- 1278
+substring$ -- 79268
+swap$ -- 212
+text.length$ -- 1353
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 330
-warning$ -- 3
-while$ -- 2048
+type$ -- 354
+warning$ -- 5
+while$ -- 2160
 width$ -- 0
-write$ -- 1266
-(There were 4 warnings)
+write$ -- 1345
+(There were 6 warnings)
