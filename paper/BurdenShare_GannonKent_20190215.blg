@@ -3,51 +3,49 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: BurdenShare_GannonKent_20190215.aux
 The style file: apsr.bst
 Database file #1: isaf_alliances.bib
-Warning--I didn't find a database entry for "chiozza_leadersinternationalconflict_2011"
 Warning--there's a number but no volume in keohane_biginfluencesmall_1971
 Warning--empty author in boselli_napoleoniiivictor_1926
-Warning--empty publisher in boselli_napoleoniiivictor_1926
 Warning--there's a number but no volume in rathbone_piedmont1850s_2008
 Warning--empty author in reportprogresssecurity_2010
-You've used 98 entries,
+You've used 107 entries,
             2874 wiz_defined-function locations,
-            1145 strings with 22237 characters,
-and the built_in function-call counts, 344618 in all, are:
-= -- 56494
-> -- 3085
+            1185 strings with 23627 characters,
+and the built_in function-call counts, 368476 in all, are:
+= -- 60324
+> -- 3299
 < -- 1
-+ -- 25915
-- -- 1161
-* -- 28752
-:= -- 69844
-add.period$ -- 398
-call.type$ -- 98
-change.case$ -- 1269
-chr.to.int$ -- 95
-cite$ -- 103
-duplicate$ -- 1508
-empty$ -- 3248
-format.name$ -- 1298
-if$ -- 61934
++ -- 27601
+- -- 1246
+* -- 30662
+:= -- 74857
+add.period$ -- 432
+call.type$ -- 107
+change.case$ -- 1387
+chr.to.int$ -- 104
+cite$ -- 111
+duplicate$ -- 1639
+empty$ -- 3529
+format.name$ -- 1397
+if$ -- 66194
 int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 109
-newline$ -- 424
-num.names$ -- 1039
-pop$ -- 456
+missing$ -- 119
+newline$ -- 463
+num.names$ -- 1133
+pop$ -- 499
 preamble$ -- 1
-purify$ -- 1460
+purify$ -- 1595
 quote$ -- 0
-skip$ -- 1221
+skip$ -- 1321
 stack$ -- 0
-substring$ -- 79268
-swap$ -- 212
-text.length$ -- 1353
+substring$ -- 84528
+swap$ -- 224
+text.length$ -- 1479
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 354
-warning$ -- 5
-while$ -- 2160
+type$ -- 384
+warning$ -- 4
+while$ -- 2358
 width$ -- 0
-write$ -- 1345
-(There were 6 warnings)
+write$ -- 1470
+(There were 4 warnings)
