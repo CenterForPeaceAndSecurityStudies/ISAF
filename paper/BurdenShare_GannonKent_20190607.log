@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  11 JUN 2019 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  11 JUN 2019 17:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**TitlePage.tex
-(./TitlePage.tex
+**BurdenShare_GannonKent_20190607.tex
+(./BurdenShare_GannonKent_20190607.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -733,16 +733,21 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )))
-\c@hyp=\count119
-\c@subhyp=\count120
+(/usr/share/texlive/texmf-dist/tex/latex/endnotes/endnotes.sty
+\c@endnote=\count119
+\endnotesep=\dimen159
+\@enotes=\write3
+)
+\c@hyp=\count120
+\c@subhyp=\count121
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks50
-\pgfutil@tempdima=\dimen159
-\pgfutil@tempdimb=\dimen160
+\pgfutil@tempdima=\dimen160
+\pgfutil@tempdimb=\dimen161
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -768,20 +773,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ex
 \pgfkeys@tmptoks=\toks53
 ))
-\pgf@x=\dimen161
-\pgf@y=\dimen162
-\pgf@xa=\dimen163
-\pgf@ya=\dimen164
-\pgf@xb=\dimen165
-\pgf@yb=\dimen166
-\pgf@xc=\dimen167
-\pgf@yc=\dimen168
-\w@pgf@writea=\write3
+\pgf@x=\dimen162
+\pgf@y=\dimen163
+\pgf@xa=\dimen164
+\pgf@ya=\dimen165
+\pgf@xb=\dimen166
+\pgf@yb=\dimen167
+\pgf@xc=\dimen168
+\pgf@yc=\dimen169
+\w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count121
-\c@pgf@countb=\count122
-\c@pgf@countc=\count123
-\c@pgf@countd=\count124
+\c@pgf@counta=\count122
+\c@pgf@countb=\count123
+\c@pgf@countc=\count124
+\c@pgf@countd=\count125
 \t@pgf@toka=\toks54
 \t@pgf@tokb=\toks55
 \t@pgf@tokc=\toks56
@@ -800,8 +805,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count125
-\pgfsyssoftpath@bigbuffer@items=\count126
+\pgfsyssoftpath@smallbuffer@items=\count126
+\pgfsyssoftpath@bigbuffer@items=\count127
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -830,8 +835,8 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen169
-\pgfmath@count=\count127
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count128
 \pgfmath@box=\box39
 \pgfmath@toks=\toks57
 \pgfmath@stack@operand=\toks58
@@ -855,37 +860,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count128
+\c@pgfmathroundto@lastzeros=\count129
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen170
-\pgf@picmaxx=\dimen171
-\pgf@picminy=\dimen172
-\pgf@picmaxy=\dimen173
-\pgf@pathminx=\dimen174
-\pgf@pathmaxx=\dimen175
-\pgf@pathminy=\dimen176
-\pgf@pathmaxy=\dimen177
-\pgf@xx=\dimen178
-\pgf@xy=\dimen179
-\pgf@yx=\dimen180
-\pgf@yy=\dimen181
-\pgf@zx=\dimen182
-\pgf@zy=\dimen183
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen184
-\pgf@path@lasty=\dimen185
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen186
-\pgf@shorten@start@additional=\dimen187
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -893,19 +898,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box40
 \pgf@hbox=\box41
 \pgf@layerbox@main=\box42
-\pgf@picture@serial@count=\count129
+\pgf@picture@serial@count=\count130
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen188
+\pgflinewidth=\dimen189
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen189
-\pgf@pt@y=\dimen190
-\pgf@pt@temp=\dimen191
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -921,12 +926,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen192
+\pgfarrowsep=\dimen193
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen193
-\pgf@sys@shading@range@num=\count130
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count131
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -957,8 +962,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen194
-\pgf@nodesepend=\dimen195
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -972,8 +977,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen196
-\pgffor@skip=\dimen197
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
 \pgffor@stack=\toks60
 \pgffor@toks=\toks61
 ))
@@ -983,31 +988,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count131
-\pgfplotmarksize=\dimen198
+\pgf@plot@mark@count=\count132
+\pgfplotmarksize=\dimen199
 )
-\tikz@lastx=\dimen199
-\tikz@lasty=\dimen256
-\tikz@lastxsaved=\dimen257
-\tikz@lastysaved=\dimen258
-\tikzleveldistance=\dimen259
-\tikzsiblingdistance=\dimen260
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikzleveldistance=\dimen260
+\tikzsiblingdistance=\dimen261
 \tikz@figbox=\box45
 \tikz@figbox@bg=\box46
 \tikz@tempbox=\box47
 \tikz@tempbox@bg=\box48
-\tikztreelevel=\count132
-\tikznumberofchildren=\count133
-\tikznumberofcurrentchild=\count134
-\tikz@fig@count=\count135
+\tikztreelevel=\count133
+\tikznumberofchildren=\count134
+\tikznumberofcurrentchild=\count135
+\tikz@fig@count=\count136
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count136
-\pgfmatrixcurrentcolumn=\count137
-\pgf@matrix@numberofcolumns=\count138
+\pgfmatrixcurrentrow=\count137
+\pgfmatrixcurrentcolumn=\count138
+\pgf@matrix@numberofcolumns=\count139
 )
-\tikz@expandcount=\count139
+\tikz@expandcount=\count140
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1020,7 +1025,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen261
+\arrowsize=\dimen262
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.pathmorphing.code.tex
@@ -1028,14 +1033,14 @@ zlibrarydecorations.pathmorphing.code.tex
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen262
-\pgfdecoratedremainingdistance=\dimen263
-\pgfdecoratedinputsegmentcompleteddistance=\dimen264
-\pgfdecoratedinputsegmentremainingdistance=\dimen265
-\pgf@decorate@distancetomove=\dimen266
-\pgf@decorate@repeatstate=\count140
-\pgfdecorationsegmentamplitude=\dimen267
-\pgfdecorationsegmentlength=\dimen268
+\pgfdecoratedcompleteddistance=\dimen263
+\pgfdecoratedremainingdistance=\dimen264
+\pgfdecoratedinputsegmentcompleteddistance=\dimen265
+\pgfdecoratedinputsegmentremainingdistance=\dimen266
+\pgf@decorate@distancetomove=\dimen267
+\pgf@decorate@repeatstate=\count141
+\pgfdecorationsegmentamplitude=\dimen268
+\pgfdecorationsegmentlength=\dimen269
 )
 \tikz@lib@dec@box=\box49
 )
@@ -1076,7 +1081,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip66
 \bibsep=\skip67
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count141
+\c@NAT@ctr=\count142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
@@ -1122,50 +1127,52 @@ Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip68
 \@affilsep=\skip69
-\c@Maxaffil=\count142
-\c@authors=\count143
-\c@affil=\count144
-) (./TitlePage.aux)
-\openout1 = `TitlePage.aux'.
+\c@Maxaffil=\count143
+\c@authors=\count144
+\c@affil=\count145
+)
+(./BurdenShare_GannonKent_20190607.aux)
+\openout1 = `BurdenShare_GannonKent_20190607.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 72.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 72.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 60.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 60.
+
+(/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 72.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 72.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 60.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    ... okay on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count145
-\scratchdimen=\dimen269
+\scratchcounter=\count146
+\scratchdimen=\dimen270
 \scratchbox=\box52
-\nofMPsegments=\count146
-\nofMParguments=\count147
+\nofMPsegments=\count147
+\nofMParguments=\count148
 \everyMPshowfont=\toks62
-\MPscratchCnt=\count148
-\MPscratchDim=\dimen270
-\MPnumerator=\count149
-\makeMPintoPDFobject=\count150
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen271
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
 \everyMPtoPDFconversion=\toks63
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1232,180 +1239,236 @@ Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 16.58891pt on input line 73.
+(Font)              scaled to size 16.58891pt on input line 63.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 16.58891pt on input line 73.
-LaTeX Font Info:    Try loading font information for OT1+mdbch on input line 73
+(Font)              scaled to size 16.58891pt on input line 63.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 65.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 65.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OT1+mdbch on input line 76
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
-LaTeX Font Info:    Try loading font information for OML+mdbch on input line 73
+(Font)              scaled to size 5.76004pt on input line 76.
+LaTeX Font Info:    Try loading font information for OML+mdbch on input line 76
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 73.
-LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 73
+(Font)              scaled to size 5.76004pt on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 76
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
-LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 73
+(Font)              scaled to size 5.76004pt on input line 76.
+LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 76
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
+(Font)              scaled to size 5.76004pt on input line 76.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 11.31592pt on input line 73.
+(Font)              scaled to size 11.31592pt on input line 76.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 7.54395pt on input line 73.
+(Font)              scaled to size 7.54395pt on input line 76.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 5.65796pt on input line 73.
+(Font)              scaled to size 5.65796pt on input line 76.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
-LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 73
+(Font)              scaled to size 5.76004pt on input line 76.
+LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 76
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
-LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 73
+(Font)              scaled to size 5.76004pt on input line 76.
+LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 76
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 73.
+(Font)              scaled to size 11.52008pt on input line 76.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 76.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
+(Font)              scaled to size 5.76004pt on input line 76.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 73.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 9.42993pt on input line 73.
-LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 6.60095pt on input line 73.
-LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 4.71497pt on input line 73.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 73.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 73.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 73.
-LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 10.72006pt on input line 73.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 75.
+(Font)              scaled to size 7.68005pt on input line 76.
+\openout3 = `BurdenShare_GannonKent_20190607.ent'.
+
+ [2]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 75.
-\tf@thm=\write4
-\openout4 = `TitlePage.thm'.
+(Font)              scaled to size 11.52008pt on input line 86.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 11.52008pt on input line 104.
 
- [1
+[3] [4] [5] [6] [7] [8]
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 128.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 13.82408pt on input line 128.
+ [9]
+<figures/contribution_slopeplot.png, id=37, 966.61125pt x 755.82375pt>
+File: figures/contribution_slopeplot.png Graphic file (type png)
+<use figures/contribution_slopeplot.png>
+Package pdftex.def Info: figures/contribution_slopeplot.png  used on input line
+ 135.
+(pdftex.def)             Requested size: 469.75502pt x 367.31218pt.
+ [10] [11 <./figures/contribution_slopeplot.png>]
+[12] [13] [14] [15]
+<figures/troop_year.pdf, id=59, 578.16pt x 361.35pt>
+File: figures/troop_year.pdf Graphic file (type pdf)
+<use figures/troop_year.pdf>
+Package pdftex.def Info: figures/troop_year.pdf  used on input line 170.
+(pdftex.def)             Requested size: 469.75502pt x 293.59616pt.
+ [16] [17 <./figures/troop_year.pdf>] [18] [19]
+<figures/troop_dist.pdf, id=77, 361.35pt x 361.35pt>
+File: figures/troop_dist.pdf Graphic file (type pdf)
+<use figures/troop_dist.pdf>
+Package pdftex.def Info: figures/troop_dist.pdf  used on input line 189.
+(pdftex.def)             Requested size: 305.33789pt x 305.34044pt.
+ [20]
+[21 <./figures/troop_dist.pdf>] (./table.tex
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 34.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 4.80003pt on input line 34.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 34.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 34.
+LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
+(Font)              scaled to size 4.71497pt on input line 34.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 34.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 34.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 34.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./TitlePage.aux) ) 
+Overfull \hbox (17.01697pt too wide) in paragraph at lines 3--36
+ [] 
+ []
+
+) [22]
+<figures/pred_contr.pdf, id=92, 578.16pt x 361.35pt>
+File: figures/pred_contr.pdf Graphic file (type pdf)
+<use figures/pred_contr.pdf>
+Package pdftex.def Info: figures/pred_contr.pdf  used on input line 209.
+(pdftex.def)             Requested size: 433.61893pt x 271.01184pt.
+ [23] [24 <./figures/pred_contr.pdf>] [25] [26] [27] [28] [29]
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 240.
+
+(./BurdenShare_GannonKent_20190607.ent
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
+(Font)              scaled to size 9.42993pt on input line 2.
+LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
+(Font)              scaled to size 6.60095pt on input line 2.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 2.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 2.
+) [30]
+(./BurdenShare_GannonKent_20190607.bbl [31] [32] [33] [34] [35] [36]
+Underfull \hbox (badness 1342) in paragraph at lines 413--418
+[]\T1/mdbch/m/n/12 Ministry of De-fence II (se-cu-rity pol-icy). 2001\T1/mdbch/
+m/it/12 a\T1/mdbch/m/n/12 .  ``Mulig Norsk Ubåt-støtte Til Stanav-
+ []
+
+[37] [38] [39])
+\tf@thm=\write5
+\openout5 = `BurdenShare_GannonKent_20190607.thm'.
+
+ [40] (./BurdenShare_GannonKent_20190607.aux) ) 
 Here is how much of TeX's memory you used:
- 18586 strings out of 492982
- 358670 string characters out of 6134895
- 385714 words of memory out of 5000000
- 21709 multiletter control sequences out of 15000+600000
- 48740 words of font info for 91 fonts, out of 8000000 for 9000
+ 19017 strings out of 492982
+ 374866 string characters out of 6134895
+ 390659 words of memory out of 5000000
+ 22119 multiletter control sequences out of 15000+600000
+ 57960 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,65p,1035b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/s
-hare/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/ly1/texnansi.enc}</usr/share/texlive/texmf-dist/fonts/type1
-/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstre
-a/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charte
-r/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbc
-h/md-chr7y.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on TitlePage.pdf (1 page, 69259 bytes).
+ 55i,11n,77p,2958b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/f
+onts/enc/dvips/ly1/texnansi.enc}</usr/share/texlive/texmf-dist/fonts/type1/bits
+trea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/cha
+rter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bch
+ri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-
+chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md
+-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
+d-chr8t.pfb>
+Output written on BurdenShare_GannonKent_20190607.pdf (40 pages, 943791 bytes).
+
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 182 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
