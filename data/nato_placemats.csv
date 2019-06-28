@@ -1,0 +1,3192 @@
+id,year,month,day,country,count_total,location,intlorg,operational_org
+1,2007,01,29,Albania,30,Afghanistan,NATO,ISAF
+2,2007,01,29,Australia,500,Afghanistan,NATO,ISAF
+3,2007,01,29,Austria,5,Afghanistan,NATO,ISAF
+4,2007,01,29,Azerbaijan,20,Afghanistan,NATO,ISAF
+5,2007,01,29,Belgium,300,Afghanistan,NATO,ISAF
+6,2007,01,29,Bulgaria,100,Afghanistan,NATO,ISAF
+7,2007,01,29,Canada,2500,Afghanistan,NATO,ISAF
+8,2007,01,29,Croatia,130,Afghanistan,NATO,ISAF
+9,2007,01,29,Czech Republic,150,Afghanistan,NATO,ISAF
+10,2007,01,29,Denmark,400,Afghanistan,NATO,ISAF
+11,2007,01,29,Estonia,90,Afghanistan,NATO,ISAF
+12,2007,01,29,Finland,70,Afghanistan,NATO,ISAF
+13,2007,01,29,France,1000,Afghanistan,NATO,ISAF
+14,2007,01,29,The former Yugoslav Republic of Macedonia,120,Afghanistan,NATO,ISAF
+15,2007,01,29,Germany,3000,Afghanistan,NATO,ISAF
+16,2007,01,29,Greece,170,Afghanistan,NATO,ISAF
+17,2007,01,29,Hungary,180,Afghanistan,NATO,ISAF
+18,2007,01,29,Ireland,10,Afghanistan,NATO,ISAF
+19,2007,01,29,Italy,1950,Afghanistan,NATO,ISAF
+20,2007,01,29,Latvia,35,Afghanistan,NATO,ISAF
+21,2007,01,29,Lithuania,130,Afghanistan,NATO,ISAF
+22,2007,01,29,Luxembourg,10,Afghanistan,NATO,ISAF
+23,2007,01,29,Netherlands,220,Afghanistan,NATO,ISAF
+24,2007,01,29,New Zealand,100,Afghanistan,NATO,ISAF
+25,2007,01,29,Iceland,5,Afghanistan,NATO,ISAF
+26,2007,01,29,Norway,350,Afghanistan,NATO,ISAF
+27,2007,01,29,Poland,160,Afghanistan,NATO,ISAF
+28,2007,01,29,Portugal,150,Afghanistan,NATO,ISAF
+29,2007,01,29,Romania,750,Afghanistan,NATO,ISAF
+30,2007,01,29,Slovakia,60,Afghanistan,NATO,ISAF
+31,2007,01,29,Slovenia,50,Afghanistan,NATO,ISAF
+32,2007,01,29,Spain,550,Afghanistan,NATO,ISAF
+33,2007,01,29,Sweden,180,Afghanistan,NATO,ISAF
+34,2007,01,29,Switzerland,5,Afghanistan,NATO,ISAF
+35,2007,01,29,Turkey,800,Afghanistan,NATO,ISAF
+36,2007,01,29,United Kingdom,5200,Afghanistan,NATO,ISAF
+37,2007,01,29,United States,14000,Afghanistan,NATO,ISAF
+38,2007,03,14,Albania,30,Afghanistan,NATO,ISAF
+39,2007,03,14,Australia,500,Afghanistan,NATO,ISAF
+40,2007,03,14,Austria,5,Afghanistan,NATO,ISAF
+41,2007,03,14,Azerbaijan,20,Afghanistan,NATO,ISAF
+42,2007,03,14,Belgium,300,Afghanistan,NATO,ISAF
+43,2007,03,14,Bulgaria,100,Afghanistan,NATO,ISAF
+44,2007,03,14,Canada,2500,Afghanistan,NATO,ISAF
+45,2007,03,14,Croatia,130,Afghanistan,NATO,ISAF
+46,2007,03,14,Czech Republic,150,Afghanistan,NATO,ISAF
+47,2007,03,14,Denmark,400,Afghanistan,NATO,ISAF
+48,2007,03,14,Estonia,90,Afghanistan,NATO,ISAF
+49,2007,03,14,Finland,70,Afghanistan,NATO,ISAF
+50,2007,03,14,France,1000,Afghanistan,NATO,ISAF
+51,2007,03,14,The former Yugoslav Republic of Macedonia,120,Afghanistan,NATO,ISAF
+52,2007,03,14,Germany,3000,Afghanistan,NATO,ISAF
+53,2007,03,14,Greece,170,Afghanistan,NATO,ISAF
+54,2007,03,14,Hungary,180,Afghanistan,NATO,ISAF
+55,2007,03,14,Ireland,10,Afghanistan,NATO,ISAF
+56,2007,03,14,Italy,1950,Afghanistan,NATO,ISAF
+57,2007,03,14,Latvia,35,Afghanistan,NATO,ISAF
+58,2007,03,14,Lithuania,130,Afghanistan,NATO,ISAF
+59,2007,03,14,Luxembourg,10,Afghanistan,NATO,ISAF
+60,2007,03,14,Netherlands,2200,Afghanistan,NATO,ISAF
+61,2007,03,14,New Zealand,100,Afghanistan,NATO,ISAF
+62,2007,03,14,Iceland,5,Afghanistan,NATO,ISAF
+63,2007,03,14,Norway,500,Afghanistan,NATO,ISAF
+64,2007,03,14,Poland,300,Afghanistan,NATO,ISAF
+65,2007,03,14,Portugal,150,Afghanistan,NATO,ISAF
+66,2007,03,14,Romania,750,Afghanistan,NATO,ISAF
+67,2007,03,14,Slovakia,60,Afghanistan,NATO,ISAF
+68,2007,03,14,Slovenia,50,Afghanistan,NATO,ISAF
+69,2007,03,14,Spain,550,Afghanistan,NATO,ISAF
+70,2007,03,14,Sweden,180,Afghanistan,NATO,ISAF
+71,2007,03,14,Switzerland,5,Afghanistan,NATO,ISAF
+72,2007,03,14,Turkey,800,Afghanistan,NATO,ISAF
+73,2007,03,14,United Kingdom,5200,Afghanistan,NATO,ISAF
+74,2007,03,14,United States,15000,Afghanistan,NATO,ISAF
+75,2007,04,20,Albania,30,Afghanistan,NATO,ISAF
+76,2007,04,20,Australia,500,Afghanistan,NATO,ISAF
+77,2007,04,20,Austria,5,Afghanistan,NATO,ISAF
+78,2007,04,20,Azerbaijan,20,Afghanistan,NATO,ISAF
+79,2007,04,20,Belgium,300,Afghanistan,NATO,ISAF
+80,2007,04,20,Bulgaria,100,Afghanistan,NATO,ISAF
+81,2007,04,20,Canada,2500,Afghanistan,NATO,ISAF
+82,2007,04,20,Croatia,130,Afghanistan,NATO,ISAF
+83,2007,04,20,Czech Republic,150,Afghanistan,NATO,ISAF
+84,2007,04,20,Denmark,400,Afghanistan,NATO,ISAF
+85,2007,04,20,Estonia,90,Afghanistan,NATO,ISAF
+86,2007,04,20,Finland,70,Afghanistan,NATO,ISAF
+87,2007,04,20,France,1000,Afghanistan,NATO,ISAF
+88,2007,04,20,The former Yugoslav Republic of Macedonia,120,Afghanistan,NATO,ISAF
+89,2007,04,20,Germany,3000,Afghanistan,NATO,ISAF
+90,2007,04,20,Greece,170,Afghanistan,NATO,ISAF
+91,2007,04,20,Hungary,180,Afghanistan,NATO,ISAF
+92,2007,04,20,Ireland,10,Afghanistan,NATO,ISAF
+93,2007,04,20,Italy,1950,Afghanistan,NATO,ISAF
+94,2007,04,20,Latvia,35,Afghanistan,NATO,ISAF
+95,2007,04,20,Lithuania,130,Afghanistan,NATO,ISAF
+96,2007,04,20,Luxembourg,10,Afghanistan,NATO,ISAF
+97,2007,04,20,Netherlands,220,Afghanistan,NATO,ISAF
+98,2007,04,20,New Zealand,100,Afghanistan,NATO,ISAF
+99,2007,04,20,Iceland,5,Afghanistan,NATO,ISAF
+100,2007,04,20,Norway,500,Afghanistan,NATO,ISAF
+101,2007,04,20,Poland,300,Afghanistan,NATO,ISAF
+102,2007,04,20,Portugal,150,Afghanistan,NATO,ISAF
+103,2007,04,20,Romania,750,Afghanistan,NATO,ISAF
+104,2007,04,20,Slovakia,60,Afghanistan,NATO,ISAF
+105,2007,04,20,Slovenia,50,Afghanistan,NATO,ISAF
+106,2007,04,20,Spain,550,Afghanistan,NATO,ISAF
+107,2007,04,20,Sweden,180,Afghanistan,NATO,ISAF
+108,2007,04,20,Switzerland,5,Afghanistan,NATO,ISAF
+109,2007,04,20,Turkey,800,Afghanistan,NATO,ISAF
+110,2007,04,20,United Kingdom,5200,Afghanistan,NATO,ISAF
+111,2007,04,20,United States,15000,Afghanistan,NATO,ISAF
+112,2007,05,31,Albania,30,Afghanistan,NATO,ISAF
+113,2007,05,31,Australia,500,Afghanistan,NATO,ISAF
+114,2007,05,31,Austria,2,Afghanistan,NATO,ISAF
+115,2007,05,31,Azerbaijan,20,Afghanistan,NATO,ISAF
+116,2007,05,31,Belgium,300,Afghanistan,NATO,ISAF
+117,2007,05,31,Bulgaria,100,Afghanistan,NATO,ISAF
+118,2007,05,31,Canada,2500,Afghanistan,NATO,ISAF
+119,2007,05,31,Croatia,180,Afghanistan,NATO,ISAF
+120,2007,05,31,Czech Republic,150,Afghanistan,NATO,ISAF
+121,2007,05,31,Denmark,400,Afghanistan,NATO,ISAF
+122,2007,05,31,Estonia,130,Afghanistan,NATO,ISAF
+123,2007,05,31,Finland,70,Afghanistan,NATO,ISAF
+124,2007,05,31,France,1000,Afghanistan,NATO,ISAF
+125,2007,05,31,The former Yugoslav Republic of Macedonia,120,Afghanistan,NATO,ISAF
+126,2007,05,31,Germany,3000,Afghanistan,NATO,ISAF
+127,2007,05,31,Greece,170,Afghanistan,NATO,ISAF
+128,2007,05,31,Hungary,180,Afghanistan,NATO,ISAF
+129,2007,05,31,Ireland,5,Afghanistan,NATO,ISAF
+130,2007,05,31,Italy,1950,Afghanistan,NATO,ISAF
+131,2007,05,31,Latvia,35,Afghanistan,NATO,ISAF
+132,2007,05,31,Lithuania,130,Afghanistan,NATO,ISAF
+133,2007,05,31,Luxembourg,10,Afghanistan,NATO,ISAF
+134,2007,05,31,Netherlands,220,Afghanistan,NATO,ISAF
+135,2007,05,31,New Zealand,7,Afghanistan,NATO,ISAF
+136,2007,05,31,Iceland,9,Afghanistan,NATO,ISAF
+137,2007,05,31,Norway,500,Afghanistan,NATO,ISAF
+138,2007,05,31,Poland,1100,Afghanistan,NATO,ISAF
+139,2007,05,31,Portugal,150,Afghanistan,NATO,ISAF
+140,2007,05,31,Romania,750,Afghanistan,NATO,ISAF
+141,2007,05,31,Slovakia,60,Afghanistan,NATO,ISAF
+142,2007,05,31,Slovenia,50,Afghanistan,NATO,ISAF
+143,2007,05,31,Spain,650,Afghanistan,NATO,ISAF
+144,2007,05,31,Sweden,260,Afghanistan,NATO,ISAF
+145,2007,05,31,Switzerland,2,Afghanistan,NATO,ISAF
+146,2007,05,31,Turkey,1200,Afghanistan,NATO,ISAF
+147,2007,05,31,United Kingdom,6700,Afghanistan,NATO,ISAF
+148,2007,05,31,United States,17000,Afghanistan,NATO,ISAF
+149,2007,07,13,Albania,30,Afghanistan,NATO,ISAF
+150,2007,07,13,Australia,700,Afghanistan,NATO,ISAF
+151,2007,07,13,Austria,2,Afghanistan,NATO,ISAF
+152,2007,07,13,Azerbaijan,20,Afghanistan,NATO,ISAF
+153,2007,07,13,Belgium,295,Afghanistan,NATO,ISAF
+154,2007,07,13,Bulgaria,400,Afghanistan,NATO,ISAF
+155,2007,07,13,Canada,2500,Afghanistan,NATO,ISAF
+156,2007,07,13,Croatia,175,Afghanistan,NATO,ISAF
+157,2007,07,13,Czech Republic,220,Afghanistan,NATO,ISAF
+158,2007,07,13,Denmark,400,Afghanistan,NATO,ISAF
+159,2007,07,13,Estonia,110,Afghanistan,NATO,ISAF
+160,2007,07,13,Finland,70,Afghanistan,NATO,ISAF
+161,2007,07,13,France,800,Afghanistan,NATO,ISAF
+162,2007,07,13,The former Yugoslav Republic of Macedonia,120,Afghanistan,NATO,ISAF
+163,2007,07,13,Germany,3000,Afghanistan,NATO,ISAF
+164,2007,07,13,Greece,145,Afghanistan,NATO,ISAF
+165,2007,07,13,Hungary,180,Afghanistan,NATO,ISAF
+166,2007,07,13,Ireland,5,Afghanistan,NATO,ISAF
+167,2007,07,13,Italy,2500,Afghanistan,NATO,ISAF
+168,2007,07,13,Latvia,35,Afghanistan,NATO,ISAF
+169,2007,07,13,Lithuania,130,Afghanistan,NATO,ISAF
+170,2007,07,13,Luxembourg,10,Afghanistan,NATO,ISAF
+171,2007,07,13,Netherlands,1300,Afghanistan,NATO,ISAF
+172,2007,07,13,New Zealand,150,Afghanistan,NATO,ISAF
+173,2007,07,13,Iceland,9,Afghanistan,NATO,ISAF
+174,2007,07,13,Norway,500,Afghanistan,NATO,ISAF
+175,2007,07,13,Poland,1075,Afghanistan,NATO,ISAF
+176,2007,07,13,Portugal,150,Afghanistan,NATO,ISAF
+177,2007,07,13,Romania,500,Afghanistan,NATO,ISAF
+178,2007,07,13,Slovakia,60,Afghanistan,NATO,ISAF
+179,2007,07,13,Slovenia,50,Afghanistan,NATO,ISAF
+180,2007,07,13,Spain,650,Afghanistan,NATO,ISAF
+181,2007,07,13,Sweden,260,Afghanistan,NATO,ISAF
+182,2007,07,13,Switzerland,2,Afghanistan,NATO,ISAF
+183,2007,07,13,Turkey,1200,Afghanistan,NATO,ISAF
+184,2007,07,13,United Kingdom,6500,Afghanistan,NATO,ISAF
+185,2007,07,13,United States,14750,Afghanistan,NATO,ISAF
+186,2007,09,10,Albania,142,Afghanistan,NATO,ISAF
+187,2007,09,10,Australia,883,Afghanistan,NATO,ISAF
+188,2007,09,10,Austria,3,Afghanistan,NATO,ISAF
+189,2007,09,10,Azerbaijan,22,Afghanistan,NATO,ISAF
+190,2007,09,10,Belgium,305,Afghanistan,NATO,ISAF
+191,2007,09,10,Bulgaria,390,Afghanistan,NATO,ISAF
+192,2007,09,10,Canada,3079,Afghanistan,NATO,ISAF
+193,2007,09,10,Croatia,113,Afghanistan,NATO,ISAF
+194,2007,09,10,Czech Republic,231,Afghanistan,NATO,ISAF
+195,2007,09,10,Denmark,516,Afghanistan,NATO,ISAF
+196,2007,09,10,Estonia,128,Afghanistan,NATO,ISAF
+197,2007,09,10,Finland,101,Afghanistan,NATO,ISAF
+198,2007,09,10,France,978,Afghanistan,NATO,ISAF
+199,2007,09,10,The former Yugoslav Republic of Macedonia,133,Afghanistan,NATO,ISAF
+200,2007,09,10,Germany,2908,Afghanistan,NATO,ISAF
+201,2007,09,10,Greece,143,Afghanistan,NATO,ISAF
+202,2007,09,10,Hungary,314,Afghanistan,NATO,ISAF
+203,2007,09,10,Ireland,7,Afghanistan,NATO,ISAF
+204,2007,09,10,Italy,2573,Afghanistan,NATO,ISAF
+205,2007,09,10,Latvia,84,Afghanistan,NATO,ISAF
+206,2007,09,10,Lithuania,198,Afghanistan,NATO,ISAF
+207,2007,09,10,Luxembourg,9,Afghanistan,NATO,ISAF
+208,2007,09,10,Netherlands,1341,Afghanistan,NATO,ISAF
+209,2007,09,10,New Zealand,152,Afghanistan,NATO,ISAF
+210,2007,09,10,Iceland,9,Afghanistan,NATO,ISAF
+211,2007,09,10,Norway,441,Afghanistan,NATO,ISAF
+212,2007,09,10,Poland,943,Afghanistan,NATO,ISAF
+213,2007,09,10,Portugal,182,Afghanistan,NATO,ISAF
+214,2007,09,10,Romania,544,Afghanistan,NATO,ISAF
+215,2007,09,10,Slovakia,72,Afghanistan,NATO,ISAF
+216,2007,09,10,Slovenia,65,Afghanistan,NATO,ISAF
+217,2007,09,10,Spain,905,Afghanistan,NATO,ISAF
+218,2007,09,10,Sweden,356,Afghanistan,NATO,ISAF
+219,2007,09,10,Switzerland,2,Afghanistan,NATO,ISAF
+220,2007,09,10,Turkey,1215,Afghanistan,NATO,ISAF
+221,2007,09,10,United Kingdom,6678,Afghanistan,NATO,ISAF
+222,2007,09,10,United States,15154,Afghanistan,NATO,ISAF
+223,2007,10,18,Albania,138,Afghanistan,NATO,ISAF
+224,2007,10,18,Australia,907,Afghanistan,NATO,ISAF
+225,2007,10,18,Austria,3,Afghanistan,NATO,ISAF
+226,2007,10,18,Azerbaijan,22,Afghanistan,NATO,ISAF
+227,2007,10,18,Belgium,368,Afghanistan,NATO,ISAF
+228,2007,10,18,Bulgaria,401,Afghanistan,NATO,ISAF
+229,2007,10,18,Canada,1730,Afghanistan,NATO,ISAF
+230,2007,10,18,Croatia,199,Afghanistan,NATO,ISAF
+231,2007,10,18,Czech Republic,233,Afghanistan,NATO,ISAF
+232,2007,10,18,Denmark,454,Afghanistan,NATO,ISAF
+233,2007,10,18,Estonia,128,Afghanistan,NATO,ISAF
+234,2007,10,18,Finland,85,Afghanistan,NATO,ISAF
+235,2007,10,18,France,1073,Afghanistan,NATO,ISAF
+236,2007,10,18,The former Yugoslav Republic of Macedonia,129,Afghanistan,NATO,ISAF
+237,2007,10,18,Germany,3155,Afghanistan,NATO,ISAF
+238,2007,10,18,Greece,146,Afghanistan,NATO,ISAF
+239,2007,10,18,Hungary,225,Afghanistan,NATO,ISAF
+240,2007,10,18,Iceland,11,Afghanistan,NATO,ISAF
+241,2007,10,18,Ireland,7,Afghanistan,NATO,ISAF
+242,2007,10,18,Italy,2395,Afghanistan,NATO,ISAF
+243,2007,10,18,Latvia,97,Afghanistan,NATO,ISAF
+244,2007,10,18,Lithuania,195,Afghanistan,NATO,ISAF
+245,2007,10,18,Luxembourg,9,Afghanistan,NATO,ISAF
+246,2007,10,18,Netherlands,1516,Afghanistan,NATO,ISAF
+247,2007,10,18,New Zealand,138,Afghanistan,NATO,ISAF
+248,2007,10,18,Norway,508,Afghanistan,NATO,ISAF
+249,2007,10,18,Poland,937,Afghanistan,NATO,ISAF
+250,2007,10,18,Portugal,162,Afghanistan,NATO,ISAF
+251,2007,10,18,Romania,536,Afghanistan,NATO,ISAF
+252,2007,10,18,Slovakia,70,Afghanistan,NATO,ISAF
+253,2007,10,18,Slovenia,42,Afghanistan,NATO,ISAF
+254,2007,10,18,Spain,715,Afghanistan,NATO,ISAF
+255,2007,10,18,Sweden,340,Afghanistan,NATO,ISAF
+256,2007,10,18,Switzerland,2,Afghanistan,NATO,ISAF
+257,2007,10,18,Turkey,1220,Afghanistan,NATO,ISAF
+258,2007,10,18,Ukraine,1,Afghanistan,NATO,ISAF
+259,2007,10,18,United Kingdom,7740,Afghanistan,NATO,ISAF
+260,2007,10,18,United States,15108,Afghanistan,NATO,ISAF
+261,2007,10,18,Georgia,0,Afghanistan,NATO,ISAF
+262,2007,10,22,Albania,138,Afghanistan,NATO,ISAF
+263,2007,10,22,Australia,907,Afghanistan,NATO,ISAF
+264,2007,10,22,Austria,3,Afghanistan,NATO,ISAF
+265,2007,10,22,Azerbaijan,22,Afghanistan,NATO,ISAF
+266,2007,10,22,Belgium,368,Afghanistan,NATO,ISAF
+267,2007,10,22,Bulgaria,401,Afghanistan,NATO,ISAF
+268,2007,10,22,Canada,1730,Afghanistan,NATO,ISAF
+269,2007,10,22,Croatia,199,Afghanistan,NATO,ISAF
+270,2007,10,22,Czech Republic,233,Afghanistan,NATO,ISAF
+271,2007,10,22,Denmark,454,Afghanistan,NATO,ISAF
+272,2007,10,22,Estonia,128,Afghanistan,NATO,ISAF
+273,2007,10,22,Finland,85,Afghanistan,NATO,ISAF
+274,2007,10,22,France,1073,Afghanistan,NATO,ISAF
+275,2007,10,22,Georgia,0,Afghanistan,NATO,ISAF
+276,2007,10,22,Germany,3155,Afghanistan,NATO,ISAF
+277,2007,10,22,Greece,146,Afghanistan,NATO,ISAF
+278,2007,10,22,Hungary,225,Afghanistan,NATO,ISAF
+279,2007,10,22,Iceland,11,Afghanistan,NATO,ISAF
+280,2007,10,22,Ireland,7,Afghanistan,NATO,ISAF
+281,2007,10,22,Italy,2395,Afghanistan,NATO,ISAF
+282,2007,10,22,Latvia,97,Afghanistan,NATO,ISAF
+283,2007,10,22,Lithuania,195,Afghanistan,NATO,ISAF
+284,2007,10,22,Luxembourg,9,Afghanistan,NATO,ISAF
+285,2007,10,22,Netherlands,1516,Afghanistan,NATO,ISAF
+286,2007,10,22,New Zealand,138,Afghanistan,NATO,ISAF
+287,2007,10,22,Norway,508,Afghanistan,NATO,ISAF
+288,2007,10,22,Poland,937,Afghanistan,NATO,ISAF
+289,2007,10,22,Portugal,162,Afghanistan,NATO,ISAF
+290,2007,10,22,Romania,536,Afghanistan,NATO,ISAF
+291,2007,10,22,Slovakia,70,Afghanistan,NATO,ISAF
+292,2007,10,22,Slovenia,42,Afghanistan,NATO,ISAF
+293,2007,10,22,Spain,715,Afghanistan,NATO,ISAF
+294,2007,10,22,Sweden,340,Afghanistan,NATO,ISAF
+295,2007,10,22,Switzerland,2,Afghanistan,NATO,ISAF
+296,2007,10,22,The former Yugoslav Republic of Macedonia,129,Afghanistan,NATO,ISAF
+297,2007,10,22,Turkey,1220,Afghanistan,NATO,ISAF
+298,2007,10,22,United Kingdom,7740,Afghanistan,NATO,ISAF
+299,2007,10,22,United States,15108,Afghanistan,NATO,ISAF
+300,2007,12,05,Albania,138,Afghanistan,NATO,ISAF
+301,2007,12,05,Australia,892,Afghanistan,NATO,ISAF
+302,2007,12,05,Austria,3,Afghanistan,NATO,ISAF
+303,2007,12,05,Azerbaijan,22,Afghanistan,NATO,ISAF
+304,2007,12,05,Belgium,369,Afghanistan,NATO,ISAF
+305,2007,12,05,Bulgaria,401,Afghanistan,NATO,ISAF
+306,2007,12,05,Canada,1730,Afghanistan,NATO,ISAF
+307,2007,12,05,Croatia,211,Afghanistan,NATO,ISAF
+308,2007,12,05,Czech Republic,240,Afghanistan,NATO,ISAF
+309,2007,12,05,Denmark,628,Afghanistan,NATO,ISAF
+310,2007,12,05,Estonia,125,Afghanistan,NATO,ISAF
+311,2007,12,05,Finland,86,Afghanistan,NATO,ISAF
+312,2007,12,05,France,1292,Afghanistan,NATO,ISAF
+313,2007,12,05,Georgia,0,Afghanistan,NATO,ISAF
+314,2007,12,05,Germany,3155,Afghanistan,NATO,ISAF
+315,2007,12,05,Greece,143,Afghanistan,NATO,ISAF
+316,2007,12,05,Hungary,219,Afghanistan,NATO,ISAF
+317,2007,12,05,Iceland,10,Afghanistan,NATO,ISAF
+318,2007,12,05,Ireland,7,Afghanistan,NATO,ISAF
+319,2007,12,05,Italy,2358,Afghanistan,NATO,ISAF
+320,2007,12,05,Jordan,90,Afghanistan,NATO,ISAF
+321,2007,12,05,Latvia,96,Afghanistan,NATO,ISAF
+322,2007,12,05,Lithuania,196,Afghanistan,NATO,ISAF
+323,2007,12,05,Luxembourg,9,Afghanistan,NATO,ISAF
+324,2007,12,05,Netherlands,1512,Afghanistan,NATO,ISAF
+325,2007,12,05,New Zealand,74,Afghanistan,NATO,ISAF
+326,2007,12,05,Norway,508,Afghanistan,NATO,ISAF
+327,2007,12,05,Poland,1141,Afghanistan,NATO,ISAF
+328,2007,12,05,Portugal,163,Afghanistan,NATO,ISAF
+329,2007,12,05,Romania,537,Afghanistan,NATO,ISAF
+330,2007,12,05,Slovakia,70,Afghanistan,NATO,ISAF
+331,2007,12,05,Slovenia,66,Afghanistan,NATO,ISAF
+332,2007,12,05,Spain,763,Afghanistan,NATO,ISAF
+333,2007,12,05,Sweden,350,Afghanistan,NATO,ISAF
+334,2007,12,05,Switzerland,2,Afghanistan,NATO,ISAF
+335,2007,12,05,The former Yugoslav Republic of Macedonia,125,Afghanistan,NATO,ISAF
+336,2007,12,05,Turkey,1219,Afghanistan,NATO,ISAF
+337,2007,12,05,United Kingdom,7753,Afghanistan,NATO,ISAF
+338,2007,12,05,United States,15038,Afghanistan,NATO,ISAF
+339,2008,02,06,Albania,140,Afghanistan,NATO,ISAF
+340,2008,02,06,Australia,1070,Afghanistan,NATO,ISAF
+341,2008,02,06,Austria,3,Afghanistan,NATO,ISAF
+342,2008,02,06,Azerbaijan,50,Afghanistan,NATO,ISAF
+343,2008,02,06,Belgium,370,Afghanistan,NATO,ISAF
+344,2008,02,06,Bulgaria,420,Afghanistan,NATO,ISAF
+345,2008,02,06,Canada,2500,Afghanistan,NATO,ISAF
+346,2008,02,06,Croatia,190,Afghanistan,NATO,ISAF
+347,2008,02,06,Czech Republic,135,Afghanistan,NATO,ISAF
+348,2008,02,06,Denmark,780,Afghanistan,NATO,ISAF
+349,2008,02,06,Estonia,130,Afghanistan,NATO,ISAF
+350,2008,02,06,Finland,105,Afghanistan,NATO,ISAF
+351,2008,02,06,France,1515,Afghanistan,NATO,ISAF
+352,2008,02,06,Georgia,1,Afghanistan,NATO,ISAF
+353,2008,02,06,Germany,3210,Afghanistan,NATO,ISAF
+354,2008,02,06,Greece,150,Afghanistan,NATO,ISAF
+355,2008,02,06,Hungary,230,Afghanistan,NATO,ISAF
+356,2008,02,06,Iceland,10,Afghanistan,NATO,ISAF
+357,2008,02,06,Ireland,7,Afghanistan,NATO,ISAF
+358,2008,02,06,Italy,2880,Afghanistan,NATO,ISAF
+359,2008,02,06,Jordan,90,Afghanistan,NATO,ISAF
+360,2008,02,06,Latvia,100,Afghanistan,NATO,ISAF
+361,2008,02,06,Lithuania,260,Afghanistan,NATO,ISAF
+362,2008,02,06,Luxembourg,9,Afghanistan,NATO,ISAF
+363,2008,02,06,Netherlands,1650,Afghanistan,NATO,ISAF
+364,2008,02,06,New Zealand,115,Afghanistan,NATO,ISAF
+365,2008,02,06,Norway,495,Afghanistan,NATO,ISAF
+366,2008,02,06,Poland,1100,Afghanistan,NATO,ISAF
+367,2008,02,06,Portugal,160,Afghanistan,NATO,ISAF
+368,2008,02,06,Romania,535,Afghanistan,NATO,ISAF
+369,2008,02,06,Singapore,2,Afghanistan,NATO,ISAF
+370,2008,02,06,Slovakia,70,Afghanistan,NATO,ISAF
+371,2008,02,06,Slovenia,70,Afghanistan,NATO,ISAF
+372,2008,02,06,Spain,740,Afghanistan,NATO,ISAF
+373,2008,02,06,Sweden,345,Afghanistan,NATO,ISAF
+374,2008,02,06,Switzerland,2,Afghanistan,NATO,ISAF
+375,2008,02,06,The former Yugoslav Republic of Macedonia,130,Afghanistan,NATO,ISAF
+376,2008,02,06,Turkey,675,Afghanistan,NATO,ISAF
+377,2008,02,06,United Kingdom,7800,Afghanistan,NATO,ISAF
+378,2008,02,06,United States,15000,Afghanistan,NATO,ISAF
+379,2008,04,01,Albania,140,Afghanistan,NATO,ISAF
+380,2008,04,01,Australia,1100,Afghanistan,NATO,ISAF
+381,2008,04,01,Austria,2,Afghanistan,NATO,ISAF
+382,2008,04,01,Azerbaijan,40,Afghanistan,NATO,ISAF
+383,2008,04,01,Belgium,360,Afghanistan,NATO,ISAF
+384,2008,04,01,Bulgaria,400,Afghanistan,NATO,ISAF
+385,2008,04,01,Canada,2500,Afghanistan,NATO,ISAF
+386,2008,04,01,Croatia,210,Afghanistan,NATO,ISAF
+387,2008,04,01,Czech Republic,290,Afghanistan,NATO,ISAF
+388,2008,04,01,Denmark,690,Afghanistan,NATO,ISAF
+389,2008,04,01,Estonia,120,Afghanistan,NATO,ISAF
+390,2008,04,01,Finland,100,Afghanistan,NATO,ISAF
+391,2008,04,01,France,1430,Afghanistan,NATO,ISAF
+392,2008,04,01,Georgia,1,Afghanistan,NATO,ISAF
+393,2008,04,01,Germany,3490,Afghanistan,NATO,ISAF
+394,2008,04,01,Greece,130,Afghanistan,NATO,ISAF
+395,2008,04,01,Hungary,250,Afghanistan,NATO,ISAF
+396,2008,04,01,Iceland,10,Afghanistan,NATO,ISAF
+397,2008,04,01,Ireland,7,Afghanistan,NATO,ISAF
+398,2008,04,01,Italy,2360,Afghanistan,NATO,ISAF
+399,2008,04,01,Jordan,90,Afghanistan,NATO,ISAF
+400,2008,04,01,Latvia,100,Afghanistan,NATO,ISAF
+401,2008,04,01,Lithuania,260,Afghanistan,NATO,ISAF
+402,2008,04,01,Luxembourg,9,Afghanistan,NATO,ISAF
+403,2008,04,01,Netherlands,1730,Afghanistan,NATO,ISAF
+404,2008,04,01,New Zealand,110,Afghanistan,NATO,ISAF
+405,2008,04,01,Norway,540,Afghanistan,NATO,ISAF
+406,2008,04,01,Poland,1020,Afghanistan,NATO,ISAF
+407,2008,04,01,Portugal,170,Afghanistan,NATO,ISAF
+408,2008,04,01,Romania,530,Afghanistan,NATO,ISAF
+409,2008,04,01,Singapore,2,Afghanistan,NATO,ISAF
+410,2008,04,01,Slovakia,60,Afghanistan,NATO,ISAF
+411,2008,04,01,Slovenia,70,Afghanistan,NATO,ISAF
+412,2008,04,01,Spain,770,Afghanistan,NATO,ISAF
+413,2008,04,01,Sweden,350,Afghanistan,NATO,ISAF
+414,2008,04,01,The former Yugoslav Republic of Macedonia,130,Afghanistan,NATO,ISAF
+415,2008,04,01,Turkey,750,Afghanistan,NATO,ISAF
+416,2008,04,01,Ukraine,3,Afghanistan,NATO,ISAF
+417,2008,04,01,United Kingdom,7750,Afghanistan,NATO,ISAF
+418,2008,04,01,United States,19000,Afghanistan,NATO,ISAF
+419,2008,06,03,Albania,140,Afghanistan,NATO,ISAF
+420,2008,06,03,Australia,1100,Afghanistan,NATO,ISAF
+421,2008,06,03,Austria,2,Afghanistan,NATO,ISAF
+422,2008,06,03,Azerbaijan,45,Afghanistan,NATO,ISAF
+423,2008,06,03,Belgium,375,Afghanistan,NATO,ISAF
+424,2008,06,03,Bulgaria,420,Afghanistan,NATO,ISAF
+425,2008,06,03,Canada,2500,Afghanistan,NATO,ISAF
+426,2008,06,03,Croatia,210,Afghanistan,NATO,ISAF
+427,2008,06,03,Czech Republic,370,Afghanistan,NATO,ISAF
+428,2008,06,03,Denmark,690,Afghanistan,NATO,ISAF
+429,2008,06,03,Estonia,120,Afghanistan,NATO,ISAF
+430,2008,06,03,Finland,65,Afghanistan,NATO,ISAF
+431,2008,06,03,France,1670,Afghanistan,NATO,ISAF
+432,2008,06,03,Georgia,0,Afghanistan,NATO,ISAF
+433,2008,06,03,Germany,3370,Afghanistan,NATO,ISAF
+434,2008,06,03,Greece,150,Afghanistan,NATO,ISAF
+435,2008,06,03,Hungary,205,Afghanistan,NATO,ISAF
+436,2008,06,03,Iceland,10,Afghanistan,NATO,ISAF
+437,2008,06,03,Ireland,7,Afghanistan,NATO,ISAF
+438,2008,06,03,Italy,2350,Afghanistan,NATO,ISAF
+439,2008,06,03,Jordan,265,Afghanistan,NATO,ISAF
+440,2008,06,03,Latvia,75,Afghanistan,NATO,ISAF
+441,2008,06,03,Lithuania,200,Afghanistan,NATO,ISAF
+442,2008,06,03,Luxembourg,9,Afghanistan,NATO,ISAF
+443,2008,06,03,Netherlands,1770,Afghanistan,NATO,ISAF
+444,2008,06,03,New Zealand,160,Afghanistan,NATO,ISAF
+445,2008,06,03,Norway,580,Afghanistan,NATO,ISAF
+446,2008,06,03,Poland,1140,Afghanistan,NATO,ISAF
+447,2008,06,03,Portugal,165,Afghanistan,NATO,ISAF
+448,2008,06,03,Romania,570,Afghanistan,NATO,ISAF
+449,2008,06,03,Singapore,2,Afghanistan,NATO,ISAF
+450,2008,06,03,Slovakia,70,Afghanistan,NATO,ISAF
+451,2008,06,03,Slovenia,70,Afghanistan,NATO,ISAF
+452,2008,06,03,Spain,800,Afghanistan,NATO,ISAF
+453,2008,06,03,Sweden,250,Afghanistan,NATO,ISAF
+454,2008,06,03,The former Yugoslav Republic of Macedonia,140,Afghanistan,NATO,ISAF
+455,2008,06,03,Turkey,760,Afghanistan,NATO,ISAF
+456,2008,06,03,Ukraine,3,Afghanistan,NATO,ISAF
+457,2008,06,03,United Kingdom,8530,Afghanistan,NATO,ISAF
+458,2008,06,03,United States,23550,Afghanistan,NATO,ISAF
+459,2008,09,01,Albania,140,Afghanistan,NATO,ISAF
+460,2008,09,01,Australia,1080,Afghanistan,NATO,ISAF
+461,2008,09,01,Austria,1,Afghanistan,NATO,ISAF
+462,2008,09,01,Azerbaijan,45,Afghanistan,NATO,ISAF
+463,2008,09,01,Belgium,390,Afghanistan,NATO,ISAF
+464,2008,09,01,Bulgaria,460,Afghanistan,NATO,ISAF
+465,2008,09,01,Canada,2500,Afghanistan,NATO,ISAF
+466,2008,09,01,Croatia,200,Afghanistan,NATO,ISAF
+467,2008,09,01,Czech Republic,490,Afghanistan,NATO,ISAF
+468,2008,09,01,Denmark,750,Afghanistan,NATO,ISAF
+469,2008,09,01,Estonia,120,Afghanistan,NATO,ISAF
+470,2008,09,01,Finland,80,Afghanistan,NATO,ISAF
+471,2008,09,01,France,2660,Afghanistan,NATO,ISAF
+472,2008,09,01,Georgia,1,Afghanistan,NATO,ISAF
+473,2008,09,01,Germany,3220,Afghanistan,NATO,ISAF
+474,2008,09,01,Greece,130,Afghanistan,NATO,ISAF
+475,2008,09,01,Hungary,200,Afghanistan,NATO,ISAF
+476,2008,09,01,Iceland,8,Afghanistan,NATO,ISAF
+477,2008,09,01,Ireland,7,Afghanistan,NATO,ISAF
+478,2008,09,01,Italy,2350,Afghanistan,NATO,ISAF
+479,2008,09,01,Jordan,0,Afghanistan,NATO,ISAF
+480,2008,09,01,Latvia,70,Afghanistan,NATO,ISAF
+481,2008,09,01,Lithuania,200,Afghanistan,NATO,ISAF
+482,2008,09,01,Luxembourg,9,Afghanistan,NATO,ISAF
+483,2008,09,01,Netherlands,1770,Afghanistan,NATO,ISAF
+484,2008,09,01,New Zealand,155,Afghanistan,NATO,ISAF
+485,2008,09,01,Norway,420,Afghanistan,NATO,ISAF
+486,2008,09,01,Poland,1130,Afghanistan,NATO,ISAF
+487,2008,09,01,Portugal,40,Afghanistan,NATO,ISAF
+488,2008,09,01,Romania,730,Afghanistan,NATO,ISAF
+489,2008,09,01,Singapore,0,Afghanistan,NATO,ISAF
+490,2008,09,01,Slovakia,70,Afghanistan,NATO,ISAF
+491,2008,09,01,Slovenia,70,Afghanistan,NATO,ISAF
+492,2008,09,01,Spain,780,Afghanistan,NATO,ISAF
+493,2008,09,01,Sweden,290,Afghanistan,NATO,ISAF
+494,2008,09,01,The former Yugoslav Republic of Macedonia,135,Afghanistan,NATO,ISAF
+495,2008,09,01,Turkey,725,Afghanistan,NATO,ISAF
+496,2008,09,01,Ukraine,3,Afghanistan,NATO,ISAF
+497,2008,09,01,United Kingdom,8380,Afghanistan,NATO,ISAF
+498,2008,09,01,United States,17790,Afghanistan,NATO,ISAF
+499,2008,10,01,Albania,140,Afghanistan,NATO,ISAF
+500,2008,10,01,Australia,1080,Afghanistan,NATO,ISAF
+501,2008,10,01,Austria,1,Afghanistan,NATO,ISAF
+502,2008,10,01,Azerbaijan,45,Afghanistan,NATO,ISAF
+503,2008,10,01,Belgium,420,Afghanistan,NATO,ISAF
+504,2008,10,01,Bulgaria,460,Afghanistan,NATO,ISAF
+505,2008,10,01,Canada,2500,Afghanistan,NATO,ISAF
+506,2008,10,01,Croatia,280,Afghanistan,NATO,ISAF
+507,2008,10,01,Czech Republic,415,Afghanistan,NATO,ISAF
+508,2008,10,01,Denmark,750,Afghanistan,NATO,ISAF
+509,2008,10,01,Estonia,120,Afghanistan,NATO,ISAF
+510,2008,10,01,Finland,80,Afghanistan,NATO,ISAF
+511,2008,10,01,France,2730,Afghanistan,NATO,ISAF
+512,2008,10,01,Georgia,1,Afghanistan,NATO,ISAF
+513,2008,10,01,Germany,3310,Afghanistan,NATO,ISAF
+514,2008,10,01,Greece,130,Afghanistan,NATO,ISAF
+515,2008,10,01,Hungary,240,Afghanistan,NATO,ISAF
+516,2008,10,01,Iceland,8,Afghanistan,NATO,ISAF
+517,2008,10,01,Ireland,7,Afghanistan,NATO,ISAF
+518,2008,10,01,Italy,2350,Afghanistan,NATO,ISAF
+519,2008,10,01,Jordan,0,Afghanistan,NATO,ISAF
+520,2008,10,01,Latvia,70,Afghanistan,NATO,ISAF
+521,2008,10,01,Lithuania,200,Afghanistan,NATO,ISAF
+522,2008,10,01,Luxembourg,9,Afghanistan,NATO,ISAF
+523,2008,10,01,Netherlands,1770,Afghanistan,NATO,ISAF
+524,2008,10,01,New Zealand,155,Afghanistan,NATO,ISAF
+525,2008,10,01,Norway,455,Afghanistan,NATO,ISAF
+526,2008,10,01,Poland,1130,Afghanistan,NATO,ISAF
+527,2008,10,01,Portugal,70,Afghanistan,NATO,ISAF
+528,2008,10,01,Romania,725,Afghanistan,NATO,ISAF
+529,2008,10,01,Singapore,0,Afghanistan,NATO,ISAF
+530,2008,10,01,Slovakia,70,Afghanistan,NATO,ISAF
+531,2008,10,01,Slovenia,70,Afghanistan,NATO,ISAF
+532,2008,10,01,Spain,780,Afghanistan,NATO,ISAF
+533,2008,10,01,Sweden,280,Afghanistan,NATO,ISAF
+534,2008,10,01,The former Yugoslav Republic of Macedonia,135,Afghanistan,NATO,ISAF
+535,2008,10,01,Turkey,800,Afghanistan,NATO,ISAF
+536,2008,10,01,Ukraine,3,Afghanistan,NATO,ISAF
+537,2008,10,01,United Kingdom,8330,Afghanistan,NATO,ISAF
+538,2008,10,01,United States,20600,Afghanistan,NATO,ISAF
+539,2008,10,06,Albania,140,Afghanistan,NATO,ISAF
+540,2008,10,06,Australia,1080,Afghanistan,NATO,ISAF
+541,2008,10,06,Austria,1,Afghanistan,NATO,ISAF
+542,2008,10,06,Azerbaijan,45,Afghanistan,NATO,ISAF
+543,2008,10,06,Belgium,420,Afghanistan,NATO,ISAF
+544,2008,10,06,Bulgaria,460,Afghanistan,NATO,ISAF
+545,2008,10,06,Canada,2500,Afghanistan,NATO,ISAF
+546,2008,10,06,Croatia,280,Afghanistan,NATO,ISAF
+547,2008,10,06,Czech Republic,415,Afghanistan,NATO,ISAF
+548,2008,10,06,Denmark,750,Afghanistan,NATO,ISAF
+549,2008,10,06,Estonia,120,Afghanistan,NATO,ISAF
+550,2008,10,06,Finland,80,Afghanistan,NATO,ISAF
+551,2008,10,06,France,2730,Afghanistan,NATO,ISAF
+552,2008,10,06,Georgia,1,Afghanistan,NATO,ISAF
+553,2008,10,06,Germany,3310,Afghanistan,NATO,ISAF
+554,2008,10,06,Greece,130,Afghanistan,NATO,ISAF
+555,2008,10,06,Hungary,240,Afghanistan,NATO,ISAF
+556,2008,10,06,Iceland,8,Afghanistan,NATO,ISAF
+557,2008,10,06,Ireland,7,Afghanistan,NATO,ISAF
+558,2008,10,06,Italy,2350,Afghanistan,NATO,ISAF
+559,2008,10,06,Jordan,0,Afghanistan,NATO,ISAF
+560,2008,10,06,Latvia,70,Afghanistan,NATO,ISAF
+561,2008,10,06,Lithuania,200,Afghanistan,NATO,ISAF
+562,2008,10,06,Luxembourg,9,Afghanistan,NATO,ISAF
+563,2008,10,06,Netherlands,1770,Afghanistan,NATO,ISAF
+564,2008,10,06,New Zealand,155,Afghanistan,NATO,ISAF
+565,2008,10,06,Norway,455,Afghanistan,NATO,ISAF
+566,2008,10,06,Poland,1130,Afghanistan,NATO,ISAF
+567,2008,10,06,Portugal,70,Afghanistan,NATO,ISAF
+568,2008,10,06,Romania,725,Afghanistan,NATO,ISAF
+569,2008,10,06,Singapore,0,Afghanistan,NATO,ISAF
+570,2008,10,06,Slovakia,70,Afghanistan,NATO,ISAF
+571,2008,10,06,Slovenia,70,Afghanistan,NATO,ISAF
+572,2008,10,06,Spain,780,Afghanistan,NATO,ISAF
+573,2008,10,06,Sweden,280,Afghanistan,NATO,ISAF
+574,2008,10,06,The former Yugoslav Republic of Macedonia,135,Afghanistan,NATO,ISAF
+575,2008,10,06,Turkey,800,Afghanistan,NATO,ISAF
+576,2008,10,06,Ukraine,3,Afghanistan,NATO,ISAF
+577,2008,10,06,United Arab Erimates,0,Afghanistan,NATO,ISAF
+578,2008,10,06,United Kingdom,8330,Afghanistan,NATO,ISAF
+579,2008,10,06,United States,20600,Afghanistan,NATO,ISAF
+580,2008,11,25,Albania,140,Afghanistan,NATO,ISAF
+581,2008,11,25,Australia,1090,Afghanistan,NATO,ISAF
+582,2008,11,25,Austria,1,Afghanistan,NATO,ISAF
+583,2008,11,25,Azerbaijan,45,Afghanistan,NATO,ISAF
+584,2008,11,25,Belgium,400,Afghanistan,NATO,ISAF
+585,2008,11,25,Bulgaria,460,Afghanistan,NATO,ISAF
+586,2008,11,25,Canada,2500,Afghanistan,NATO,ISAF
+587,2008,11,25,Croatia,300,Afghanistan,NATO,ISAF
+588,2008,11,25,Czech Republic,415,Afghanistan,NATO,ISAF
+589,2008,11,25,Denmark,700,Afghanistan,NATO,ISAF
+590,2008,11,25,Estonia,130,Afghanistan,NATO,ISAF
+591,2008,11,25,Finland,80,Afghanistan,NATO,ISAF
+592,2008,11,25,France,2785,Afghanistan,NATO,ISAF
+593,2008,11,25,Georgia,1,Afghanistan,NATO,ISAF
+594,2008,11,25,Germany,3600,Afghanistan,NATO,ISAF
+595,2008,11,25,Greece,130,Afghanistan,NATO,ISAF
+596,2008,11,25,Hungary,240,Afghanistan,NATO,ISAF
+597,2008,11,25,Iceland,8,Afghanistan,NATO,ISAF
+598,2008,11,25,Ireland,7,Afghanistan,NATO,ISAF
+599,2008,11,25,Italy,2350,Afghanistan,NATO,ISAF
+600,2008,11,25,Jordan,0,Afghanistan,NATO,ISAF
+601,2008,11,25,Latvia,70,Afghanistan,NATO,ISAF
+602,2008,11,25,Lithuania,200,Afghanistan,NATO,ISAF
+603,2008,11,25,Luxembourg,9,Afghanistan,NATO,ISAF
+604,2008,11,25,Netherlands,1770,Afghanistan,NATO,ISAF
+605,2008,11,25,New Zealand,150,Afghanistan,NATO,ISAF
+606,2008,11,25,Norway,455,Afghanistan,NATO,ISAF
+607,2008,11,25,Poland,1130,Afghanistan,NATO,ISAF
+608,2008,11,25,Portugal,70,Afghanistan,NATO,ISAF
+609,2008,11,25,Romania,740,Afghanistan,NATO,ISAF
+610,2008,11,25,Singapore,0,Afghanistan,NATO,ISAF
+611,2008,11,25,Slovakia,180,Afghanistan,NATO,ISAF
+612,2008,11,25,Slovenia,70,Afghanistan,NATO,ISAF
+613,2008,11,25,Spain,780,Afghanistan,NATO,ISAF
+614,2008,11,25,Sweden,400,Afghanistan,NATO,ISAF
+615,2008,11,25,The former Yugoslav Republic of Macedonia,135,Afghanistan,NATO,ISAF
+616,2008,11,25,Turkey,860,Afghanistan,NATO,ISAF
+617,2008,11,25,Ukraine,3,Afghanistan,NATO,ISAF
+618,2008,11,25,United Arab Emirates,0,Afghanistan,NATO,ISAF
+619,2008,11,25,United Kingdom,8745,Afghanistan,NATO,ISAF
+620,2008,11,25,United States,19950,Afghanistan,NATO,ISAF
+621,2008,12,01,Albania,140,Afghanistan,NATO,ISAF
+622,2008,12,01,Australia,1090,Afghanistan,NATO,ISAF
+623,2008,12,01,Austria,1,Afghanistan,NATO,ISAF
+624,2008,12,01,Azerbaijan,45,Afghanistan,NATO,ISAF
+625,2008,12,01,Belgium,400,Afghanistan,NATO,ISAF
+626,2008,12,01,Bulgaria,460,Afghanistan,NATO,ISAF
+627,2008,12,01,Canada,2750,Afghanistan,NATO,ISAF
+628,2008,12,01,Croatia,300,Afghanistan,NATO,ISAF
+629,2008,12,01,Czech Republic,415,Afghanistan,NATO,ISAF
+630,2008,12,01,Denmark,700,Afghanistan,NATO,ISAF
+631,2008,12,01,Estonia,130,Afghanistan,NATO,ISAF
+632,2008,12,01,Finland,80,Afghanistan,NATO,ISAF
+633,2008,12,01,France,2785,Afghanistan,NATO,ISAF
+634,2008,12,01,Georgia,1,Afghanistan,NATO,ISAF
+635,2008,12,01,Germany,3600,Afghanistan,NATO,ISAF
+636,2008,12,01,Greece,130,Afghanistan,NATO,ISAF
+637,2008,12,01,Hungary,240,Afghanistan,NATO,ISAF
+638,2008,12,01,Iceland,8,Afghanistan,NATO,ISAF
+639,2008,12,01,Ireland,7,Afghanistan,NATO,ISAF
+640,2008,12,01,Italy,2350,Afghanistan,NATO,ISAF
+641,2008,12,01,Jordan,0,Afghanistan,NATO,ISAF
+642,2008,12,01,Latvia,70,Afghanistan,NATO,ISAF
+643,2008,12,01,Lithuania,200,Afghanistan,NATO,ISAF
+644,2008,12,01,Luxembourg,9,Afghanistan,NATO,ISAF
+645,2008,12,01,Netherlands,1770,Afghanistan,NATO,ISAF
+646,2008,12,01,New Zealand,150,Afghanistan,NATO,ISAF
+647,2008,12,01,Norway,455,Afghanistan,NATO,ISAF
+648,2008,12,01,Poland,1130,Afghanistan,NATO,ISAF
+649,2008,12,01,Portugal,70,Afghanistan,NATO,ISAF
+650,2008,12,01,Romania,740,Afghanistan,NATO,ISAF
+651,2008,12,01,Singapore,0,Afghanistan,NATO,ISAF
+652,2008,12,01,Slovakia,180,Afghanistan,NATO,ISAF
+653,2008,12,01,Slovenia,70,Afghanistan,NATO,ISAF
+654,2008,12,01,Spain,780,Afghanistan,NATO,ISAF
+655,2008,12,01,Sweden,400,Afghanistan,NATO,ISAF
+656,2008,12,01,The former Yugoslav Republic of Macedonia,135,Afghanistan,NATO,ISAF
+657,2008,12,01,Turkey,860,Afghanistan,NATO,ISAF
+658,2008,12,01,Ukraine,10,Afghanistan,NATO,ISAF
+659,2008,12,01,United Arab Emirates,0,Afghanistan,NATO,ISAF
+660,2008,12,01,United Kingdom,8745,Afghanistan,NATO,ISAF
+661,2008,12,01,United States,19950,Afghanistan,NATO,ISAF
+662,2009,01,12,Albania,140,Afghanistan,NATO,ISAF
+663,2009,01,12,Australia,1090,Afghanistan,NATO,ISAF
+664,2009,01,12,Austria,1,Afghanistan,NATO,ISAF
+665,2009,01,12,Azerbaijan,45,Afghanistan,NATO,ISAF
+666,2009,01,12,Belgium,410,Afghanistan,NATO,ISAF
+667,2009,01,12,Bulgaria,465,Afghanistan,NATO,ISAF
+668,2009,01,12,Canada,2830,Afghanistan,NATO,ISAF
+669,2009,01,12,Croatia,280,Afghanistan,NATO,ISAF
+670,2009,01,12,Czech Republic,415,Afghanistan,NATO,ISAF
+671,2009,01,12,Denmark,700,Afghanistan,NATO,ISAF
+672,2009,01,12,Estonia,130,Afghanistan,NATO,ISAF
+673,2009,01,12,Finland,110,Afghanistan,NATO,ISAF
+674,2009,01,12,France,2890,Afghanistan,NATO,ISAF
+675,2009,01,12,Georgia,1,Afghanistan,NATO,ISAF
+676,2009,01,12,Germany,3405,Afghanistan,NATO,ISAF
+677,2009,01,12,Greece,140,Afghanistan,NATO,ISAF
+678,2009,01,12,Hungary,240,Afghanistan,NATO,ISAF
+679,2009,01,12,Iceland,8,Afghanistan,NATO,ISAF
+680,2009,01,12,Ireland,7,Afghanistan,NATO,ISAF
+681,2009,01,12,Italy,2350,Afghanistan,NATO,ISAF
+682,2009,01,12,Jordan,0,Afghanistan,NATO,ISAF
+683,2009,01,12,Latvia,70,Afghanistan,NATO,ISAF
+684,2009,01,12,Lithuania,200,Afghanistan,NATO,ISAF
+685,2009,01,12,Luxembourg,9,Afghanistan,NATO,ISAF
+686,2009,01,12,Netherlands,1770,Afghanistan,NATO,ISAF
+687,2009,01,12,New Zealand,150,Afghanistan,NATO,ISAF
+688,2009,01,12,Norway,490,Afghanistan,NATO,ISAF
+689,2009,01,12,Poland,1590,Afghanistan,NATO,ISAF
+690,2009,01,12,Portugal,40,Afghanistan,NATO,ISAF
+691,2009,01,12,Romania,770,Afghanistan,NATO,ISAF
+692,2009,01,12,Singapore,20,Afghanistan,NATO,ISAF
+693,2009,01,12,Slovakia,120,Afghanistan,NATO,ISAF
+694,2009,01,12,Slovenia,70,Afghanistan,NATO,ISAF
+695,2009,01,12,Spain,780,Afghanistan,NATO,ISAF
+696,2009,01,12,Sweden,290,Afghanistan,NATO,ISAF
+697,2009,01,12,The former Yugoslav Republic of Macedonia,140,Afghanistan,NATO,ISAF
+698,2009,01,12,Turkey,800,Afghanistan,NATO,ISAF
+699,2009,01,12,Ukraine,10,Afghanistan,NATO,ISAF
+700,2009,01,12,United Arab Emirates,0,Afghanistan,NATO,ISAF
+701,2009,01,12,United Kingdom,8910,Afghanistan,NATO,ISAF
+702,2009,01,12,United States,23220,Afghanistan,NATO,ISAF
+703,2009,02,13,Albania,140,Afghanistan,NATO,ISAF
+704,2009,02,13,Australia,"1,090",Afghanistan,NATO,ISAF
+705,2009,02,13,Austria,1,Afghanistan,NATO,ISAF
+706,2009,02,13,Azerbaijan,45,Afghanistan,NATO,ISAF
+707,2009,02,13,Belgium,410,Afghanistan,NATO,ISAF
+708,2009,02,13,Bulgaria,510,Afghanistan,NATO,ISAF
+709,2009,02,13,Canada,"2,830",Afghanistan,NATO,ISAF
+710,2009,02,13,Croatia,270,Afghanistan,NATO,ISAF
+711,2009,02,13,Czech Republic,415,Afghanistan,NATO,ISAF
+712,2009,02,13,Denmark,700,Afghanistan,NATO,ISAF
+713,2009,02,13,Estonia,90,Afghanistan,NATO,ISAF
+714,2009,02,13,Finland,110,Afghanistan,NATO,ISAF
+715,2009,02,13,France,"2,780",Afghanistan,NATO,ISAF
+716,2009,02,13,Georgia,1,Afghanistan,NATO,ISAF
+717,2009,02,13,Germany,"3,460",Afghanistan,NATO,ISAF
+718,2009,02,13,Greece,140,Afghanistan,NATO,ISAF
+719,2009,02,13,Hungary,360,Afghanistan,NATO,ISAF
+720,2009,02,13,Iceland,8,Afghanistan,NATO,ISAF
+721,2009,02,13,Ireland,7,Afghanistan,NATO,ISAF
+722,2009,02,13,Italy,"2,350",Afghanistan,NATO,ISAF
+723,2009,02,13,Jordan,4,Afghanistan,NATO,ISAF
+724,2009,02,13,Latvia,160,Afghanistan,NATO,ISAF
+725,2009,02,13,Lithuania,200,Afghanistan,NATO,ISAF
+726,2009,02,13,Luxembourg,9,Afghanistan,NATO,ISAF
+727,2009,02,13,Netherlands,"1,770",Afghanistan,NATO,ISAF
+728,2009,02,13,New Zealand,150,Afghanistan,NATO,ISAF
+729,2009,02,13,Norway,490,Afghanistan,NATO,ISAF
+730,2009,02,13,Poland,"1,590",Afghanistan,NATO,ISAF
+731,2009,02,13,Portugal,30,Afghanistan,NATO,ISAF
+732,2009,02,13,Romania,900,Afghanistan,NATO,ISAF
+733,2009,02,13,Singapore,20,Afghanistan,NATO,ISAF
+734,2009,02,13,Slovakia,120,Afghanistan,NATO,ISAF
+735,2009,02,13,Slovenia,70,Afghanistan,NATO,ISAF
+736,2009,02,13,Spain,780,Afghanistan,NATO,ISAF
+737,2009,02,13,Sweden,310,Afghanistan,NATO,ISAF
+738,2009,02,13,The former Yugoslav Republic of Macedonia,170,Afghanistan,NATO,ISAF
+739,2009,02,13,Turkey,700,Afghanistan,NATO,ISAF
+740,2009,02,13,Ukraine,10,Afghanistan,NATO,ISAF
+741,2009,02,13,United Arab Emirates,25,Afghanistan,NATO,ISAF
+742,2009,02,13,United Kingdom,"8,300",Afghanistan,NATO,ISAF
+743,2009,02,13,United States,"24,900",Afghanistan,NATO,ISAF
+744,2009,03,13,Albania,140,Afghanistan,NATO,ISAF
+745,2009,03,13,Australia,1090,Afghanistan,NATO,ISAF
+746,2009,03,13,Austria,1,Afghanistan,NATO,ISAF
+747,2009,03,13,Azerbaijan,90,Afghanistan,NATO,ISAF
+748,2009,03,13,Belgium,405,Afghanistan,NATO,ISAF
+749,2009,03,13,Bosnia & Herzegovina,2,Afghanistan,NATO,ISAF
+750,2009,03,13,Bulgaria,470,Afghanistan,NATO,ISAF
+751,2009,03,13,Canada,2830,Afghanistan,NATO,ISAF
+752,2009,03,13,Croatia,530,Afghanistan,NATO,ISAF
+753,2009,03,13,Czech Republic,580,Afghanistan,NATO,ISAF
+754,2009,03,13,Denmark,700,Afghanistan,NATO,ISAF
+755,2009,03,13,Estonia,140,Afghanistan,NATO,ISAF
+756,2009,03,13,Finland,110,Afghanistan,NATO,ISAF
+757,2009,03,13,France,2780,Afghanistan,NATO,ISAF
+758,2009,03,13,Georgia,1,Afghanistan,NATO,ISAF
+759,2009,03,13,Germany,3640,Afghanistan,NATO,ISAF
+760,2009,03,13,Greece,140,Afghanistan,NATO,ISAF
+761,2009,03,13,Hungary,370,Afghanistan,NATO,ISAF
+762,2009,03,13,Iceland,8,Afghanistan,NATO,ISAF
+763,2009,03,13,Ireland,7,Afghanistan,NATO,ISAF
+764,2009,03,13,Italy,2350,Afghanistan,NATO,ISAF
+765,2009,03,13,Jordan,4,Afghanistan,NATO,ISAF
+766,2009,03,13,Latvia,160,Afghanistan,NATO,ISAF
+767,2009,03,13,Lithuania,200,Afghanistan,NATO,ISAF
+768,2009,03,13,Luxembourg,9,Afghanistan,NATO,ISAF
+769,2009,03,13,Netherlands,1770,Afghanistan,NATO,ISAF
+770,2009,03,13,New Zealand,150,Afghanistan,NATO,ISAF
+771,2009,03,13,Norway,490,Afghanistan,NATO,ISAF
+772,2009,03,13,Poland,1590,Afghanistan,NATO,ISAF
+773,2009,03,13,Portugal,30,Afghanistan,NATO,ISAF
+774,2009,03,13,Romania,900,Afghanistan,NATO,ISAF
+775,2009,03,13,Singapore,20,Afghanistan,NATO,ISAF
+776,2009,03,13,Slovakia,120,Afghanistan,NATO,ISAF
+777,2009,03,13,Slovenia,70,Afghanistan,NATO,ISAF
+778,2009,03,13,Spain,780,Afghanistan,NATO,ISAF
+779,2009,03,13,Sweden,265,Afghanistan,NATO,ISAF
+780,2009,03,13,The former Yugoslav Republic of Macedonia,170,Afghanistan,NATO,ISAF
+781,2009,03,13,Turkey,690,Afghanistan,NATO,ISAF
+782,2009,03,13,Ukraine,10,Afghanistan,NATO,ISAF
+783,2009,03,13,United Arab Emirates,25,Afghanistan,NATO,ISAF
+784,2009,03,13,United Kingdom,8300,Afghanistan,NATO,ISAF
+785,2009,03,13,United States,29820,Afghanistan,NATO,ISAF
+786,2009,04,03,Albania,140,Afghanistan,NATO,ISAF
+787,2009,04,03,Australia,1090,Afghanistan,NATO,ISAF
+788,2009,04,03,Austria,2,Afghanistan,NATO,ISAF
+789,2009,04,03,Azerbaijan,90,Afghanistan,NATO,ISAF
+790,2009,04,03,Belgium,450,Afghanistan,NATO,ISAF
+791,2009,04,03,Bosnia & Herzegovina,2,Afghanistan,NATO,ISAF
+792,2009,04,03,Bulgaria,820,Afghanistan,NATO,ISAF
+793,2009,04,03,Canada,2830,Afghanistan,NATO,ISAF
+794,2009,04,03,Croatia,280,Afghanistan,NATO,ISAF
+795,2009,04,03,Czech Republic,580,Afghanistan,NATO,ISAF
+796,2009,04,03,Denmark,700,Afghanistan,NATO,ISAF
+797,2009,04,03,Estonia,140,Afghanistan,NATO,ISAF
+798,2009,04,03,Finland,110,Afghanistan,NATO,ISAF
+799,2009,04,03,France,2780,Afghanistan,NATO,ISAF
+800,2009,04,03,Georgia,1,Afghanistan,NATO,ISAF
+801,2009,04,03,Germany,3465,Afghanistan,NATO,ISAF
+802,2009,04,03,Greece,140,Afghanistan,NATO,ISAF
+803,2009,04,03,Hungary,370,Afghanistan,NATO,ISAF
+804,2009,04,03,Iceland,8,Afghanistan,NATO,ISAF
+805,2009,04,03,Ireland,7,Afghanistan,NATO,ISAF
+806,2009,04,03,Italy,2350,Afghanistan,NATO,ISAF
+807,2009,04,03,Jordan,7,Afghanistan,NATO,ISAF
+808,2009,04,03,Latvia,160,Afghanistan,NATO,ISAF
+809,2009,04,03,Lithuania,200,Afghanistan,NATO,ISAF
+810,2009,04,03,Luxembourg,9,Afghanistan,NATO,ISAF
+811,2009,04,03,Netherlands,1770,Afghanistan,NATO,ISAF
+812,2009,04,03,New Zealand,150,Afghanistan,NATO,ISAF
+813,2009,04,03,Norway,490,Afghanistan,NATO,ISAF
+814,2009,04,03,Poland,1590,Afghanistan,NATO,ISAF
+815,2009,04,03,Portugal,30,Afghanistan,NATO,ISAF
+816,2009,04,03,Romania,860,Afghanistan,NATO,ISAF
+817,2009,04,03,Singapore,20,Afghanistan,NATO,ISAF
+818,2009,04,03,Slovakia,230,Afghanistan,NATO,ISAF
+819,2009,04,03,Slovenia,70,Afghanistan,NATO,ISAF
+820,2009,04,03,Spain,780,Afghanistan,NATO,ISAF
+821,2009,04,03,Sweden,290,Afghanistan,NATO,ISAF
+822,2009,04,03,The former Yugoslav Republic of Macedonia,170,Afghanistan,NATO,ISAF
+823,2009,04,03,Turkey,660,Afghanistan,NATO,ISAF
+824,2009,04,03,Ukraine,10,Afghanistan,NATO,ISAF
+825,2009,04,03,United Arab Emirates,25,Afghanistan,NATO,ISAF
+826,2009,04,03,United Kingdom,8300,Afghanistan,NATO,ISAF
+827,2009,04,03,United States,26215,Afghanistan,NATO,ISAF
+828,2009,06,15,Albania,140,Afghanistan,NATO,ISAF
+829,2009,06,15,Australia,1090,Afghanistan,NATO,ISAF
+830,2009,06,15,Austria,3,Afghanistan,NATO,ISAF
+831,2009,06,15,Azerbaijan,90,Afghanistan,NATO,ISAF
+832,2009,06,15,Belgium,500,Afghanistan,NATO,ISAF
+833,2009,06,15,Bosnia & Herzegovina,2,Afghanistan,NATO,ISAF
+834,2009,06,15,Bulgaria,470,Afghanistan,NATO,ISAF
+835,2009,06,15,Canada,2830,Afghanistan,NATO,ISAF
+836,2009,06,15,Croatia,290,Afghanistan,NATO,ISAF
+837,2009,06,15,Czech Republic,430,Afghanistan,NATO,ISAF
+838,2009,06,15,Denmark,700,Afghanistan,NATO,ISAF
+839,2009,06,15,Estonia,150,Afghanistan,NATO,ISAF
+840,2009,06,15,Finland,90,Afghanistan,NATO,ISAF
+841,2009,06,15,France,2780,Afghanistan,NATO,ISAF
+842,2009,06,15,Georgia,1,Afghanistan,NATO,ISAF
+843,2009,06,15,Germany,3380,Afghanistan,NATO,ISAF
+844,2009,06,15,Greece,145,Afghanistan,NATO,ISAF
+845,2009,06,15,Hungary,320,Afghanistan,NATO,ISAF
+846,2009,06,15,Iceland,8,Afghanistan,NATO,ISAF
+847,2009,06,15,Ireland,7,Afghanistan,NATO,ISAF
+848,2009,06,15,Italy,2350,Afghanistan,NATO,ISAF
+849,2009,06,15,Jordan,7,Afghanistan,NATO,ISAF
+850,2009,06,15,Latvia,165,Afghanistan,NATO,ISAF
+851,2009,06,15,Lithuania,200,Afghanistan,NATO,ISAF
+852,2009,06,15,Luxembourg,9,Afghanistan,NATO,ISAF
+853,2009,06,15,Netherlands,1770,Afghanistan,NATO,ISAF
+854,2009,06,15,New Zealand,170,Afghanistan,NATO,ISAF
+855,2009,06,15,Norway,485,Afghanistan,NATO,ISAF
+856,2009,06,15,Poland,2000,Afghanistan,NATO,ISAF
+857,2009,06,15,Portugal,100,Afghanistan,NATO,ISAF
+858,2009,06,15,Romania,875,Afghanistan,NATO,ISAF
+859,2009,06,15,Singapore,7,Afghanistan,NATO,ISAF
+860,2009,06,15,Slovakia,230,Afghanistan,NATO,ISAF
+861,2009,06,15,Slovenia,70,Afghanistan,NATO,ISAF
+862,2009,06,15,Spain,780,Afghanistan,NATO,ISAF
+863,2009,06,15,Sweden,410,Afghanistan,NATO,ISAF
+864,2009,06,15,The former Yugoslav Republic of Macedonia,170,Afghanistan,NATO,ISAF
+865,2009,06,15,Turkey,730,Afghanistan,NATO,ISAF
+866,2009,06,15,Ukraine,10,Afghanistan,NATO,ISAF
+867,2009,06,15,United Arab Emirates,25,Afghanistan,NATO,ISAF
+868,2009,06,15,United Kingdom,8300,Afghanistan,NATO,ISAF
+869,2009,06,15,United States,28850,Afghanistan,NATO,ISAF
+870,2009,07,23,Albania,140,Afghanistan,NATO,ISAF
+871,2009,07,23,Australia,1090,Afghanistan,NATO,ISAF
+872,2009,07,23,Austria,3,Afghanistan,NATO,ISAF
+873,2009,07,23,Azerbaijan,90,Afghanistan,NATO,ISAF
+874,2009,07,23,Belgium,510,Afghanistan,NATO,ISAF
+875,2009,07,23,Bosnia & Herzegovina,2,Afghanistan,NATO,ISAF
+876,2009,07,23,Bulgaria,470,Afghanistan,NATO,ISAF
+877,2009,07,23,Canada,2800,Afghanistan,NATO,ISAF
+878,2009,07,23,Croatia,295,Afghanistan,NATO,ISAF
+879,2009,07,23,Czech Republic,340,Afghanistan,NATO,ISAF
+880,2009,07,23,Denmark,700,Afghanistan,NATO,ISAF
+881,2009,07,23,Estonia,150,Afghanistan,NATO,ISAF
+882,2009,07,23,Finland,110,Afghanistan,NATO,ISAF
+883,2009,07,23,France,3160,Afghanistan,NATO,ISAF
+884,2009,07,23,Georgia,1,Afghanistan,NATO,ISAF
+885,2009,07,23,Germany,4050,Afghanistan,NATO,ISAF
+886,2009,07,23,Greece,145,Afghanistan,NATO,ISAF
+887,2009,07,23,Hungary,310,Afghanistan,NATO,ISAF
+888,2009,07,23,Iceland,8,Afghanistan,NATO,ISAF
+889,2009,07,23,Ireland,7,Afghanistan,NATO,ISAF
+890,2009,07,23,Italy,2795,Afghanistan,NATO,ISAF
+891,2009,07,23,Jordan,7,Afghanistan,NATO,ISAF
+892,2009,07,23,Latvia,165,Afghanistan,NATO,ISAF
+893,2009,07,23,Lithuania,200,Afghanistan,NATO,ISAF
+894,2009,07,23,Luxembourg,9,Afghanistan,NATO,ISAF
+895,2009,07,23,Netherlands,1770,Afghanistan,NATO,ISAF
+896,2009,07,23,New Zealand,160,Afghanistan,NATO,ISAF
+897,2009,07,23,Norway,485,Afghanistan,NATO,ISAF
+898,2009,07,23,Poland,2000,Afghanistan,NATO,ISAF
+899,2009,07,23,Portugal,90,Afghanistan,NATO,ISAF
+900,2009,07,23,Romania,1025,Afghanistan,NATO,ISAF
+901,2009,07,23,Singapore,8,Afghanistan,NATO,ISAF
+902,2009,07,23,Slovakia,230,Afghanistan,NATO,ISAF
+903,2009,07,23,Slovenia,80,Afghanistan,NATO,ISAF
+904,2009,07,23,Spain,780,Afghanistan,NATO,ISAF
+905,2009,07,23,Sweden,430,Afghanistan,NATO,ISAF
+906,2009,07,23,The former Yugoslav Republic of Macedonia,165,Afghanistan,NATO,ISAF
+907,2009,07,23,Turkey,730,Afghanistan,NATO,ISAF
+908,2009,07,23,Ukraine,10,Afghanistan,NATO,ISAF
+909,2009,07,23,United Arab Emirates,25,Afghanistan,NATO,ISAF
+910,2009,07,23,United Kingdom,9000,Afghanistan,NATO,ISAF
+911,2009,07,23,United States,29950,Afghanistan,NATO,ISAF
+912,2009,10,01,Albania,250,Afghanistan,NATO,ISAF
+913,2009,10,01,Australia,1200,Afghanistan,NATO,ISAF
+914,2009,10,01,Austria,4,Afghanistan,NATO,ISAF
+915,2009,10,01,Azerbaijan,90,Afghanistan,NATO,ISAF
+916,2009,10,01,Belgium,510,Afghanistan,NATO,ISAF
+917,2009,10,01,Bosnia & Herzegovina,2,Afghanistan,NATO,ISAF
+918,2009,10,01,Bulgaria,460,Afghanistan,NATO,ISAF
+919,2009,10,01,Canada,2830,Afghanistan,NATO,ISAF
+920,2009,10,01,Croatia,290,Afghanistan,NATO,ISAF
+921,2009,10,01,Czech Republic,340,Afghanistan,NATO,ISAF
+922,2009,10,01,Denmark,700,Afghanistan,NATO,ISAF
+923,2009,10,01,Estonia,150,Afghanistan,NATO,ISAF
+924,2009,10,01,Finland,130,Afghanistan,NATO,ISAF
+925,2009,10,01,France,3070,Afghanistan,NATO,ISAF
+926,2009,10,01,Georgia,1,Afghanistan,NATO,ISAF
+927,2009,10,01,Germany,4245,Afghanistan,NATO,ISAF
+928,2009,10,01,Greece,125,Afghanistan,NATO,ISAF
+929,2009,10,01,Hungary,310,Afghanistan,NATO,ISAF
+930,2009,10,01,Iceland,8,Afghanistan,NATO,ISAF
+931,2009,10,01,Ireland,7,Afghanistan,NATO,ISAF
+932,2009,10,01,Italy,2795,Afghanistan,NATO,ISAF
+933,2009,10,01,Jordan,7,Afghanistan,NATO,ISAF
+934,2009,10,01,Latvia,165,Afghanistan,NATO,ISAF
+935,2009,10,01,Lithuania,250,Afghanistan,NATO,ISAF
+936,2009,10,01,Luxembourg,8,Afghanistan,NATO,ISAF
+937,2009,10,01,Netherlands,2160,Afghanistan,NATO,ISAF
+938,2009,10,01,New Zealand,220,Afghanistan,NATO,ISAF
+939,2009,10,01,Norway,600,Afghanistan,NATO,ISAF
+940,2009,10,01,Poland,2025,Afghanistan,NATO,ISAF
+941,2009,10,01,Portugal,105,Afghanistan,NATO,ISAF
+942,2009,10,01,Romania,990,Afghanistan,NATO,ISAF
+943,2009,10,01,Singapore,2,Afghanistan,NATO,ISAF
+944,2009,10,01,Slovakia,240,Afghanistan,NATO,ISAF
+945,2009,10,01,Slovenia,80,Afghanistan,NATO,ISAF
+946,2009,10,01,Spain,1000,Afghanistan,NATO,ISAF
+947,2009,10,01,Sweden,430,Afghanistan,NATO,ISAF
+948,2009,10,01,The former Yugoslav Republic of Macedonia,185,Afghanistan,NATO,ISAF
+949,2009,10,01,Turkey,820,Afghanistan,NATO,ISAF
+950,2009,10,01,Ukraine,10,Afghanistan,NATO,ISAF
+951,2009,10,01,United Arab Emirates,25,Afghanistan,NATO,ISAF
+952,2009,10,01,United Kingdom,9000,Afghanistan,NATO,ISAF
+953,2009,10,01,United States,31855,Afghanistan,NATO,ISAF
+954,2010,02,01,Albania,255,Afghanistan,NATO,ISAF
+955,2010,02,01,Armenia,0,Afghanistan,NATO,ISAF
+956,2010,02,01,Australia,1550,Afghanistan,NATO,ISAF
+957,2010,02,01,Austria,2,Afghanistan,NATO,ISAF
+958,2010,02,01,Azerbaijan,90,Afghanistan,NATO,ISAF
+959,2010,02,01,Belgium,575,Afghanistan,NATO,ISAF
+960,2010,02,01,Bosnia & Herzegovina,10,Afghanistan,NATO,ISAF
+961,2010,02,01,Bulgaria,540,Afghanistan,NATO,ISAF
+962,2010,02,01,Canada,2830,Afghanistan,NATO,ISAF
+963,2010,02,01,Croatia,295,Afghanistan,NATO,ISAF
+964,2010,02,01,Czech Republic,440,Afghanistan,NATO,ISAF
+965,2010,02,01,Denmark,750,Afghanistan,NATO,ISAF
+966,2010,02,01,Estonia,150,Afghanistan,NATO,ISAF
+967,2010,02,01,Finland,95,Afghanistan,NATO,ISAF
+968,2010,02,01,France,3750,Afghanistan,NATO,ISAF
+969,2010,02,01,Georgia,175,Afghanistan,NATO,ISAF
+970,2010,02,01,Germany,4415,Afghanistan,NATO,ISAF
+971,2010,02,01,Greece,15,Afghanistan,NATO,ISAF
+972,2010,02,01,Hungary,315,Afghanistan,NATO,ISAF
+973,2010,02,01,Iceland,3,Afghanistan,NATO,ISAF
+974,2010,02,01,Ireland,8,Afghanistan,NATO,ISAF
+975,2010,02,01,Italy,3150,Afghanistan,NATO,ISAF
+976,2010,02,01,Jordan,0,Afghanistan,NATO,ISAF
+977,2010,02,01,Latvia,175,Afghanistan,NATO,ISAF
+978,2010,02,01,Lithuania,165,Afghanistan,NATO,ISAF
+979,2010,02,01,Luxembourg,9,Afghanistan,NATO,ISAF
+980,2010,02,01,Netherlands,1940,Afghanistan,NATO,ISAF
+981,2010,02,01,New Zealand,220,Afghanistan,NATO,ISAF
+982,2010,02,01,Norway,500,Afghanistan,NATO,ISAF
+983,2010,02,01,Poland,1955,Afghanistan,NATO,ISAF
+984,2010,02,01,Portugal,105,Afghanistan,NATO,ISAF
+985,2010,02,01,Romania,945,Afghanistan,NATO,ISAF
+986,2010,02,01,Singapore,40,Afghanistan,NATO,ISAF
+987,2010,02,01,Slovakia,240,Afghanistan,NATO,ISAF
+988,2010,02,01,Slovenia,70,Afghanistan,NATO,ISAF
+989,2010,02,01,Spain,1070,Afghanistan,NATO,ISAF
+990,2010,02,01,Sweden,410,Afghanistan,NATO,ISAF
+991,2010,02,01,The former Yugoslav Republic of Macedonia,165,Afghanistan,NATO,ISAF
+992,2010,02,01,Turkey,1755,Afghanistan,NATO,ISAF
+993,2010,02,01,Ukraine,0,Afghanistan,NATO,ISAF
+994,2010,02,01,United Arab Emrates,25,Afghanistan,NATO,ISAF
+995,2010,02,01,United Kingdom,9500,Afghanistan,NATO,ISAF
+996,2010,02,01,United States,47085,Afghanistan,NATO,ISAF
+997,2010,03,05,Albania,250,Afghanistan,NATO,ISAF
+998,2010,03,05,Albania,40,Afghanistan,NATO,ISAF
+999,2010,03,05,Australia,1550,Afghanistan,NATO,ISAF
+1000,2010,03,05,Austria,3,Afghanistan,NATO,ISAF
+1001,2010,03,05,Azerbaijan,90,Afghanistan,NATO,ISAF
+1002,2010,03,05,Belgium,560,Afghanistan,NATO,ISAF
+1003,2010,03,05,Bosnia & Herzegovina,10,Afghanistan,NATO,ISAF
+1004,2010,03,05,Bulgaria,525,Afghanistan,NATO,ISAF
+1005,2010,03,05,Canada,2830,Afghanistan,NATO,ISAF
+1006,2010,03,05,Croatia,270,Afghanistan,NATO,ISAF
+1007,2010,03,05,Czech Republic,455,Afghanistan,NATO,ISAF
+1008,2010,03,05,Denmark,750,Afghanistan,NATO,ISAF
+1009,2010,03,05,Estonia,145,Afghanistan,NATO,ISAF
+1010,2010,03,05,Finland,95,Afghanistan,NATO,ISAF
+1011,2010,03,05,France,3750,Afghanistan,NATO,ISAF
+1012,2010,03,05,Georgia,175,Afghanistan,NATO,ISAF
+1013,2010,03,05,Germany,4335,Afghanistan,NATO,ISAF
+1014,2010,03,05,Greece,15,Afghanistan,NATO,ISAF
+1015,2010,03,05,Hungary,310,Afghanistan,NATO,ISAF
+1016,2010,03,05,Iceland,4,Afghanistan,NATO,ISAF
+1017,2010,03,05,Ireland,7,Afghanistan,NATO,ISAF
+1018,2010,03,05,Italy,3160,Afghanistan,NATO,ISAF
+1019,2010,03,05,Jordan,6,Afghanistan,NATO,ISAF
+1020,2010,03,05,Latvia,170,Afghanistan,NATO,ISAF
+1021,2010,03,05,Lithuania,220,Afghanistan,NATO,ISAF
+1022,2010,03,05,Luxembourg,9,Afghanistan,NATO,ISAF
+1023,2010,03,05,Montenegro,4,Afghanistan,NATO,ISAF
+1024,2010,03,05,Netherlands,1880,Afghanistan,NATO,ISAF
+1025,2010,03,05,New Zealand,220,Afghanistan,NATO,ISAF
+1026,2010,03,05,Norway,470,Afghanistan,NATO,ISAF
+1027,2010,03,05,Poland,2140,Afghanistan,NATO,ISAF
+1028,2010,03,05,Portugal,110,Afghanistan,NATO,ISAF
+1029,2010,03,05,Romania,70,Afghanistan,NATO,ISAF
+1030,2010,03,05,Singapore,40,Afghanistan,NATO,ISAF
+1031,2010,03,05,Slovakia,230,Afghanistan,NATO,ISAF
+1032,2010,03,05,Slovenia,70,Afghanistan,NATO,ISAF
+1033,2010,03,05,Spain,1075,Afghanistan,NATO,ISAF
+1034,2010,03,05,Sweden,410,Afghanistan,NATO,ISAF
+1035,2010,03,05,The former Yugoslav Republic of Macedonia,165,Afghanistan,NATO,ISAF
+1036,2010,03,05,Turkey,1835,Afghanistan,NATO,ISAF
+1037,2010,03,05,Ukraine,8,Afghanistan,NATO,ISAF
+1038,2010,03,05,United Arab Emirates,25,Afghanistan,NATO,ISAF
+1039,2010,03,05,United Kingdom,9500,Afghanistan,NATO,ISAF
+1040,2010,03,05,United States,50590,Afghanistan,NATO,ISAF
+1041,2010,04,16,Albania,250,Afghanistan,NATO,ISAF
+1042,2010,04,16,Armenia,40,Afghanistan,NATO,ISAF
+1043,2010,04,16,Australia,1550,Afghanistan,NATO,ISAF
+1044,2010,04,16,Austria,3,Afghanistan,NATO,ISAF
+1045,2010,04,16,Azerbaijan,90,Afghanistan,NATO,ISAF
+1046,2010,04,16,Belgium,590,Afghanistan,NATO,ISAF
+1047,2010,04,16,Bosnia & Herzegovina,10,Afghanistan,NATO,ISAF
+1048,2010,04,16,Bulgaria,525,Afghanistan,NATO,ISAF
+1049,2010,04,16,Canada,2830,Afghanistan,NATO,ISAF
+1050,2010,04,16,Croatia,280,Afghanistan,NATO,ISAF
+1051,2010,04,16,Czech Republic,460,Afghanistan,NATO,ISAF
+1052,2010,04,16,Denmark,750,Afghanistan,NATO,ISAF
+1053,2010,04,16,Estonia,155,Afghanistan,NATO,ISAF
+1054,2010,04,16,Finland,100,Afghanistan,NATO,ISAF
+1055,2010,04,16,France,3750,Afghanistan,NATO,ISAF
+1056,2010,04,16,Georgia,175,Afghanistan,NATO,ISAF
+1057,2010,04,16,Germany,4665,Afghanistan,NATO,ISAF
+1058,2010,04,16,Greece,70,Afghanistan,NATO,ISAF
+1059,2010,04,16,Hungary,335,Afghanistan,NATO,ISAF
+1060,2010,04,16,Iceland,4,Afghanistan,NATO,ISAF
+1061,2010,04,16,Ireland,7,Afghanistan,NATO,ISAF
+1062,2010,04,16,Italy,3300,Afghanistan,NATO,ISAF
+1063,2010,04,16,Jordan,6,Afghanistan,NATO,ISAF
+1064,2010,04,16,Republic of Korea,0,Afghanistan,NATO,ISAF
+1065,2010,04,16,Latvia,115,Afghanistan,NATO,ISAF
+1066,2010,04,16,Lithuania,145,Afghanistan,NATO,ISAF
+1067,2010,04,16,Luxembourg,9,Afghanistan,NATO,ISAF
+1068,2010,04,16,Mongolia,40,Afghanistan,NATO,ISAF
+1069,2010,04,16,Montenegro,30,Afghanistan,NATO,ISAF
+1070,2010,04,16,Netherlands,1885,Afghanistan,NATO,ISAF
+1071,2010,04,16,New Zealand,225,Afghanistan,NATO,ISAF
+1072,2010,04,16,Norway,470,Afghanistan,NATO,ISAF
+1073,2010,04,16,Poland,2515,Afghanistan,NATO,ISAF
+1074,2010,04,16,Portugal,105,Afghanistan,NATO,ISAF
+1075,2010,04,16,Romania,1010,Afghanistan,NATO,ISAF
+1076,2010,04,16,Singapore,40,Afghanistan,NATO,ISAF
+1077,2010,04,16,Slovakia,230,Afghanistan,NATO,ISAF
+1078,2010,04,16,Slovenia,75,Afghanistan,NATO,ISAF
+1079,2010,04,16,Spain,1270,Afghanistan,NATO,ISAF
+1080,2010,04,16,Sweden,485,Afghanistan,NATO,ISAF
+1081,2010,04,16,The former Yugoslav Republic of Macedonia,215,Afghanistan,NATO,ISAF
+1082,2010,04,16,Turkey,1795,Afghanistan,NATO,ISAF
+1083,2010,04,16,Ukraine,10,Afghanistan,NATO,ISAF
+1084,2010,04,16,United Arab Emirates,25,Afghanistan,NATO,ISAF
+1085,2010,04,16,United Kingdom,9500,Afghanistan,NATO,ISAF
+1086,2010,04,16,United States,62415,Afghanistan,NATO,ISAF
+1087,2010,06,07,Albania,250,Afghanistan,NATO,ISAF
+1088,2010,06,07,Armenia,75,Afghanistan,NATO,ISAF
+1089,2010,06,07,Australia,1550,Afghanistan,NATO,ISAF
+1090,2010,06,07,Austria,3,Afghanistan,NATO,ISAF
+1091,2010,06,07,Azerbaijan,90,Afghanistan,NATO,ISAF
+1092,2010,06,07,Belgium,590,Afghanistan,NATO,ISAF
+1093,2010,06,07,Bosnia & Herzegovina,10,Afghanistan,NATO,ISAF
+1094,2010,06,07,Bulgaria,525,Afghanistan,NATO,ISAF
+1095,2010,06,07,Canada,2830,Afghanistan,NATO,ISAF
+1096,2010,06,07,Croatia,280,Afghanistan,NATO,ISAF
+1097,2010,06,07,Czech Republic,525,Afghanistan,NATO,ISAF
+1098,2010,06,07,Denmark,750,Afghanistan,NATO,ISAF
+1099,2010,06,07,Estonia,160,Afghanistan,NATO,ISAF
+1100,2010,06,07,Finland,115,Afghanistan,NATO,ISAF
+1101,2010,06,07,France,3750,Afghanistan,NATO,ISAF
+1102,2010,06,07,Georgia,925,Afghanistan,NATO,ISAF
+1103,2010,06,07,Germany,4350,Afghanistan,NATO,ISAF
+1104,2010,06,07,Greece,75,Afghanistan,NATO,ISAF
+1105,2010,06,07,Hungary,340,Afghanistan,NATO,ISAF
+1106,2010,06,07,Iceland,3,Afghanistan,NATO,ISAF
+1107,2010,06,07,Ireland,7,Afghanistan,NATO,ISAF
+1108,2010,06,07,Italy,3300,Afghanistan,NATO,ISAF
+1109,2010,06,07,Jordan,6,Afghanistan,NATO,ISAF
+1110,2010,06,07,Republic of Korea,0,Afghanistan,NATO,ISAF
+1111,2010,06,07,Latvia,170,Afghanistan,NATO,ISAF
+1112,2010,06,07,Lithuania,245,Afghanistan,NATO,ISAF
+1113,2010,06,07,Luxembourg,9,Afghanistan,NATO,ISAF
+1114,2010,06,07,Mongolia,40,Afghanistan,NATO,ISAF
+1115,2010,06,07,Montenegro,30,Afghanistan,NATO,ISAF
+1116,2010,06,07,Netherlands,1705,Afghanistan,NATO,ISAF
+1117,2010,06,07,New Zealand,155,Afghanistan,NATO,ISAF
+1118,2010,06,07,Norway,500,Afghanistan,NATO,ISAF
+1119,2010,06,07,Poland,2500,Afghanistan,NATO,ISAF
+1120,2010,06,07,Portugal,265,Afghanistan,NATO,ISAF
+1121,2010,06,07,Romania,1140,Afghanistan,NATO,ISAF
+1122,2010,06,07,Singapore,40,Afghanistan,NATO,ISAF
+1123,2010,06,07,Slovakia,290,Afghanistan,NATO,ISAF
+1124,2010,06,07,Slovenia,75,Afghanistan,NATO,ISAF
+1125,2010,06,07,Spain,1415,Afghanistan,NATO,ISAF
+1126,2010,06,07,Sweden,500,Afghanistan,NATO,ISAF
+1127,2010,06,07,The former Yugoslav Republic of Macedonia,210,Afghanistan,NATO,ISAF
+1128,2010,06,07,Turkey,1710,Afghanistan,NATO,ISAF
+1129,2010,06,07,Ukraine,15,Afghanistan,NATO,ISAF
+1130,2010,06,07,United Arab Emirates,25,Afghanistan,NATO,ISAF
+1131,2010,06,07,United Kingdom,9500,Afghanistan,NATO,ISAF
+1132,2010,06,07,United States,78430,Afghanistan,NATO,ISAF
+1133,2010,08,06,Albania,295,Afghanistan,NATO,ISAF
+1134,2010,08,06,Armenia,40,Afghanistan,NATO,ISAF
+1135,2010,08,06,Australia,1455,Afghanistan,NATO,ISAF
+1136,2010,08,06,Austria,3,Afghanistan,NATO,ISAF
+1137,2010,08,06,Azerbaijan,90,Afghanistan,NATO,ISAF
+1138,2010,08,06,Belgium,575,Afghanistan,NATO,ISAF
+1139,2010,08,06,Bosnia & Herzegovina,10,Afghanistan,NATO,ISAF
+1140,2010,08,06,Bulgaria,540,Afghanistan,NATO,ISAF
+1141,2010,08,06,Canada,2830,Afghanistan,NATO,ISAF
+1142,2010,08,06,Croatia,295,Afghanistan,NATO,ISAF
+1143,2010,08,06,Czech Republic,500,Afghanistan,NATO,ISAF
+1144,2010,08,06,Denmark,730,Afghanistan,NATO,ISAF
+1145,2010,08,06,Estonia,160,Afghanistan,NATO,ISAF
+1146,2010,08,06,Finland,80,Afghanistan,NATO,ISAF
+1147,2010,08,06,France,3750,Afghanistan,NATO,ISAF
+1148,2010,08,06,Georgia,925,Afghanistan,NATO,ISAF
+1149,2010,08,06,Germany,4590,Afghanistan,NATO,ISAF
+1150,2010,08,06,Greece,75,Afghanistan,NATO,ISAF
+1151,2010,08,06,Hungary,360,Afghanistan,NATO,ISAF
+1152,2010,08,06,Iceland,5,Afghanistan,NATO,ISAF
+1153,2010,08,06,Ireland,6,Afghanistan,NATO,ISAF
+1154,2010,08,06,Italy,3400,Afghanistan,NATO,ISAF
+1155,2010,08,06,Jordan,6,Afghanistan,NATO,ISAF
+1156,2010,08,06,Republic of Korea,270,Afghanistan,NATO,ISAF
+1157,2010,08,06,Latvia,170,Afghanistan,NATO,ISAF
+1158,2010,08,06,Lithuania,245,Afghanistan,NATO,ISAF
+1159,2010,08,06,Luxembourg,9,Afghanistan,NATO,ISAF
+1160,2010,08,06,Malaysia,40,Afghanistan,NATO,ISAF
+1161,2010,08,06,Mongolia,195,Afghanistan,NATO,ISAF
+1162,2010,08,06,Montenegro,30,Afghanistan,NATO,ISAF
+1163,2010,08,06,Netherlands,380,Afghanistan,NATO,ISAF
+1164,2010,08,06,New Zealand,205,Afghanistan,NATO,ISAF
+1165,2010,08,06,Norway,500,Afghanistan,NATO,ISAF
+1166,2010,08,06,Poland,2630,Afghanistan,NATO,ISAF
+1167,2010,08,06,Portugal,250,Afghanistan,NATO,ISAF
+1168,2010,08,06,Romania,1750,Afghanistan,NATO,ISAF
+1169,2010,08,06,Singapore,30,Afghanistan,NATO,ISAF
+1170,2010,08,06,Slovakia,300,Afghanistan,NATO,ISAF
+1171,2010,08,06,Slovenia,70,Afghanistan,NATO,ISAF
+1172,2010,08,06,Spain,1555,Afghanistan,NATO,ISAF
+1173,2010,08,06,Sweden,530,Afghanistan,NATO,ISAF
+1174,2010,08,06,The former Yugoslav Republic of Macedonia,240,Afghanistan,NATO,ISAF
+1175,2010,08,06,Turkey,1740,Afghanistan,NATO,ISAF
+1176,2010,08,06,Ukraine,15,Afghanistan,NATO,ISAF
+1177,2010,08,06,United Arab Emirates,15,Afghanistan,NATO,ISAF
+1178,2010,08,06,United Kingdom,9500,Afghanistan,NATO,ISAF
+1179,2010,08,06,United States,78430,Afghanistan,NATO,ISAF
+1180,2010,10,25,Albania,257,Afghanistan,NATO,ISAF
+1181,2010,10,25,Albania,40,Afghanistan,NATO,ISAF
+1182,2010,10,25,Australia,1550,Afghanistan,NATO,ISAF
+1183,2010,10,25,Austria,3,Afghanistan,NATO,ISAF
+1184,2010,10,25,Azerbaijan,0,Afghanistan,NATO,ISAF
+1185,2010,10,25,Belgium,401,Afghanistan,NATO,ISAF
+1186,2010,10,25,Bosnia & Herzegovina,45,Afghanistan,NATO,ISAF
+1187,2010,10,25,Bulgaria,516,Afghanistan,NATO,ISAF
+1188,2010,10,25,Canada,2922,Afghanistan,NATO,ISAF
+1189,2010,10,25,Croatia,300,Afghanistan,NATO,ISAF
+1190,2010,10,25,Czech Republic,468,Afghanistan,NATO,ISAF
+1191,2010,10,25,Denmark,750,Afghanistan,NATO,ISAF
+1192,2010,10,25,Estonia,136,Afghanistan,NATO,ISAF
+1193,2010,10,25,Finland,150,Afghanistan,NATO,ISAF
+1194,2010,10,25,France,3750,Afghanistan,NATO,ISAF
+1195,2010,10,25,Georgia,25,Afghanistan,NATO,ISAF
+1196,2010,10,25,Germany,4388,Afghanistan,NATO,ISAF
+1197,2010,10,25,Greece,80,Afghanistan,NATO,ISAF
+1198,2010,10,25,Hungary,507,Afghanistan,NATO,ISAF
+1199,2010,10,25,Iceland,5,Afghanistan,NATO,ISAF
+1200,2010,10,25,Ireland,7,Afghanistan,NATO,ISAF
+1201,2010,10,25,Italy,3300,Afghanistan,NATO,ISAF
+1202,2010,10,25,Jordan,0,Afghanistan,NATO,ISAF
+1203,2010,10,25,Republic of Korea,246,Afghanistan,NATO,ISAF
+1204,2010,10,25,Latvia,155,Afghanistan,NATO,ISAF
+1205,2010,10,25,Lithuania,220,Afghanistan,NATO,ISAF
+1206,2010,10,25,Luxembourg,9,Afghanistan,NATO,ISAF
+1207,2010,10,25,Malaysia,40,Afghanistan,NATO,ISAF
+1208,2010,10,25,Mongolia,36,Afghanistan,NATO,ISAF
+1209,2010,10,25,Montenegro,31,Afghanistan,NATO,ISAF
+1210,2010,10,25,Netherlands,380,Afghanistan,NATO,ISAF
+1211,2010,10,25,New Zealand,231,Afghanistan,NATO,ISAF
+1212,2010,10,25,Norway,351,Afghanistan,NATO,ISAF
+1213,2010,10,25,Poland,2417,Afghanistan,NATO,ISAF
+1214,2010,10,25,Portugal,26,Afghanistan,NATO,ISAF
+1215,2010,10,25,Romania,1646,Afghanistan,NATO,ISAF
+1216,2010,10,25,Singapore,36,Afghanistan,NATO,ISAF
+1217,2010,10,25,Slovakia,300,Afghanistan,NATO,ISAF
+1218,2010,10,25,Slovenia,72,Afghanistan,NATO,ISAF
+1219,2010,10,25,Spain,1537,Afghanistan,NATO,ISAF
+1220,2010,10,25,Sweden,500,Afghanistan,NATO,ISAF
+1221,2010,10,25,The former Yugoslav Republic of Macedonia,161,Afghanistan,NATO,ISAF
+1222,2010,10,25,Tonga,0,Afghanistan,NATO,ISAF
+1223,2010,10,25,Turkey,1700,Afghanistan,NATO,ISAF
+1224,2010,10,25,Ukraine,31,Afghanistan,NATO,ISAF
+1225,2010,10,25,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1226,2010,10,25,United Kingdom,500,Afghanistan,NATO,ISAF
+1227,2010,10,25,United States,0,Afghanistan,NATO,ISAF
+1228,2010,11,15,Albania,258,Afghanistan,NATO,ISAF
+1229,2010,11,15,Armenia,40,Afghanistan,NATO,ISAF
+1230,2010,11,15,Australia,1550,Afghanistan,NATO,ISAF
+1231,2010,11,15,Austria,3,Afghanistan,NATO,ISAF
+1232,2010,11,15,Azerbaijan,94,Afghanistan,NATO,ISAF
+1233,2010,11,15,Belgium,491,Afghanistan,NATO,ISAF
+1234,2010,11,15,Bosnia & Herzegovina,45,Afghanistan,NATO,ISAF
+1235,2010,11,15,Bulgaria,516,Afghanistan,NATO,ISAF
+1236,2010,11,15,Canada,2922,Afghanistan,NATO,ISAF
+1237,2010,11,15,Croatia,299,Afghanistan,NATO,ISAF
+1238,2010,11,15,Czech Republic,468,Afghanistan,NATO,ISAF
+1239,2010,11,15,Denmark,750,Afghanistan,NATO,ISAF
+1240,2010,11,15,Estonia,140,Afghanistan,NATO,ISAF
+1241,2010,11,15,Finland,150,Afghanistan,NATO,ISAF
+1242,2010,11,15,France,3850,Afghanistan,NATO,ISAF
+1243,2010,11,15,Georgia,924,Afghanistan,NATO,ISAF
+1244,2010,11,15,Germany,4341,Afghanistan,NATO,ISAF
+1245,2010,11,15,Greece,80,Afghanistan,NATO,ISAF
+1246,2010,11,15,Hungary,502,Afghanistan,NATO,ISAF
+1247,2010,11,15,Iceland,4,Afghanistan,NATO,ISAF
+1248,2010,11,15,Ireland,7,Afghanistan,NATO,ISAF
+1249,2010,11,15,Italy,3688,Afghanistan,NATO,ISAF
+1250,2010,11,15,Jordan,0,Afghanistan,NATO,ISAF
+1251,2010,11,15,Republic of Korea,246,Afghanistan,NATO,ISAF
+1252,2010,11,15,Latvia,189,Afghanistan,NATO,ISAF
+1253,2010,11,15,Lithuania,219,Afghanistan,NATO,ISAF
+1254,2010,11,15,Luxembourg,9,Afghanistan,NATO,ISAF
+1255,2010,11,15,Malaysia,30,Afghanistan,NATO,ISAF
+1256,2010,11,15,Mongolia,47,Afghanistan,NATO,ISAF
+1257,2010,11,15,Montenegro,31,Afghanistan,NATO,ISAF
+1258,2010,11,15,Netherlands,242,Afghanistan,NATO,ISAF
+1259,2010,11,15,New Zealand,234,Afghanistan,NATO,ISAF
+1260,2010,11,15,Norway,353,Afghanistan,NATO,ISAF
+1261,2010,11,15,Poland,2519,Afghanistan,NATO,ISAF
+1262,2010,11,15,Portugal,95,Afghanistan,NATO,ISAF
+1263,2010,11,15,Romania,1646,Afghanistan,NATO,ISAF
+1264,2010,11,15,Singapore,38,Afghanistan,NATO,ISAF
+1265,2010,11,15,Slovakia,250,Afghanistan,NATO,ISAF
+1266,2010,11,15,Slovenia,78,Afghanistan,NATO,ISAF
+1267,2010,11,15,Spain,1576,Afghanistan,NATO,ISAF
+1268,2010,11,15,Sweden,500,Afghanistan,NATO,ISAF
+1269,2010,11,15,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1270,2010,11,15,Tonga,0,Afghanistan,NATO,ISAF
+1271,2010,11,15,Turkey,1790,Afghanistan,NATO,ISAF
+1272,2010,11,15,Ukraine,16,Afghanistan,NATO,ISAF
+1273,2010,11,15,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1274,2010,11,15,United Kingdom,9500,Afghanistan,NATO,ISAF
+1275,2010,11,15,United States,90000,Afghanistan,NATO,ISAF
+1276,2011,01,25,Albania,250,Afghanistan,NATO,ISAF
+1277,2011,01,25,Armenia,40,Afghanistan,NATO,ISAF
+1278,2011,01,25,Australia,1550,Afghanistan,NATO,ISAF
+1279,2011,01,25,Austria,3,Afghanistan,NATO,ISAF
+1280,2011,01,25,Azerbaijan,94,Afghanistan,NATO,ISAF
+1281,2011,01,25,Belgium,530,Afghanistan,NATO,ISAF
+1282,2011,01,25,Bosnia & Herzegovina,45,Afghanistan,NATO,ISAF
+1283,2011,01,25,Bulgaria,611,Afghanistan,NATO,ISAF
+1284,2011,01,25,Canada,2903,Afghanistan,NATO,ISAF
+1285,2011,01,25,Croatia,288,Afghanistan,NATO,ISAF
+1286,2011,01,25,Czech Republic,471,Afghanistan,NATO,ISAF
+1287,2011,01,25,Denmark,750,Afghanistan,NATO,ISAF
+1288,2011,01,25,Estonia,159,Afghanistan,NATO,ISAF
+1289,2011,01,25,Finland,165,Afghanistan,NATO,ISAF
+1290,2011,01,25,France,4000,Afghanistan,NATO,ISAF
+1291,2011,01,25,Georgia,924,Afghanistan,NATO,ISAF
+1292,2011,01,25,Germany,4922,Afghanistan,NATO,ISAF
+1293,2011,01,25,Greece,136,Afghanistan,NATO,ISAF
+1294,2011,01,25,Hungary,522,Afghanistan,NATO,ISAF
+1295,2011,01,25,Iceland,4,Afghanistan,NATO,ISAF
+1296,2011,01,25,Ireland,7,Afghanistan,NATO,ISAF
+1297,2011,01,25,Italy,3772,Afghanistan,NATO,ISAF
+1298,2011,01,25,Jordan,0,Afghanistan,NATO,ISAF
+1299,2011,01,25,Republic of Korea,246,Afghanistan,NATO,ISAF
+1300,2011,01,25,Latvia,136,Afghanistan,NATO,ISAF
+1301,2011,01,25,Lithuania,179,Afghanistan,NATO,ISAF
+1302,2011,01,25,Luxembourg,9,Afghanistan,NATO,ISAF
+1303,2011,01,25,Malaysia,30,Afghanistan,NATO,ISAF
+1304,2011,01,25,Mongolia,62,Afghanistan,NATO,ISAF
+1305,2011,01,25,Montenegro,35,Afghanistan,NATO,ISAF
+1306,2011,01,25,Netherlands,196,Afghanistan,NATO,ISAF
+1307,2011,01,25,New Zealand,234,Afghanistan,NATO,ISAF
+1308,2011,01,25,Norway,413,Afghanistan,NATO,ISAF
+1309,2011,01,25,Poland,2490,Afghanistan,NATO,ISAF
+1310,2011,01,25,Portugal,116,Afghanistan,NATO,ISAF
+1311,2011,01,25,Romania,1693,Afghanistan,NATO,ISAF
+1312,2011,01,25,Singapore,48,Afghanistan,NATO,ISAF
+1313,2011,01,25,Slovakia,301,Afghanistan,NATO,ISAF
+1314,2011,01,25,Slovenia,80,Afghanistan,NATO,ISAF
+1315,2011,01,25,Spain,1472,Afghanistan,NATO,ISAF
+1316,2011,01,25,Sweden,500,Afghanistan,NATO,ISAF
+1317,2011,01,25,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1318,2011,01,25,Tonga,55,Afghanistan,NATO,ISAF
+1319,2011,01,25,Turkey,1823,Afghanistan,NATO,ISAF
+1320,2011,01,25,Ukraine,20,Afghanistan,NATO,ISAF
+1321,2011,01,25,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1322,2011,01,25,United Kingdom,9500,Afghanistan,NATO,ISAF
+1323,2011,01,25,United States,90000,Afghanistan,NATO,ISAF
+1324,2011,02,03,Albania,250,Afghanistan,NATO,ISAF
+1325,2011,02,03,Armenia,40,Afghanistan,NATO,ISAF
+1326,2011,02,03,Australia,1550,Afghanistan,NATO,ISAF
+1327,2011,02,03,Austria,3,Afghanistan,NATO,ISAF
+1328,2011,02,03,Azerbaijan,95,Afghanistan,NATO,ISAF
+1329,2011,02,03,Belgium,530,Afghanistan,NATO,ISAF
+1330,2011,02,03,Bosnia & Herzegovina,45,Afghanistan,NATO,ISAF
+1331,2011,02,03,Bulgaria,610,Afghanistan,NATO,ISAF
+1332,2011,02,03,Canada,2905,Afghanistan,NATO,ISAF
+1333,2011,02,03,Croatia,290,Afghanistan,NATO,ISAF
+1334,2011,02,03,Czech Republic,470,Afghanistan,NATO,ISAF
+1335,2011,02,03,Denmark,750,Afghanistan,NATO,ISAF
+1336,2011,02,03,Estonia,160,Afghanistan,NATO,ISAF
+1337,2011,02,03,Finland,165,Afghanistan,NATO,ISAF
+1338,2011,02,03,France,4000,Afghanistan,NATO,ISAF
+1339,2011,02,03,Georgia,925,Afghanistan,NATO,ISAF
+1340,2011,02,03,Germany,4920,Afghanistan,NATO,ISAF
+1341,2011,02,03,Greece,135,Afghanistan,NATO,ISAF
+1342,2011,02,03,Hungary,520,Afghanistan,NATO,ISAF
+1343,2011,02,03,Iceland,5,Afghanistan,NATO,ISAF
+1344,2011,02,03,Ireland,7,Afghanistan,NATO,ISAF
+1345,2011,02,03,Italy,3770 ',Afghanistan,NATO,ISAF
+1346,2011,02,03,Jordan,0,Afghanistan,NATO,ISAF
+1347,2011,02,03,Republic of Korea,245,Afghanistan,NATO,ISAF
+1348,2011,02,03,Latvia,135,Afghanistan,NATO,ISAF
+1349,2011,02,03,Lithuania,180,Afghanistan,NATO,ISAF
+1350,2011,02,03,Luxembourg,9,Afghanistan,NATO,ISAF
+1351,2011,02,03,Malaysia,30,Afghanistan,NATO,ISAF
+1352,2011,02,03,Mongolia,60,Afghanistan,NATO,ISAF
+1353,2011,02,03,Montenegro,35,Afghanistan,NATO,ISAF
+1354,2011,02,03,Netherlands,195,Afghanistan,NATO,ISAF
+1355,2011,02,03,New Zealand,235,Afghanistan,NATO,ISAF
+1356,2011,02,03,Norway,415,Afghanistan,NATO,ISAF
+1357,2011,02,03,Poland,2490,Afghanistan,NATO,ISAF
+1358,2011,02,03,Portugal,115,Afghanistan,NATO,ISAF
+1359,2011,02,03,Romania,1695,Afghanistan,NATO,ISAF
+1360,2011,02,03,Singapore,50,Afghanistan,NATO,ISAF
+1361,2011,02,03,Slovakia,300,Afghanistan,NATO,ISAF
+1362,2011,02,03,Slovenia,80,Afghanistan,NATO,ISAF
+1363,2011,02,03,Spain,1470,Afghanistan,NATO,ISAF
+1364,2011,02,03,Sweden,500,Afghanistan,NATO,ISAF
+1365,2011,02,03,The former Yugoslav Republic of Macedonia,165,Afghanistan,NATO,ISAF
+1366,2011,02,03,Tonga,55,Afghanistan,NATO,ISAF
+1367,2011,02,03,Turkey,1825,Afghanistan,NATO,ISAF
+1368,2011,02,03,Ukraine,20,Afghanistan,NATO,ISAF
+1369,2011,02,03,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1370,2011,02,03,United Kingdom,9500,Afghanistan,NATO,ISAF
+1371,2011,02,03,United States,90000,Afghanistan,NATO,ISAF
+1372,2011,03,04,Albania,257,Afghanistan,NATO,ISAF
+1373,2011,03,04,Armenia,40,Afghanistan,NATO,ISAF
+1374,2011,03,04,Australia,1550,Afghanistan,NATO,ISAF
+1375,2011,03,04,Austria,3,Afghanistan,NATO,ISAF
+1376,2011,03,04,Azerbaijan,94,Afghanistan,NATO,ISAF
+1377,2011,03,04,Belgium,528,Afghanistan,NATO,ISAF
+1378,2011,03,04,Bosnia & Herzegovina,45,Afghanistan,NATO,ISAF
+1379,2011,03,04,Bulgaria,608,Afghanistan,NATO,ISAF
+1380,2011,03,04,Canada,2900,Afghanistan,NATO,ISAF
+1381,2011,03,04,Croatia,299,Afghanistan,NATO,ISAF
+1382,2011,03,04,Czech Republic,463,Afghanistan,NATO,ISAF
+1383,2011,03,04,Denmark,748,Afghanistan,NATO,ISAF
+1384,2011,03,04,Estonia,158,Afghanistan,NATO,ISAF
+1385,2011,03,04,Finland,165,Afghanistan,NATO,ISAF
+1386,2011,03,04,France,3979,Afghanistan,NATO,ISAF
+1387,2011,03,04,Georgia,924,Afghanistan,NATO,ISAF
+1388,2011,03,04,Germany,4909,Afghanistan,NATO,ISAF
+1389,2011,03,04,Greece,132,Afghanistan,NATO,ISAF
+1390,2011,03,04,Hungary,483,Afghanistan,NATO,ISAF
+1391,2011,03,04,Iceland,2,Afghanistan,NATO,ISAF
+1392,2011,03,04,Ireland,7,Afghanistan,NATO,ISAF
+1393,2011,03,04,Italy,3815,Afghanistan,NATO,ISAF
+1394,2011,03,04,Jordan,0,Afghanistan,NATO,ISAF
+1395,2011,03,04,Republic of Korea,426,Afghanistan,NATO,ISAF
+1396,2011,03,04,Latvia,136,Afghanistan,NATO,ISAF
+1397,2011,03,04,Lithuania,188,Afghanistan,NATO,ISAF
+1398,2011,03,04,Luxembourg,9,Afghanistan,NATO,ISAF
+1399,2011,03,04,Malaysia,30,Afghanistan,NATO,ISAF
+1400,2011,03,04,Mongolia,62,Afghanistan,NATO,ISAF
+1401,2011,03,04,Montenegro,36,Afghanistan,NATO,ISAF
+1402,2011,03,04,Netherlands,197,Afghanistan,NATO,ISAF
+1403,2011,03,04,New Zealand,236,Afghanistan,NATO,ISAF
+1404,2011,03,04,Norway,413,Afghanistan,NATO,ISAF
+1405,2011,03,04,Poland,2527,Afghanistan,NATO,ISAF
+1406,2011,03,04,Portugal,114,Afghanistan,NATO,ISAF
+1407,2011,03,04,Romania,1726,Afghanistan,NATO,ISAF
+1408,2011,03,04,Singapore,48,Afghanistan,NATO,ISAF
+1409,2011,03,04,Slovakia,296,Afghanistan,NATO,ISAF
+1410,2011,03,04,Slovenia,79,Afghanistan,NATO,ISAF
+1411,2011,03,04,Spain,1499,Afghanistan,NATO,ISAF
+1412,2011,03,04,Sweden,500,Afghanistan,NATO,ISAF
+1413,2011,03,04,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1414,2011,03,04,Tonga,55,Afghanistan,NATO,ISAF
+1415,2011,03,04,Turkey,1799,Afghanistan,NATO,ISAF
+1416,2011,03,04,Ukraine,20,Afghanistan,NATO,ISAF
+1417,2011,03,04,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1418,2011,03,04,United Kingdom,9500,Afghanistan,NATO,ISAF
+1419,2011,03,04,United States,90000,Afghanistan,NATO,ISAF
+1420,2011,05,16,Albania,260,Afghanistan,NATO,ISAF
+1421,2011,05,16,Armenia,40,Afghanistan,NATO,ISAF
+1422,2011,05,16,Australia,1550,Afghanistan,NATO,ISAF
+1423,2011,05,16,Austria,3,Afghanistan,NATO,ISAF
+1424,2011,05,16,Azerbaijan,95,Afghanistan,NATO,ISAF
+1425,2011,05,16,Belgium,510,Afghanistan,NATO,ISAF
+1426,2011,05,16,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1427,2011,05,16,Bulgaria,600,Afghanistan,NATO,ISAF
+1428,2011,05,16,Canada,2920,Afghanistan,NATO,ISAF
+1429,2011,05,16,Croatia,310,Afghanistan,NATO,ISAF
+1430,2011,05,16,Czech Republic,485,Afghanistan,NATO,ISAF
+1431,2011,05,16,Denmark,750,Afghanistan,NATO,ISAF
+1432,2011,05,16,Estonia,160,Afghanistan,NATO,ISAF
+1433,2011,05,16,Finland,165,Afghanistan,NATO,ISAF
+1434,2011,05,16,France,4005,Afghanistan,NATO,ISAF
+1435,2011,05,16,Georgia,925,Afghanistan,NATO,ISAF
+1436,2011,05,16,Germany,5000,Afghanistan,NATO,ISAF
+1437,2011,05,16,Greece,140,Afghanistan,NATO,ISAF
+1438,2011,05,16,Hungary,335,Afghanistan,NATO,ISAF
+1439,2011,05,16,Iceland,4,Afghanistan,NATO,ISAF
+1440,2011,05,16,Ireland,8,Afghanistan,NATO,ISAF
+1441,2011,05,16,Italy,3880,Afghanistan,NATO,ISAF
+1442,2011,05,16,Jordan,0,Afghanistan,NATO,ISAF
+1443,2011,05,16,Republic of Korea,350,Afghanistan,NATO,ISAF
+1444,2011,05,16,Latvia,140,Afghanistan,NATO,ISAF
+1445,2011,05,16,Lithuania,220,Afghanistan,NATO,ISAF
+1446,2011,05,16,Luxembourg,10,Afghanistan,NATO,ISAF
+1447,2011,05,16,Malaysia,30,Afghanistan,NATO,ISAF
+1448,2011,05,16,Mongolia,100,Afghanistan,NATO,ISAF
+1449,2011,05,16,Montenegro,35,Afghanistan,NATO,ISAF
+1450,2011,05,16,Netherlands,190,Afghanistan,NATO,ISAF
+1451,2011,05,16,New Zealand,155,Afghanistan,NATO,ISAF
+1452,2011,05,16,Norway,410,Afghanistan,NATO,ISAF
+1453,2011,05,16,Poland,2530,Afghanistan,NATO,ISAF
+1454,2011,05,16,Portugal,105,Afghanistan,NATO,ISAF
+1455,2011,05,16,Romania,1870,Afghanistan,NATO,ISAF
+1456,2011,05,16,Singapore,20,Afghanistan,NATO,ISAF
+1457,2011,05,16,Slovakia,300,Afghanistan,NATO,ISAF
+1458,2011,05,16,Slovenia,80,Afghanistan,NATO,ISAF
+1459,2011,05,16,Spain,1500,Afghanistan,NATO,ISAF
+1460,2011,05,16,Sweden,500,Afghanistan,NATO,ISAF
+1461,2011,05,16,The former Yugoslav Republic of Macedonia,165,Afghanistan,NATO,ISAF
+1462,2011,05,16,Tonga,55,Afghanistan,NATO,ISAF
+1463,2011,05,16,Turkey,1785,Afghanistan,NATO,ISAF
+1464,2011,05,16,Ukraine,20,Afghanistan,NATO,ISAF
+1465,2011,05,16,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1466,2011,05,16,United Kingdom,9500,Afghanistan,NATO,ISAF
+1467,2011,05,16,United States,90000,Afghanistan,NATO,ISAF
+1468,2011,06,06,Albania,260,Afghanistan,NATO,ISAF
+1469,2011,06,06,Armenia,40,Afghanistan,NATO,ISAF
+1470,2011,06,06,Australia,1550,Afghanistan,NATO,ISAF
+1471,2011,06,06,Austria,3,Afghanistan,NATO,ISAF
+1472,2011,06,06,Azerbaijan,94,Afghanistan,NATO,ISAF
+1473,2011,06,06,Belgium,507,Afghanistan,NATO,ISAF
+1474,2011,06,06,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1475,2011,06,06,Bulgaria,602,Afghanistan,NATO,ISAF
+1476,2011,06,06,Canada,2922,Afghanistan,NATO,ISAF
+1477,2011,06,06,Croatia,320,Afghanistan,NATO,ISAF
+1478,2011,06,06,Czech Republic,519,Afghanistan,NATO,ISAF
+1479,2011,06,06,Denmark,750,Afghanistan,NATO,ISAF
+1480,2011,06,06,Estonia,163,Afghanistan,NATO,ISAF
+1481,2011,06,06,Finland,156,Afghanistan,NATO,ISAF
+1482,2011,06,06,France,3935,Afghanistan,NATO,ISAF
+1483,2011,06,06,Georgia,937,Afghanistan,NATO,ISAF
+1484,2011,06,06,Germany,4812,Afghanistan,NATO,ISAF
+1485,2011,06,06,Greece,162,Afghanistan,NATO,ISAF
+1486,2011,06,06,Hungary,383,Afghanistan,NATO,ISAF
+1487,2011,06,06,Iceland,4,Afghanistan,NATO,ISAF
+1488,2011,06,06,Ireland,7,Afghanistan,NATO,ISAF
+1489,2011,06,06,Italy,3880,Afghanistan,NATO,ISAF
+1490,2011,06,06,Jordan,0,Afghanistan,NATO,ISAF
+1491,2011,06,06,Republic of Korea,350,Afghanistan,NATO,ISAF
+1492,2011,06,06,Latvia,139,Afghanistan,NATO,ISAF
+1493,2011,06,06,Lithuania,237,Afghanistan,NATO,ISAF
+1494,2011,06,06,Luxembourg,11,Afghanistan,NATO,ISAF
+1495,2011,06,06,Malaysia,31,Afghanistan,NATO,ISAF
+1496,2011,06,06,Mongolia,74,Afghanistan,NATO,ISAF
+1497,2011,06,06,Montenegro,36,Afghanistan,NATO,ISAF
+1498,2011,06,06,Netherlands,192,Afghanistan,NATO,ISAF
+1499,2011,06,06,New Zealand,191,Afghanistan,NATO,ISAF
+1500,2011,06,06,Norway,406,Afghanistan,NATO,ISAF
+1501,2011,06,06,Poland,2560,Afghanistan,NATO,ISAF
+1502,2011,06,06,Portugal,133,Afghanistan,NATO,ISAF
+1503,2011,06,06,Romania,1938,Afghanistan,NATO,ISAF
+1504,2011,06,06,Singapore,21,Afghanistan,NATO,ISAF
+1505,2011,06,06,Slovakia,308,Afghanistan,NATO,ISAF
+1506,2011,06,06,Slovenia,80,Afghanistan,NATO,ISAF
+1507,2011,06,06,Spain,1552,Afghanistan,NATO,ISAF
+1508,2011,06,06,Sweden,500,Afghanistan,NATO,ISAF
+1509,2011,06,06,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1510,2011,06,06,Tonga,55,Afghanistan,NATO,ISAF
+1511,2011,06,06,Turkey,1786,Afghanistan,NATO,ISAF
+1512,2011,06,06,Ukraine,22,Afghanistan,NATO,ISAF
+1513,2011,06,06,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1514,2011,06,06,United Kingdom,9500,Afghanistan,NATO,ISAF
+1515,2011,06,06,United States,90000,Afghanistan,NATO,ISAF
+1516,2011,07,26,Albania,260,Afghanistan,NATO,ISAF
+1517,2011,07,26,Armenia,40,Afghanistan,NATO,ISAF
+1518,2011,07,26,Australia,1550,Afghanistan,NATO,ISAF
+1519,2011,07,26,Austria,3,Afghanistan,NATO,ISAF
+1520,2011,07,26,Azerbaijan,94,Afghanistan,NATO,ISAF
+1521,2011,07,26,Belgium,507,Afghanistan,NATO,ISAF
+1522,2011,07,26,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1523,2011,07,26,Bulgaria,602,Afghanistan,NATO,ISAF
+1524,2011,07,26,Canada,2922,Afghanistan,NATO,ISAF
+1525,2011,07,26,Croatia,320,Afghanistan,NATO,ISAF
+1526,2011,07,26,Czech Republic,519,Afghanistan,NATO,ISAF
+1527,2011,07,26,Denmark,750,Afghanistan,NATO,ISAF
+1528,2011,07,26,Estonia,163,Afghanistan,NATO,ISAF
+1529,2011,07,26,Finland,156,Afghanistan,NATO,ISAF
+1530,2011,07,26,France,3935,Afghanistan,NATO,ISAF
+1531,2011,07,26,Georgia,937,Afghanistan,NATO,ISAF
+1532,2011,07,26,Germany,4812,Afghanistan,NATO,ISAF
+1533,2011,07,26,Greece,162,Afghanistan,NATO,ISAF
+1534,2011,07,26,Hungary,383,Afghanistan,NATO,ISAF
+1535,2011,07,26,Iceland,4,Afghanistan,NATO,ISAF
+1536,2011,07,26,Ireland,7,Afghanistan,NATO,ISAF
+1537,2011,07,26,Italy,3880,Afghanistan,NATO,ISAF
+1538,2011,07,26,Jordan,0,Afghanistan,NATO,ISAF
+1539,2011,07,26,Republic of Korea,350,Afghanistan,NATO,ISAF
+1540,2011,07,26,Latvia,139,Afghanistan,NATO,ISAF
+1541,2011,07,26,Lithuania,237,Afghanistan,NATO,ISAF
+1542,2011,07,26,Luxembourg,11,Afghanistan,NATO,ISAF
+1543,2011,07,26,Malaysia,31,Afghanistan,NATO,ISAF
+1544,2011,07,26,Mongolia,74,Afghanistan,NATO,ISAF
+1545,2011,07,26,Montenegro,36,Afghanistan,NATO,ISAF
+1546,2011,07,26,Netherlands,192,Afghanistan,NATO,ISAF
+1547,2011,07,26,New Zealand,191,Afghanistan,NATO,ISAF
+1548,2011,07,26,Norway,406,Afghanistan,NATO,ISAF
+1549,2011,07,26,Poland,2560,Afghanistan,NATO,ISAF
+1550,2011,07,26,Portugal,133,Afghanistan,NATO,ISAF
+1551,2011,07,26,Romania,1938,Afghanistan,NATO,ISAF
+1552,2011,07,26,Singapore,21,Afghanistan,NATO,ISAF
+1553,2011,07,26,Slovakia,308,Afghanistan,NATO,ISAF
+1554,2011,07,26,Slovenia,80,Afghanistan,NATO,ISAF
+1555,2011,07,26,Spain,1552,Afghanistan,NATO,ISAF
+1556,2011,07,26,Sweden,500,Afghanistan,NATO,ISAF
+1557,2011,07,26,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1558,2011,07,26,Tonga,55,Afghanistan,NATO,ISAF
+1559,2011,07,26,Turkey,1786,Afghanistan,NATO,ISAF
+1560,2011,07,26,Ukraine,22,Afghanistan,NATO,ISAF
+1561,2011,07,26,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1562,2011,07,26,United Kingdom,9500,Afghanistan,NATO,ISAF
+1563,2011,07,26,United States,90000,Afghanistan,NATO,ISAF
+1564,2011,08,16,Albania,285,Afghanistan,NATO,ISAF
+1565,2011,08,16,Armenia,126,Afghanistan,NATO,ISAF
+1566,2011,08,16,Australia,1550,Afghanistan,NATO,ISAF
+1567,2011,08,16,Austria,3,Afghanistan,NATO,ISAF
+1568,2011,08,16,Azerbaijan,94,Afghanistan,NATO,ISAF
+1569,2011,08,16,Belgium,521,Afghanistan,NATO,ISAF
+1570,2011,08,16,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1571,2011,08,16,Bulgaria,602,Afghanistan,NATO,ISAF
+1572,2011,08,16,Canada,513,Afghanistan,NATO,ISAF
+1573,2011,08,16,Croatia,321,Afghanistan,NATO,ISAF
+1574,2011,08,16,Czech Republic,620,Afghanistan,NATO,ISAF
+1575,2011,08,16,Denmark,750,Afghanistan,NATO,ISAF
+1576,2011,08,16,Estonia,159,Afghanistan,NATO,ISAF
+1577,2011,08,16,Finland,156,Afghanistan,NATO,ISAF
+1578,2011,08,16,France,3939,Afghanistan,NATO,ISAF
+1579,2011,08,16,Georgia,937,Afghanistan,NATO,ISAF
+1580,2011,08,16,Germany,5000,Afghanistan,NATO,ISAF
+1581,2011,08,16,Greece,160,Afghanistan,NATO,ISAF
+1582,2011,08,16,Hungary,433,Afghanistan,NATO,ISAF
+1583,2011,08,16,Iceland,4,Afghanistan,NATO,ISAF
+1584,2011,08,16,Ireland,7,Afghanistan,NATO,ISAF
+1585,2011,08,16,Italy,3974,Afghanistan,NATO,ISAF
+1586,2011,08,16,Jordan,0,Afghanistan,NATO,ISAF
+1587,2011,08,16,Republic of Korea,350,Afghanistan,NATO,ISAF
+1588,2011,08,16,Latvia,173,Afghanistan,NATO,ISAF
+1589,2011,08,16,Lithuania,235,Afghanistan,NATO,ISAF
+1590,2011,08,16,Luxembourg,11,Afghanistan,NATO,ISAF
+1591,2011,08,16,Malaysia,34,Afghanistan,NATO,ISAF
+1592,2011,08,16,Mongolia,114,Afghanistan,NATO,ISAF
+1593,2011,08,16,Montenegro,36,Afghanistan,NATO,ISAF
+1594,2011,08,16,Netherlands,184,Afghanistan,NATO,ISAF
+1595,2011,08,16,New Zealand,190,Afghanistan,NATO,ISAF
+1596,2011,08,16,Norway,428,Afghanistan,NATO,ISAF
+1597,2011,08,16,Poland,2579,Afghanistan,NATO,ISAF
+1598,2011,08,16,Portugal,140,Afghanistan,NATO,ISAF
+1599,2011,08,16,Romania,1949,Afghanistan,NATO,ISAF
+1600,2011,08,16,Singapore,40,Afghanistan,NATO,ISAF
+1601,2011,08,16,Slovakia,309,Afghanistan,NATO,ISAF
+1602,2011,08,16,Slovenia,78,Afghanistan,NATO,ISAF
+1603,2011,08,16,Spain,1523,Afghanistan,NATO,ISAF
+1604,2011,08,16,Sweden,500,Afghanistan,NATO,ISAF
+1605,2011,08,16,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1606,2011,08,16,Tonga,55,Afghanistan,NATO,ISAF
+1607,2011,08,16,Turkey,1840,Afghanistan,NATO,ISAF
+1608,2011,08,16,Ukraine,22,Afghanistan,NATO,ISAF
+1609,2011,08,16,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1610,2011,08,16,United Kingdom,9500,Afghanistan,NATO,ISAF
+1611,2011,08,16,United States,90000,Afghanistan,NATO,ISAF
+1612,2011,09,09,Albania,286,Afghanistan,NATO,ISAF
+1613,2011,09,09,Armenia,126,Afghanistan,NATO,ISAF
+1614,2011,09,09,Australia,"1,550",Afghanistan,NATO,ISAF
+1615,2011,09,09,Austria,3,Afghanistan,NATO,ISAF
+1616,2011,09,09,Azerbaijan,94,Afghanistan,NATO,ISAF
+1617,2011,09,09,Belgium,521,Afghanistan,NATO,ISAF
+1618,2011,09,09,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1619,2011,09,09,Bulgaria,602,Afghanistan,NATO,ISAF
+1620,2011,09,09,Canada,520,Afghanistan,NATO,ISAF
+1621,2011,09,09,Croatia,317,Afghanistan,NATO,ISAF
+1622,2011,09,09,Czech Republic,622,Afghanistan,NATO,ISAF
+1623,2011,09,09,Denmark,750,Afghanistan,NATO,ISAF
+1624,2011,09,09,El Salvador,24,Afghanistan,NATO,ISAF
+1625,2011,09,09,Estonia,159,Afghanistan,NATO,ISAF
+1626,2011,09,09,Finland,156,Afghanistan,NATO,ISAF
+1627,2011,09,09,France,"3,935",Afghanistan,NATO,ISAF
+1628,2011,09,09,Georgia,937,Afghanistan,NATO,ISAF
+1629,2011,09,09,Germany,"4,998",Afghanistan,NATO,ISAF
+1630,2011,09,09,Greece,158,Afghanistan,NATO,ISAF
+1631,2011,09,09,Hungary,433,Afghanistan,NATO,ISAF
+1632,2011,09,09,Iceland,4,Afghanistan,NATO,ISAF
+1633,2011,09,09,Ireland,7,Afghanistan,NATO,ISAF
+1634,2011,09,09,Italy,"3,918",Afghanistan,NATO,ISAF
+1635,2011,09,09,Jordan,0,Afghanistan,NATO,ISAF
+1636,2011,09,09,Republic of Korea,350,Afghanistan,NATO,ISAF
+1637,2011,09,09,Latvia,173,Afghanistan,NATO,ISAF
+1638,2011,09,09,Lithuania,235,Afghanistan,NATO,ISAF
+1639,2011,09,09,Luxembourg,10,Afghanistan,NATO,ISAF
+1640,2011,09,09,Malaysia,46,Afghanistan,NATO,ISAF
+1641,2011,09,09,Mongolia,114,Afghanistan,NATO,ISAF
+1642,2011,09,09,Montenegro,36,Afghanistan,NATO,ISAF
+1643,2011,09,09,Netherlands,183,Afghanistan,NATO,ISAF
+1644,2011,09,09,New Zealand,188,Afghanistan,NATO,ISAF
+1645,2011,09,09,Norway,428,Afghanistan,NATO,ISAF
+1646,2011,09,09,Poland,"2,580",Afghanistan,NATO,ISAF
+1647,2011,09,09,Portugal,140,Afghanistan,NATO,ISAF
+1648,2011,09,09,Romania,"1,948",Afghanistan,NATO,ISAF
+1649,2011,09,09,Singapore,38,Afghanistan,NATO,ISAF
+1650,2011,09,09,Slovakia,309,Afghanistan,NATO,ISAF
+1651,2011,09,09,Slovenia,78,Afghanistan,NATO,ISAF
+1652,2011,09,09,Spain,"1,523",Afghanistan,NATO,ISAF
+1653,2011,09,09,Sweden,500,Afghanistan,NATO,ISAF
+1654,2011,09,09,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1655,2011,09,09,Tonga,55,Afghanistan,NATO,ISAF
+1656,2011,09,09,Turkey,"1,840",Afghanistan,NATO,ISAF
+1657,2011,09,09,Ukraine,23,Afghanistan,NATO,ISAF
+1658,2011,09,09,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1659,2011,09,09,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1660,2011,09,09,United States,"90,000",Afghanistan,NATO,ISAF
+1661,2011,12,01,Albania,286,Afghanistan,NATO,ISAF
+1662,2011,12,01,Armenia,126,Afghanistan,NATO,ISAF
+1663,2011,12,01,Australia,"1,650",Afghanistan,NATO,ISAF
+1664,2011,12,01,Austria,3,Afghanistan,NATO,ISAF
+1665,2011,12,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+1666,2011,12,01,Bahrain,95,Afghanistan,NATO,ISAF
+1667,2011,12,01,Belgium,520,Afghanistan,NATO,ISAF
+1668,2011,12,01,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1669,2011,12,01,Bulgaria,598,Afghanistan,NATO,ISAF
+1670,2011,12,01,Canada,556,Afghanistan,NATO,ISAF
+1671,2011,12,01,Croatia,312,Afghanistan,NATO,ISAF
+1672,2011,12,01,Czech Republic,626,Afghanistan,NATO,ISAF
+1673,2011,12,01,Denmark,750,Afghanistan,NATO,ISAF
+1674,2011,12,01,El Salvador,24,Afghanistan,NATO,ISAF
+1675,2011,12,01,Estonia,154,Afghanistan,NATO,ISAF
+1676,2011,12,01,Finland,156,Afghanistan,NATO,ISAF
+1677,2011,12,01,France,"3,916",Afghanistan,NATO,ISAF
+1678,2011,12,01,Georgia,935,Afghanistan,NATO,ISAF
+1679,2011,12,01,Germany,"4,818",Afghanistan,NATO,ISAF
+1680,2011,12,01,Greece,154,Afghanistan,NATO,ISAF
+1681,2011,12,01,Hungary,413,Afghanistan,NATO,ISAF
+1682,2011,12,01,Iceland,4,Afghanistan,NATO,ISAF
+1683,2011,12,01,Ireland,7,Afghanistan,NATO,ISAF
+1684,2011,12,01,Italy,"3,952",Afghanistan,NATO,ISAF
+1685,2011,12,01,Jordan,0,Afghanistan,NATO,ISAF
+1686,2011,12,01,Republic of Korea,350,Afghanistan,NATO,ISAF
+1687,2011,12,01,Latvia,175,Afghanistan,NATO,ISAF
+1688,2011,12,01,Lithuania,237,Afghanistan,NATO,ISAF
+1689,2011,12,01,Luxembourg,11,Afghanistan,NATO,ISAF
+1690,2011,12,01,Malaysia,46,Afghanistan,NATO,ISAF
+1691,2011,12,01,Mongolia,114,Afghanistan,NATO,ISAF
+1692,2011,12,01,Montenegro,37,Afghanistan,NATO,ISAF
+1693,2011,12,01,Netherlands,166,Afghanistan,NATO,ISAF
+1694,2011,12,01,New Zealand,188,Afghanistan,NATO,ISAF
+1695,2011,12,01,Norway,433,Afghanistan,NATO,ISAF
+1696,2011,12,01,Poland,"2,475",Afghanistan,NATO,ISAF
+1697,2011,12,01,Portugal,140,Afghanistan,NATO,ISAF
+1698,2011,12,01,Romania,"1,876",Afghanistan,NATO,ISAF
+1699,2011,12,01,Singapore,39,Afghanistan,NATO,ISAF
+1700,2011,12,01,Slovakia,329,Afghanistan,NATO,ISAF
+1701,2011,12,01,Slovenia,79,Afghanistan,NATO,ISAF
+1702,2011,12,01,Spain,"1,488",Afghanistan,NATO,ISAF
+1703,2011,12,01,Sweden,500,Afghanistan,NATO,ISAF
+1704,2011,12,01,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1705,2011,12,01,Tonga,55,Afghanistan,NATO,ISAF
+1706,2011,12,01,Turkey,"1,845",Afghanistan,NATO,ISAF
+1707,2011,12,01,Ukraine,23,Afghanistan,NATO,ISAF
+1708,2011,12,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1709,2011,12,01,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1710,2011,12,01,United States,"90,000",Afghanistan,NATO,ISAF
+1711,2011,12,08,Albania,286,Afghanistan,NATO,ISAF
+1712,2011,12,08,Armenia,126,Afghanistan,NATO,ISAF
+1713,2011,12,08,Australia,"1,550",Afghanistan,NATO,ISAF
+1714,2011,12,08,Austria,3,Afghanistan,NATO,ISAF
+1715,2011,12,08,Azerbaijan,94,Afghanistan,NATO,ISAF
+1716,2011,12,08,Belgium,520,Afghanistan,NATO,ISAF
+1717,2011,12,08,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1718,2011,12,08,Bulgaria,598,Afghanistan,NATO,ISAF
+1719,2011,12,08,Canada,556,Afghanistan,NATO,ISAF
+1720,2011,12,08,Croatia,312,Afghanistan,NATO,ISAF
+1721,2011,12,08,Czech Republic,626,Afghanistan,NATO,ISAF
+1722,2011,12,08,Denmark,750,Afghanistan,NATO,ISAF
+1723,2011,12,08,El Salvador,24,Afghanistan,NATO,ISAF
+1724,2011,12,08,Estonia,154,Afghanistan,NATO,ISAF
+1725,2011,12,08,Finland,156,Afghanistan,NATO,ISAF
+1726,2011,12,08,France,"3,916",Afghanistan,NATO,ISAF
+1727,2011,12,08,Georgia,935,Afghanistan,NATO,ISAF
+1728,2011,12,08,Germany,"4,818",Afghanistan,NATO,ISAF
+1729,2011,12,08,Greece,154,Afghanistan,NATO,ISAF
+1730,2011,12,08,Hungary,413,Afghanistan,NATO,ISAF
+1731,2011,12,08,Iceland,4,Afghanistan,NATO,ISAF
+1732,2011,12,08,Ireland,7,Afghanistan,NATO,ISAF
+1733,2011,12,08,Italy,"3,952",Afghanistan,NATO,ISAF
+1734,2011,12,08,Jordan,0,Afghanistan,NATO,ISAF
+1735,2011,12,08,Republic of Korea,350,Afghanistan,NATO,ISAF
+1736,2011,12,08,Latvia,175,Afghanistan,NATO,ISAF
+1737,2011,12,08,Lithuania,237,Afghanistan,NATO,ISAF
+1738,2011,12,08,Luxembourg,11,Afghanistan,NATO,ISAF
+1739,2011,12,08,Malaysia,46,Afghanistan,NATO,ISAF
+1740,2011,12,08,Mongolia,114,Afghanistan,NATO,ISAF
+1741,2011,12,08,Montenegro,37,Afghanistan,NATO,ISAF
+1742,2011,12,08,Netherlands,166,Afghanistan,NATO,ISAF
+1743,2011,12,08,New Zealand,188,Afghanistan,NATO,ISAF
+1744,2011,12,08,Norway,433,Afghanistan,NATO,ISAF
+1745,2011,12,08,Poland,"2,475",Afghanistan,NATO,ISAF
+1746,2011,12,08,Portugal,140,Afghanistan,NATO,ISAF
+1747,2011,12,08,Romania,"1,876",Afghanistan,NATO,ISAF
+1748,2011,12,08,Singapore,39,Afghanistan,NATO,ISAF
+1749,2011,12,08,Slovakia,329,Afghanistan,NATO,ISAF
+1750,2011,12,08,Slovenia,79,Afghanistan,NATO,ISAF
+1751,2011,12,08,Spain,"1,488",Afghanistan,NATO,ISAF
+1752,2011,12,08,Sweden,500,Afghanistan,NATO,ISAF
+1753,2011,12,08,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1754,2011,12,08,Tonga,55,Afghanistan,NATO,ISAF
+1755,2011,12,08,Turkey,"1,845",Afghanistan,NATO,ISAF
+1756,2011,12,08,Ukraine,23,Afghanistan,NATO,ISAF
+1757,2011,12,08,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1758,2011,12,08,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1759,2011,12,08,United States,"90,000",Afghanistan,NATO,ISAF
+1760,2012,01,06,Albania,286,Afghanistan,NATO,ISAF
+1761,2012,01,06,Armenia,126,Afghanistan,NATO,ISAF
+1762,2012,01,06,Australia,"1,550",Afghanistan,NATO,ISAF
+1763,2012,01,06,Austria,3,Afghanistan,NATO,ISAF
+1764,2012,01,06,Azerbaijan,94,Afghanistan,NATO,ISAF
+1765,2012,01,06,Bahrain,95,Afghanistan,NATO,ISAF
+1766,2012,01,06,Belgium,520,Afghanistan,NATO,ISAF
+1767,2012,01,06,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1768,2012,01,06,Bulgaria,598,Afghanistan,NATO,ISAF
+1769,2012,01,06,Canada,556,Afghanistan,NATO,ISAF
+1770,2012,01,06,Croatia,312,Afghanistan,NATO,ISAF
+1771,2012,01,06,Czech Republic,626,Afghanistan,NATO,ISAF
+1772,2012,01,06,Denmark,750,Afghanistan,NATO,ISAF
+1773,2012,01,06,El Salvador,24,Afghanistan,NATO,ISAF
+1774,2012,01,06,Estonia,154,Afghanistan,NATO,ISAF
+1775,2012,01,06,Finland,156,Afghanistan,NATO,ISAF
+1776,2012,01,06,France,"3,916",Afghanistan,NATO,ISAF
+1777,2012,01,06,Georgia,935,Afghanistan,NATO,ISAF
+1778,2012,01,06,Germany,"4,818",Afghanistan,NATO,ISAF
+1779,2012,01,06,Greece,154,Afghanistan,NATO,ISAF
+1780,2012,01,06,Hungary,413,Afghanistan,NATO,ISAF
+1781,2012,01,06,Iceland,4,Afghanistan,NATO,ISAF
+1782,2012,01,06,Ireland,7,Afghanistan,NATO,ISAF
+1783,2012,01,06,Italy,"3,952",Afghanistan,NATO,ISAF
+1784,2012,01,06,Jordan,0,Afghanistan,NATO,ISAF
+1785,2012,01,06,Republic of Korea,350,Afghanistan,NATO,ISAF
+1786,2012,01,06,Latvia,175,Afghanistan,NATO,ISAF
+1787,2012,01,06,Lithuania,237,Afghanistan,NATO,ISAF
+1788,2012,01,06,Luxembourg,11,Afghanistan,NATO,ISAF
+1789,2012,01,06,Malaysia,46,Afghanistan,NATO,ISAF
+1790,2012,01,06,Mongolia,114,Afghanistan,NATO,ISAF
+1791,2012,01,06,Montenegro,37,Afghanistan,NATO,ISAF
+1792,2012,01,06,Netherlands,166,Afghanistan,NATO,ISAF
+1793,2012,01,06,New Zealand,188,Afghanistan,NATO,ISAF
+1794,2012,01,06,Norway,433,Afghanistan,NATO,ISAF
+1795,2012,01,06,Poland,"2,475",Afghanistan,NATO,ISAF
+1796,2012,01,06,Portugal,118,Afghanistan,NATO,ISAF
+1797,2012,01,06,Romania,"1,876",Afghanistan,NATO,ISAF
+1798,2012,01,06,Singapore,39,Afghanistan,NATO,ISAF
+1799,2012,01,06,Slovakia,329,Afghanistan,NATO,ISAF
+1800,2012,01,06,Slovenia,79,Afghanistan,NATO,ISAF
+1801,2012,01,06,Spain,"1,488",Afghanistan,NATO,ISAF
+1802,2012,01,06,Sweden,500,Afghanistan,NATO,ISAF
+1803,2012,01,06,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1804,2012,01,06,Tonga,55,Afghanistan,NATO,ISAF
+1805,2012,01,06,Turkey,"1,845",Afghanistan,NATO,ISAF
+1806,2012,01,06,Ukraine,23,Afghanistan,NATO,ISAF
+1807,2012,01,06,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1808,2012,01,06,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1809,2012,01,06,United States,"90,000",Afghanistan,NATO,ISAF
+1810,2012,01,09,Albania,286,Afghanistan,NATO,ISAF
+1811,2012,01,09,Armenia,126,Afghanistan,NATO,ISAF
+1812,2012,01,09,Australia,"1,660",Afghanistan,NATO,ISAF
+1813,2012,01,09,Austria,3,Afghanistan,NATO,ISAF
+1814,2012,01,09,Azerbaijan,94,Afghanistan,NATO,ISAF
+1815,2012,01,09,Bahrain,95,Afghanistan,NATO,ISAF
+1816,2012,01,09,Belgium,520,Afghanistan,NATO,ISAF
+1817,2012,01,09,Bosnia & Herzegovina,55,Afghanistan,NATO,ISAF
+1818,2012,01,09,Bulgaria,604,Afghanistan,NATO,ISAF
+1819,2012,01,09,Canada,510,Afghanistan,NATO,ISAF
+1820,2012,01,09,Croatia,312,Afghanistan,NATO,ISAF
+1821,2012,01,09,Czech Republic,626,Afghanistan,NATO,ISAF
+1822,2012,01,09,Denmark,750,Afghanistan,NATO,ISAF
+1823,2012,01,09,El Salvador,24,Afghanistan,NATO,ISAF
+1824,2012,01,09,Estonia,150,Afghanistan,NATO,ISAF
+1825,2012,01,09,Finland,156,Afghanistan,NATO,ISAF
+1826,2012,01,09,France,"3,491",Afghanistan,NATO,ISAF
+1827,2012,01,09,Georgia,935,Afghanistan,NATO,ISAF
+1828,2012,01,09,Germany,"4,715",Afghanistan,NATO,ISAF
+1829,2012,01,09,Greece,154,Afghanistan,NATO,ISAF
+1830,2012,01,09,Hungary,412,Afghanistan,NATO,ISAF
+1831,2012,01,09,Iceland,4,Afghanistan,NATO,ISAF
+1832,2012,01,09,Ireland,7,Afghanistan,NATO,ISAF
+1833,2012,01,09,Italy,"3,956",Afghanistan,NATO,ISAF
+1834,2012,01,09,Jordan,0,Afghanistan,NATO,ISAF
+1835,2012,01,09,Republic of Korea,350,Afghanistan,NATO,ISAF
+1836,2012,01,09,Latvia,185,Afghanistan,NATO,ISAF
+1837,2012,01,09,Lithuania,237,Afghanistan,NATO,ISAF
+1838,2012,01,09,Luxembourg,11,Afghanistan,NATO,ISAF
+1839,2012,01,09,Malaysia,46,Afghanistan,NATO,ISAF
+1840,2012,01,09,Mongolia,114,Afghanistan,NATO,ISAF
+1841,2012,01,09,Montenegro,39,Afghanistan,NATO,ISAF
+1842,2012,01,09,Netherlands,167,Afghanistan,NATO,ISAF
+1843,2012,01,09,New Zealand,189,Afghanistan,NATO,ISAF
+1844,2012,01,09,Norway,487,Afghanistan,NATO,ISAF
+1845,2012,01,09,Poland,"2,472",Afghanistan,NATO,ISAF
+1846,2012,01,09,Portugal,117,Afghanistan,NATO,ISAF
+1847,2012,01,09,Romania,"1,876",Afghanistan,NATO,ISAF
+1848,2012,01,09,Singapore,39,Afghanistan,NATO,ISAF
+1849,2012,01,09,Slovakia,330,Afghanistan,NATO,ISAF
+1850,2012,01,09,Slovenia,77,Afghanistan,NATO,ISAF
+1851,2012,01,09,Spain,"1,502",Afghanistan,NATO,ISAF
+1852,2012,01,09,Sweden,500,Afghanistan,NATO,ISAF
+1853,2012,01,09,The former Yugoslav Republic of Macedonia,163,Afghanistan,NATO,ISAF
+1854,2012,01,09,Tonga,55,Afghanistan,NATO,ISAF
+1855,2012,01,09,Turkey,"1,846",Afghanistan,NATO,ISAF
+1856,2012,01,09,Ukraine,23,Afghanistan,NATO,ISAF
+1857,2012,01,09,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1858,2012,01,09,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1859,2012,01,09,United States,90,Afghanistan,NATO,ISAF
+1860,2012,03,16,Albania,290,Afghanistan,NATO,ISAF
+1861,2012,03,16,Armenia,126,Afghanistan,NATO,ISAF
+1862,2012,03,16,Australia,"1,650",Afghanistan,NATO,ISAF
+1863,2012,03,16,Austria,3,Afghanistan,NATO,ISAF
+1864,2012,03,16,Azerbaijan,94,Afghanistan,NATO,ISAF
+1865,2012,03,16,Bahrain,95,Afghanistan,NATO,ISAF
+1866,2012,03,16,Belgium,523,Afghanistan,NATO,ISAF
+1867,2012,03,16,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+1868,2012,03,16,Bulgaria,605,Afghanistan,NATO,ISAF
+1869,2012,03,16,Canada,506,Afghanistan,NATO,ISAF
+1870,2012,03,16,Croatia,320,Afghanistan,NATO,ISAF
+1871,2012,03,16,Czech Republic,528,Afghanistan,NATO,ISAF
+1872,2012,03,16,Denmark,692,Afghanistan,NATO,ISAF
+1873,2012,03,16,El Salvador,25,Afghanistan,NATO,ISAF
+1874,2012,03,16,Estonia,153,Afghanistan,NATO,ISAF
+1875,2012,03,16,Finland,171,Afghanistan,NATO,ISAF
+1876,2012,03,16,France,"3,524",Afghanistan,NATO,ISAF
+1877,2012,03,16,Georgia,807,Afghanistan,NATO,ISAF
+1878,2012,03,16,Germany,"4,834",Afghanistan,NATO,ISAF
+1879,2012,03,16,Greece,130,Afghanistan,NATO,ISAF
+1880,2012,03,16,Hungary,340,Afghanistan,NATO,ISAF
+1881,2012,03,16,Iceland,4,Afghanistan,NATO,ISAF
+1882,2012,03,16,Ireland,7,Afghanistan,NATO,ISAF
+1883,2012,03,16,Italy,"3,815",Afghanistan,NATO,ISAF
+1884,2012,03,16,Jordan,0,Afghanistan,NATO,ISAF
+1885,2012,03,16,Republic of Korea,350,Afghanistan,NATO,ISAF
+1886,2012,03,16,Latvia,175,Afghanistan,NATO,ISAF
+1887,2012,03,16,Lithuania,245,Afghanistan,NATO,ISAF
+1888,2012,03,16,Luxembourg,11,Afghanistan,NATO,ISAF
+1889,2012,03,16,Malaysia,46,Afghanistan,NATO,ISAF
+1890,2012,03,16,Mongolia,114,Afghanistan,NATO,ISAF
+1891,2012,03,16,Montenegro,39,Afghanistan,NATO,ISAF
+1892,2012,03,16,Netherlands,275,Afghanistan,NATO,ISAF
+1893,2012,03,16,New Zealand,187,Afghanistan,NATO,ISAF
+1894,2012,03,16,Norway,490,Afghanistan,NATO,ISAF
+1895,2012,03,16,Poland,"2,456",Afghanistan,NATO,ISAF
+1896,2012,03,16,Portugal,116,Afghanistan,NATO,ISAF
+1897,2012,03,16,Romania,"1,935",Afghanistan,NATO,ISAF
+1898,2012,03,16,Singapore,39,Afghanistan,NATO,ISAF
+1899,2012,03,16,Slovakia,330,Afghanistan,NATO,ISAF
+1900,2012,03,16,Slovenia,77,Afghanistan,NATO,ISAF
+1901,2012,03,16,Spain,"1,494",Afghanistan,NATO,ISAF
+1902,2012,03,16,Sweden,500,Afghanistan,NATO,ISAF
+1903,2012,03,16,The former Yugoslav Republic of Macedonia,177,Afghanistan,NATO,ISAF
+1904,2012,03,16,Tonga,55,Afghanistan,NATO,ISAF
+1905,2012,03,16,Turkey,"1,322",Afghanistan,NATO,ISAF
+1906,2012,03,16,Ukraine,23,Afghanistan,NATO,ISAF
+1907,2012,03,16,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1908,2012,03,16,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1909,2012,03,16,United States,90,Afghanistan,NATO,ISAF
+1910,2012,04,18,Albania,290,Afghanistan,NATO,ISAF
+1911,2012,04,18,Armenia,126,Afghanistan,NATO,ISAF
+1912,2012,04,18,Australia,"1,650",Afghanistan,NATO,ISAF
+1913,2012,04,18,Austria,3,Afghanistan,NATO,ISAF
+1914,2012,04,18,Azerbaijan,94,Afghanistan,NATO,ISAF
+1915,2012,04,18,Bahrain,95,Afghanistan,NATO,ISAF
+1916,2012,04,18,Belgium,522,Afghanistan,NATO,ISAF
+1917,2012,04,18,Bosnia & Herzegovina,59,Afghanistan,NATO,ISAF
+1918,2012,04,18,Bulgaria,605,Afghanistan,NATO,ISAF
+1919,2012,04,18,Canada,508,Afghanistan,NATO,ISAF
+1920,2012,04,18,Croatia,320,Afghanistan,NATO,ISAF
+1921,2012,04,18,Czech Republic,527,Afghanistan,NATO,ISAF
+1922,2012,04,18,Denmark,692,Afghanistan,NATO,ISAF
+1923,2012,04,18,El Salvador,25,Afghanistan,NATO,ISAF
+1924,2012,04,18,Estonia,153,Afghanistan,NATO,ISAF
+1925,2012,04,18,Finland,176,Afghanistan,NATO,ISAF
+1926,2012,04,18,France,"3,308",Afghanistan,NATO,ISAF
+1927,2012,04,18,Georgia,800,Afghanistan,NATO,ISAF
+1928,2012,04,18,Germany,"4,900",Afghanistan,NATO,ISAF
+1929,2012,04,18,Greece,122,Afghanistan,NATO,ISAF
+1930,2012,04,18,Hungary,337,Afghanistan,NATO,ISAF
+1931,2012,04,18,Iceland,6,Afghanistan,NATO,ISAF
+1932,2012,04,18,Ireland,7,Afghanistan,NATO,ISAF
+1933,2012,04,18,Italy,"3,816",Afghanistan,NATO,ISAF
+1934,2012,04,18,Jordan,0,Afghanistan,NATO,ISAF
+1935,2012,04,18,Republic of Korea,350,Afghanistan,NATO,ISAF
+1936,2012,04,18,Latvia,175,Afghanistan,NATO,ISAF
+1937,2012,04,18,Lithuania,245,Afghanistan,NATO,ISAF
+1938,2012,04,18,Luxembourg,10,Afghanistan,NATO,ISAF
+1939,2012,04,18,Malaysia,46,Afghanistan,NATO,ISAF
+1940,2012,04,18,Mongolia,113,Afghanistan,NATO,ISAF
+1941,2012,04,18,Montenegro,39,Afghanistan,NATO,ISAF
+1942,2012,04,18,Netherlands,274,Afghanistan,NATO,ISAF
+1943,2012,04,18,New Zealand,153,Afghanistan,NATO,ISAF
+1944,2012,04,18,Norway,525,Afghanistan,NATO,ISAF
+1945,2012,04,18,Poland,"2,457",Afghanistan,NATO,ISAF
+1946,2012,04,18,Portugal,133,Afghanistan,NATO,ISAF
+1947,2012,04,18,Romania,"1,843",Afghanistan,NATO,ISAF
+1948,2012,04,18,Singapore,39,Afghanistan,NATO,ISAF
+1949,2012,04,18,Slovakia,331,Afghanistan,NATO,ISAF
+1950,2012,04,18,Slovenia,89,Afghanistan,NATO,ISAF
+1951,2012,04,18,Spain,"1,481",Afghanistan,NATO,ISAF
+1952,2012,04,18,Sweden,500,Afghanistan,NATO,ISAF
+1953,2012,04,18,The former Yugoslav Republic of Macedonia,177,Afghanistan,NATO,ISAF
+1954,2012,04,18,Tonga,55,Afghanistan,NATO,ISAF
+1955,2012,04,18,Turkey,"1,327",Afghanistan,NATO,ISAF
+1956,2012,04,18,Ukraine,23,Afghanistan,NATO,ISAF
+1957,2012,04,18,United Arab Emirates,35,Afghanistan,NATO,ISAF
+1958,2012,04,18,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+1959,2012,04,18,United States,"90,000",Afghanistan,NATO,ISAF
+1960,2012,05,15,Albania,333,Afghanistan,NATO,ISAF
+1961,2012,05,15,Armenia,126,Afghanistan,NATO,ISAF
+1962,2012,05,15,Australia,"1,650",Afghanistan,NATO,ISAF
+1963,2012,05,15,Austria,3,Afghanistan,NATO,ISAF
+1964,2012,05,15,Azerbaijan,94,Afghanistan,NATO,ISAF
+1965,2012,05,15,Bahrain,95,Afghanistan,NATO,ISAF
+1966,2012,05,15,Belgium,524,Afghanistan,NATO,ISAF
+1967,2012,05,15,Bosnia & Herzegovina,59,Afghanistan,NATO,ISAF
+1968,2012,05,15,Bulgaria,561,Afghanistan,NATO,ISAF
+1969,2012,05,15,Canada,950,Afghanistan,NATO,ISAF
+1970,2012,05,15,Croatia,278,Afghanistan,NATO,ISAF
+1971,2012,05,15,Czech Republic,529,Afghanistan,NATO,ISAF
+1972,2012,05,15,Denmark,676,Afghanistan,NATO,ISAF
+1973,2012,05,15,El Salvador,24,Afghanistan,NATO,ISAF
+1974,2012,05,15,Estonia,153,Afghanistan,NATO,ISAF
+1975,2012,05,15,Finland,177,Afghanistan,NATO,ISAF
+1976,2012,05,15,France,"3,279",Afghanistan,NATO,ISAF
+1977,2012,05,15,Georgia,800,Afghanistan,NATO,ISAF
+1978,2012,05,15,Germany,"4,701",Afghanistan,NATO,ISAF
+1979,2012,05,15,Greece,112,Afghanistan,NATO,ISAF
+1980,2012,05,15,Hungary,339,Afghanistan,NATO,ISAF
+1981,2012,05,15,Iceland,6,Afghanistan,NATO,ISAF
+1982,2012,05,15,Ireland,7,Afghanistan,NATO,ISAF
+1983,2012,05,15,Italy,"3,986",Afghanistan,NATO,ISAF
+1984,2012,05,15,Jordan,0,Afghanistan,NATO,ISAF
+1985,2012,05,15,Republic of Korea,350,Afghanistan,NATO,ISAF
+1986,2012,05,15,Latvia,175,Afghanistan,NATO,ISAF
+1987,2012,05,15,Lithuania,237,Afghanistan,NATO,ISAF
+1988,2012,05,15,Luxembourg,10,Afghanistan,NATO,ISAF
+1989,2012,05,15,Malaysia,46,Afghanistan,NATO,ISAF
+1990,2012,05,15,Mongolia,102,Afghanistan,NATO,ISAF
+1991,2012,05,15,Montenegro,39,Afghanistan,NATO,ISAF
+1992,2012,05,15,Netherlands,500,Afghanistan,NATO,ISAF
+1993,2012,05,15,New Zealand,152,Afghanistan,NATO,ISAF
+1994,2012,05,15,Norway,515,Afghanistan,NATO,ISAF
+1995,2012,05,15,Poland,"2,420",Afghanistan,NATO,ISAF
+1996,2012,05,15,Portugal,155,Afghanistan,NATO,ISAF
+1997,2012,05,15,Romania,"1,800",Afghanistan,NATO,ISAF
+1998,2012,05,15,Singapore,39,Afghanistan,NATO,ISAF
+1999,2012,05,15,Slovakia,330,Afghanistan,NATO,ISAF
+2000,2012,05,15,Slovenia,79,Afghanistan,NATO,ISAF
+2001,2012,05,15,Spain,"1,596",Afghanistan,NATO,ISAF
+2002,2012,05,15,Sweden,500,Afghanistan,NATO,ISAF
+2003,2012,05,15,The former Yugoslav Republic of Macedonia,177,Afghanistan,NATO,ISAF
+2004,2012,05,15,Tonga,55,Afghanistan,NATO,ISAF
+2005,2012,05,15,Turkey,"1,272",Afghanistan,NATO,ISAF
+2006,2012,05,15,Ukraine,23,Afghanistan,NATO,ISAF
+2007,2012,05,15,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2008,2012,05,15,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+2009,2012,05,15,United States,90,Afghanistan,NATO,ISAF
+2010,2012,08,01,Albania,333,Afghanistan,NATO,ISAF
+2011,2012,08,01,Armenia,126,Afghanistan,NATO,ISAF
+2012,2012,08,01,Australia,"1,550",Afghanistan,NATO,ISAF
+2013,2012,08,01,Austria,3,Afghanistan,NATO,ISAF
+2014,2012,08,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2015,2012,08,01,Bahrain,95,Afghanistan,NATO,ISAF
+2016,2012,08,01,Belgium,524,Afghanistan,NATO,ISAF
+2017,2012,08,01,Bosnia & Herzegovina,59,Afghanistan,NATO,ISAF
+2018,2012,08,01,Bulgaria,561,Afghanistan,NATO,ISAF
+2019,2012,08,01,Canada,950,Afghanistan,NATO,ISAF
+2020,2012,08,01,Croatia,278,Afghanistan,NATO,ISAF
+2021,2012,08,01,Czech Republic,529,Afghanistan,NATO,ISAF
+2022,2012,08,01,Denmark,676,Afghanistan,NATO,ISAF
+2023,2012,08,01,El Salvador,24,Afghanistan,NATO,ISAF
+2024,2012,08,01,Estonia,153,Afghanistan,NATO,ISAF
+2025,2012,08,01,Finland,177,Afghanistan,NATO,ISAF
+2026,2012,08,01,France,"3,279",Afghanistan,NATO,ISAF
+2027,2012,08,01,Georgia,800,Afghanistan,NATO,ISAF
+2028,2012,08,01,Germany,"4,701",Afghanistan,NATO,ISAF
+2029,2012,08,01,Greece,112,Afghanistan,NATO,ISAF
+2030,2012,08,01,Hungary,339,Afghanistan,NATO,ISAF
+2031,2012,08,01,Iceland,6,Afghanistan,NATO,ISAF
+2032,2012,08,01,Ireland,7,Afghanistan,NATO,ISAF
+2033,2012,08,01,Italy,"3,986",Afghanistan,NATO,ISAF
+2034,2012,08,01,Jordan,0,Afghanistan,NATO,ISAF
+2035,2012,08,01,Republic of Korea,360,Afghanistan,NATO,ISAF
+2036,2012,08,01,Latvia,175,Afghanistan,NATO,ISAF
+2037,2012,08,01,Lithuania,237,Afghanistan,NATO,ISAF
+2038,2012,08,01,Luxembourg,10,Afghanistan,NATO,ISAF
+2039,2012,08,01,Malaysia,46,Afghanistan,NATO,ISAF
+2040,2012,08,01,Mongolia,102,Afghanistan,NATO,ISAF
+2041,2012,08,01,Montenegro,39,Afghanistan,NATO,ISAF
+2042,2012,08,01,Netherlands,500,Afghanistan,NATO,ISAF
+2043,2012,08,01,New Zealand,152,Afghanistan,NATO,ISAF
+2044,2012,08,01,Norway,515,Afghanistan,NATO,ISAF
+2045,2012,08,01,Poland,"2,420",Afghanistan,NATO,ISAF
+2046,2012,08,01,Portugal,155,Afghanistan,NATO,ISAF
+2047,2012,08,01,Romania,"1,800",Afghanistan,NATO,ISAF
+2048,2012,08,01,Singapore,39,Afghanistan,NATO,ISAF
+2049,2012,08,01,Slovakia,330,Afghanistan,NATO,ISAF
+2050,2012,08,01,Slovenia,79,Afghanistan,NATO,ISAF
+2051,2012,08,01,Spain,"1,596",Afghanistan,NATO,ISAF
+2052,2012,08,01,Sweden,500,Afghanistan,NATO,ISAF
+2053,2012,08,01,The former Yugoslav Republic of Macedonia,177,Afghanistan,NATO,ISAF
+2054,2012,08,01,Tonga,55,Afghanistan,NATO,ISAF
+2055,2012,08,01,Turkey,"1,272",Afghanistan,NATO,ISAF
+2056,2012,08,01,Ukraine,23,Afghanistan,NATO,ISAF
+2057,2012,08,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2058,2012,08,01,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+2059,2012,08,01,United States,"90,000",Afghanistan,NATO,ISAF
+2060,2012,09,10,Albania,211,Afghanistan,NATO,ISAF
+2061,2012,09,10,Armenia,127,Afghanistan,NATO,ISAF
+2062,2012,09,10,Australia,"1,550",Afghanistan,NATO,ISAF
+2063,2012,09,10,Austria,3,Afghanistan,NATO,ISAF
+2064,2012,09,10,Azerbaijan,94,Afghanistan,NATO,ISAF
+2065,2012,09,10,Bahrain,95,Afghanistan,NATO,ISAF
+2066,2012,09,10,Belgium,520,Afghanistan,NATO,ISAF
+2067,2012,09,10,Bosnia & Herzegovina,59,Afghanistan,NATO,ISAF
+2068,2012,09,10,Bulgaria,563,Afghanistan,NATO,ISAF
+2069,2012,09,10,Canada,950,Afghanistan,NATO,ISAF
+2070,2012,09,10,Croatia,274,Afghanistan,NATO,ISAF
+2071,2012,09,10,Czech Republic,423,Afghanistan,NATO,ISAF
+2072,2012,09,10,Denmark,624,Afghanistan,NATO,ISAF
+2073,2012,09,10,El Salvador,25,Afghanistan,NATO,ISAF
+2074,2012,09,10,Estonia,154,Afghanistan,NATO,ISAF
+2075,2012,09,10,Finland,181,Afghanistan,NATO,ISAF
+2076,2012,09,10,France,"2,453",Afghanistan,NATO,ISAF
+2077,2012,09,10,Georgia,806,Afghanistan,NATO,ISAF
+2078,2012,09,10,Germany,"4,645",Afghanistan,NATO,ISAF
+2079,2012,09,10,Greece,12,Afghanistan,NATO,ISAF
+2080,2012,09,10,Hungary,354,Afghanistan,NATO,ISAF
+2081,2012,09,10,Iceland,3,Afghanistan,NATO,ISAF
+2082,2012,09,10,Ireland,6,Afghanistan,NATO,ISAF
+2083,2012,09,10,Italy,"4,000",Afghanistan,NATO,ISAF
+2084,2012,09,10,Jordan,0,Afghanistan,NATO,ISAF
+2085,2012,09,10,Republic of Korea,350,Afghanistan,NATO,ISAF
+2086,2012,09,10,Latvia,180,Afghanistan,NATO,ISAF
+2087,2012,09,10,Lithuania,241,Afghanistan,NATO,ISAF
+2088,2012,09,10,Luxembourg,1,Afghanistan,NATO,ISAF
+2089,2012,09,10,Malaysia,42,Afghanistan,NATO,ISAF
+2090,2012,09,10,Mongolia,101,Afghanistan,NATO,ISAF
+2091,2012,09,10,Montenegro,41,Afghanistan,NATO,ISAF
+2092,2012,09,10,Netherlands,500,Afghanistan,NATO,ISAF
+2093,2012,09,10,New Zealand,152,Afghanistan,NATO,ISAF
+2094,2012,09,10,Norway,538,Afghanistan,NATO,ISAF
+2095,2012,09,10,Poland,"2,432",Afghanistan,NATO,ISAF
+2096,2012,09,10,Portugal,137,Afghanistan,NATO,ISAF
+2097,2012,09,10,Romania,"1,808",Afghanistan,NATO,ISAF
+2098,2012,09,10,Singapore,39,Afghanistan,NATO,ISAF
+2099,2012,09,10,Slovakia,343,Afghanistan,NATO,ISAF
+2100,2012,09,10,Slovenia,80,Afghanistan,NATO,ISAF
+2101,2012,09,10,Spain,"1,500",Afghanistan,NATO,ISAF
+2102,2012,09,10,Sweden,500,Afghanistan,NATO,ISAF
+2103,2012,09,10,The former Yugoslav Republic of Macedonia,177,Afghanistan,NATO,ISAF
+2104,2012,09,10,Tonga,55,Afghanistan,NATO,ISAF
+2105,2012,09,10,Turkey,"1,271",Afghanistan,NATO,ISAF
+2106,2012,09,10,Ukraine,24,Afghanistan,NATO,ISAF
+2107,2012,09,10,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2108,2012,09,10,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+2109,2012,09,10,United States,"74,400",Afghanistan,NATO,ISAF
+2110,2012,10,08,Albania,212,Afghanistan,NATO,ISAF
+2111,2012,10,08,Armenia,126,Afghanistan,NATO,ISAF
+2112,2012,10,08,Australia,"1,550",Afghanistan,NATO,ISAF
+2113,2012,10,08,Austria,3,Afghanistan,NATO,ISAF
+2114,2012,10,08,Azerbaijan,94,Afghanistan,NATO,ISAF
+2115,2012,10,08,Bahrain,95,Afghanistan,NATO,ISAF
+2116,2012,10,08,Belgium,283,Afghanistan,NATO,ISAF
+2117,2012,10,08,Bosnia & Herzegovina,54,Afghanistan,NATO,ISAF
+2118,2012,10,08,Bulgaria,572,Afghanistan,NATO,ISAF
+2119,2012,10,08,Canada,950,Afghanistan,NATO,ISAF
+2120,2012,10,08,Croatia,260,Afghanistan,NATO,ISAF
+2121,2012,10,08,Czech Republic,422,Afghanistan,NATO,ISAF
+2122,2012,10,08,Denmark,613,Afghanistan,NATO,ISAF
+2123,2012,10,08,El Salvador,24,Afghanistan,NATO,ISAF
+2124,2012,10,08,Estonia,155,Afghanistan,NATO,ISAF
+2125,2012,10,08,Finland,136,Afghanistan,NATO,ISAF
+2126,2012,10,08,France,"2,418",Afghanistan,NATO,ISAF
+2127,2012,10,08,Georgia,800,Afghanistan,NATO,ISAF
+2128,2012,10,08,Germany,"4,737",Afghanistan,NATO,ISAF
+2129,2012,10,08,Greece,12,Afghanistan,NATO,ISAF
+2130,2012,10,08,Hungary,555,Afghanistan,NATO,ISAF
+2131,2012,10,08,Iceland,3,Afghanistan,NATO,ISAF
+2132,2012,10,08,Ireland,6,Afghanistan,NATO,ISAF
+2133,2012,10,08,Italy,"4,000",Afghanistan,NATO,ISAF
+2134,2012,10,08,Jordan,0,Afghanistan,NATO,ISAF
+2135,2012,10,08,Republic of Korea,350,Afghanistan,NATO,ISAF
+2136,2012,10,08,Latvia,40,Afghanistan,NATO,ISAF
+2137,2012,10,08,Lithuania,221,Afghanistan,NATO,ISAF
+2138,2012,10,08,Luxembourg,10,Afghanistan,NATO,ISAF
+2139,2012,10,08,Malaysia,46,Afghanistan,NATO,ISAF
+2140,2012,10,08,Mongolia,88,Afghanistan,NATO,ISAF
+2141,2012,10,08,Montenegro,41,Afghanistan,NATO,ISAF
+2142,2012,10,08,Netherlands,500,Afghanistan,NATO,ISAF
+2143,2012,10,08,New Zealand,155,Afghanistan,NATO,ISAF
+2144,2012,10,08,Norway,145,Afghanistan,NATO,ISAF
+2145,2012,10,08,Poland,1.8,Afghanistan,NATO,ISAF
+2146,2012,10,08,Portugal,141,Afghanistan,NATO,ISAF
+2147,2012,10,08,Romania,"1,762",Afghanistan,NATO,ISAF
+2148,2012,10,08,Singapore,39,Afghanistan,NATO,ISAF
+2149,2012,10,08,Slovakia,343,Afghanistan,NATO,ISAF
+2150,2012,10,08,Slovenia,77,Afghanistan,NATO,ISAF
+2151,2012,10,08,Spain,1.45,Afghanistan,NATO,ISAF
+2152,2012,10,08,Sweden,506,Afghanistan,NATO,ISAF
+2153,2012,10,08,The former Yugoslav Republic of Macedonia,168,Afghanistan,NATO,ISAF
+2154,2012,10,08,Tonga,55,Afghanistan,NATO,ISAF
+2155,2012,10,08,Turkey,1.328,Afghanistan,NATO,ISAF
+2156,2012,10,08,Ukraine,25,Afghanistan,NATO,ISAF
+2157,2012,10,08,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2158,2012,10,08,United Kingdom,9.5,Afghanistan,NATO,ISAF
+2159,2012,10,08,United States,68,Afghanistan,NATO,ISAF
+2160,2012,12,03,Albania,199,Afghanistan,NATO,ISAF
+2161,2012,12,03,Armenia,126,Afghanistan,NATO,ISAF
+2162,2012,12,03,Australia,"1,094",Afghanistan,NATO,ISAF
+2163,2012,12,03,Austria,3,Afghanistan,NATO,ISAF
+2164,2012,12,03,Azerbaijan,94,Afghanistan,NATO,ISAF
+2165,2012,12,03,Bahrain,95,Afghanistan,NATO,ISAF
+2166,2012,12,03,Belgium,265,Afghanistan,NATO,ISAF
+2167,2012,12,03,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2168,2012,12,03,Bulgaria,581,Afghanistan,NATO,ISAF
+2169,2012,12,03,Canada,950,Afghanistan,NATO,ISAF
+2170,2012,12,03,Croatia,242,Afghanistan,NATO,ISAF
+2171,2012,12,03,Czech Republic,416,Afghanistan,NATO,ISAF
+2172,2012,12,03,Denmark,567,Afghanistan,NATO,ISAF
+2173,2012,12,03,El Salvador,12,Afghanistan,NATO,ISAF
+2174,2012,12,03,Estonia,150,Afghanistan,NATO,ISAF
+2175,2012,12,03,Finland,112,Afghanistan,NATO,ISAF
+2176,2012,12,03,France,543,Afghanistan,NATO,ISAF
+2177,2012,12,03,Georgia,"1,561",Afghanistan,NATO,ISAF
+2178,2012,12,03,Germany,"4,318",Afghanistan,NATO,ISAF
+2179,2012,12,03,Greece,10,Afghanistan,NATO,ISAF
+2180,2012,12,03,Hungary,582,Afghanistan,NATO,ISAF
+2181,2012,12,03,Iceland,2,Afghanistan,NATO,ISAF
+2182,2012,12,03,Ireland,7,Afghanistan,NATO,ISAF
+2183,2012,12,03,Italy,"4,000",Afghanistan,NATO,ISAF
+2184,2012,12,03,Jordan,0,Afghanistan,NATO,ISAF
+2185,2012,12,03,Republic of Korea,350,Afghanistan,NATO,ISAF
+2186,2012,12,03,Latvia,27,Afghanistan,NATO,ISAF
+2187,2012,12,03,Lithuania,240,Afghanistan,NATO,ISAF
+2188,2012,12,03,Luxembourg,10,Afghanistan,NATO,ISAF
+2189,2012,12,03,Malaysia,4,Afghanistan,NATO,ISAF
+2190,2012,12,03,Mongolia,46,Afghanistan,NATO,ISAF
+2191,2012,12,03,Montenegro,40,Afghanistan,NATO,ISAF
+2192,2012,12,03,Netherlands,500,Afghanistan,NATO,ISAF
+2193,2012,12,03,New Zealand,156,Afghanistan,NATO,ISAF
+2194,2012,12,03,Norway,97,Afghanistan,NATO,ISAF
+2195,2012,12,03,Poland,"1,770",Afghanistan,NATO,ISAF
+2196,2012,12,03,Portugal,141,Afghanistan,NATO,ISAF
+2197,2012,12,03,Romania,"1,549",Afghanistan,NATO,ISAF
+2198,2012,12,03,Singapore,39,Afghanistan,NATO,ISAF
+2199,2012,12,03,Slovakia,234,Afghanistan,NATO,ISAF
+2200,2012,12,03,Slovenia,38,Afghanistan,NATO,ISAF
+2201,2012,12,03,Spain,"1,606",Afghanistan,NATO,ISAF
+2202,2012,12,03,Sweden,413,Afghanistan,NATO,ISAF
+2203,2012,12,03,The former Yugoslav Republic of Macedonia,157,Afghanistan,NATO,ISAF
+2204,2012,12,03,Tonga,55,Afghanistan,NATO,ISAF
+2205,2012,12,03,Turkey,998,Afghanistan,NATO,ISAF
+2206,2012,12,03,Ukraine,24,Afghanistan,NATO,ISAF
+2207,2012,12,03,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2208,2012,12,03,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+2209,2012,12,03,United States,"68,000",Afghanistan,NATO,ISAF
+2210,2012,12,04,Albania,199,Afghanistan,NATO,ISAF
+2211,2012,12,04,Armenia,126,Afghanistan,NATO,ISAF
+2212,2012,12,04,Australia,1.55,Afghanistan,NATO,ISAF
+2213,2012,12,04,Austria,3,Afghanistan,NATO,ISAF
+2214,2012,12,04,Azerbaijan,94,Afghanistan,NATO,ISAF
+2215,2012,12,04,Bahrain,95,Afghanistan,NATO,ISAF
+2216,2012,12,04,Belgium,265,Afghanistan,NATO,ISAF
+2217,2012,12,04,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2218,2012,12,04,Bulgaria,581,Afghanistan,NATO,ISAF
+2219,2012,12,04,Canada,950,Afghanistan,NATO,ISAF
+2220,2012,12,04,Croatia,242,Afghanistan,NATO,ISAF
+2221,2012,12,04,Czech Republic,416,Afghanistan,NATO,ISAF
+2222,2012,12,04,Denmark,567,Afghanistan,NATO,ISAF
+2223,2012,12,04,El Salvador,12,Afghanistan,NATO,ISAF
+2224,2012,12,04,Estonia,150,Afghanistan,NATO,ISAF
+2225,2012,12,04,Finland,112,Afghanistan,NATO,ISAF
+2226,2012,12,04,France,543,Afghanistan,NATO,ISAF
+2227,2012,12,04,Georgia,"1,561",Afghanistan,NATO,ISAF
+2228,2012,12,04,Germany,"4,318",Afghanistan,NATO,ISAF
+2229,2012,12,04,Greece,10,Afghanistan,NATO,ISAF
+2230,2012,12,04,Hungary,582,Afghanistan,NATO,ISAF
+2231,2012,12,04,Iceland,2,Afghanistan,NATO,ISAF
+2232,2012,12,04,Ireland,7,Afghanistan,NATO,ISAF
+2233,2012,12,04,Italy,"4,000",Afghanistan,NATO,ISAF
+2234,2012,12,04,Jordan,0,Afghanistan,NATO,ISAF
+2235,2012,12,04,Republic of Korea,350,Afghanistan,NATO,ISAF
+2236,2012,12,04,Latvia,27,Afghanistan,NATO,ISAF
+2237,2012,12,04,Lithuania,240,Afghanistan,NATO,ISAF
+2238,2012,12,04,Luxembourg,10,Afghanistan,NATO,ISAF
+2239,2012,12,04,Malaysia,4,Afghanistan,NATO,ISAF
+2240,2012,12,04,Mongolia,46,Afghanistan,NATO,ISAF
+2241,2012,12,04,Montenegro,40,Afghanistan,NATO,ISAF
+2242,2012,12,04,Netherlands,500,Afghanistan,NATO,ISAF
+2243,2012,12,04,New Zealand,156,Afghanistan,NATO,ISAF
+2244,2012,12,04,Norway,97,Afghanistan,NATO,ISAF
+2245,2012,12,04,Poland,"1,770",Afghanistan,NATO,ISAF
+2246,2012,12,04,Portugal,141,Afghanistan,NATO,ISAF
+2247,2012,12,04,Romania,"1,549",Afghanistan,NATO,ISAF
+2248,2012,12,04,Singapore,39,Afghanistan,NATO,ISAF
+2249,2012,12,04,Slovakia,234,Afghanistan,NATO,ISAF
+2250,2012,12,04,Slovenia,79,Afghanistan,NATO,ISAF
+2251,2012,12,04,Spain,"1,606",Afghanistan,NATO,ISAF
+2252,2012,12,04,Sweden,413,Afghanistan,NATO,ISAF
+2253,2012,12,04,The former Yugoslav Republic of Macedonia,157,Afghanistan,NATO,ISAF
+2254,2012,12,04,Tonga,55,Afghanistan,NATO,ISAF
+2255,2012,12,04,Turkey,998,Afghanistan,NATO,ISAF
+2256,2012,12,04,Ukraine,24,Afghanistan,NATO,ISAF
+2257,2012,12,04,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2258,2012,12,04,United Kingdom,"9,500",Afghanistan,NATO,ISAF
+2259,2012,12,04,United States,"68,000",Afghanistan,NATO,ISAF
+2260,2013,02,14,Albania,221,Afghanistan,NATO,ISAF
+2261,2013,02,14,Armenia,45,Afghanistan,NATO,ISAF
+2262,2013,02,14,Australia,"1,096",Afghanistan,NATO,ISAF
+2263,2013,02,14,Austria,3,Afghanistan,NATO,ISAF
+2264,2013,02,14,Azerbaijan,94,Afghanistan,NATO,ISAF
+2265,2013,02,14,Bahrain,0,Afghanistan,NATO,ISAF
+2266,2013,02,14,Belgium,253,Afghanistan,NATO,ISAF
+2267,2013,02,14,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2268,2013,02,14,Bulgaria,419,Afghanistan,NATO,ISAF
+2269,2013,02,14,Canada,950,Afghanistan,NATO,ISAF
+2270,2013,02,14,Croatia,245,Afghanistan,NATO,ISAF
+2271,2013,02,14,Czech Republic,415,Afghanistan,NATO,ISAF
+2272,2013,02,14,Denmark,568,Afghanistan,NATO,ISAF
+2273,2013,02,14,El Salvador,12,Afghanistan,NATO,ISAF
+2274,2013,02,14,Estonia,162,Afghanistan,NATO,ISAF
+2275,2013,02,14,Finland,125,Afghanistan,NATO,ISAF
+2276,2013,02,14,France,550,Afghanistan,NATO,ISAF
+2277,2013,02,14,Georgia,"1,561",Afghanistan,NATO,ISAF
+2278,2013,02,14,Germany,"4,400",Afghanistan,NATO,ISAF
+2279,2013,02,14,Greece,10,Afghanistan,NATO,ISAF
+2280,2013,02,14,Hungary,611,Afghanistan,NATO,ISAF
+2281,2013,02,14,Iceland,3,Afghanistan,NATO,ISAF
+2282,2013,02,14,Ireland,7,Afghanistan,NATO,ISAF
+2283,2013,02,14,Italy,"3,067",Afghanistan,NATO,ISAF
+2284,2013,02,14,Jordan,0,Afghanistan,NATO,ISAF
+2285,2013,02,14,Republic of Korea,350,Afghanistan,NATO,ISAF
+2286,2013,02,14,Latvia,26,Afghanistan,NATO,ISAF
+2287,2013,02,14,Lithuania,240,Afghanistan,NATO,ISAF
+2288,2013,02,14,Luxembourg,9,Afghanistan,NATO,ISAF
+2289,2013,02,14,Malaysia,2,Afghanistan,NATO,ISAF
+2290,2013,02,14,Mongolia,46,Afghanistan,NATO,ISAF
+2291,2013,02,14,Montenegro,40,Afghanistan,NATO,ISAF
+2292,2013,02,14,Netherlands,500,Afghanistan,NATO,ISAF
+2293,2013,02,14,New Zealand,155,Afghanistan,NATO,ISAF
+2294,2013,02,14,Norway,98,Afghanistan,NATO,ISAF
+2295,2013,02,14,Poland,"1,739",Afghanistan,NATO,ISAF
+2296,2013,02,14,Portugal,179,Afghanistan,NATO,ISAF
+2297,2013,02,14,Romania,"1,595",Afghanistan,NATO,ISAF
+2298,2013,02,14,Singapore,39,Afghanistan,NATO,ISAF
+2299,2013,02,14,Slovakia,238,Afghanistan,NATO,ISAF
+2300,2013,02,14,Slovenia,65,Afghanistan,NATO,ISAF
+2301,2013,02,14,Spain,"1,305",Afghanistan,NATO,ISAF
+2302,2013,02,14,Sweden,453,Afghanistan,NATO,ISAF
+2303,2013,02,14,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2304,2013,02,14,Tonga,55,Afghanistan,NATO,ISAF
+2305,2013,02,14,Turkey,"1,093",Afghanistan,NATO,ISAF
+2306,2013,02,14,Ukraine,26,Afghanistan,NATO,ISAF
+2307,2013,02,14,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2308,2013,02,14,United Kingdom,"9,000",Afghanistan,NATO,ISAF
+2309,2013,02,14,United States,"68,000",Afghanistan,NATO,ISAF
+2310,2013,02,19,Albania,221,Afghanistan,NATO,ISAF
+2311,2013,02,19,Armenia,45,Afghanistan,NATO,ISAF
+2312,2013,02,19,Australia,"1,096",Afghanistan,NATO,ISAF
+2313,2013,02,19,Austria,3,Afghanistan,NATO,ISAF
+2314,2013,02,19,Azerbaijan,94,Afghanistan,NATO,ISAF
+2315,2013,02,19,Bahrain,0,Afghanistan,NATO,ISAF
+2316,2013,02,19,Belgium,253,Afghanistan,NATO,ISAF
+2317,2013,02,19,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2318,2013,02,19,Bulgaria,419,Afghanistan,NATO,ISAF
+2319,2013,02,19,Canada,950,Afghanistan,NATO,ISAF
+2320,2013,02,19,Croatia,245,Afghanistan,NATO,ISAF
+2321,2013,02,19,Czech Republic,415,Afghanistan,NATO,ISAF
+2322,2013,02,19,Denmark,568,Afghanistan,NATO,ISAF
+2323,2013,02,19,El Salvador,12,Afghanistan,NATO,ISAF
+2324,2013,02,19,Estonia,162,Afghanistan,NATO,ISAF
+2325,2013,02,19,Finland,125,Afghanistan,NATO,ISAF
+2326,2013,02,19,France,550,Afghanistan,NATO,ISAF
+2327,2013,02,19,Georgia,"1,561",Afghanistan,NATO,ISAF
+2328,2013,02,19,Germany,"4,400",Afghanistan,NATO,ISAF
+2329,2013,02,19,Greece,10,Afghanistan,NATO,ISAF
+2330,2013,02,19,Hungary,611,Afghanistan,NATO,ISAF
+2331,2013,02,19,Iceland,3,Afghanistan,NATO,ISAF
+2332,2013,02,19,Ireland,7,Afghanistan,NATO,ISAF
+2333,2013,02,19,Italy,"3,067",Afghanistan,NATO,ISAF
+2334,2013,02,19,Jordan,0,Afghanistan,NATO,ISAF
+2335,2013,02,19,Republic of Korea,350,Afghanistan,NATO,ISAF
+2336,2013,02,19,Latvia,26,Afghanistan,NATO,ISAF
+2337,2013,02,19,Lithuania,240,Afghanistan,NATO,ISAF
+2338,2013,02,19,Luxembourg,9,Afghanistan,NATO,ISAF
+2339,2013,02,19,Malaysia,2,Afghanistan,NATO,ISAF
+2340,2013,02,19,Mongolia,46,Afghanistan,NATO,ISAF
+2341,2013,02,19,Montenegro,40,Afghanistan,NATO,ISAF
+2342,2013,02,19,Netherlands,500,Afghanistan,NATO,ISAF
+2343,2013,02,19,New Zealand,155,Afghanistan,NATO,ISAF
+2344,2013,02,19,Norway,98,Afghanistan,NATO,ISAF
+2345,2013,02,19,Poland,"1,739",Afghanistan,NATO,ISAF
+2346,2013,02,19,Portugal,179,Afghanistan,NATO,ISAF
+2347,2013,02,19,Romania,"1,595",Afghanistan,NATO,ISAF
+2348,2013,02,19,Singapore,39,Afghanistan,NATO,ISAF
+2349,2013,02,19,Slovakia,238,Afghanistan,NATO,ISAF
+2350,2013,02,19,Slovenia,79,Afghanistan,NATO,ISAF
+2351,2013,02,19,Spain,"1,305",Afghanistan,NATO,ISAF
+2352,2013,02,19,Sweden,453,Afghanistan,NATO,ISAF
+2353,2013,02,19,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2354,2013,02,19,Tonga,55,Afghanistan,NATO,ISAF
+2355,2013,02,19,Turkey,"1,093",Afghanistan,NATO,ISAF
+2356,2013,02,19,Ukraine,26,Afghanistan,NATO,ISAF
+2357,2013,02,19,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2358,2013,02,19,United Kingdom,"9,000",Afghanistan,NATO,ISAF
+2359,2013,02,19,United States,"68,000",Afghanistan,NATO,ISAF
+2360,2013,03,01,Albania,221,Afghanistan,NATO,ISAF
+2361,2013,03,01,Armenia,45,Afghanistan,NATO,ISAF
+2362,2013,03,01,Australia,"1,096",Afghanistan,NATO,ISAF
+2363,2013,03,01,Austria,3,Afghanistan,NATO,ISAF
+2364,2013,03,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2365,2013,03,01,Bahrain,0,Afghanistan,NATO,ISAF
+2366,2013,03,01,Belgium,253,Afghanistan,NATO,ISAF
+2367,2013,03,01,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2368,2013,03,01,Bulgaria,419,Afghanistan,NATO,ISAF
+2369,2013,03,01,Canada,950,Afghanistan,NATO,ISAF
+2370,2013,03,01,Croatia,245,Afghanistan,NATO,ISAF
+2371,2013,03,01,Czech Republic,415,Afghanistan,NATO,ISAF
+2372,2013,03,01,Denmark,568,Afghanistan,NATO,ISAF
+2373,2013,03,01,El Salvador,12,Afghanistan,NATO,ISAF
+2374,2013,03,01,Estonia,162,Afghanistan,NATO,ISAF
+2375,2013,03,01,Finland,125,Afghanistan,NATO,ISAF
+2376,2013,03,01,France,550,Afghanistan,NATO,ISAF
+2377,2013,03,01,Georgia,"1,561",Afghanistan,NATO,ISAF
+2378,2013,03,01,Germany,"4,400",Afghanistan,NATO,ISAF
+2379,2013,03,01,Greece,10,Afghanistan,NATO,ISAF
+2380,2013,03,01,Hungary,611,Afghanistan,NATO,ISAF
+2381,2013,03,01,Iceland,3,Afghanistan,NATO,ISAF
+2382,2013,03,01,Ireland,7,Afghanistan,NATO,ISAF
+2383,2013,03,01,Italy,"3,067",Afghanistan,NATO,ISAF
+2384,2013,03,01,Jordan,0,Afghanistan,NATO,ISAF
+2385,2013,03,01,Republic of Korea,350,Afghanistan,NATO,ISAF
+2386,2013,03,01,Latvia,26,Afghanistan,NATO,ISAF
+2387,2013,03,01,Lithuania,240,Afghanistan,NATO,ISAF
+2388,2013,03,01,Luxembourg,9,Afghanistan,NATO,ISAF
+2389,2013,03,01,Malaysia,2,Afghanistan,NATO,ISAF
+2390,2013,03,01,Mongolia,46,Afghanistan,NATO,ISAF
+2391,2013,03,01,Montenegro,40,Afghanistan,NATO,ISAF
+2392,2013,03,01,Netherlands,500,Afghanistan,NATO,ISAF
+2393,2013,03,01,New Zealand,155,Afghanistan,NATO,ISAF
+2394,2013,03,01,Norway,98,Afghanistan,NATO,ISAF
+2395,2013,03,01,Poland,"1,739",Afghanistan,NATO,ISAF
+2396,2013,03,01,Portugal,179,Afghanistan,NATO,ISAF
+2397,2013,03,01,Romania,"1,595",Afghanistan,NATO,ISAF
+2398,2013,03,01,Singapore,39,Afghanistan,NATO,ISAF
+2399,2013,03,01,Slovakia,238,Afghanistan,NATO,ISAF
+2400,2013,03,01,Slovenia,79,Afghanistan,NATO,ISAF
+2401,2013,03,01,Spain,"1,305",Afghanistan,NATO,ISAF
+2402,2013,03,01,Sweden,453,Afghanistan,NATO,ISAF
+2403,2013,03,01,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2404,2013,03,01,Tonga,55,Afghanistan,NATO,ISAF
+2405,2013,03,01,Turkey,"1,093",Afghanistan,NATO,ISAF
+2406,2013,03,01,Ukraine,26,Afghanistan,NATO,ISAF
+2407,2013,03,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2408,2013,03,01,United Kingdom,"9,000",Afghanistan,NATO,ISAF
+2409,2013,03,01,United States,"68,000",Afghanistan,NATO,ISAF
+2410,2013,04,19,Albania,221,Afghanistan,NATO,ISAF
+2411,2013,04,19,Armenia,126,Afghanistan,NATO,ISAF
+2412,2013,04,19,Australia,"1,084",Afghanistan,NATO,ISAF
+2413,2013,04,19,Austria,3,Afghanistan,NATO,ISAF
+2414,2013,04,19,Azerbaijan,94,Afghanistan,NATO,ISAF
+2415,2013,04,19,Bahrain,0,Afghanistan,NATO,ISAF
+2416,2013,04,19,Belgium,240,Afghanistan,NATO,ISAF
+2417,2013,04,19,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2418,2013,04,19,Bulgaria,407,Afghanistan,NATO,ISAF
+2419,2013,04,19,Canada,950,Afghanistan,NATO,ISAF
+2420,2013,04,19,Croatia,188,Afghanistan,NATO,ISAF
+2421,2013,04,19,Czech Republic,123,Afghanistan,NATO,ISAF
+2422,2013,04,19,Denmark,558,Afghanistan,NATO,ISAF
+2423,2013,04,19,El Salvador,13,Afghanistan,NATO,ISAF
+2424,2013,04,19,Estonia,163,Afghanistan,NATO,ISAF
+2425,2013,04,19,Finland,126,Afghanistan,NATO,ISAF
+2426,2013,04,19,France,459,Afghanistan,NATO,ISAF
+2427,2013,04,19,Georgia,"1,561",Afghanistan,NATO,ISAF
+2428,2013,04,19,Germany,"4,400",Afghanistan,NATO,ISAF
+2429,2013,04,19,Greece,3,Afghanistan,NATO,ISAF
+2430,2013,04,19,Hungary,368,Afghanistan,NATO,ISAF
+2431,2013,04,19,Iceland,3,Afghanistan,NATO,ISAF
+2432,2013,04,19,Ireland,7,Afghanistan,NATO,ISAF
+2433,2013,04,19,Italy,"3,049",Afghanistan,NATO,ISAF
+2434,2013,04,19,Jordan,0,Afghanistan,NATO,ISAF
+2435,2013,04,19,Republic of Korea,350,Afghanistan,NATO,ISAF
+2436,2013,04,19,Latvia,26,Afghanistan,NATO,ISAF
+2437,2013,04,19,Lithuania,240,Afghanistan,NATO,ISAF
+2438,2013,04,19,Luxembourg,10,Afghanistan,NATO,ISAF
+2439,2013,04,19,Malaysia,2,Afghanistan,NATO,ISAF
+2440,2013,04,19,Mongolia,46,Afghanistan,NATO,ISAF
+2441,2013,04,19,Montenegro,27,Afghanistan,NATO,ISAF
+2442,2013,04,19,Netherlands,500,Afghanistan,NATO,ISAF
+2443,2013,04,19,New Zealand,155,Afghanistan,NATO,ISAF
+2444,2013,04,19,Norway,165,Afghanistan,NATO,ISAF
+2445,2013,04,19,Poland,"1,744",Afghanistan,NATO,ISAF
+2446,2013,04,19,Portugal,164,Afghanistan,NATO,ISAF
+2447,2013,04,19,Romania,"1,536",Afghanistan,NATO,ISAF
+2448,2013,04,19,Singapore,39,Afghanistan,NATO,ISAF
+2449,2013,04,19,Slovakia,236,Afghanistan,NATO,ISAF
+2450,2013,04,19,Slovenia,79,Afghanistan,NATO,ISAF
+2451,2013,04,19,Spain,"1,249",Afghanistan,NATO,ISAF
+2452,2013,04,19,Sweden,472,Afghanistan,NATO,ISAF
+2453,2013,04,19,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2454,2013,04,19,Tonga,55,Afghanistan,NATO,ISAF
+2455,2013,04,19,Turkey,"1,097",Afghanistan,NATO,ISAF
+2456,2013,04,19,Ukraine,25,Afghanistan,NATO,ISAF
+2457,2013,04,19,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2458,2013,04,19,United Kingdom,"9,000",Afghanistan,NATO,ISAF
+2459,2013,04,19,United States,"68,000",Afghanistan,NATO,ISAF
+2460,2013,04,22,Albania,221,Afghanistan,NATO,ISAF
+2461,2013,04,22,Armenia,126,Afghanistan,NATO,ISAF
+2462,2013,04,22,Australia,"1,084",Afghanistan,NATO,ISAF
+2463,2013,04,22,Austria,3,Afghanistan,NATO,ISAF
+2464,2013,04,22,Azerbaijan,94,Afghanistan,NATO,ISAF
+2465,2013,04,22,Bahrain,0,Afghanistan,NATO,ISAF
+2466,2013,04,22,Belgium,240,Afghanistan,NATO,ISAF
+2467,2013,04,22,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2468,2013,04,22,Bulgaria,407,Afghanistan,NATO,ISAF
+2469,2013,04,22,Canada,950,Afghanistan,NATO,ISAF
+2470,2013,04,22,Croatia,188,Afghanistan,NATO,ISAF
+2471,2013,04,22,Czech Republic,123,Afghanistan,NATO,ISAF
+2472,2013,04,22,Denmark,558,Afghanistan,NATO,ISAF
+2473,2013,04,22,El Salvador,13,Afghanistan,NATO,ISAF
+2474,2013,04,22,Estonia,163,Afghanistan,NATO,ISAF
+2475,2013,04,22,Finland,126,Afghanistan,NATO,ISAF
+2476,2013,04,22,France,459,Afghanistan,NATO,ISAF
+2477,2013,04,22,Georgia,"1,561",Afghanistan,NATO,ISAF
+2478,2013,04,22,Germany,"4,400",Afghanistan,NATO,ISAF
+2479,2013,04,22,Greece,3,Afghanistan,NATO,ISAF
+2480,2013,04,22,Hungary,368,Afghanistan,NATO,ISAF
+2481,2013,04,22,Iceland,3,Afghanistan,NATO,ISAF
+2482,2013,04,22,Ireland,7,Afghanistan,NATO,ISAF
+2483,2013,04,22,Italy,"3,049",Afghanistan,NATO,ISAF
+2484,2013,04,22,Jordan,0,Afghanistan,NATO,ISAF
+2485,2013,04,22,Republic of Korea,350,Afghanistan,NATO,ISAF
+2486,2013,04,22,Latvia,26,Afghanistan,NATO,ISAF
+2487,2013,04,22,Lithuania,240,Afghanistan,NATO,ISAF
+2488,2013,04,22,Luxembourg,10,Afghanistan,NATO,ISAF
+2489,2013,04,22,Malaysia,2,Afghanistan,NATO,ISAF
+2490,2013,04,22,Mongolia,46,Afghanistan,NATO,ISAF
+2491,2013,04,22,Montenegro,27,Afghanistan,NATO,ISAF
+2492,2013,04,22,Netherlands,500,Afghanistan,NATO,ISAF
+2493,2013,04,22,New Zealand,155,Afghanistan,NATO,ISAF
+2494,2013,04,22,Norway,165,Afghanistan,NATO,ISAF
+2495,2013,04,22,Poland,"1,744",Afghanistan,NATO,ISAF
+2496,2013,04,22,Portugal,164,Afghanistan,NATO,ISAF
+2497,2013,04,22,Romania,"1,536",Afghanistan,NATO,ISAF
+2498,2013,04,22,Singapore,39,Afghanistan,NATO,ISAF
+2499,2013,04,22,Slovakia,236,Afghanistan,NATO,ISAF
+2500,2013,04,22,Slovenia,60,Afghanistan,NATO,ISAF
+2501,2013,04,22,Spain,"1,249",Afghanistan,NATO,ISAF
+2502,2013,04,22,Sweden,472,Afghanistan,NATO,ISAF
+2503,2013,04,22,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2504,2013,04,22,Tonga,55,Afghanistan,NATO,ISAF
+2505,2013,04,22,Turkey,"1,097",Afghanistan,NATO,ISAF
+2506,2013,04,22,Ukraine,25,Afghanistan,NATO,ISAF
+2507,2013,04,22,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2508,2013,04,22,United Kingdom,"9,000",Afghanistan,NATO,ISAF
+2509,2013,04,22,United States,"68,000",Afghanistan,NATO,ISAF
+2510,2013,06,01,Albania,216,Afghanistan,NATO,ISAF
+2511,2013,06,01,Armenia,126,Afghanistan,NATO,ISAF
+2512,2013,06,01,Australia,"1,039",Afghanistan,NATO,ISAF
+2513,2013,06,01,Austria,3,Afghanistan,NATO,ISAF
+2514,2013,06,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2515,2013,06,01,Bahrain,0,Afghanistan,NATO,ISAF
+2516,2013,06,01,Belgium,182,Afghanistan,NATO,ISAF
+2517,2013,06,01,Bosnia & Herzegovina,79,Afghanistan,NATO,ISAF
+2518,2013,06,01,Bulgaria,383,Afghanistan,NATO,ISAF
+2519,2013,06,01,Canada,950,Afghanistan,NATO,ISAF
+2520,2013,06,01,Croatia,190,Afghanistan,NATO,ISAF
+2521,2013,06,01,Czech Republic,188,Afghanistan,NATO,ISAF
+2522,2013,06,01,Denmark,522,Afghanistan,NATO,ISAF
+2523,2013,06,01,El Salvador,24,Afghanistan,NATO,ISAF
+2524,2013,06,01,Estonia,163,Afghanistan,NATO,ISAF
+2525,2013,06,01,Finland,126,Afghanistan,NATO,ISAF
+2526,2013,06,01,France,455,Afghanistan,NATO,ISAF
+2527,2013,06,01,Georgia,"1,561",Afghanistan,NATO,ISAF
+2528,2013,06,01,Germany,"4,400",Afghanistan,NATO,ISAF
+2529,2013,06,01,Greece,3,Afghanistan,NATO,ISAF
+2530,2013,06,01,Hungary,364,Afghanistan,NATO,ISAF
+2531,2013,06,01,Iceland,3,Afghanistan,NATO,ISAF
+2532,2013,06,01,Ireland,7,Afghanistan,NATO,ISAF
+2533,2013,06,01,Italy,"3,034",Afghanistan,NATO,ISAF
+2534,2013,06,01,Jordan,0,Afghanistan,NATO,ISAF
+2535,2013,06,01,Republic of Korea,350,Afghanistan,NATO,ISAF
+2536,2013,06,01,Latvia,26,Afghanistan,NATO,ISAF
+2537,2013,06,01,Lithuania,244,Afghanistan,NATO,ISAF
+2538,2013,06,01,Luxembourg,10,Afghanistan,NATO,ISAF
+2539,2013,06,01,Malaysia,2,Afghanistan,NATO,ISAF
+2540,2013,06,01,Mongolia,46,Afghanistan,NATO,ISAF
+2541,2013,06,01,Montenegro,27,Afghanistan,NATO,ISAF
+2542,2013,06,01,Netherlands,500,Afghanistan,NATO,ISAF
+2543,2013,06,01,New Zealand,13,Afghanistan,NATO,ISAF
+2544,2013,06,01,Norway,166,Afghanistan,NATO,ISAF
+2545,2013,06,01,Poland,"1,741",Afghanistan,NATO,ISAF
+2546,2013,06,01,Portugal,165,Afghanistan,NATO,ISAF
+2547,2013,06,01,Romania,"1,521",Afghanistan,NATO,ISAF
+2548,2013,06,01,Singapore,11,Afghanistan,NATO,ISAF
+2549,2013,06,01,Slovakia,229,Afghanistan,NATO,ISAF
+2550,2013,06,01,Slovenia,60,Afghanistan,NATO,ISAF
+2551,2013,06,01,Spain,863,Afghanistan,NATO,ISAF
+2552,2013,06,01,Sweden,287,Afghanistan,NATO,ISAF
+2553,2013,06,01,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2554,2013,06,01,Tonga,55,Afghanistan,NATO,ISAF
+2555,2013,06,01,Turkey,"1,101",Afghanistan,NATO,ISAF
+2556,2013,06,01,Ukraine,26,Afghanistan,NATO,ISAF
+2557,2013,06,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2558,2013,06,01,United Kingdom,"8,065",Afghanistan,NATO,ISAF
+2559,2013,06,01,United States,"68,000",Afghanistan,NATO,ISAF
+2560,2013,06,19,Albania,216,Afghanistan,NATO,ISAF
+2561,2013,06,19,Armenia,126,Afghanistan,NATO,ISAF
+2562,2013,06,19,Australia,"1,039",Afghanistan,NATO,ISAF
+2563,2013,06,19,Austria,3,Afghanistan,NATO,ISAF
+2564,2013,06,19,Azerbaijan,94,Afghanistan,NATO,ISAF
+2565,2013,06,19,Bahrain,0,Afghanistan,NATO,ISAF
+2566,2013,06,19,Belgium,182,Afghanistan,NATO,ISAF
+2567,2013,06,19,Bosnia & Herzegovina,79,Afghanistan,NATO,ISAF
+2568,2013,06,19,Bulgaria,383,Afghanistan,NATO,ISAF
+2569,2013,06,19,Canada,950,Afghanistan,NATO,ISAF
+2570,2013,06,19,Croatia,190,Afghanistan,NATO,ISAF
+2571,2013,06,19,Czech Republic,188,Afghanistan,NATO,ISAF
+2572,2013,06,19,Denmark,522,Afghanistan,NATO,ISAF
+2573,2013,06,19,El Salvador,24,Afghanistan,NATO,ISAF
+2574,2013,06,19,Estonia,163,Afghanistan,NATO,ISAF
+2575,2013,06,19,Finland,126,Afghanistan,NATO,ISAF
+2576,2013,06,19,France,455,Afghanistan,NATO,ISAF
+2577,2013,06,19,Georgia,"1,561",Afghanistan,NATO,ISAF
+2578,2013,06,19,Germany,"4,400",Afghanistan,NATO,ISAF
+2579,2013,06,19,Greece,3,Afghanistan,NATO,ISAF
+2580,2013,06,19,Hungary,364,Afghanistan,NATO,ISAF
+2581,2013,06,19,Iceland,3,Afghanistan,NATO,ISAF
+2582,2013,06,19,Ireland,7,Afghanistan,NATO,ISAF
+2583,2013,06,19,Italy,"3,034",Afghanistan,NATO,ISAF
+2584,2013,06,19,Jordan,0,Afghanistan,NATO,ISAF
+2585,2013,06,19,Republic of Korea,350,Afghanistan,NATO,ISAF
+2586,2013,06,19,Latvia,144,Afghanistan,NATO,ISAF
+2587,2013,06,19,Lithuania,244,Afghanistan,NATO,ISAF
+2588,2013,06,19,Luxembourg,10,Afghanistan,NATO,ISAF
+2589,2013,06,19,Malaysia,2,Afghanistan,NATO,ISAF
+2590,2013,06,19,Mongolia,46,Afghanistan,NATO,ISAF
+2591,2013,06,19,Montenegro,27,Afghanistan,NATO,ISAF
+2592,2013,06,19,Netherlands,500,Afghanistan,NATO,ISAF
+2593,2013,06,19,New Zealand,13,Afghanistan,NATO,ISAF
+2594,2013,06,19,Norway,166,Afghanistan,NATO,ISAF
+2595,2013,06,19,Poland,"1,741",Afghanistan,NATO,ISAF
+2596,2013,06,19,Portugal,165,Afghanistan,NATO,ISAF
+2597,2013,06,19,Romania,"1,521",Afghanistan,NATO,ISAF
+2598,2013,06,19,Singapore,11,Afghanistan,NATO,ISAF
+2599,2013,06,19,Slovakia,229,Afghanistan,NATO,ISAF
+2600,2013,06,19,Slovenia,60,Afghanistan,NATO,ISAF
+2601,2013,06,19,Spain,863,Afghanistan,NATO,ISAF
+2602,2013,06,19,Sweden,287,Afghanistan,NATO,ISAF
+2603,2013,06,19,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2604,2013,06,19,Tonga,55,Afghanistan,NATO,ISAF
+2605,2013,06,19,Turkey,"1,101",Afghanistan,NATO,ISAF
+2606,2013,06,19,Ukraine,26,Afghanistan,NATO,ISAF
+2607,2013,06,19,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2608,2013,06,19,United Kingdom,"8,065",Afghanistan,NATO,ISAF
+2609,2013,06,19,United States,"68,000",Afghanistan,NATO,ISAF
+2610,2013,06,24,Albania,216,Afghanistan,NATO,ISAF
+2611,2013,06,24,Armenia,126,Afghanistan,NATO,ISAF
+2612,2013,06,24,Australia,"1,039",Afghanistan,NATO,ISAF
+2613,2013,06,24,Austria,3,Afghanistan,NATO,ISAF
+2614,2013,06,24,Azerbaijan,94,Afghanistan,NATO,ISAF
+2615,2013,06,24,Bahrain,0,Afghanistan,NATO,ISAF
+2616,2013,06,24,Belgium,182,Afghanistan,NATO,ISAF
+2617,2013,06,24,Bosnia & Herzegovina,79,Afghanistan,NATO,ISAF
+2618,2013,06,24,Bulgaria,383,Afghanistan,NATO,ISAF
+2619,2013,06,24,Canada,950,Afghanistan,NATO,ISAF
+2620,2013,06,24,Croatia,190,Afghanistan,NATO,ISAF
+2621,2013,06,24,Czech Republic,188,Afghanistan,NATO,ISAF
+2622,2013,06,24,Denmark,522,Afghanistan,NATO,ISAF
+2623,2013,06,24,El Salvador,24,Afghanistan,NATO,ISAF
+2624,2013,06,24,Estonia,163,Afghanistan,NATO,ISAF
+2625,2013,06,24,Finland,126,Afghanistan,NATO,ISAF
+2626,2013,06,24,France,455,Afghanistan,NATO,ISAF
+2627,2013,06,24,Georgia,"1,561",Afghanistan,NATO,ISAF
+2628,2013,06,24,Germany,"4,400",Afghanistan,NATO,ISAF
+2629,2013,06,24,Greece,3,Afghanistan,NATO,ISAF
+2630,2013,06,24,Hungary,364,Afghanistan,NATO,ISAF
+2631,2013,06,24,Iceland,3,Afghanistan,NATO,ISAF
+2632,2013,06,24,Ireland,7,Afghanistan,NATO,ISAF
+2633,2013,06,24,Italy,"3,034",Afghanistan,NATO,ISAF
+2634,2013,06,24,Jordan,0,Afghanistan,NATO,ISAF
+2635,2013,06,24,Republic of Korea,350,Afghanistan,NATO,ISAF
+2636,2013,06,24,Latvia,144,Afghanistan,NATO,ISAF
+2637,2013,06,24,Lithuania,244,Afghanistan,NATO,ISAF
+2638,2013,06,24,Luxembourg,10,Afghanistan,NATO,ISAF
+2639,2013,06,24,Malaysia,2,Afghanistan,NATO,ISAF
+2640,2013,06,24,Mongolia,46,Afghanistan,NATO,ISAF
+2641,2013,06,24,Montenegro,27,Afghanistan,NATO,ISAF
+2642,2013,06,24,Netherlands,500,Afghanistan,NATO,ISAF
+2643,2013,06,24,New Zealand,13,Afghanistan,NATO,ISAF
+2644,2013,06,24,Norway,166,Afghanistan,NATO,ISAF
+2645,2013,06,24,Poland,"1,741",Afghanistan,NATO,ISAF
+2646,2013,06,24,Portugal,165,Afghanistan,NATO,ISAF
+2647,2013,06,24,Romania,"1,521",Afghanistan,NATO,ISAF
+2648,2013,06,24,Slovakia,229,Afghanistan,NATO,ISAF
+2649,2013,06,24,Slovenia,60,Afghanistan,NATO,ISAF
+2650,2013,06,24,Spain,863,Afghanistan,NATO,ISAF
+2651,2013,06,24,Sweden,287,Afghanistan,NATO,ISAF
+2652,2013,06,24,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2653,2013,06,24,Tonga,55,Afghanistan,NATO,ISAF
+2654,2013,06,24,Turkey,"1,101",Afghanistan,NATO,ISAF
+2655,2013,06,24,Ukraine,26,Afghanistan,NATO,ISAF
+2656,2013,06,24,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2657,2013,06,24,United Kingdom,"8,065",Afghanistan,NATO,ISAF
+2658,2013,06,24,United States,"68,000",Afghanistan,NATO,ISAF
+2659,2013,08,01,Albania,105,Afghanistan,NATO,ISAF
+2660,2013,08,01,Armenia,131,Afghanistan,NATO,ISAF
+2661,2013,08,01,Australia,"1,031",Afghanistan,NATO,ISAF
+2662,2013,08,01,Austria,3,Afghanistan,NATO,ISAF
+2663,2013,08,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2664,2013,08,01,Bahrain,0,Afghanistan,NATO,ISAF
+2665,2013,08,01,Belgium,180,Afghanistan,NATO,ISAF
+2666,2013,08,01,Bosnia & Herzegovina,79,Afghanistan,NATO,ISAF
+2667,2013,08,01,Bulgaria,416,Afghanistan,NATO,ISAF
+2668,2013,08,01,Canada,950,Afghanistan,NATO,ISAF
+2669,2013,08,01,Croatia,181,Afghanistan,NATO,ISAF
+2670,2013,08,01,Czech Republic,182,Afghanistan,NATO,ISAF
+2671,2013,08,01,Denmark,317,Afghanistan,NATO,ISAF
+2672,2013,08,01,El Salvador,24,Afghanistan,NATO,ISAF
+2673,2013,08,01,Estonia,160,Afghanistan,NATO,ISAF
+2674,2013,08,01,Finland,100,Afghanistan,NATO,ISAF
+2675,2013,08,01,France,266,Afghanistan,NATO,ISAF
+2676,2013,08,01,Georgia,"1,561",Afghanistan,NATO,ISAF
+2677,2013,08,01,Germany,"4,400",Afghanistan,NATO,ISAF
+2678,2013,08,01,Greece,3,Afghanistan,NATO,ISAF
+2679,2013,08,01,Hungary,354,Afghanistan,NATO,ISAF
+2680,2013,08,01,Iceland,3,Afghanistan,NATO,ISAF
+2681,2013,08,01,Ireland,7,Afghanistan,NATO,ISAF
+2682,2013,08,01,Italy,"2,825",Afghanistan,NATO,ISAF
+2683,2013,08,01,Jordan,0,Afghanistan,NATO,ISAF
+2684,2013,08,01,Republic of Korea,50,Afghanistan,NATO,ISAF
+2685,2013,08,01,Latvia,141,Afghanistan,NATO,ISAF
+2686,2013,08,01,Lithuania,240,Afghanistan,NATO,ISAF
+2687,2013,08,01,Luxembourg,10,Afghanistan,NATO,ISAF
+2688,2013,08,01,Malaysia,2,Afghanistan,NATO,ISAF
+2689,2013,08,01,Mongolia,40,Afghanistan,NATO,ISAF
+2690,2013,08,01,Montenegro,27,Afghanistan,NATO,ISAF
+2691,2013,08,01,Netherlands,400,Afghanistan,NATO,ISAF
+2692,2013,08,01,New Zealand,11,Afghanistan,NATO,ISAF
+2693,2013,08,01,Norway,111,Afghanistan,NATO,ISAF
+2694,2013,08,01,Poland,"1,177",Afghanistan,NATO,ISAF
+2695,2013,08,01,Portugal,165,Afghanistan,NATO,ISAF
+2696,2013,08,01,Romania,"1,077",Afghanistan,NATO,ISAF
+2697,2013,08,01,Slovakia,199,Afghanistan,NATO,ISAF
+2698,2013,08,01,Slovenia,60,Afghanistan,NATO,ISAF
+2699,2013,08,01,Spain,856,Afghanistan,NATO,ISAF
+2700,2013,08,01,Sweden,259,Afghanistan,NATO,ISAF
+2701,2013,08,01,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2702,2013,08,01,Tonga,55,Afghanistan,NATO,ISAF
+2703,2013,08,01,Turkey,"1,036",Afghanistan,NATO,ISAF
+2704,2013,08,01,Ukraine,26,Afghanistan,NATO,ISAF
+2705,2013,08,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2706,2013,08,01,United Kingdom,"7,700",Afghanistan,NATO,ISAF
+2707,2013,08,01,United States,"60,000",Afghanistan,NATO,ISAF
+2708,2013,10,01,Albania,91,Afghanistan,NATO,ISAF
+2709,2013,10,01,Armenia,131,Afghanistan,NATO,ISAF
+2710,2013,10,01,Australia,"1,029",Afghanistan,NATO,ISAF
+2711,2013,10,01,Austria,3,Afghanistan,NATO,ISAF
+2712,2013,10,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2713,2013,10,01,Bahrain,0,Afghanistan,NATO,ISAF
+2714,2013,10,01,Belgium,193,Afghanistan,NATO,ISAF
+2715,2013,10,01,Bosnia & Herzegovina,79,Afghanistan,NATO,ISAF
+2716,2013,10,01,Bulgaria,416,Afghanistan,NATO,ISAF
+2717,2013,10,01,Canada,950,Afghanistan,NATO,ISAF
+2718,2013,10,01,Croatia,187,Afghanistan,NATO,ISAF
+2719,2013,10,01,Czech Republic,213,Afghanistan,NATO,ISAF
+2720,2013,10,01,Denmark,249,Afghanistan,NATO,ISAF
+2721,2013,10,01,El Salvador,24,Afghanistan,NATO,ISAF
+2722,2013,10,01,Estonia,160,Afghanistan,NATO,ISAF
+2723,2013,10,01,Finland,100,Afghanistan,NATO,ISAF
+2724,2013,10,01,France,235,Afghanistan,NATO,ISAF
+2725,2013,10,01,Georgia,"1,560",Afghanistan,NATO,ISAF
+2726,2013,10,01,Germany,"4,400",Afghanistan,NATO,ISAF
+2727,2013,10,01,Greece,8,Afghanistan,NATO,ISAF
+2728,2013,10,01,Hungary,151,Afghanistan,NATO,ISAF
+2729,2013,10,01,Iceland,3,Afghanistan,NATO,ISAF
+2730,2013,10,01,Ireland,7,Afghanistan,NATO,ISAF
+2731,2013,10,01,Italy,"2,826",Afghanistan,NATO,ISAF
+2732,2013,10,01,Jordan,0,Afghanistan,NATO,ISAF
+2733,2013,10,01,Republic of Korea,50,Afghanistan,NATO,ISAF
+2734,2013,10,01,Latvia,141,Afghanistan,NATO,ISAF
+2735,2013,10,01,Lithuania,96,Afghanistan,NATO,ISAF
+2736,2013,10,01,Luxembourg,10,Afghanistan,NATO,ISAF
+2737,2013,10,01,Malaysia,2,Afghanistan,NATO,ISAF
+2738,2013,10,01,Mongolia,40,Afghanistan,NATO,ISAF
+2739,2013,10,01,Montenegro,25,Afghanistan,NATO,ISAF
+2740,2013,10,01,Netherlands,400,Afghanistan,NATO,ISAF
+2741,2013,10,01,New Zealand,11,Afghanistan,NATO,ISAF
+2742,2013,10,01,Norway,111,Afghanistan,NATO,ISAF
+2743,2013,10,01,Poland,"1,553",Afghanistan,NATO,ISAF
+2744,2013,10,01,Portugal,154,Afghanistan,NATO,ISAF
+2745,2013,10,01,Romania,"1,022",Afghanistan,NATO,ISAF
+2746,2013,10,01,Slovakia,199,Afghanistan,NATO,ISAF
+2747,2013,10,01,Slovenia,35,Afghanistan,NATO,ISAF
+2748,2013,10,01,Spain,414,Afghanistan,NATO,ISAF
+2749,2013,10,01,Sweden,259,Afghanistan,NATO,ISAF
+2750,2013,10,01,The former Yugoslav Republic of Macedonia,158,Afghanistan,NATO,ISAF
+2751,2013,10,01,Tonga,55,Afghanistan,NATO,ISAF
+2752,2013,10,01,Turkey,"1,041",Afghanistan,NATO,ISAF
+2753,2013,10,01,Ukraine,14,Afghanistan,NATO,ISAF
+2754,2013,10,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2755,2013,10,01,United Kingdom,"7,900",Afghanistan,NATO,ISAF
+2756,2013,10,01,United States,"60,000",Afghanistan,NATO,ISAF
+2757,2013,12,01,Albania,91,Afghanistan,NATO,ISAF
+2758,2013,12,01,Armenia,131,Afghanistan,NATO,ISAF
+2759,2013,12,01,Australia,"1,045",Afghanistan,NATO,ISAF
+2760,2013,12,01,Austria,3,Afghanistan,NATO,ISAF
+2761,2013,12,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2762,2013,12,01,Bahrain,0,Afghanistan,NATO,ISAF
+2763,2013,12,01,Belgium,151,Afghanistan,NATO,ISAF
+2764,2013,12,01,Bosnia & Herzegovina,79,Afghanistan,NATO,ISAF
+2765,2013,12,01,Bulgaria,416,Afghanistan,NATO,ISAF
+2766,2013,12,01,Canada,620,Afghanistan,NATO,ISAF
+2767,2013,12,01,Croatia,186,Afghanistan,NATO,ISAF
+2768,2013,12,01,Czech Republic,213,Afghanistan,NATO,ISAF
+2769,2013,12,01,Denmark,253,Afghanistan,NATO,ISAF
+2770,2013,12,01,El Salvador,24,Afghanistan,NATO,ISAF
+2771,2013,12,01,Estonia,160,Afghanistan,NATO,ISAF
+2772,2013,12,01,Finland,100,Afghanistan,NATO,ISAF
+2773,2013,12,01,France,212,Afghanistan,NATO,ISAF
+2774,2013,12,01,Georgia,"1,560",Afghanistan,NATO,ISAF
+2775,2013,12,01,Germany,"3,084",Afghanistan,NATO,ISAF
+2776,2013,12,01,Greece,8,Afghanistan,NATO,ISAF
+2777,2013,12,01,Hungary,121,Afghanistan,NATO,ISAF
+2778,2013,12,01,Iceland,3,Afghanistan,NATO,ISAF
+2779,2013,12,01,Ireland,7,Afghanistan,NATO,ISAF
+2780,2013,12,01,Italy,"2,822",Afghanistan,NATO,ISAF
+2781,2013,12,01,Jordan,0,Afghanistan,NATO,ISAF
+2782,2013,12,01,Republic of Korea,50,Afghanistan,NATO,ISAF
+2783,2013,12,01,Latvia,131,Afghanistan,NATO,ISAF
+2784,2013,12,01,Lithuania,95,Afghanistan,NATO,ISAF
+2785,2013,12,01,Luxembourg,10,Afghanistan,NATO,ISAF
+2786,2013,12,01,Malaysia,2,Afghanistan,NATO,ISAF
+2787,2013,12,01,Mongolia,40,Afghanistan,NATO,ISAF
+2788,2013,12,01,Montenegro,25,Afghanistan,NATO,ISAF
+2789,2013,12,01,Netherlands,200,Afghanistan,NATO,ISAF
+2790,2013,12,01,New Zealand,11,Afghanistan,NATO,ISAF
+2791,2013,12,01,Norway,111,Afghanistan,NATO,ISAF
+2792,2013,12,01,Poland,"1,099",Afghanistan,NATO,ISAF
+2793,2013,12,01,Portugal,78,Afghanistan,NATO,ISAF
+2794,2013,12,01,Romania,"1,018",Afghanistan,NATO,ISAF
+2795,2013,12,01,Slovakia,199,Afghanistan,NATO,ISAF
+2796,2013,12,01,Slovenia,32,Afghanistan,NATO,ISAF
+2797,2013,12,01,Spain,260,Afghanistan,NATO,ISAF
+2798,2013,12,01,Sweden,279,Afghanistan,NATO,ISAF
+2799,2013,12,01,The former Yugoslav Republic of Macedonia,156,Afghanistan,NATO,ISAF
+2800,2013,12,01,Tonga,55,Afghanistan,NATO,ISAF
+2801,2013,12,01,Turkey,"1,035",Afghanistan,NATO,ISAF
+2802,2013,12,01,Ukraine,14,Afghanistan,NATO,ISAF
+2803,2013,12,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2804,2013,12,01,United Kingdom,"7,953",Afghanistan,NATO,ISAF
+2805,2013,12,01,United States,"60,000",Afghanistan,NATO,ISAF
+2806,2014,01,15,Albania,74,Afghanistan,NATO,ISAF
+2807,2014,01,15,Armenia,121,Afghanistan,NATO,ISAF
+2808,2014,01,15,Australia,348,Afghanistan,NATO,ISAF
+2809,2014,01,15,Austria,3,Afghanistan,NATO,ISAF
+2810,2014,01,15,Azerbaijan,94,Afghanistan,NATO,ISAF
+2811,2014,01,15,Bahrain,0,Afghanistan,NATO,ISAF
+2812,2014,01,15,Belgium,140,Afghanistan,NATO,ISAF
+2813,2014,01,15,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2814,2014,01,15,Bulgaria,417,Afghanistan,NATO,ISAF
+2815,2014,01,15,Canada,265,Afghanistan,NATO,ISAF
+2816,2014,01,15,Croatia,140,Afghanistan,NATO,ISAF
+2817,2014,01,15,Czech Republic,219,Afghanistan,NATO,ISAF
+2818,2014,01,15,Denmark,263,Afghanistan,NATO,ISAF
+2819,2014,01,15,El Salvador,12,Afghanistan,NATO,ISAF
+2820,2014,01,15,Estonia,156,Afghanistan,NATO,ISAF
+2821,2014,01,15,Finland,110,Afghanistan,NATO,ISAF
+2822,2014,01,15,France,205,Afghanistan,NATO,ISAF
+2823,2014,01,15,Georgia,"1,560",Afghanistan,NATO,ISAF
+2824,2014,01,15,Germany,"3,077",Afghanistan,NATO,ISAF
+2825,2014,01,15,Greece,7,Afghanistan,NATO,ISAF
+2826,2014,01,15,Hungary,131,Afghanistan,NATO,ISAF
+2827,2014,01,15,Iceland,2,Afghanistan,NATO,ISAF
+2828,2014,01,15,Ireland,7,Afghanistan,NATO,ISAF
+2829,2014,01,15,Italy,"2,159",Afghanistan,NATO,ISAF
+2830,2014,01,15,Jordan,456,Afghanistan,NATO,ISAF
+2831,2014,01,15,Republic of Korea,50,Afghanistan,NATO,ISAF
+2832,2014,01,15,Latvia,131,Afghanistan,NATO,ISAF
+2833,2014,01,15,Lithuania,99,Afghanistan,NATO,ISAF
+2834,2014,01,15,Luxembourg,10,Afghanistan,NATO,ISAF
+2835,2014,01,15,Malaysia,1,Afghanistan,NATO,ISAF
+2836,2014,01,15,Mongolia,40,Afghanistan,NATO,ISAF
+2837,2014,01,15,Montenegro,25,Afghanistan,NATO,ISAF
+2838,2014,01,15,Netherlands,200,Afghanistan,NATO,ISAF
+2839,2014,01,15,New Zealand,2,Afghanistan,NATO,ISAF
+2840,2014,01,15,Norway,109,Afghanistan,NATO,ISAF
+2841,2014,01,15,Poland,967,Afghanistan,NATO,ISAF
+2842,2014,01,15,Portugal,78,Afghanistan,NATO,ISAF
+2843,2014,01,15,Romania,505,Afghanistan,NATO,ISAF
+2844,2014,01,15,Slovakia,274,Afghanistan,NATO,ISAF
+2845,2014,01,15,Slovenia,34,Afghanistan,NATO,ISAF
+2846,2014,01,15,Spain,259,Afghanistan,NATO,ISAF
+2847,2014,01,15,Sweden,270,Afghanistan,NATO,ISAF
+2848,2014,01,15,The former Yugoslav Republic of Macedonia,155,Afghanistan,NATO,ISAF
+2849,2014,01,15,Tonga,55,Afghanistan,NATO,ISAF
+2850,2014,01,15,Turkey,458,Afghanistan,NATO,ISAF
+2851,2014,01,15,Ukraine,28,Afghanistan,NATO,ISAF
+2852,2014,01,15,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2853,2014,01,15,United Kingdom,"5,200",Afghanistan,NATO,ISAF
+2854,2014,01,15,United States,"38,000",Afghanistan,NATO,ISAF
+2855,2014,02,20,Albania,76,Afghanistan,NATO,ISAF
+2856,2014,02,20,Armenia,121,Afghanistan,NATO,ISAF
+2857,2014,02,20,Australia,351,Afghanistan,NATO,ISAF
+2858,2014,02,20,Austria,3,Afghanistan,NATO,ISAF
+2859,2014,02,20,Azerbaijan,94,Afghanistan,NATO,ISAF
+2860,2014,02,20,Bahrain,0,Afghanistan,NATO,ISAF
+2861,2014,02,20,Belgium,143,Afghanistan,NATO,ISAF
+2862,2014,02,20,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2863,2014,02,20,Bulgaria,387,Afghanistan,NATO,ISAF
+2864,2014,02,20,Canada,105,Afghanistan,NATO,ISAF
+2865,2014,02,20,Croatia,158,Afghanistan,NATO,ISAF
+2866,2014,02,20,Czech Republic,250,Afghanistan,NATO,ISAF
+2867,2014,02,20,Denmark,214,Afghanistan,NATO,ISAF
+2868,2014,02,20,El Salvador,13,Afghanistan,NATO,ISAF
+2869,2014,02,20,Estonia,159,Afghanistan,NATO,ISAF
+2870,2014,02,20,Finland,97,Afghanistan,NATO,ISAF
+2871,2014,02,20,France,210,Afghanistan,NATO,ISAF
+2872,2014,02,20,Georgia,805,Afghanistan,NATO,ISAF
+2873,2014,02,20,Germany,"2,938",Afghanistan,NATO,ISAF
+2874,2014,02,20,Greece,8,Afghanistan,NATO,ISAF
+2875,2014,02,20,Hungary,131,Afghanistan,NATO,ISAF
+2876,2014,02,20,Iceland,2,Afghanistan,NATO,ISAF
+2877,2014,02,20,Ireland,7,Afghanistan,NATO,ISAF
+2878,2014,02,20,Italy,"2,165",Afghanistan,NATO,ISAF
+2879,2014,02,20,Jordan,"1,066",Afghanistan,NATO,ISAF
+2880,2014,02,20,Republic of Korea,50,Afghanistan,NATO,ISAF
+2881,2014,02,20,Latvia,135,Afghanistan,NATO,ISAF
+2882,2014,02,20,Lithuania,98,Afghanistan,NATO,ISAF
+2883,2014,02,20,Luxembourg,10,Afghanistan,NATO,ISAF
+2884,2014,02,20,Malaysia,2,Afghanistan,NATO,ISAF
+2885,2014,02,20,Mongolia,40,Afghanistan,NATO,ISAF
+2886,2014,02,20,Montenegro,25,Afghanistan,NATO,ISAF
+2887,2014,02,20,Netherlands,224,Afghanistan,NATO,ISAF
+2888,2014,02,20,New Zealand,2,Afghanistan,NATO,ISAF
+2889,2014,02,20,Norway,108,Afghanistan,NATO,ISAF
+2890,2014,02,20,Poland,971,Afghanistan,NATO,ISAF
+2891,2014,02,20,Portugal,78,Afghanistan,NATO,ISAF
+2892,2014,02,20,Romania,"1,018",Afghanistan,NATO,ISAF
+2893,2014,02,20,Slovakia,277,Afghanistan,NATO,ISAF
+2894,2014,02,20,Slovenia,33,Afghanistan,NATO,ISAF
+2895,2014,02,20,Spain,259,Afghanistan,NATO,ISAF
+2896,2014,02,20,Sweden,270,Afghanistan,NATO,ISAF
+2897,2014,02,20,The former Yugoslav Republic of Macedonia,155,Afghanistan,NATO,ISAF
+2898,2014,02,20,Tonga,55,Afghanistan,NATO,ISAF
+2899,2014,02,20,Turkey,457,Afghanistan,NATO,ISAF
+2900,2014,02,20,Ukraine,28,Afghanistan,NATO,ISAF
+2901,2014,02,20,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2902,2014,02,20,United Kingdom,"5,200",Afghanistan,NATO,ISAF
+2903,2014,02,20,United States,"33,600",Afghanistan,NATO,ISAF
+2904,2014,04,01,Albania,72,Afghanistan,NATO,ISAF
+2905,2014,04,01,Armenia,121,Afghanistan,NATO,ISAF
+2906,2014,04,01,Australia,351,Afghanistan,NATO,ISAF
+2907,2014,04,01,Austria,3,Afghanistan,NATO,ISAF
+2908,2014,04,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2909,2014,04,01,Bahrain,0,Afghanistan,NATO,ISAF
+2910,2014,04,01,Belgium,138,Afghanistan,NATO,ISAF
+2911,2014,04,01,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2912,2014,04,01,Bulgaria,387,Afghanistan,NATO,ISAF
+2913,2014,04,01,Croatia,160,Afghanistan,NATO,ISAF
+2914,2014,04,01,Czech Republic,250,Afghanistan,NATO,ISAF
+2915,2014,04,01,Denmark,214,Afghanistan,NATO,ISAF
+2916,2014,04,01,El Salvador,13,Afghanistan,NATO,ISAF
+2917,2014,04,01,Estonia,159,Afghanistan,NATO,ISAF
+2918,2014,04,01,Finland,95,Afghanistan,NATO,ISAF
+2919,2014,04,01,France,211,Afghanistan,NATO,ISAF
+2920,2014,04,01,Georgia,805,Afghanistan,NATO,ISAF
+2921,2014,04,01,Germany,"2,730",Afghanistan,NATO,ISAF
+2922,2014,04,01,Greece,10,Afghanistan,NATO,ISAF
+2923,2014,04,01,Hungary,131,Afghanistan,NATO,ISAF
+2924,2014,04,01,Iceland,3,Afghanistan,NATO,ISAF
+2925,2014,04,01,Ireland,7,Afghanistan,NATO,ISAF
+2926,2014,04,01,Italy,"2,019",Afghanistan,NATO,ISAF
+2927,2014,04,01,Jordan,"1,066",Afghanistan,NATO,ISAF
+2928,2014,04,01,Republic of Korea,50,Afghanistan,NATO,ISAF
+2929,2014,04,01,Latvia,131,Afghanistan,NATO,ISAF
+2930,2014,04,01,Lithuania,95,Afghanistan,NATO,ISAF
+2931,2014,04,01,Luxembourg,10,Afghanistan,NATO,ISAF
+2932,2014,04,01,Malaysia,2,Afghanistan,NATO,ISAF
+2933,2014,04,01,Mongolia,40,Afghanistan,NATO,ISAF
+2934,2014,04,01,Montenegro,25,Afghanistan,NATO,ISAF
+2935,2014,04,01,Netherlands,200,Afghanistan,NATO,ISAF
+2936,2014,04,01,New Zealand,2,Afghanistan,NATO,ISAF
+2937,2014,04,01,Norway,108,Afghanistan,NATO,ISAF
+2938,2014,04,01,Poland,968,Afghanistan,NATO,ISAF
+2939,2014,04,01,Portugal,81,Afghanistan,NATO,ISAF
+2940,2014,04,01,Romania,"1,021",Afghanistan,NATO,ISAF
+2941,2014,04,01,Slovakia,277,Afghanistan,NATO,ISAF
+2942,2014,04,01,Slovenia,34,Afghanistan,NATO,ISAF
+2943,2014,04,01,Spain,259,Afghanistan,NATO,ISAF
+2944,2014,04,01,Sweden,270,Afghanistan,NATO,ISAF
+2945,2014,04,01,The former Yugoslav Republic of Macedonia,150,Afghanistan,NATO,ISAF
+2946,2014,04,01,Tonga,55,Afghanistan,NATO,ISAF
+2947,2014,04,01,Turkey,459,Afghanistan,NATO,ISAF
+2948,2014,04,01,Ukraine,27,Afghanistan,NATO,ISAF
+2949,2014,04,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2950,2014,04,01,United Kingdom,"5,200",Afghanistan,NATO,ISAF
+2951,2014,04,01,United States,"33,500",Afghanistan,NATO,ISAF
+2952,2014,06,01,Albania,72,Afghanistan,NATO,ISAF
+2953,2014,06,01,Armenia,121,Afghanistan,NATO,ISAF
+2954,2014,06,01,Australia,356,Afghanistan,NATO,ISAF
+2955,2014,06,01,Austria,3,Afghanistan,NATO,ISAF
+2956,2014,06,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+2957,2014,06,01,Bahrain,0,Afghanistan,NATO,ISAF
+2958,2014,06,01,Belgium,147,Afghanistan,NATO,ISAF
+2959,2014,06,01,Bosnia & Herzegovina,53,Afghanistan,NATO,ISAF
+2960,2014,06,01,Bulgaria,378,Afghanistan,NATO,ISAF
+2961,2014,06,01,Croatia,146,Afghanistan,NATO,ISAF
+2962,2014,06,01,Czech Republic,250,Afghanistan,NATO,ISAF
+2963,2014,06,01,Denmark,165,Afghanistan,NATO,ISAF
+2964,2014,06,01,El Salvador,0,Afghanistan,NATO,ISAF
+2965,2014,06,01,Estonia,20,Afghanistan,NATO,ISAF
+2966,2014,06,01,Finland,95,Afghanistan,NATO,ISAF
+2967,2014,06,01,France,177,Afghanistan,NATO,ISAF
+2968,2014,06,01,Georgia,805,Afghanistan,NATO,ISAF
+2969,2014,06,01,Germany,"2,695",Afghanistan,NATO,ISAF
+2970,2014,06,01,Greece,10,Afghanistan,NATO,ISAF
+2971,2014,06,01,Hungary,100,Afghanistan,NATO,ISAF
+2972,2014,06,01,Iceland,3,Afghanistan,NATO,ISAF
+2973,2014,06,01,Ireland,7,Afghanistan,NATO,ISAF
+2974,2014,06,01,Italy,"2,000",Afghanistan,NATO,ISAF
+2975,2014,06,01,Jordan,"1,069",Afghanistan,NATO,ISAF
+2976,2014,06,01,Republic of Korea,50,Afghanistan,NATO,ISAF
+2977,2014,06,01,Latvia,31,Afghanistan,NATO,ISAF
+2978,2014,06,01,Lithuania,83,Afghanistan,NATO,ISAF
+2979,2014,06,01,Luxembourg,1,Afghanistan,NATO,ISAF
+2980,2014,06,01,Malaysia,2,Afghanistan,NATO,ISAF
+2981,2014,06,01,Mongolia,40,Afghanistan,NATO,ISAF
+2982,2014,06,01,Montenegro,25,Afghanistan,NATO,ISAF
+2983,2014,06,01,Netherlands,200,Afghanistan,NATO,ISAF
+2984,2014,06,01,New Zealand,2,Afghanistan,NATO,ISAF
+2985,2014,06,01,Norway,67,Afghanistan,NATO,ISAF
+2986,2014,06,01,Poland,968,Afghanistan,NATO,ISAF
+2987,2014,06,01,Portugal,66,Afghanistan,NATO,ISAF
+2988,2014,06,01,Romania,"1,002",Afghanistan,NATO,ISAF
+2989,2014,06,01,Slovakia,275,Afghanistan,NATO,ISAF
+2990,2014,06,01,Slovenia,4,Afghanistan,NATO,ISAF
+2991,2014,06,01,Spain,247,Afghanistan,NATO,ISAF
+2992,2014,06,01,Sweden,219,Afghanistan,NATO,ISAF
+2993,2014,06,01,The former Yugoslav Republic of Macedonia,152,Afghanistan,NATO,ISAF
+2994,2014,06,01,Tonga,55,Afghanistan,NATO,ISAF
+2995,2014,06,01,Turkey,457,Afghanistan,NATO,ISAF
+2996,2014,06,01,Ukraine,27,Afghanistan,NATO,ISAF
+2997,2014,06,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+2998,2014,06,01,United Kingdom,"5,200",Afghanistan,NATO,ISAF
+2999,2014,06,01,United States,"32,800",Afghanistan,NATO,ISAF
+3000,2014,08,04,Albania,72,Afghanistan,NATO,ISAF
+3001,2014,08,04,Armenia,121,Afghanistan,NATO,ISAF
+3002,2014,08,04,Australia,272,Afghanistan,NATO,ISAF
+3003,2014,08,04,Austria,3,Afghanistan,NATO,ISAF
+3004,2014,08,04,Azerbaijan,94,Afghanistan,NATO,ISAF
+3005,2014,08,04,Bahrain,0,Afghanistan,NATO,ISAF
+3006,2014,08,04,Belgium,161,Afghanistan,NATO,ISAF
+3007,2014,08,04,Bosnia & Herzegovina,8,Afghanistan,NATO,ISAF
+3008,2014,08,04,Bulgaria,318,Afghanistan,NATO,ISAF
+3009,2014,08,04,Croatia,157,Afghanistan,NATO,ISAF
+3010,2014,08,04,Czech Republic,224,Afghanistan,NATO,ISAF
+3011,2014,08,04,Denmark,75,Afghanistan,NATO,ISAF
+3012,2014,08,04,El Salvador,4,Afghanistan,NATO,ISAF
+3013,2014,08,04,Estonia,19,Afghanistan,NATO,ISAF
+3014,2014,08,04,Finland,88,Afghanistan,NATO,ISAF
+3015,2014,08,04,France,88,Afghanistan,NATO,ISAF
+3016,2014,08,04,Georgia,755,Afghanistan,NATO,ISAF
+3017,2014,08,04,Germany,"2,250",Afghanistan,NATO,ISAF
+3018,2014,08,04,Greece,10,Afghanistan,NATO,ISAF
+3019,2014,08,04,Hungary,100,Afghanistan,NATO,ISAF
+3020,2014,08,04,Iceland,2,Afghanistan,NATO,ISAF
+3021,2014,08,04,Ireland,7,Afghanistan,NATO,ISAF
+3022,2014,08,04,Italy,"1,653",Afghanistan,NATO,ISAF
+3023,2014,08,04,Jordan,"1,066",Afghanistan,NATO,ISAF
+3024,2014,08,04,Republic of Korea,50,Afghanistan,NATO,ISAF
+3025,2014,08,04,Latvia,11,Afghanistan,NATO,ISAF
+3026,2014,08,04,Lithuania,80,Afghanistan,NATO,ISAF
+3027,2014,08,04,Luxembourg,10,Afghanistan,NATO,ISAF
+3028,2014,08,04,Malaysia,2,Afghanistan,NATO,ISAF
+3029,2014,08,04,Mongolia,40,Afghanistan,NATO,ISAF
+3030,2014,08,04,Montenegro,25,Afghanistan,NATO,ISAF
+3031,2014,08,04,Netherlands,200,Afghanistan,NATO,ISAF
+3032,2014,08,04,New Zealand,4,Afghanistan,NATO,ISAF
+3033,2014,08,04,Norway,66,Afghanistan,NATO,ISAF
+3034,2014,08,04,Poland,322,Afghanistan,NATO,ISAF
+3035,2014,08,04,Portugal,50,Afghanistan,NATO,ISAF
+3036,2014,08,04,Romania,921,Afghanistan,NATO,ISAF
+3037,2014,08,04,Slovakia,277,Afghanistan,NATO,ISAF
+3038,2014,08,04,Slovenia,2,Afghanistan,NATO,ISAF
+3039,2014,08,04,Spain,184,Afghanistan,NATO,ISAF
+3040,2014,08,04,Sweden,12,Afghanistan,NATO,ISAF
+3041,2014,08,04,The former Yugoslav Republic of Macedonia,152,Afghanistan,NATO,ISAF
+3042,2014,08,04,Tonga,7,Afghanistan,NATO,ISAF
+3043,2014,08,04,Turkey,392,Afghanistan,NATO,ISAF
+3044,2014,08,04,Ukraine,12,Afghanistan,NATO,ISAF
+3045,2014,08,04,United Arab Emirates,118,Afghanistan,NATO,ISAF
+3046,2014,08,04,United Kingdom,"3,936",Afghanistan,NATO,ISAF
+3047,2014,08,04,United States,"30,700",Afghanistan,NATO,ISAF
+3048,2014,09,01,Albania,22,Afghanistan,NATO,ISAF
+3049,2014,09,01,Armenia,121,Afghanistan,NATO,ISAF
+3050,2014,09,01,Australia,273,Afghanistan,NATO,ISAF
+3051,2014,09,01,Austria,3,Afghanistan,NATO,ISAF
+3052,2014,09,01,Azerbaijan,94,Afghanistan,NATO,ISAF
+3053,2014,09,01,Bahrain,0,Afghanistan,NATO,ISAF
+3054,2014,09,01,Belgium,160,Afghanistan,NATO,ISAF
+3055,2014,09,01,Bosnia & Herzegovina,8,Afghanistan,NATO,ISAF
+3056,2014,09,01,Bulgaria,320,Afghanistan,NATO,ISAF
+3057,2014,09,01,Croatia,153,Afghanistan,NATO,ISAF
+3058,2014,09,01,Czech Republic,227,Afghanistan,NATO,ISAF
+3059,2014,09,01,Denmark,145,Afghanistan,NATO,ISAF
+3060,2014,09,01,El Salvador,0,Afghanistan,NATO,ISAF
+3061,2014,09,01,Estonia,4,Afghanistan,NATO,ISAF
+3062,2014,09,01,Finland,88,Afghanistan,NATO,ISAF
+3063,2014,09,01,France,88,Afghanistan,NATO,ISAF
+3064,2014,09,01,Georgia,755,Afghanistan,NATO,ISAF
+3065,2014,09,01,Germany,"1,599",Afghanistan,NATO,ISAF
+3066,2014,09,01,Greece,9,Afghanistan,NATO,ISAF
+3067,2014,09,01,Hungary,101,Afghanistan,NATO,ISAF
+3068,2014,09,01,Iceland,2,Afghanistan,NATO,ISAF
+3069,2014,09,01,Ireland,7,Afghanistan,NATO,ISAF
+3070,2014,09,01,Italy,"1,411",Afghanistan,NATO,ISAF
+3071,2014,09,01,Jordan,626,Afghanistan,NATO,ISAF
+3072,2014,09,01,Republic of Korea,50,Afghanistan,NATO,ISAF
+3073,2014,09,01,Latvia,11,Afghanistan,NATO,ISAF
+3074,2014,09,01,Lithuania,84,Afghanistan,NATO,ISAF
+3075,2014,09,01,Luxembourg,1,Afghanistan,NATO,ISAF
+3076,2014,09,01,Malaysia,2,Afghanistan,NATO,ISAF
+3077,2014,09,01,Mongolia,40,Afghanistan,NATO,ISAF
+3078,2014,09,01,Montenegro,25,Afghanistan,NATO,ISAF
+3079,2014,09,01,Netherlands,30,Afghanistan,NATO,ISAF
+3080,2014,09,01,New Zealand,1,Afghanistan,NATO,ISAF
+3081,2014,09,01,Norway,57,Afghanistan,NATO,ISAF
+3082,2014,09,01,Poland,304,Afghanistan,NATO,ISAF
+3083,2014,09,01,Portugal,37,Afghanistan,NATO,ISAF
+3084,2014,09,01,Romania,327,Afghanistan,NATO,ISAF
+3085,2014,09,01,Slovakia,277,Afghanistan,NATO,ISAF
+3086,2014,09,01,Slovenia,2,Afghanistan,NATO,ISAF
+3087,2014,09,01,Spain,181,Afghanistan,NATO,ISAF
+3088,2014,09,01,Sweden,13,Afghanistan,NATO,ISAF
+3089,2014,09,01,The former Yugoslav Republic of Macedonia,152,Afghanistan,NATO,ISAF
+3090,2014,09,01,Tonga,0,Afghanistan,NATO,ISAF
+3091,2014,09,01,Turkey,393,Afghanistan,NATO,ISAF
+3092,2014,09,01,Ukraine,10,Afghanistan,NATO,ISAF
+3093,2014,09,01,United Arab Emirates,35,Afghanistan,NATO,ISAF
+3094,2014,09,01,United Kingdom,"3,906",Afghanistan,NATO,ISAF
+3095,2014,09,01,United States,"28,970",Afghanistan,NATO,ISAF
+3096,2014,10,14,Albania,11,Afghanistan,NATO,ISAF
+3097,2014,10,14,Armenia,121,Afghanistan,NATO,ISAF
+3098,2014,10,14,Australia,271,Afghanistan,NATO,ISAF
+3099,2014,10,14,Austria,3,Afghanistan,NATO,ISAF
+3100,2014,10,14,Azerbaijan,94,Afghanistan,NATO,ISAF
+3101,2014,10,14,Bahrain,0,Afghanistan,NATO,ISAF
+3102,2014,10,14,Belgium,55,Afghanistan,NATO,ISAF
+3103,2014,10,14,Bosnia & Herzegovina,8,Afghanistan,NATO,ISAF
+3104,2014,10,14,Bulgaria,320,Afghanistan,NATO,ISAF
+3105,2014,10,14,Croatia,153,Afghanistan,NATO,ISAF
+3106,2014,10,14,Czech Republic,227,Afghanistan,NATO,ISAF
+3107,2014,10,14,Denmark,149,Afghanistan,NATO,ISAF
+3108,2014,10,14,El Salvador,0,Afghanistan,NATO,ISAF
+3109,2014,10,14,Estonia,2,Afghanistan,NATO,ISAF
+3110,2014,10,14,Finland,90,Afghanistan,NATO,ISAF
+3111,2014,10,14,France,90,Afghanistan,NATO,ISAF
+3112,2014,10,14,Georgia,755,Afghanistan,NATO,ISAF
+3113,2014,10,14,Germany,"1,707",Afghanistan,NATO,ISAF
+3114,2014,10,14,Greece,9,Afghanistan,NATO,ISAF
+3115,2014,10,14,Hungary,84,Afghanistan,NATO,ISAF
+3116,2014,10,14,Iceland,3 i,Afghanistan,NATO,ISAF
+3117,2014,10,14,Ireland,7,Afghanistan,NATO,ISAF
+3118,2014,10,14,Italy,"1,400",Afghanistan,NATO,ISAF
+3119,2014,10,14,Jordan,616,Afghanistan,NATO,ISAF
+3120,2014,10,14,Republic of Korea,0,Afghanistan,NATO,ISAF
+3121,2014,10,14,Latvia,18,Afghanistan,NATO,ISAF
+3122,2014,10,14,Lithuania,72,Afghanistan,NATO,ISAF
+3123,2014,10,14,Luxembourg,1,Afghanistan,NATO,ISAF
+3124,2014,10,14,Malaysia,2,Afghanistan,NATO,ISAF
+3125,2014,10,14,Mongolia,40,Afghanistan,NATO,ISAF
+3126,2014,10,14,Montenegro,25,Afghanistan,NATO,ISAF
+3127,2014,10,14,Netherlands,16,Afghanistan,NATO,ISAF
+3128,2014,10,14,New Zealand,1,Afghanistan,NATO,ISAF
+3129,2014,10,14,Norway,58,Afghanistan,NATO,ISAF
+3130,2014,10,14,Poland,65,Afghanistan,NATO,ISAF
+3131,2014,10,14,Portugal,57,Afghanistan,NATO,ISAF
+3132,2014,10,14,Romania,317,Afghanistan,NATO,ISAF
+3133,2014,10,14,Slovakia,12,Afghanistan,NATO,ISAF
+3134,2014,10,14,Slovenia,2,Afghanistan,NATO,ISAF
+3135,2014,10,14,Spain,181,Afghanistan,NATO,ISAF
+3136,2014,10,14,Sweden,13,Afghanistan,NATO,ISAF
+3137,2014,10,14,The former Yugoslav Republic of Macedonia,152,Afghanistan,NATO,ISAF
+3138,2014,10,14,Tonga,0,Afghanistan,NATO,ISAF
+3139,2014,10,14,Turkey,367,Afghanistan,NATO,ISAF
+3140,2014,10,14,Ukraine,14,Afghanistan,NATO,ISAF
+3141,2014,10,14,United Arab Emirates,35,Afghanistan,NATO,ISAF
+3142,2014,10,14,United Kingdom,"2,839",Afghanistan,NATO,ISAF
+3143,2014,10,14,United States,"24,050",Afghanistan,NATO,ISAF
+3144,2014,11,11,Albania,10,Afghanistan,NATO,ISAF
+3145,2014,11,11,Armenia,121,Afghanistan,NATO,ISAF
+3146,2014,11,11,Australia,268,Afghanistan,NATO,ISAF
+3147,2014,11,11,Austria,1,Afghanistan,NATO,ISAF
+3148,2014,11,11,Azerbaijan,94,Afghanistan,NATO,ISAF
+3149,2014,11,11,Bahrain,0,Afghanistan,NATO,ISAF
+3150,2014,11,11,Belgium,33,Afghanistan,NATO,ISAF
+3151,2014,11,11,Bosnia & Herzegovina,8,Afghanistan,NATO,ISAF
+3152,2014,11,11,Bulgaria,319,Afghanistan,NATO,ISAF
+3153,2014,11,11,Croatia,79,Afghanistan,NATO,ISAF
+3154,2014,11,11,Czech Republic,228,Afghanistan,NATO,ISAF
+3155,2014,11,11,Denmark,128,Afghanistan,NATO,ISAF
+3156,2014,11,11,El Salvador,0,Afghanistan,NATO,ISAF
+3157,2014,11,11,Estonia,2,Afghanistan,NATO,ISAF
+3158,2014,11,11,Finland,91,Afghanistan,NATO,ISAF
+3159,2014,11,11,France,89,Afghanistan,NATO,ISAF
+3160,2014,11,11,Georgia,755,Afghanistan,NATO,ISAF
+3161,2014,11,11,Germany,"1,318",Afghanistan,NATO,ISAF
+3162,2014,11,11,Greece,8,Afghanistan,NATO,ISAF
+3163,2014,11,11,Hungary,79,Afghanistan,NATO,ISAF
+3164,2014,11,11,Iceland,3,Afghanistan,NATO,ISAF
+3165,2014,11,11,Ireland,7,Afghanistan,NATO,ISAF
+3166,2014,11,11,Italy,"1,373",Afghanistan,NATO,ISAF
+3167,2014,11,11,Jordan,616,Afghanistan,NATO,ISAF
+3168,2014,11,11,Republic of Korea,0,Afghanistan,NATO,ISAF
+3169,2014,11,11,Latvia,18,Afghanistan,NATO,ISAF
+3170,2014,11,11,Lithuania,47,Afghanistan,NATO,ISAF
+3171,2014,11,11,Luxembourg,0,Afghanistan,NATO,ISAF
+3172,2014,11,11,Malaysia,2,Afghanistan,NATO,ISAF
+3173,2014,11,11,Mongolia,40,Afghanistan,NATO,ISAF
+3174,2014,11,11,Montenegro,25,Afghanistan,NATO,ISAF
+3175,2014,11,11,Netherlands,30,Afghanistan,NATO,ISAF
+3176,2014,11,11,New Zealand,0,Afghanistan,NATO,ISAF
+3177,2014,11,11,Norway,60,Afghanistan,NATO,ISAF
+3178,2014,11,11,Poland,310,Afghanistan,NATO,ISAF
+3179,2014,11,11,Portugal,32,Afghanistan,NATO,ISAF
+3180,2014,11,11,Romania,273,Afghanistan,NATO,ISAF
+3181,2014,11,11,Slovakia,32,Afghanistan,NATO,ISAF
+3182,2014,11,11,Slovenia,2,Afghanistan,NATO,ISAF
+3183,2014,11,11,Spain,273,Afghanistan,NATO,ISAF
+3184,2014,11,11,Sweden,12,Afghanistan,NATO,ISAF
+3185,2014,11,11,The former Yugoslav Republic of Macedonia,152,Afghanistan,NATO,ISAF
+3186,2014,11,11,Tonga,0,Afghanistan,NATO,ISAF
+3187,2014,11,11,Turkey,361,Afghanistan,NATO,ISAF
+3188,2014,11,11,Ukraine,9,Afghanistan,NATO,ISAF
+3189,2014,11,11,United Arab Emirates,35,Afghanistan,NATO,ISAF
+3190,2014,11,11,United Kingdom,"2,837",Afghanistan,NATO,ISAF
+3191,2014,11,11,United States,"18,180",Afghanistan,NATO,ISAF
