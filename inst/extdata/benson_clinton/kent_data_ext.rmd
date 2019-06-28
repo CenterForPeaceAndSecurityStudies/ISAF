@@ -80,7 +80,7 @@ atop <- dplyr::filter(atop, !(nonagg ==1 & consul == 0 &
 + I'm only working with the variables that Benson and Clinton use to estimate alliance depth and scope.
 
 + Ready data -- this is member-alliance observations.
-    + **Problem: compellent, deterrence, and unconditional variables are all hand-coded by Benson in an earlier paper.** So I can't extend them with ATOP. I'll write him in the meantime, but am not hopeful.
+    + **Problem: compellent, deterrence, and unconditional variables are all hand-coded by Benson in an earlier paper.** So I can't extend them with ATOP. 
 
 ```{R eval = FALSE}
 bc_ext <- dplyr::tibble(
@@ -235,7 +235,7 @@ all_alliances <- tidyr::drop_na(all_alliances)
 ```
 
 + Code for scope estimates:
-
+    + Missing: compel, deterministic, unconditional
 
 ```{R eval = FALSE}
 scope <- MCMCpack::MCMCfactanal(

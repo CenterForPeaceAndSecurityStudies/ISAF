@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -l walltime=00:30:00
+#PBS -l nodes=1:ppn=3,mem=3GB
+#PBS -N alliance_estimates
+#PBS -j oe 
+#PBS -m abe
+#PBS -M kent.249@osu.edu
+
+
+#COMMANDS TO RUN
+Rscript /home/kent.249/alliance_extension/kent_extension_server.r

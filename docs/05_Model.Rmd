@@ -13,7 +13,7 @@ isaf <- rio::import('../data/iiss_afghan_complete.rds')
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ```
 
-+ Iceland -- drop for now until we figure out total available troops.
++ Iceland -- denominator is technically 0, but they sent some police officers. We drop for parsimony.
 
 ```{R}
 isaf <- dplyr::filter(isaf, stateabb != "ICE")
@@ -21,24 +21,7 @@ isaf <- dplyr::filter(isaf, stateabb != "ICE")
 
 # Description and visualization
 
-+ Note that as constructed, the `pot_gain` variable considers countries without a US alliance as NA. To remedy this, let's rescale `pot_gain` so that countries without a US alliance are at the minimum. 
-
-```{R}
-## First, recode to be from 0 to max.
-isaf$pot_gain_recode <- isaf$pot_gain - summary(isaf$pot_gain)[1]
-
-## Any NA's become 0
-isaf$pot_gain_recode <- ifelse(
-  is.na(isaf$pot_gain_recode), 
-  0, 
-  isaf$pot_gain_recode
-  )
-
-## Rescale to be between 0 and 1 via min/max
-isaf$pot_gain_recode = (isaf$pot_gain_recode - 
-  min(isaf$pot_gain_recode))/(
-  max(isaf$pot_gain_recode)-min(isaf$pot_gain_recode))  
-```
++ Summary stats
 
 ```{R}
 ## Remove id variables
@@ -110,24 +93,25 @@ ggsave(troop_dist, file = "../paper/figures/troop_dist.pdf",
 
 ```{R}
 m1 <- glm(
-  troops_afghan_ratio ~ pot_gain_recode, 
+  troops_afghan_ratio ~ pot_gain, 
   data = isaf
   ) 
 summary(m1)
+## Just outside of significance
+
 
 ## Keeping out gdp and gdppc because they drop so many observations
 ## Drop pctagreeus cuz used for indicator construction
 m2 <- glm(
-  troops_afghan_ratio ~ pot_gain_recode + idealpoint + dem + casualties + us_ally + cinc,
+  troops_afghan_ratio ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc,
   data = isaf
   )
 summary(m2)
 
 
 ## And let's control for gdp and gdppc and keep pctagreeus -- though loses obs
-
 m3 <- glm(
-  troops_afghan_ratio ~ pot_gain_recode + idealpoint + dem + casualties + us_ally + cinc + log(gdp) + log(gdppc) + distance,
+  troops_afghan_ratio ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc + log(gdp) + log(gdppc),
   data = isaf
   )
 summary(m3)
@@ -138,7 +122,7 @@ summary(m3)
 ## gdp and gdppc dropped because lack of observations 
 ## worsens fixed effects bias-variance tradeoff
 m4 <- plm::plm(
-  troops_afghan_ratio ~ pot_gain_recode + idealpoint + 
+  troops_afghan_ratio ~ pot_gain + 
   dem + casualties + us_ally + cinc,
   model = "within",
   index = c("ccode", "year"),
@@ -185,7 +169,7 @@ dw1 <- dwplot(
     whisker_args = list(size = 1.5), 
     color = "black") %>%
     relabel_predictors(c(
-        pot_gain_recode = "Potential Gain With U.S.",
+        pot_gain = "Potential Gain With U.S.",
         idealpoint = "Ideal Point Similarity With U.S.",
         dem = "Democracy",
         casualties = "Casualties",
@@ -211,7 +195,7 @@ dw1 <- dwplot(
         "Fixed Effects")) +
     labs(x = "Percent of Total Troops Provided") + 
     theme_bw() +
-    theme(text = element_text(size = 24, family = myfont1),
+    theme(text = element_text(size = 24),
         axis.text.x = element_text(colour="black"), 
         axis.text.y = element_text(colour="black"),
         legend.position = c(0.8, 0.01),
@@ -259,9 +243,9 @@ ggplot(mod_perf) +
 us_ally0 <- with(
     isaf, 
     dplyr::tibble(
-      pot_gain_recode = seq(
-        min(pot_gain_recode), 
-        max(pot_gain_recode),
+      pot_gain = seq(
+        min(pot_gain), 
+        max(pot_gain),
         length = 101
         ),
       pctagreeus = mean(pctagreeus, na.rm = TRUE),

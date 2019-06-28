@@ -42,15 +42,41 @@ Second, let's merge the Bailey et al. ideal point measures.
 
 ```{R}
 ## import data
-ideal <- rio::import('../inst/extdata/voeten_un_votes/idealpoints.csv')
+ideal <- haven::read_dta('../inst/extdata/voeten_un_votes/Idealpoints.dta')
 
 ## prep for merging by removing unwanted variables
-ideal <- dplyr::select(ideal, c(ccode, year, CountryName, Idealpoint, 
-    PctAgreeUS))
-colnames(ideal) <- c("ccode", "year", "statenme", "idealpoint", "pctagreeus")
+ideal <- dplyr::select(ideal, c(ccode, year, idealpoint, 
+    pctagreeus))
+colnames(ideal) <- c("ccode", "year", "idealpoint", "pctagreeus")
 
 ## merge data
 isaf_ext <- dplyr::left_join(isaf_ext, ideal)
+```
+
+## Ideal point distance from US
+
++ Standardize ideal point to be between 0 and 1. 
+
+```{R}
+## Min-max
+range_01 <- function(x){
+    (x - min(x, na.rm = TRUE))/(
+    max(x, na.rm = TRUE) - min(x, na.rm = TRUE))
+    }
+
+isaf_ext$idealpoint <- range_01(isaf_ext$idealpoint)
+```
+
++ Difference between each state and US
+
+```{R}
+isaf_ext$ideal_dist <- 0
+for(i in 1:nrow(isaf_ext)){
+    time <- as.numeric(isaf_ext[i,1]) ## what year
+    temp <- dplyr::filter(isaf_ext, year == time) ## only that year data
+    us <- dplyr::filter(temp, ccode == 2)$idealpoint
+    isaf_ext[i,14] <- abs(isaf_ext[i,12] - us)
+}
 ```
 
 # Polity
@@ -75,6 +101,8 @@ isaf_ext <- dplyr::left_join(isaf_ext, polity)
 
 # Alliance Depth
 
+Note -- there are only a handful of unique values for alliance depth estimates because the number of discrete U.S. alliance treaties during our dataset is not large. There just happen to be a large number of countries in those alliances. 
+
 ```{R}
 depth_dyad <- rio::import('../inst/extdata/benson_clinton/depth_scores.Rds')
 ```
@@ -84,27 +112,18 @@ depth_dyad <- rio::import('../inst/extdata/benson_clinton/depth_scores.Rds')
 depth_sub <- dplyr::select(depth_dyad, c("year", "mem2", "atopid", "depth"))
 colnames(depth_sub) <- c("year", "ccode", "atopid", "depth")
 ## Note, there do not appear to be repeat country-years.
-
-## Merge
 isaf_ext <- dplyr::left_join(isaf_ext, depth_sub)
 ```
 
-# Potential Gain
-
-+ Standardize depth to be between 0 and 1. 
++ Standardize depth to be between 0 and 1. Afghanistan is the low outlier.
 
 ```{R}
-## Make all values positive
-isaf_ext$depth <- isaf_ext$depth + abs(summary(isaf_ext$depth)[1]) 
-## Divide by max to make between 0 and 1
-isaf_ext$depth <- isaf_ext$depth/summary(isaf_ext$depth)[6]
+# log all values once min is added -- deals with outlier well
+isaf_ext$depth <- log(isaf_ext$depth + 2.141)
+# recode -Inf to min value
+isaf_ext$depth[is.infinite(isaf_ext$depth)] <- 0
 ```
 
-+ Create potential gain variable:
-
-```{R}
-isaf_ext$pot_gain <- isaf_ext$pctagreeus - isaf_ext$depth
-```
 
 # US ally variable
 
@@ -114,6 +133,19 @@ isaf_ext$us_ally <- ifelse(
     !is.na(isaf_ext$depth), ## if there is a depth score
     1, 0 ## 0 if no depth score (no alliance), 1 if there is a depth score
 )
+```
+
+# Potential gain variable:
+
+```{R}
+## If no alliance, then depth goes to 0
+isaf_ext$depth[isaf_ext$us_ally == 0] <- 0
+## need to recode to reflect closer to US is better
+## Just flip by substracting from 1. So 0 (no dist) becomes 1
+## and 0.9 (very different) becomes 0.1 (low alignment)
+isaf_ext$pot_gain <- (1 - isaf_ext$ideal_dist) - isaf_ext$depth
+## drop US
+isaf_ext$pot_gain[isaf_ext$ccode == 2] <- NA
 ```
 
 # DV

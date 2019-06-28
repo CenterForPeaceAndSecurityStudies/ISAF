@@ -1,0 +1,139 @@
+---
+title: "03a_SummaryStats_TroopContributions"
+author: "Daniel Kent"
+date: "June 11, 2019"
+output: html_document
+---
+
+
+# Data loading
+
+```{R}
+isaf <- rio::import('../data/iiss_afghan_complete.rds')
+## Remove afghanistan because it is not a realistic self-contributor
+## Remove US because paper is about relations with the US
+isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
+```
+
++ Iceland -- drop because of denominator issue.
+
+```{R}
+isaf <- dplyr::filter(isaf, stateabb != "ICE")
+```
+
+How best to summarize everything? Table with rows as contributors,
+columns as: average troop/year, average percent/year, average dissatisfaction
+
+```{R}
+contributors <- dplyr::filter(isaf, troops_afghan_total > 0)
+## how many unique contributing countries?
+length(unique(contributors$country))
+```
+
+What variables to select? Year, country, troops, troops ratio, pot_gain
+
+```{R}
+contributors <- dplyr::select(
+    contributors, 
+    c("year", "country", "troops_afghan_total",
+    "troops_afghan_ratio", "pot_gain")
+    )
+```
+
+Create unique data frame with countries, average contr, average ratio, and averate pot_gain
+
+```{R}
+contr_sum <- dplyr::tibble(
+    country = as.character(),
+    average_troops = as.numeric(),
+    average_troop_percent = as.numeric(),
+    average_alliance_potential = as.numeric()
+)
+
+for(i in 1:length(unique(contributors$country))){
+    temp <- dplyr::filter(
+        contributors,
+        country == unique(contributors$country)[i]
+        )
+    contr_sum[i,1] <- as.character(temp[1,2]) ## country
+    ## avg troops
+    contr_sum[i,2] <- mean(temp$troops_afghan_total, na.rm = TRUE) 
+    ## avg percent of troops
+    contr_sum[i,3] <- mean(temp$troops_afghan_ratio, na.rm = TRUE) 
+    ## average potential
+    contr_sum[i,4] <- mean(temp$pot_gain, na.rm = TRUE) 
+}
+
+contr_sum
+## messy, but there
+plot(contr_sum$average_troop_percent ~ contr_sum$average_alliance_potential)
+
+ggplot(contr_sum, 
+    aes(x = average_alliance_potential, y = average_troop_percent)
+    ) + 
+    geom_point() + 
+    geom_smooth(method = "glm") + 
+    geom_text(aes(label = country)) + 
+    hrbrthemes::theme_ipsum_rc()
+```
+
++ Let's plot and sort by contribution percent. 3 columns: country name, average percent of troops, and average potential gain. Sort by percent of troops contributed. 
+
+```{R}
+contr_sum <- contr_sum[order(-contr_sum$average_troop_percent),]
+```
+
++ Countries in negative:
+
+```{R}
+contr_sum$neg <- ifelse(contr_sum$average_alliance_potential < 0, 1, 0)
+```
+
+
++ Do a lattice-style plot with two columns/plots side-by-side (top-20). Two separate objects in a grid, with no axis labels on right.
+
+```{R}
+library(ggplot2)
+
+p1 <- ggplot(
+        contr_sum, 
+        aes(x = country, y = average_troop_percent)
+        ) +
+    geom_point(size = 2) +
+    geom_bar(stat = "identity", width = .1) +
+    coord_flip() + 
+    hrbrthemes::theme_ipsum() + 
+    theme(
+        axis.title.x = element_text(size = 14),
+        axis.text.x = element_text(size = 14, color = "black"),
+        axis.title.y = element_text(size = 14),
+        axis.text.y = element_text(size = 14, color = "black"),
+        panel.background = element_rect(colour = "black", size = 2)
+    ) + 
+    labs(
+        x = "Country",
+        y = "Average Percent of Total Troops Contributed"
+    )
+
+p2 <- ggplot(
+        contr_sum, 
+        aes(x = country, y = average_alliance_potential)
+        ) +
+    geom_point(size = 2) +
+    geom_bar(stat = "identity", width = .1) +
+    coord_flip() + 
+    hrbrthemes::theme_ipsum() +
+    theme(
+        axis.text.y = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.title.x = element_text(size = 14),
+        axis.text.x = element_text(size = 14, color = "black"),
+        panel.background = element_rect(colour = "black", size = 2)
+    ) +
+    labs(
+        y = "Average Unrealized Alliance Potential"
+    )
+
+cowplot::plot_grid(p1, p2)
+```
