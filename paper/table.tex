@@ -1,39 +1,42 @@
+
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{l c c c c }
 \hline
  & Baseline & Political Controls & All Controls & Fixed Effects \\
 \hline
-Intercept      & $0.000^{*}$       & $0.002^{*}$         & $0.007^{*}$         &                     \\
-               & $[0.000;\ 0.001]$ & $[0.001;\ 0.002]$   & $[0.002;\ 0.012]$   &                     \\
-Potential Gain & $0.012^{*}$       & $0.014^{*}$         & $0.009^{*}$         & $0.010^{*}$         \\
-               & $[0.011;\ 0.013]$ & $[0.012;\ 0.016]$   & $[0.006;\ 0.012]$   & $[0.003;\ 0.016]$   \\
-Ideal Point    &                   & $0.002^{*}$         & $0.001^{*}$         & $-0.002^{*}$        \\
-               &                   & $[0.001;\ 0.002]$   & $[0.000;\ 0.002]$   & $[-0.003;\ -0.000]$ \\
-Democracy      &                   & $0.000$             & $0.000$             & $0.001$             \\
-               &                   & $[-0.000;\ 0.001]$  & $[-0.001;\ 0.001]$  & $[-0.000;\ 0.002]$  \\
-Casualties     &                   & $0.000^{*}$         & $0.000^{*}$         & $0.000^{*}$         \\
-               &                   & $[0.000;\ 0.000]$   & $[0.000;\ 0.000]$   & $[0.000;\ 0.000]$   \\
-U.S. Ally      &                   & $-0.003^{*}$        & $-0.001$            & $0.006^{*}$         \\
-               &                   & $[-0.004;\ -0.002]$ & $[-0.002;\ 0.001]$  & $[0.001;\ 0.011]$   \\
-CINC Score     &                   & $-0.020^{*}$        & $0.006$             & $-0.067$            \\
-               &                   & $[-0.034;\ -0.006]$ & $[-0.011;\ 0.022]$  & $[-0.177;\ 0.042]$  \\
-Log GDP        &                   &                     & $-0.001^{*}$        &                     \\
-               &                   &                     & $[-0.001;\ -0.000]$ &                     \\
-Log GDPPC      &                   &                     & $0.001^{*}$         &                     \\
-               &                   &                     & $[0.001;\ 0.001]$   &                     \\
-Distance       &                   &                     & $-0.000^{*}$        &                     \\
-               &                   &                     & $[-0.000;\ -0.000]$ &                     \\
+Intercept      & $0.002^{*}$       & $-0.004^{*}$        & $0.005$             &                    \\
+               & $[0.001;\ 0.002]$ & $[-0.004;\ -0.003]$ & $[-0.000;\ 0.009]$  &                    \\
+Alliance Potential & $0.002^{*}$       & $0.010^{*}$         & $0.005^{*}$         & $0.006^{*}$        \\
+               & $[0.001;\ 0.003]$ & $[0.008;\ 0.012]$   & $[0.003;\ 0.008]$   & $[0.001;\ 0.011]$  \\
+UN Voting      &                   & $0.005^{*}$         & $0.001$             &                    \\
+               &                   & $[0.003;\ 0.008]$   & $[-0.002;\ 0.005]$  &                    \\
+Democracy      &                   & $-0.000$            & $0.000$             & $0.001$            \\
+               &                   & $[-0.001;\ 0.000]$  & $[-0.001;\ 0.001]$  & $[-0.001;\ 0.002]$ \\
+Casualties     &                   & $0.000^{*}$         & $0.001^{*}$         & $0.000^{*}$        \\
+               &                   & $[0.000;\ 0.000]$   & $[0.001;\ 0.001]$   & $[0.000;\ 0.000]$  \\
+U.S. Ally      &                   & $0.008^{*}$         & $0.007^{*}$         & $0.015^{*}$        \\
+               &                   & $[0.007;\ 0.009]$   & $[0.005;\ 0.008]$   & $[0.012;\ 0.018]$  \\
+CINC Score     &                   & $-0.019^{*}$        & $0.003$             & $-0.071$           \\
+               &                   & $[-0.034;\ -0.004]$ & $[-0.014;\ 0.020]$  & $[-0.187;\ 0.046]$ \\
+Log GDP        &                   &                     & $-0.001^{*}$        &                    \\
+               &                   &                     & $[-0.001;\ -0.000]$ &                    \\
+Log GDPPC      &                   &                     & $0.001^{*}$         &                    \\
+               &                   &                     & $[0.001;\ 0.001]$   &                    \\
+Distance       &                   &                     & $-0.000^{*}$        &                    \\
+               &                   &                     & $[-0.000;\ -0.000]$ &                    \\
 \hline
-AIC            & -17677.705        & -13883.175          & -6404.655           &                     \\
-BIC            & -17660.471        & -13839.153          & -6353.043           &                     \\
-Log Likelihood & 8841.852          & 6949.587            & 3213.328            &                     \\
-Deviance       & 0.064             & 0.050               & 0.016               &                     \\
-Num. obs.      & 2309              & 1813                & 806                 & 1813                \\
+AIC            & -15787.895        & -13344.774          & -6385.674           &                    \\
+BIC            & -15770.792        & -13300.926          & -6334.048           &                    \\
+Log Likelihood & 7896.947          & 6680.387            & 3203.837            &                    \\
+Deviance       & 0.102             & 0.056               & 0.017               &                    \\
+Num. obs.      & 2210              & 1774                & 807                 & 1774               \\
+R$^2$          &                   &                     &                     & 0.127              \\
+Adj. R$^2$     &                   &                     &                     & 0.043              \\
 \hline
 \multicolumn{5}{l}{\scriptsize{$^*$ 0 outside the confidence interval}}
 \end{tabular}
-\caption{Statistical models}
+\caption{Statistical Models. For all models the dependent variable is the percent of a total's total troops that are contributed to Afghanistan. Because the dependent variable is continuous, all models are linear regressions, but model 4 includes fixed effects. As a robustness check, replication scripts include the same models, but with two different DVs: troops/gdp and troops/population. Across model specifications the association between unrealized alliance potential and the DV maintains a positive and significant relationship.}
 \label{table:coefficients}
 \end{center}
 \end{table}
