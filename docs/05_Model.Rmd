@@ -93,7 +93,7 @@ ggsave(troop_dist, file = "../paper/figures/troop_dist.pdf",
 
 ```{R}
 m1 <- glm(
-  troops_afghan_ratio ~ pot_gain, 
+  troops_afghan_final_ratio ~ pot_gain, 
   data = isaf
   ) 
 summary(m1)
@@ -103,7 +103,7 @@ summary(m1)
 ## Keeping out gdp and gdppc because they drop so many observations
 ## Drop pctagreeus cuz used for indicator construction
 m2 <- glm(
-  troops_afghan_ratio ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc,
+  troops_afghan_final_ratio ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc,
   data = isaf
   )
 summary(m2)
@@ -111,7 +111,7 @@ summary(m2)
 
 ## And let's control for gdp and gdppc and keep pctagreeus -- though loses obs
 m3 <- glm(
-  troops_afghan_ratio ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc + log(gdp) + log(gdppc),
+  troops_afghan_final_ratio ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc + log(gdp) + log(gdppc) + distance,
   data = isaf
   )
 summary(m3)
@@ -122,7 +122,7 @@ summary(m3)
 ## gdp and gdppc dropped because lack of observations 
 ## worsens fixed effects bias-variance tradeoff
 m4 <- plm::plm(
-  troops_afghan_ratio ~ pot_gain + 
+  troops_afghan_final_ratio ~ pot_gain + 
   dem + casualties + us_ally + cinc,
   model = "within",
   index = c("ccode", "year"),
@@ -138,7 +138,7 @@ texreg::texreg(
     "Fixed Effects"
   ),
   custom.coef.names = c(
-    "Intercept", "Potential Gain", "Ideal Point", "Democracy", 
+    "Intercept", "Potential Gain", "UN Voting", "Democracy", 
     "Casualties", "U.S. Ally", "CINC Score", "Log GDP",
     "Log GDPPC", "Distance"),
   digits = 3,
@@ -217,8 +217,8 @@ ggsave(dw1, file = "../paper/figures/coefs.pdf",
 library(ggplot2) 
 ## Initialize tibble
 mod_perf <- dplyr::tibble(
-  resids = as.numeric(rep(NA, 1813)),
-  fitted = as.numeric(rep(NA, 1813))
+  resids = as.numeric(rep(NA, 1774)),
+  fitted = as.numeric(rep(NA, 1774))
 )
 mod_perf$resids <- m4$residuals ## residuals
 mod_perf$fitted <- predict(m4) ## fitted values
@@ -244,26 +244,27 @@ us_ally0 <- with(
     isaf, 
     dplyr::tibble(
       pot_gain = seq(
-        min(pot_gain), 
-        max(pot_gain),
+        0, #min(pot_gain, na.rm = TRUE), 
+        1, #max(pot_gain, na.rm = TRUE),
         length = 101
         ),
       pctagreeus = mean(pctagreeus, na.rm = TRUE),
-      idealpoint = mean(idealpoint, na.rm = TRUE),
-      #distance = median(distance, na.rm = TRUE),
       dem = 1,
       casualties = mean(casualties),
-      us_ally = 0, 
-      cinc = median(cinc, na.rm = TRUE)
+      us_ally = 1, 
+      cinc = median(cinc, na.rm = TRUE),
+      gdp = median(gdp, na.rm = TRUE),
+      gdppc = median(gdppc, na.rm = TRUE),
+      distance = median(distance, na.rm = TRUE)
       )
     )
 
 ## Predicted contributions
 ## useful walkthrough: https://www.fromthebottomoftheheap.net/2017/05/01/glm-prediction-intervals-i/
 
-us_ally0$pred_contr <- predict(m2, newdata = us_ally0)
+us_ally0$pred_contr <- predict(m3, newdata = us_ally0)
 
-pred_int <- predict(m2, newdata = us_ally0, se.fit = TRUE)
+pred_int <- predict(m3, newdata = us_ally0, se.fit = TRUE)
 
 pd <- transform(pred_int, 
   Contributions = fit, 
@@ -285,17 +286,93 @@ pred_fig <- ggplot(pd) +
       x = "Potential Alliance Gain", 
       y = "Predicted Contribution Percentage", 
       title = "Predicted Contributions by Potential Alliance Gain With the United States") +
-    ylim(c(0, 0.02)) +  
-    theme_bw() +
+    ylim(c(0.004, 0.015)) +  
+    hrbrthemes::theme_ipsum() +
     theme(
-      text = element_text(size = 14, family = myfont1),
-      axis.text.x = element_text(color = "black"),
-      axis.text.y = element_text(color = "black"))
+      text = element_text(size = 12),
+      axis.text.x = element_text(color = "black", size = 12),
+      axis.text.y = element_text(color = "black", size = 12),
+      axis.title.x = element_text(color = "black", size = 12),
+      axis.title.y = element_text(color = "black", size = 12),
+      title = element_text(size = 14)
+      )
       ## Median troop number is 26,500 -- discuss what this means in caption
+
+tikzDevice::tikz(width = 8, height = 5, 
+  file = "../paper/figures/pred_contr.tex")
+pred_fig
+dev.off()
+
 
 ## Save the figure
 ggsave(pred_fig, file = "../paper/figures/pred_contr.pdf",
       width = 8, height = 5, dpi = 1000)
+```
+
+## Robustness Checks -- Other DVs
+
+Troops as a percent of GDP
+
+```{R}
+isaf$troops_gdp <- isaf$troops_afghan_total/isaf$gdp
+
+m1b <- glm(
+  troops_gdp ~ pot_gain, 
+  data = isaf
+  ) 
+summary(m1b)
+## Just outside of significance
+
+
+## Keeping out gdp and gdppc because correlated with DV
+m2b <- glm(
+  troops_gdp ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc,
+  data = isaf
+  )
+summary(m2b)
+```
+
+Troops as a percent of population
+
+```{R}
+isaf$troops_pop <- isaf$troops_afghan_total/isaf$tpop
+
+m1c <- glm(
+  troops_pop ~ pot_gain, 
+  data = isaf
+  ) 
+summary(m1c)
+## Just outside of significance
+
+
+## Keeping out gdp and gdppc because they drop so many observations
+## Drop pctagreeus cuz used for indicator construction
+m2c <- glm(
+  troops_pop ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc,
+  data = isaf
+  )
+summary(m2c)
+
+
+## And let's control for gdp and gdppc and keep pctagreeus -- though loses obs
+m3c <- glm(
+  troops_pop ~ pot_gain + pctagreeus + dem + casualties + us_ally + cinc + log(gdp) + log(gdppc) + distance,
+  data = isaf
+  )
+summary(m3c)
+
+## fixed effects? 
+## note distance coefficient not estimated, because it has 
+## no within-unit variation
+## gdp and gdppc dropped because lack of observations 
+## worsens fixed effects bias-variance tradeoff
+m4c <- plm::plm(
+  troops_pop ~ pot_gain + 
+  dem + casualties + us_ally + cinc,
+  model = "within",
+  index = c("ccode", "year"),
+  data = isaf)
+summary(m4)
 ```
 
 ## Map location

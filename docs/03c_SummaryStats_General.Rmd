@@ -15,7 +15,7 @@ isaf <- rio::import('../data/iiss_afghan_complete.rds')
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ```
 
-+ Iceland -- drop because of denominator issue.
++ Iceland -- drop because of denominator issue.http://sheets.google
 
 ```{R}
 isaf <- dplyr::filter(isaf, stateabb != "ICE")
@@ -35,8 +35,8 @@ What variables to select? Year, country, troops, troops ratio, pot_gain
 ```{R}
 contributors <- dplyr::select(
     contributors, 
-    c("year", "country", "troops_afghan_total",
-    "troops_afghan_ratio", "pot_gain")
+    c("year", "country", "troops_afghan_final",
+    "troops_afghan_final_ratio", "pot_gain")
     )
 ```
 
@@ -57,9 +57,9 @@ for(i in 1:length(unique(contributors$country))){
         )
     contr_sum[i,1] <- as.character(temp[1,2]) ## country
     ## avg troops
-    contr_sum[i,2] <- mean(temp$troops_afghan_total, na.rm = TRUE) 
+    contr_sum[i,2] <- mean(temp$troops_afghan_final, na.rm = TRUE) 
     ## avg percent of troops
-    contr_sum[i,3] <- mean(temp$troops_afghan_ratio, na.rm = TRUE) 
+    contr_sum[i,3] <- mean(temp$troops_afghan_final_ratio, na.rm = TRUE) 
     ## average potential
     contr_sum[i,4] <- mean(temp$pot_gain, na.rm = TRUE) 
 }
@@ -90,10 +90,16 @@ contr_sum$neg <- ifelse(contr_sum$average_alliance_potential < 0, 1, 0)
 ```
 
 
-+ Do a lattice-style plot with two columns/plots side-by-side (top-20). Two separate objects in a grid, with no axis labels on right.
++ Visual
 
 ```{R}
 library(ggplot2)
+## Macedonia
+contr_sum[32,1] <- "Macedonia"
+
+contr_sum <- dplyr::arrange(contr_sum, country)
+axis_colors <- rev(ifelse(contr_sum$neg == 0, "black", "red"))
+
 
 p1 <- ggplot(
         contr_sum, 
@@ -103,12 +109,14 @@ p1 <- ggplot(
     geom_bar(stat = "identity", width = .1) +
     coord_flip() + 
     hrbrthemes::theme_ipsum() + 
+    scale_x_discrete(limits = rev(unique(sort(contr_sum$country)))) +
     theme(
-        axis.title.x = element_text(size = 14),
-        axis.text.x = element_text(size = 14, color = "black"),
-        axis.title.y = element_text(size = 14),
-        axis.text.y = element_text(size = 14, color = "black"),
-        panel.background = element_rect(colour = "black", size = 2)
+        axis.title.x = element_text(size = 17),
+        axis.text.y = element_text(size = 16, color = axis_colors),
+        axis.title.y = element_text(size = 16),
+        axis.text.x = element_text(size = 16, color = "black"),
+        panel.background = element_rect(colour = "black", size = 2),
+        plot.margin = margin(t = 1, r = 0, b = 1, l = 1, unit = "cm")
     ) + 
     labs(
         x = "Country",
@@ -123,17 +131,19 @@ p2 <- ggplot(
     geom_bar(stat = "identity", width = .1) +
     coord_flip() + 
     hrbrthemes::theme_ipsum() +
+    scale_x_discrete(limits = rev(unique(sort(contr_sum$country)))) +
     theme(
         axis.text.y = element_blank(),
         axis.title.y = element_blank(),
         axis.ticks.y = element_blank(),
-        axis.title.x = element_text(size = 14),
-        axis.text.x = element_text(size = 14, color = "black"),
-        panel.background = element_rect(colour = "black", size = 2)
+        axis.title.x = element_text(size = 16),
+        axis.text.x = element_text(size = 16, color = "black"),
+        panel.background = element_rect(colour = "black", size = 2),
+        plot.margin = margin(t = 1, r = 1, b = 1, l = 0, unit = "cm")
     ) +
     labs(
         y = "Average Unrealized Alliance Potential"
     )
 
-cowplot::plot_grid(p1, p2)
+cowplot::plot_grid(p1, p2, rel_widths = c(1, 0.8))
 ```
