@@ -1,6 +1,6 @@
 ---
 title: "Model Building"
-author: Gannon and Kent
+author: Author-blind
 output: html_document
 ---
 
