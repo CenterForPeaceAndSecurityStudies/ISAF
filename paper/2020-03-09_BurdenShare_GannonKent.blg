@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: 2020-03-09_BurdenShare_GannonKent.aux
+The style file: apsr.bst
+Database file #1: isaf_alliances.bib
+Warning--there's a number but no volume in keohane_biginfluencesmall_1971
+Warning--empty author in boselli_napoleoniiivictor_1926
+Warning--there's a number but no volume in rathbone_piedmont1850s_2008
+Warning--empty author in reportprogresssecurity_2010
+You've used 115 entries,
+            2874 wiz_defined-function locations,
+            1220 strings with 24990 characters,
+and the built_in function-call counts, 390588 in all, are:
+= -- 63954
+> -- 3501
+< -- 1
++ -- 29102
+- -- 1326
+* -- 32447
+:= -- 79412
+add.period$ -- 465
+call.type$ -- 115
+change.case$ -- 1492
+chr.to.int$ -- 112
+cite$ -- 119
+duplicate$ -- 1766
+empty$ -- 3794
+format.name$ -- 1489
+if$ -- 70038
+int.to.chr$ -- 8
+int.to.str$ -- 0
+missing$ -- 127
+newline$ -- 498
+num.names$ -- 1218
+pop$ -- 535
+preamble$ -- 1
+purify$ -- 1715
+quote$ -- 0
+skip$ -- 1428
+stack$ -- 0
+substring$ -- 89486
+swap$ -- 244
+text.length$ -- 1591
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 414
+warning$ -- 4
+while$ -- 2604
+width$ -- 0
+write$ -- 1582
+(There were 4 warnings)
