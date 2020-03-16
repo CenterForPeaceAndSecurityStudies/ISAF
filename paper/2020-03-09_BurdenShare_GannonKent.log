@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  14 MAR 2020 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  16 MAR 2020 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1402,7 +1402,7 @@ Overfull \hbox (4.41374pt too wide) in paragraph at lines 202--203
 cu-lated bet that over-contributing
  []
 
-[27] [28] [29]
+[27] [28] [29] [30]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 213.
  (./2020-03-09_BurdenShare_GannonKent.ent
@@ -1440,26 +1440,28 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 6.72005pt on input line 2.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 6.72005pt on input line 2.
-) [30]
-(./2020-03-09_BurdenShare_GannonKent.bbl [31] [32] [33] [34] [35] [36]
-Underfull \hbox (badness 1342) in paragraph at lines 450--455
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 9.60007pt on input line 57.
+) [31]
+(./2020-03-09_BurdenShare_GannonKent.bbl [32] [33] [34] [35] [36] [37]
+Underfull \hbox (badness 1342) in paragraph at lines 461--466
 []\T1/mdbch/m/n/12 Ministry of De-fence II (se-cu-rity pol-icy). 2001\T1/mdbch/
 m/it/12 a\T1/mdbch/m/n/12 .  ``Mulig Norsk Ubåt-støtte Til Stanav-
  []
 
-[37] [38] [39] [40])
+[38] [39] [40] [41])
 \tf@thm=\write5
 \openout5 = `2020-03-09_BurdenShare_GannonKent.thm'.
 
- [41] (./2020-03-09_BurdenShare_GannonKent.aux) ) 
+ [42] (./2020-03-09_BurdenShare_GannonKent.aux) ) 
 Here is how much of TeX's memory you used:
- 19067 strings out of 492982
- 376387 string characters out of 6134895
- 394562 words of memory out of 5000000
- 22164 multiletter control sequences out of 15000+600000
- 58142 words of font info for 104 fonts, out of 8000000 for 9000
+ 19076 strings out of 492982
+ 376661 string characters out of 6134895
+ 394614 words of memory out of 5000000
+ 22171 multiletter control sequences out of 15000+600000
+ 61056 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,77p,3047b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,77p,3202b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist
 /fonts/enc/dvips/ly1/texnansi.enc}</usr/share/texlive/texmf-dist/fonts/type1/bi
 tstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/c
@@ -1468,11 +1470,11 @@ chri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
 d-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/
 md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch
 /md-chr8t.pfb>
-Output written on 2020-03-09_BurdenShare_GannonKent.pdf (41 pages, 879822 bytes
+Output written on 2020-03-09_BurdenShare_GannonKent.pdf (42 pages, 881889 bytes
 ).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 173 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
