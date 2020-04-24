@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  24 APR 2020 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  24 APR 2020 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1402,19 +1402,19 @@ Overfull \hbox (22.16646pt too wide) in paragraph at lines 4--39
  []
 
 ) [21] [22] (./figures/pred_contr.tex)
-Overfull \hbox (23.50345pt too wide) in paragraph at lines 188--191
+Overfull \hbox (23.50345pt too wide) in paragraph at lines 191--194
  [][] 
  []
 
 [23] [24] [25] [26] [27]
-Overfull \hbox (4.41374pt too wide) in paragraph at lines 218--219
+Overfull \hbox (4.41374pt too wide) in paragraph at lines 221--222
 []\T1/mdbch/m/n/12 Over over-contributions re-warded? States are mak-ing a cal-
 cu-lated bet that over-contributing
  []
 
 [28] [29] [30] [31]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 232.
+(Font)              scaled to size 9.60007pt on input line 237.
  (./2020-03-26_BurdenShare_GannonKent.ent
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 2.
@@ -1480,7 +1480,7 @@ chri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
 d-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/
 md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch
 /md-chr8t.pfb>
-Output written on 2020-03-26_BurdenShare_GannonKent.pdf (43 pages, 747966 bytes
+Output written on 2020-03-26_BurdenShare_GannonKent.pdf (43 pages, 748390 bytes
 ).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
