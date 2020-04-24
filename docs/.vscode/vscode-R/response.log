@@ -1,0 +1,4 @@
+{"time":"2020-03-31 14:29:00","pid":5624,"command":"attach","tempdir":"/tmp/RtmpBcLDMf"} 
+{"time":"2020-03-31 15:15:12","pid":5624,"command":"dataview","source":"table","type":"json","title":"contributors","file":"/tmp/RtmpBcLDMf/file15f8765ef7c6.json"} 
+{"time":"2020-03-31 15:15:36","pid":5624,"command":"dataview","source":"table","type":"json","title":"contr_sum","file":"/tmp/RtmpBcLDMf/file15f830253d20.json"} 
+{"time":"2020-03-31 15:16:01","pid":5624,"command":"dataview","source":"table","type":"json","title":"contr_sum","file":"/tmp/RtmpBcLDMf/file15f84599df77.json"} 

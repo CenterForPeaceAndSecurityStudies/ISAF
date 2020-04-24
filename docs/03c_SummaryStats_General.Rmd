@@ -9,13 +9,14 @@ output: html_document
 # Data loading
 
 ```{R}
+library(ggplot2)
 isaf <- rio::import('../data/iiss_afghan_complete.rds')
 ## Remove afghanistan because it is not a realistic self-contributor
 ## Remove US because paper is about relations with the US
 isaf <- dplyr::filter(isaf, stateabb != "AFG" & stateabb != "USA")
 ```
 
-+ Iceland -- drop because of denominator issue.http://sheets.google
++ Iceland -- drop because of denominator issue
 
 ```{R}
 isaf <- dplyr::filter(isaf, stateabb != "ICE")
@@ -93,57 +94,72 @@ contr_sum$neg <- ifelse(contr_sum$average_alliance_potential < 0, 1, 0)
 + Visual
 
 ```{R}
-library(ggplot2)
 ## Macedonia
-contr_sum[32,1] <- "Macedonia"
+contr_sum[9,1] <- "Macedonia"
 
 contr_sum <- dplyr::arrange(contr_sum, country)
-axis_colors <- rev(ifelse(contr_sum$neg == 0, "black", "red"))
+# axis_colors <- rev(ifelse(contr_sum$neg == 0, "black", "red"))
 
+#p1 <- ggplot(
+#        contr_sum, 
+#        aes(x = country, y = average_troop_percent)
+#        ) +
+#    geom_point(size = 2) +
+#    geom_bar(stat = "identity", width = .1) +
+#    coord_flip() +
+#    hrbrthemes::theme_ipsum() +
+#    scale_x_discrete(limits = rev(unique(sort(contr_sum$country)))) +
+#    theme(
+#        axis.title.x = element_text(size = 17),
+#        axis.text.y = element_text(size = 16, color = axis_colors),
+#        axis.title.y = element_text(size = 16),
+#        axis.text.x = element_text(size = 16, color = "black"),
+#        panel.background = element_rect(colour = "black", size = 2),
+#        plot.margin = margin(t = 1, r = 0, b = 1, l = 1, unit = "cm")
+#    ) + 
+#    labs(
+#        x = "Country",
+#        y = "Average Percent of Total Troops Contributed"
+#    )
 
-p1 <- ggplot(
-        contr_sum, 
-        aes(x = country, y = average_troop_percent)
-        ) +
-    geom_point(size = 2) +
-    geom_bar(stat = "identity", width = .1) +
-    coord_flip() + 
-    hrbrthemes::theme_ipsum() + 
-    scale_x_discrete(limits = rev(unique(sort(contr_sum$country)))) +
-    theme(
-        axis.title.x = element_text(size = 17),
-        axis.text.y = element_text(size = 16, color = axis_colors),
-        axis.title.y = element_text(size = 16),
-        axis.text.x = element_text(size = 16, color = "black"),
-        panel.background = element_rect(colour = "black", size = 2),
-        plot.margin = margin(t = 1, r = 0, b = 1, l = 1, unit = "cm")
-    ) + 
-    labs(
-        x = "Country",
-        y = "Average Percent of Total Troops Contributed"
-    )
-
-p2 <- ggplot(
-        contr_sum, 
+contrib <- ggplot(
+        contr_sum,
         aes(x = country, y = average_alliance_potential)
         ) +
     geom_point(size = 2) +
     geom_bar(stat = "identity", width = .1) +
     coord_flip() + 
-    hrbrthemes::theme_ipsum() +
-    scale_x_discrete(limits = rev(unique(sort(contr_sum$country)))) +
+    hrbrthemes::theme_ipsum_rc() +
+    scale_x_discrete(
+        limits = rev(unique(sort(contr_sum$country)))
+        ) +
     theme(
-        axis.text.y = element_blank(),
-        axis.title.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.title.x = element_text(size = 16),
-        axis.text.x = element_text(size = 16, color = "black"),
-        panel.background = element_rect(colour = "black", size = 2),
-        plot.margin = margin(t = 1, r = 1, b = 1, l = 0, unit = "cm")
+        axis.text.y = element_text(
+            size = 12, color = "black",
+        ),
+        axis.title.y = element_text(size = 14),
+        #axis.ticks.y = element_blank(),
+        axis.title.x = element_text(size = 14),
+        axis.text.x = element_text(size = 13, color = "black"),
+        panel.background = element_rect(colour = "black", size = 2)#,
+        #plot.margin = margin(t = 1, r = 1, b = 1, l = 0, unit = "cm")
     ) +
     labs(
-        y = "Average Unrealized Alliance Potential"
+        y = "Average Unrealized Alliance Potential",
+        x = "Country"
     )
 
-cowplot::plot_grid(p1, p2, rel_widths = c(1, 0.8))
+#cowplot::plot_grid(p1, p2, rel_widths = c(1, 0.8))
+```
+
+Save figure. For Linux OS, see [https://github.com/hrbrmstr/hrbrthemes/issues/18](https://github.com/hrbrmstr/hrbrthemes/issues/18).
+
+```{R}
+ggsave(
+    "../paper/figures/descriptive_stats.pdf",
+    contrib,
+    width = 7,
+    height = 8.25,
+    units = "in"
+    )
 ```
