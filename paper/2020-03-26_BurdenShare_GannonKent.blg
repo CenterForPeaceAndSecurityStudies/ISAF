@@ -7,45 +7,45 @@ Warning--there's a number but no volume in keohane_biginfluencesmall_1971
 Warning--empty author in boselli_napoleoniiivictor_1926
 Warning--there's a number but no volume in rathbone_piedmont1850s_2008
 Warning--empty author in reportprogresssecurity_2010
-You've used 118 entries,
+You've used 125 entries,
             2874 wiz_defined-function locations,
-            1231 strings with 25335 characters,
-and the built_in function-call counts, 395495 in all, are:
-= -- 64719
-> -- 3511
+            1265 strings with 26728 characters,
+and the built_in function-call counts, 424966 in all, are:
+= -- 69533
+> -- 3874
 < -- 1
-+ -- 29386
-- -- 1335
-* -- 32820
-:= -- 80495
-add.period$ -- 476
-call.type$ -- 118
-change.case$ -- 1531
-chr.to.int$ -- 114
-cite$ -- 122
-duplicate$ -- 1808
-empty$ -- 3889
-format.name$ -- 1504
-if$ -- 70901
++ -- 31635
+- -- 1463
+* -- 35338
+:= -- 86401
+add.period$ -- 504
+call.type$ -- 125
+change.case$ -- 1622
+chr.to.int$ -- 121
+cite$ -- 129
+duplicate$ -- 1921
+empty$ -- 4144
+format.name$ -- 1636
+if$ -- 76205
 int.to.chr$ -- 9
 int.to.str$ -- 0
-missing$ -- 130
-newline$ -- 509
-num.names$ -- 1246
-pop$ -- 538
+missing$ -- 138
+newline$ -- 538
+num.names$ -- 1330
+pop$ -- 564
 preamble$ -- 1
-purify$ -- 1760
+purify$ -- 1865
 quote$ -- 0
-skip$ -- 1470
+skip$ -- 1568
 stack$ -- 0
-substring$ -- 90497
-swap$ -- 253
-text.length$ -- 1633
+substring$ -- 97282
+swap$ -- 272
+text.length$ -- 1731
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 426
+type$ -- 452
 warning$ -- 4
-while$ -- 2672
+while$ -- 2846
 width$ -- 0
-write$ -- 1617
+write$ -- 1714
 (There were 4 warnings)
