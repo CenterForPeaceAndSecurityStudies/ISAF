@@ -2,3 +2,10 @@
 {"time":"2020-03-31 15:15:12","pid":5624,"command":"dataview","source":"table","type":"json","title":"contributors","file":"/tmp/RtmpBcLDMf/file15f8765ef7c6.json"} 
 {"time":"2020-03-31 15:15:36","pid":5624,"command":"dataview","source":"table","type":"json","title":"contr_sum","file":"/tmp/RtmpBcLDMf/file15f830253d20.json"} 
 {"time":"2020-03-31 15:16:01","pid":5624,"command":"dataview","source":"table","type":"json","title":"contr_sum","file":"/tmp/RtmpBcLDMf/file15f84599df77.json"} 
+{"time":"2020-05-12 14:13:38","pid":3816,"command":"attach","tempdir":"/tmp/Rtmp3ZTo15"} 
+{"time":"2020-05-12 15:33:07","pid":3816,"command":"dataview","source":"table","type":"json","title":"pd2","file":"/tmp/Rtmp3ZTo15/fileee845dce09.json"} 
+{"time":"2020-05-12 15:53:25","pid":3816,"command":"dataview","source":"table","type":"json","title":"pd2","file":"/tmp/Rtmp3ZTo15/fileee8e08f160.json"} 
+{"time":"2020-05-12 16:06:25","pid":21139,"command":"attach","tempdir":"/tmp/RtmpJvKGDw"} 
+{"time":"2020-05-12 17:21:46","pid":2828,"command":"attach","tempdir":"/tmp/RtmpdKzIhb"} 
+{"time":"2020-05-12 17:26:58","pid":2828,"command":"browser","url":"http://127.0.0.1:20902/library/ggplot2/html/scale_discrete.html"} 
+{"time":"2020-05-12 17:35:15","pid":19671,"command":"attach","tempdir":"/tmp/Rtmpn8GV1m"} 

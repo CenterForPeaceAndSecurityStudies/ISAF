@@ -241,17 +241,17 @@ ggplot(mod_perf) +
 ```{R}
 ## Simulated Data
 us_ally0 <- with(
-    isaf, 
+    isaf,
     dplyr::tibble(
       pot_gain = seq(
-        0, #min(pot_gain, na.rm = TRUE), 
+        0, #min(pot_gain, na.rm = TRUE),
         1, #max(pot_gain, na.rm = TRUE),
         length = 101
         ),
       pctagreeus = mean(pctagreeus, na.rm = TRUE),
       dem = 1,
       casualties = mean(casualties),
-      us_ally = 1, 
+      us_ally = 1,
       cinc = median(cinc, na.rm = TRUE),
       gdp = median(gdp, na.rm = TRUE),
       gdppc = median(gdppc, na.rm = TRUE),
@@ -266,27 +266,26 @@ us_ally0$pred_contr <- predict(m3, newdata = us_ally0)
 
 pred_int <- predict(m3, newdata = us_ally0, se.fit = TRUE)
 
-pd <- transform(pred_int, 
-  Contributions = fit, 
-  Upper = fit + (2 * se.fit),
-  Lower = fit - (2 * se.fit),
+pd <- transform(pred_int,
+  Contributions = fit,
+  Upper = fit + (1.96 * se.fit),
+  Lower = fit - (1.96 * se.fit),
   Gain = seq(from = 0, to = 1, by = 0.01)
   )
 
-
 ## Visualize
 pred_fig <- ggplot(pd) +
-    geom_ribbon(aes(x = Gain, ymin = Lower, ymax = Upper),
-                fill = "steelblue2", 
+    geom_ribbon(aes(x = Gain, ymin = Lower * 111976, ymax = Upper * 111976),
+                fill = "steelblue2",
                 alpha = 0.3, inherit.aes = FALSE) +
-    geom_line(aes(x = Gain, y = Contributions), size = 1.25) +
-    geom_line(aes(x = Gain, y = Lower), size = 1) + 
-    geom_line(aes(x = Gain, y = Upper), size = 1) + 
+    geom_line(aes(x = Gain, y = Contributions * 111976), size = 1.25) +
+    geom_line(aes(x = Gain, y = Lower * 111976), size = 1) +
+    geom_line(aes(x = Gain, y = Upper * 111976), size = 1) +
     labs(
-      x = "Potential Alliance Gain", 
-      y = "Predicted Contribution Percentage", 
+      x = "Potential Alliance Gain (Maximum Value at 1)",
+      y = "Predicted Contributed Troops",
       title = "Predicted Contributions by Potential Alliance Gain With the United States") +
-    ylim(c(0.004, 0.015)) +  
+    ylim(c(500, 1500)) +
     hrbrthemes::theme_ipsum() +
     theme(
       text = element_text(size = 12),
@@ -307,6 +306,98 @@ dev.off()
 ## Save the figure
 ggsave(pred_fig, file = "../paper/figures/pred_contr.pdf",
       width = 8, height = 5, dpi = 1000)
+```
+
++ Additional predictions figure, take average country and show the predicted increase if they go from current place to maximum or decrease to 0.
+
+```{R}
+us_ally1 <- with(
+    isaf,
+    dplyr::tibble(
+      pot_gain = 0.2,
+      pctagreeus = mean(pctagreeus, na.rm = TRUE),
+      dem = 1,
+      casualties = mean(casualties),
+      us_ally = 1,
+      cinc = median(cinc, na.rm = TRUE),
+      gdp = median(gdp, na.rm = TRUE),
+      gdppc = median(gdppc, na.rm = TRUE),
+      distance = median(distance, na.rm = TRUE)
+      )
+    )
+
+current_pred <- predict(m3, newdata = us_ally1)
+
+# SD for pot_gain is 0.338, so will range by 0.35 from average ~ 0.2
+# Now make counterfactual df with s.e.
+us_ally2 <- with(
+    isaf,
+    dplyr::tibble(
+      pot_gain = seq(
+        0.2 - 0.35, # near min observed -- makes symmetric around avg val
+        0.2 + 0.35, # near max observed
+        length = 25
+        ),
+      pctagreeus = mean(pctagreeus, na.rm = TRUE),
+      dem = 1,
+      casualties = mean(casualties),
+      us_ally = 1,
+      cinc = median(cinc, na.rm = TRUE),
+      gdp = median(gdp, na.rm = TRUE),
+      gdppc = median(gdppc, na.rm = TRUE),
+      distance = median(distance, na.rm = TRUE)
+      )
+    )
+  
+
+pred_int1 <- predict(m3, newdata = us_ally2, se.fit = TRUE)
+
+pd2 <- transform(pred_int1,
+  Contributions_alt = fit,
+  Upper = fit + (1.96 * se.fit),
+  Lower = fit - (1.96 * se.fit),
+  pot_gain = us_ally2$pot_gain
+  ) %>%
+  select(c(Contributions_alt, Upper, Lower, pot_gain))
+
+pd2 <- pd2 %>%
+  mutate(
+    diff_pot = pot_gain - 0.2,
+    diff_cont = Contributions_alt - current_pred,
+    diff_lower = Lower - current_pred,
+    diff_upper = Upper - current_pred
+  )
+
+pred_fig2 <- ggplot(pd2) +
+  geom_line(aes(x = diff_pot, y = diff_cont * 111976), size = 1.25) + 
+  geom_ribbon(
+    aes(x = diff_pot, ymin = diff_lower * 111976, ymax = diff_upper * 111976),
+    fill = "steelblue2",
+    alpha = 0.3, inherit.aes = FALSE
+    ) + 
+    geom_line(aes(x = diff_pot, y = diff_lower * 111976), size = 1) +
+    geom_line(aes(x = diff_pot, y = diff_upper * 111976), size = 1) +
+  hrbrthemes::theme_ipsum() + 
+  labs(
+    x = "Change in Unrealized Alliance Potential",
+    y = "Predicted Change in Contributed Troops",
+    title = "Predicted Change in Contributed Troops \nBy Change in Unrealized Alliance Potential With the United States"
+  ) +
+  scale_x_continuous(breaks = seq(-0.35, 0.35, by = 0.1)) +
+  scale_y_continuous(breaks = seq(-300, 400, by = 150)) +
+    theme(
+      text = element_text(size = 12),
+      axis.text.x = element_text(color = "black", size = 12),
+      axis.text.y = element_text(color = "black", size = 12),
+      axis.title.x = element_text(color = "black", size = 12),
+      axis.title.y = element_text(color = "black", size = 12),
+      title = element_text(size = 14)
+      )
+
+tikzDevice::tikz(width = 8, height = 5, 
+  file = "../paper/figures/pred_contr2.tex")
+pred_fig2
+dev.off()
 ```
 
 ## Robustness Checks -- Other DVs
