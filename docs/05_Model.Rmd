@@ -555,64 +555,25 @@ theme_map <- function(base_size = 9, base_family = "") {
 
 isaf_map2$perc_total <- isaf_map2$Contribution * 100
 
-## what is the best palette? 
-contr_map1 <- ggplot() + 
-  geom_map(data = WorldData, map = WorldData,
-    aes(x = long, y = lat, group = group, map_id = region),
-    fill = "white", size = 0.35) + 
-  geom_map(data = isaf_map2, map = WorldData,
-    aes(fill = perc_total, map_id = region)) + 
-    borders("world", size = 0.425, colour = "black") + 
-    #viridis::scale_fill_viridis() + 
-    #scale_fill_continuous(
-    #  low = "white", high = "midnightblue", guide = "colorbar") + 
-    scale_fill_gradientn(
-    colours = c(
-      "white", "#adccff", "#004570"), 
-    values = c(0,0.025,1)) +
-    theme_map() + 
-    labs(title = "Percent of Country's Total Troops Contributed",
-    fill = "Percent") + 
-    theme(text = element_text(size = 12, family = myfont1))
-
-## Save the figure
-ggsave(contr_map1, file = "../paper/figures/contr_map_total.pdf",
-      width = 8, height = 4, dpi = 600)
-```
-
-+ Map but for percent of all troops in ISAF.
-
-```{R}
 isaf_map2$perc_isaf <- isaf_map2$Troops/sum(isaf_map2$Troops)
 isaf_map2$perc_isaf <- isaf_map2$perc_isaf * 100
 
-contr_map2 <- ggplot() + 
+contr_map2 <- ggplot() +
   geom_map(data = WorldData, map = WorldData,
     aes(x = long, y = lat, group = group, map_id = region),
-    fill = "white", size = 0.35) + 
+    fill = "white", size = 0.35) +
   geom_map(data = isaf_map2, map = WorldData,
-    aes(fill = perc_isaf, map_id = region)) + 
-  borders("world", size = 0.425, colour = "black") + 
+    aes(fill = perc_isaf, map_id = region)) +
+  borders("world", size = 0.425, colour = "black") +
   scale_fill_gradientn(
     colours = c(
       "white", "#adccff", "#004570"), 
-    values = c(0,0.025,1)) +
-    #scale_fill_continuous(
-    #  low = "white", high = "midnightblue", guide = "colorbar") + 
+    values = c(0, 0.025,1 )) +
     theme_map() + 
     labs(title = "Percent of Total ISAF Coalition Contributed",
-      fill = "Percent") + 
-    theme(text = element_text(size = 12, family = myfont1))
+      fill = "Percent") 
 
 ## Save the figure
 ggsave(contr_map2, file = "../paper/figures/contr_map_isaf.pdf",
       width = 8, height = 4, dpi = 600)
-```
-
-+ Maps side-by-side
-
-```{R}
-side_by_side <- cowplot::plot_grid(contr_map2, contr_map1, nrow = 2)
-ggsave(side_by_side, file = "../paper/figures/contr_map_both.pdf",
-  width = 8, height = 8, dpi = 1000 )
 ```

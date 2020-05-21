@@ -9,3 +9,4 @@
 {"time":"2020-05-12 17:21:46","pid":2828,"command":"attach","tempdir":"/tmp/RtmpdKzIhb"} 
 {"time":"2020-05-12 17:26:58","pid":2828,"command":"browser","url":"http://127.0.0.1:20902/library/ggplot2/html/scale_discrete.html"} 
 {"time":"2020-05-12 17:35:15","pid":19671,"command":"attach","tempdir":"/tmp/Rtmpn8GV1m"} 
+{"time":"2020-05-21 15:58:10","pid":13620,"command":"attach","tempdir":"/tmp/RtmpGBG7bj"} 
