@@ -208,31 +208,6 @@ ggsave(dw1, file = "../paper/figures/coefs.pdf",
       width = 19, height = 8, dpi = 600)
 ```
 
-+ Note that the max contribution is 0.057381, the mean is 0.0018, and the median is 0. So a range of 0 to 0.01225 is not minimal. 
-
-## How does the model fit? 
-
-```{R}
-## Easier to just load ggplot than call before each geom
-library(ggplot2) 
-## Initialize tibble
-mod_perf <- dplyr::tibble(
-  resids = as.numeric(rep(NA, 1774)),
-  fitted = as.numeric(rep(NA, 1774))
-)
-mod_perf$resids <- m4$residuals ## residuals
-mod_perf$fitted <- predict(m4) ## fitted values
-
-## Plot
-ggplot(mod_perf) + 
-    geom_point(aes(x=fitted, y=resids)) + 
-    theme_classic() + 
-    labs(title = "Residuals Versus Fitted Values",
-        x = "Fitted Values",
-        y = "Residuals")
-```
-
-+ Not perfect, it looks like we have some heteroskedasticity. But this is not unreasonable.
 
 ## Predicted contributions
 

@@ -101,7 +101,7 @@ isaf_ext <- dplyr::left_join(isaf_ext, polity)
 
 # Alliance Depth
 
-Note -- there are only a handful of unique values for alliance depth estimates because the number of discrete U.S. alliance treaties during our dataset is not large. There just happen to be a large number of countries in those alliances. 
+Note -- there are only a handful of unique values for alliance depth estimates because the number of discrete U.S. alliance treaties during our dataset is not large. There are, however, a large number of countries in those alliances. 
 
 ```{R}
 depth_dyad <- rio::import('../inst/extdata/benson_clinton/depth_scores.Rds')
