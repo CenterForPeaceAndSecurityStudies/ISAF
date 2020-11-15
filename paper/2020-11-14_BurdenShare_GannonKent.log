@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.8)  14 NOV 2020 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.8)  14 NOV 2020 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1395,30 +1395,30 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 
  [2] [3] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 116.
+(Font)              scaled to size 13.82408pt on input line 114.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 116.
+(Font)              scaled to size 13.82408pt on input line 114.
  [8]
 <figures/contribution_slopeplot.png, id=36, 966.61125pt x 755.82375pt>
 File: figures/contribution_slopeplot.png Graphic file (type png)
 <use figures/contribution_slopeplot.png>
 Package pdftex.def Info: figures/contribution_slopeplot.png  used on input line
- 123.
+ 121.
 (pdftex.def)             Requested size: 469.75502pt x 367.31218pt.
 
 [9] [10 <./figures/contribution_slopeplot.png>] [11] [12]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 142.
+(Font)              scaled to size 11.52008pt on input line 140.
  [13] [14] [15]
 <figures/descriptive_stats.pdf, id=61, 505.89pt x 596.2275pt>
 File: figures/descriptive_stats.pdf Graphic file (type pdf)
 <use figures/descriptive_stats.pdf>
-Package pdftex.def Info: figures/descriptive_stats.pdf  used on input line 161.
+Package pdftex.def Info: figures/descriptive_stats.pdf  used on input line 159.
 
 (pdftex.def)             Requested size: 496.71828pt x 585.38303pt.
 
 
-LaTeX Warning: Float too large for page by 30.85394pt on input line 165.
+LaTeX Warning: Float too large for page by 30.85394pt on input line 163.
 
 [16] [17 <./figures/descriptive_stats.pdf>] [18] [19] (./figures/table.tex
 Overfull \hbox (22.16646pt too wide) in paragraph at lines 4--39
@@ -1426,7 +1426,7 @@ Overfull \hbox (22.16646pt too wide) in paragraph at lines 4--39
  []
 
 ) [20] (./figures/pred_contr2.tex)
-Overfull \hbox (23.50345pt too wide) in paragraph at lines 192--195
+Overfull \hbox (23.50345pt too wide) in paragraph at lines 190--193
  [][] 
  []
 
@@ -1436,7 +1436,7 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 9.60007pt on input line 57.
 ) [31]
 (./2020-11-14_BurdenShare_GannonKent.bbl [32] [33] [34] [35] [36] [37] [38]
-Underfull \hbox (badness 1342) in paragraph at lines 518--523
+Underfull \hbox (badness 1342) in paragraph at lines 513--518
 []\T1/mdbch/m/n/12 Ministry of De-fence II (se-cu-rity pol-icy). 2001\T1/mdbch/
 m/it/12 a\T1/mdbch/m/n/12 .  ``Mulig Norsk Ubåt-støtte Til Stanav-
  []
@@ -1447,13 +1447,13 @@ m/it/12 a\T1/mdbch/m/n/12 .  ``Mulig Norsk Ubåt-støtte Til Stanav-
 
  [44] (./2020-11-14_BurdenShare_GannonKent.aux) ) 
 Here is how much of TeX's memory you used:
- 19128 strings out of 492982
- 379004 string characters out of 6134897
- 397926 words of memory out of 5000000
- 22221 multiletter control sequences out of 15000+600000
+ 19125 strings out of 492982
+ 378893 string characters out of 6134897
+ 397906 words of memory out of 5000000
+ 22218 multiletter control sequences out of 15000+600000
  61668 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,77p,3513b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,77p,3512b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dv
 ips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ly1
 /texnansi.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8
@@ -1463,7 +1463,7 @@ re/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on 2020-11-14_BurdenShare_GannonKent.pdf (44 pages, 780452 bytes
+Output written on 2020-11-14_BurdenShare_GannonKent.pdf (44 pages, 780127 bytes
 ).
 PDF statistics:
  192 PDF objects out of 1000 (max. 8388607)
