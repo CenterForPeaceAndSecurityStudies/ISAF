@@ -47,7 +47,7 @@ country_troop_violin_plot <- function(iiss_afghan){
 
   return(g)
 }
-=======
+
 country_troop_violin_plot <- function(iiss_afghan){
 
   troops_subset <- subset(iiss_afghan, iiss_afghan$troops_total > 0)
