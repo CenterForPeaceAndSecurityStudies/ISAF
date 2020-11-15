@@ -5,7 +5,7 @@ This is a package, documentation, and replication repository for the paper "Keep
 
 The Paper:
 
-[Keeping Your Friends Close, But Acquaintances Closer](https://github.com/CenterForPeaceAndSecurityStudies/ISAF/blob/master/paper/2020-11-14_BurdenShare_GannonKent.pdf)
+[Keeping Your Friends Close, But Acquaintances Closer](https://github.com/CenterForPeaceAndSecurityStudies/ISAF/blob/master/paper/2020-11-15_BurdenShare_GannonKent.pdf)
 
 The Authors:
 
