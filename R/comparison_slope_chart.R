@@ -2,6 +2,8 @@
 #troops_afghan_total - the total number of troops a country sent to Afghanistan in that year
 #troops_afghan_ratio - the percent of a country's armed forces they sent to Afghanistan in that year
 
+install.packages("ggplot2")
+
 troops <- readRDS(file = paste0(here::here(), '/data/iiss_afghan_complete.rds'))
 
 countries <- sort(unique(troops$country))
