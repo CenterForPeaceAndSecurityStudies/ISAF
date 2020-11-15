@@ -1,8 +1,21 @@
 ---
-title: "03b_SummaryStats_AllianceNetwork"
+title: "03b SummaryStats - Alliance Network"
 author: "Erin Werner and Daniel Kent"
 date: "August 8, 2018"
-output: html_document
+output:
+  html_document:
+    theme: flatly
+    code_download: true
+    code_folding: hide
+    toc: yes
+    number_sections: yes
+    toc_float:
+      collapsed: yes
+  html_notebook:
+    toc: yes
+    toc_float: yes
+editor_options:
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -10,10 +23,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-start <- read_csv("isaf_start.csv")
-alliances <- read_csv("alliance_v4.1_by_dyad_yearly.csv")
+start <- read.csv("isaf_start.csv")
+alliances <- read.csv("alliance_v4.1_by_dyad_yearly.csv")
 
-isaf_final <- read_csv("polnet_final.csv")
+isaf_final <- read.csv("polnet_final.csv")
 
 
 ## empty variable for alliance with US or UK

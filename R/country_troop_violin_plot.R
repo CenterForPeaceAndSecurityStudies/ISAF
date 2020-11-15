@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 country_troop_violin_plot <- function(iiss_afghan){
 
   troops_subset <- subset(iiss_afghan, iiss_afghan$troops_total > 0)
@@ -100,4 +99,3 @@ country_troop_violin_plot <- function(iiss_afghan){
 
   return(g)
 }
->>>>>>> 87e019778a0815bf12963141bc8666eee73a6735

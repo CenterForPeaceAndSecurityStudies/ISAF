@@ -1,12 +1,27 @@
 ---
-title: "03a_SummaryStats_TroopContributions"
+title: "03a SummaryStats - TroopContributions"
 author: "J Andres Gannon, Erin Werner, and Cole Reynolds"
 date: "August 8, 2018"
-output: html_document
+output:
+  html_document:
+    theme: flatly
+    code_download: true
+    code_folding: hide
+    toc: yes
+    number_sections: yes
+    toc_float:
+      collapsed: yes
+  html_notebook:
+    toc: yes
+    toc_float: yes
+editor_options:
+  chunk_output_type: inline
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, error = FALSE)
+library(magrittr)
+library(ggplot2)
 ```
 
 #Load data

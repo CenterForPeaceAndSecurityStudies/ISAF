@@ -1,10 +1,27 @@
 ---
-title: "05_EV"
+title: "04 Data Load and Cleaning - EV"
 author: "Daniel Kent"
-output: 
-    tint::tintHtml:
-        toc: true
+output:
+  html_document:
+    theme: flatly
+    code_download: true
+    code_folding: hide
+    toc: yes
+    number_sections: yes
+    toc_float:
+      collapsed: yes
+  html_notebook:
+    toc: yes
+    toc_float: yes
+editor_options:
+  chunk_output_type: inline
 ---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, error = FALSE)
+library(magrittr)
+library(ggplot2)
+```
 
 # State List
 
