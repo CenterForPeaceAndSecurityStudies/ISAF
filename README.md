@@ -9,9 +9,9 @@ The Paper:
 
 The Authors:
 
-* [J Andres Hannon](https://jandresgannon.com/)(University of California San Diego)
+* [J Andres Gannon](https://jandresgannon.com/) (University of California San Diego)
 
-* [Daniel Kent](https://dnkent.github.io/)(The Ohio State University)
+* [Daniel Kent](https://dnkent.github.io/) (The Ohio State University)
 
 For any questions, please email: [jagannon@ucsd.edu](mailto:jagannon@ucsd.edu).
 
