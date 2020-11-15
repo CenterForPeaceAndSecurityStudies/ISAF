@@ -1,30 +1,17 @@
----
-output: github_document
----
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-``` 
- 
 # Keeping Your Friends Close, But Acquaintances Closer
 
 This is a package, documentation, and replication repository for the paper "Keeping Your Friends Close, But Acquaintances Closer: Why Weakly Allied States Make Committed Coalition Partners" (accepted for publication at the Journal of Conflict Resolution) 2020
 
 The Paper:
 
-[Keeping Your Friends Close, But Acquaintances Closer - Read the Paper](https://github.com/CenterForPeaceAndSecurityStudies/ISAF/blob/master/paper/2020-11-14_BurdenShare_GannonKent.pdf)
+[Keeping Your Friends Close, But Acquaintances Closer](https://github.com/CenterForPeaceAndSecurityStudies/ISAF/blob/master/paper/2020-11-15_BurdenShare_GannonKent.pdf)
 
 The Authors:
 
-* [J Andres Hannon](https://jandresgannon.com/)(University of California San Diego)
+* [J Andres Gannon](https://jandresgannon.com/) (University of California San Diego)
 
-* [Daniel Kent](https://dnkent.github.io/)(The Ohio State University)
+* [Daniel Kent](https://dnkent.github.io/) (The Ohio State University)
 
 For any questions, please email: [jagannon@ucsd.edu](mailto:jagannon@ucsd.edu).
 
