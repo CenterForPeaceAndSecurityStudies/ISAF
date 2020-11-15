@@ -1,17 +1,4 @@
----
-output: github_document
----
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-``` 
- 
 # Keeping Your Friends Close, But Acquaintances Closer
 
 This is a package, documentation, and replication repository for the paper "Keeping Your Friends Close, But Acquaintances Closer: Why Weakly Allied States Make Committed Coalition Partners" (accepted for publication at the Journal of Conflict Resolution) 2020
