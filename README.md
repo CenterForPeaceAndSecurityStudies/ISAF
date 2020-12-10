@@ -2,11 +2,14 @@
 # Keeping Your Friends Close, But Acquaintances Closer
 
 This is a package, documentation, and replication repository for:
+
 Gannon, J. Andrés, and Daniel Kent. “Keeping Your Friends Close, but Acquaintances Closer: Why Weakly Allied States Make Committed Coalition Partners.” Journal of Conflict Resolution, (December 2020). https://doi.org/10.1177/0022002720978800.
 
 
 The Paper:
+
 [Final print](https://journals.sagepub.com/doi/full/10.1177/0022002720978800)
+
 [Pre-print](https://github.com/CenterForPeaceAndSecurityStudies/ISAF/blob/master/paper/2020-11-15_BurdenShare_GannonKent.pdf)
 
 The Authors:
